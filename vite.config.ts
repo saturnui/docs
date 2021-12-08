@@ -31,6 +31,10 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue', 'md'],
+      // extendRoute(route) {
+      //   console.log('route:', route.name)
+      //   return route
+      // },
     }),
 
     // https://github.com/JohnCampionJr/vite-plugin-vue-layouts

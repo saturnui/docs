@@ -4,7 +4,7 @@ export const useAppStore = defineStore('app', () => {
   /**
    * Current named of the user.
    */
-  const name = ref('Uvisity')
+  const name = ref(import.meta.env.APP_NAME)
   // const previousNames = ref(new Set<string>())
 
   // const usedNames = computed(() => Array.from(previousNames.value))

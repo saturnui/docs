@@ -26,7 +26,6 @@ export default defineComponent({
 <template>
   <div
     class="
-      vuwi-card
       p-0
       flex flex-col
       h-full
@@ -34,7 +33,7 @@ export default defineComponent({
       hover:shadow-lg
       pb-0
       cursor-pointer
-      dark:bg-gray-800
+      dark:bg-dark-800
       transition-shadow
       duration-500
       ease-in-out

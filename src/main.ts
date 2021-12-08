@@ -17,11 +17,19 @@ import 'virtual:windi-devtools'
 const routes = setupLayouts(generatedRoutes)
 
 // https://github.com/antfu/vite-ssg
-export const createApp = ViteSSG(
-  App,
-  { routes },
-  (ctx) => {
-    // install all modules under `modules/`
-    Object.values(import.meta.globEager('./modules/*.ts')).map(i => i.install?.(ctx))
-  },
-)
+export const createApp = ViteSSG(App, { routes }, (ctx) => {
+  ctx.router.beforeEach((to) => {
+    // eslint-disable-next-line no-console
+    if (to.meta.requiresAuth) {
+      // TODO: This is where you would add authentication
+      return new Promise<void>((resolve) => {
+        return resolve()
+      })
+    }
+    return true
+  })
+  // install all modules under `modules/`
+  Object.values(import.meta.globEager('./modules/*.ts')).map(i =>
+    i.install?.(ctx),
+  )
+})

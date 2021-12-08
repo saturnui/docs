@@ -17,23 +17,35 @@
 // const user = {}
 // const showDrawer = ref(false)
 const showToast = ref(false)
+// const { beforeEach, currentRoute } = useRouter()
+
+// beforeEach(async (to, from) => {
+//   // eslint-disable-next-line no-console
+//   console.log('beforeResolve:', to.name, to.meta.requiresAuth)
+//   if (to.meta.requiresAuth) {
+//     return new Promise<void>((resolve, reject) => {
+//       setTimeout(() => {
+//         return resolve()
+//       }, 2000)
+//     })
+//   }
+//   return true
+// })
+
+// onBeforeMount(async () => {
+//   console.log('onBeforeMount default layout', currentRoute.value.name)
+//   return false
+// })
 </script>
 
 <template>
   <!-- <Background /> -->
-  <main class="vuwi-main1 flex flex-col">
+  <main class="vuwi-main flex flex-col">
     <div class="fixed left-0 top-0 w-full z-10">
       <AppBar class="vuwi-light-dark border-b dark:border-b-dark-900" />
     </div>
     <div class="vuwi-container vuwi-text navbar pt-12">
-      <div class="flex flex-wrap gap-2 p-8">
-        <button class="vuwi-btn vuwi-btn-primary" @click="showToast = true">
-          <span>Show Toast</span>
-        </button>
-        <div class="flex flex-wrap gap-2">
-          <span v-for="i in 500" :key="i">Item #{{ i }}</span>
-        </div>
-      </div>
+      <router-view />
     </div>
   </main>
 
