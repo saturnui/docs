@@ -16,6 +16,7 @@
     "@popperjs/core": "^2.10.2",
     "@vueuse/core": "^6.8.0",
     "@vueuse/head": "^0.6.0",
+    "@vuwi/vuwijs": "*",
     "dayjs": "^1.10.7",
     "email-validator": "^2.0.4",
     "lodash": "^4.17.21",

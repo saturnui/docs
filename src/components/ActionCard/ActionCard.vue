@@ -33,6 +33,7 @@ export default defineComponent({
       hover:shadow-lg
       pb-0
       cursor-pointer
+      bg-white
       dark:bg-dark-800
       transition-shadow
       duration-500

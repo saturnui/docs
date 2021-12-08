@@ -48,6 +48,17 @@ export default defineConfig({
         'vue-i18n',
         '@vueuse/head',
         '@vueuse/core',
+        {
+          '~/modules/vuwi/src/composables': [
+            'isDark',
+            'toggleDark',
+            'useMessenger',
+            'useUuid',
+            'useImageToDataUrl',
+            'useEmitter',
+            'useGroupEmitter',
+          ],
+        },
       ],
       dts: 'src/auto-imports.d.ts',
     }),

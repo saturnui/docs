@@ -23,19 +23,50 @@ const signout = async () => {
   router.push('signin')
   emit('close')
 }
+
+const links = [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }]
+
+const menus = [
+  {
+    title: 'First Section',
+    open: true,
+    links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
+  },
+  {
+    title: 'Second Section',
+    links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
+  },
+  {
+    title: 'Third Section',
+    links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
+  },
+]
 </script>
 
 <template>
-  <Collapse v-for="i in 3" :key="i" group="menu">
-    <template #header>
-      <div class="flex items-center gap-4">
+  <div v-for="(link, n) in links" :key="n" class="vuwi-menu-item">
+    {{ link.title }}
+  </div>
+  <Collapse
+    v-for="(menu, i) in menus"
+    :key="i"
+    v-model="menu.open"
+    group="menu"
+  >
+    <template #header="{ open }">
+      <div class="p-3 flex items-center gap-4">
         <tabler-box />
-        <span class="font-bold">Section {{ i }}</span>
+        <span class="font-bold flex-grow">{{ menu.title }}</span>
+        <tabler-chevron-right
+          class="transition duration-150 transform"
+          :class="{ 'rotate-90': open }"
+        />
       </div>
     </template>
+
     <div class="overflow-y-auto">
-      <div v-for="n in 8" :key="n" class="vuwi-menu-item">
-        Menu Item {{ n }}
+      <div v-for="(link, n) in menu.links" :key="n" class="vuwi-menu-item">
+        {{ link.title }}
       </div>
     </div>
   </Collapse>

@@ -17,51 +17,33 @@
 // const user = {}
 // const showDrawer = ref(false)
 const showToast = ref(false)
-// const { beforeEach, currentRoute } = useRouter()
 
-// beforeEach(async (to, from) => {
-//   // eslint-disable-next-line no-console
-//   console.log('beforeResolve:', to.name, to.meta.requiresAuth)
-//   if (to.meta.requiresAuth) {
-//     return new Promise<void>((resolve, reject) => {
-//       setTimeout(() => {
-//         return resolve()
-//       }, 2000)
-//     })
-//   }
-//   return true
-// })
-
-// onBeforeMount(async () => {
-//   console.log('onBeforeMount default layout', currentRoute.value.name)
-//   return false
-// })
+const { onAddMessage } = useMessenger()
+onAddMessage(() => {
+  showToast.value = true
+})
 </script>
 
 <template>
-  <!-- <Background /> -->
   <main class="vuwi-main flex flex-col">
-    <div class="fixed left-0 top-0 w-full z-10">
-      <AppBar class="vuwi-light-dark border-b dark:border-b-dark-900" />
-    </div>
+    <AppBar class="vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
     <div class="vuwi-container vuwi-text navbar pt-12">
       <router-view />
     </div>
+    <!-- :: Navigation :: -->
+    <Drawer
+      class="
+        flex flex-col
+        vuwi-light-dark
+        border-r
+        dark:border-none
+        overflow-y-auto overflow-x-hidden
+        pt-14
+      "
+    >
+      <Navigation />
+    </Drawer>
   </main>
-
-  <!-- :: Left Drawer :: -->
-  <Drawer
-    class="
-      flex flex-col
-      vuwi-light-dark
-      border-r
-      dark:border-none
-      overflow-y-auto overflow-x-hidden
-      pt-14
-    "
-  >
-    <Navigation />
-  </Drawer>
 
   <!-- :: Toast :: -->
   <Toast

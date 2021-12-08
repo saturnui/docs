@@ -149,7 +149,7 @@ const signout = async () => {
     </div>
     <Overlay
       v-model="showDrawer"
-      class="z-50"
+      class="z-0"
       position="left"
       @swipe:end="handleSwipeEnd"
     >
