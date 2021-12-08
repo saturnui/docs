@@ -2,7 +2,4 @@
   .app-appbar {
     @apply relative w-full flex justify-center px-2 py-2 gap-3;
   }
-  .router-link-exact-active {
-    @apply bg-dark-600 text-white text-left font-bold;
-  }
 }

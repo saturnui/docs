@@ -16,7 +16,7 @@ export default defineConfig({
           DEFAULT: '#1873e8', // Normal primary color
           dark: '#1d66ca', // Used for hover, active, etc.
         },
-        dark: colors.blueGray,
+        // dark: colors.blueGray,
       },
       typography: {
         DEFAULT: {

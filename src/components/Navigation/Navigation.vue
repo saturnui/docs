@@ -24,7 +24,10 @@ const signout = async () => {
   emit('close')
 }
 
-const links = [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }]
+const links = [
+  { title: 'Form', to: '/examples/form' },
+  { title: 'Protected', to: '/examples/protected' },
+]
 
 const menus = [
   {
@@ -44,9 +47,14 @@ const menus = [
 </script>
 
 <template>
-  <div v-for="(link, n) in links" :key="n" class="vuwi-menu-item">
+  <router-link
+    v-for="(link, n) in links"
+    :key="n"
+    :to="link.to"
+    class="menu-link"
+  >
     {{ link.title }}
-  </div>
+  </router-link>
   <Collapse
     v-for="(menu, i) in menus"
     :key="i"
@@ -65,7 +73,7 @@ const menus = [
     </template>
 
     <div class="overflow-y-auto">
-      <div v-for="(link, n) in menu.links" :key="n" class="vuwi-menu-item">
+      <div v-for="(link, n) in menu.links" :key="n" class="menu-link">
         {{ link.title }}
       </div>
     </div>

@@ -7,7 +7,7 @@ const { t } = useI18n()
   <button
     class="
       vuwi-btn vuwi-btn-icon
-      bg-gray-400 bg-opacity-20
+      bg-dark-400 bg-opacity-20
     "
     :title="t('button.toggle_dark')"
     @click="toggleDark()"

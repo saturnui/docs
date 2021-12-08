@@ -53,7 +53,6 @@ export default defineConfig({
             'isDark',
             'toggleDark',
             'useMessenger',
-            'useUuid',
             'useImageToDataUrl',
             'useEmitter',
             'useGroupEmitter',

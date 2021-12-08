@@ -61,8 +61,8 @@ const signout = async () => {
       >
         <tabler-menu-2 />
       </button>
-      <div class="flex flex-grow lg:pl-5">
-        <span>Logo</span>
+      <div class="flex flex-grow lg:pl-5 cursor-pointer">
+        <router-link to="/" class="font-bold">Logo here</router-link>
       </div>
       <div class="hidden lg:block relative top-0 cursor-pointer">
         <button
@@ -162,7 +162,7 @@ const signout = async () => {
             <tabler-menu-2 />
           </button>
           <div class="flex">
-            <span>Logo</span>
+            <span class="font-bold">Logo here</span>
           </div>
         </div>
         <Navigation @close="showDrawer = false" />

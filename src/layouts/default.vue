@@ -27,7 +27,7 @@ onAddMessage(() => {
 <template>
   <main class="vuwi-main flex flex-col">
     <AppBar class="vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
-    <div class="vuwi-container vuwi-text navbar pt-12">
+    <div class="vuwi-container vuwi-text navbar">
       <router-view />
     </div>
     <!-- :: Navigation :: -->

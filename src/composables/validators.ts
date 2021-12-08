@@ -1,6 +1,6 @@
 import * as EmailValidator from 'email-validator'
 
-export const useValidateEmail = (email: string) => {
+export const useValidEmail = (email: string) => {
   return EmailValidator.validate(email) || 'is not valid'
 }
 
