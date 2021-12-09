@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useUserStore } from '~/stores/user'
 
 const showDialog = ref(false)
-const { displayName, photoUrl } = storeToRefs(useUserStore())
+const { user, displayName, photoUrl } = storeToRefs(useUserStore())
 const { addMessage } = useMessenger()
 const features = [
   {
@@ -32,21 +32,29 @@ const features = [
 <template>
   <div class="w-full flex flex-col items-center py-8 sm:py-12">
     <div class="flex flex-col items-center w-full max-w-lg gap-4">
-      <router-link to="profile">
+      <div v-if="user" class="flex flex-col items-center text-2xl gap-4">
+        <router-link to="profile">
+          <Avatar
+            :name="displayName"
+            :photo="photoUrl"
+            class="
+              vuwi-avatar-xl
+              rounded-full
+              overflow-hidden
+              bg-blue-500
+              text-white
+            " />
+        </router-link>
+        <div class="text-2xl">
+          <span>Welcome, {{ displayName }}</span>
+        </div>
+      </div>
+      <div v-else class="flex flex-col items-center text-2xl gap-4">
         <Avatar
-          :name="displayName"
-          :photo="photoUrl"
-          class="
-            vuwi-avatar-xl
-            rounded-full
-            overflow-hidden
-            bg-blue-500
-            text-white
-          "
-        />
-      </router-link>
-      <div class="text-2xl">
-        <span>Welcome, {{ displayName }}</span>
+          name="Stranger"
+          photo="https://cdn4.iconfinder.com/data/icons/diversity-v2-0-volume-02/64/bandit-asian-male-cowboy-1024.png"
+          class="vuwi-avatar-xl rounded-full overflow-hidden text-white" />
+        <span>Howdy, stranger!</span>
       </div>
       <div class="text-center text-sm vuwi-text px-8 pb-4 md:pb-0">
         Example Dashboard Page
@@ -61,8 +69,7 @@ const features = [
         :desc="feature.desc"
         :action="feature.action"
         :icon="feature.icon"
-        @click="feature.handle"
-      ></ActionCard>
+        @click="feature.handle"></ActionCard>
     </div>
   </div>
 
@@ -80,8 +87,7 @@ const features = [
           <div class="vuwi-row justify-end p-2">
             <button
               class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-              @click="showDialog = false"
-            >
+              @click="showDialog = false">
               Submit
             </button>
           </div>

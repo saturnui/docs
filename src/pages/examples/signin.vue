@@ -1,10 +1,26 @@
 <script setup lang="ts">
 import { useValidEmail, useValidPassword } from '~/composables'
+import { useUserStore } from '~/stores/user'
+
+const { setUser } = useUserStore()
+const router = useRouter()
+
 const submit = () => {
-  console.log('Submit here')
+  setUser({
+    id: '1',
+    enabled: true,
+    name: 'Mock User',
+    firstName: 'Mock',
+    lastName: 'User',
+    role: 'USER',
+  })
+  if (router.currentRoute.value.query.redirect)
+    router.push(router.currentRoute.value.query.redirect as string)
+  else
+    router.push('/')
 }
-const email = ref('')
-const password = ref('')
+const email = ref('user@mail.com')
+const password = ref('Password@1')
 const showPassword = ref(false)
 const busy = ref(false)
 // const requireRule = (v: string) => useRequired(v)
@@ -61,7 +77,6 @@ const passwordType = computed(() => {
 </template>
 
 <route lang="yaml">
-name: signup
 meta:
   layout: plain
 </route>

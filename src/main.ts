@@ -13,23 +13,24 @@ import './styles/main.css'
 import 'virtual:windi-utilities.css'
 // windicss devtools support (dev only)
 import 'virtual:windi-devtools'
+// store
+import { useUserStore } from '~/stores/user'
 
 const routes = setupLayouts(generatedRoutes)
 
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(App, { routes }, (ctx) => {
-  ctx.router.beforeEach((to) => {
-    // eslint-disable-next-line no-console
-    if (to.meta.requiresAuth) {
-      // TODO: This is where you would add authentication
-      return new Promise<void>((resolve) => {
-        return resolve()
-      })
-    }
-    return true
-  })
   // install all modules under `modules/`
   Object.values(import.meta.globEager('./modules/*.ts')).map(i =>
     i.install?.(ctx),
   )
+
+  ctx.router.beforeEach((to, from, next) => {
+    // eslint-disable-next-line no-console
+    if (to.meta.requiresAuth) {
+      const { user } = useUserStore()
+      if (!user) return next(`/examples/signin?redirect=${to.path}`)
+    }
+    next()
+  })
 })

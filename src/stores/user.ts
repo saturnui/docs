@@ -14,14 +14,16 @@ export interface User {
 
 export const useUserStore = defineStore('user', {
   state: () => {
-    const user = ref<User>({
-      id: '1',
-      enabled: true,
-      name: 'Mock User',
-      firstName: 'Mock',
-      lastName: 'User',
-      role: 'USER',
-    })
+    const user = ref<User>(
+    //   {
+    //   id: '1',
+    //   enabled: true,
+    //   name: 'Mock User',
+    //   firstName: 'Mock',
+    //   lastName: 'User',
+    //   role: 'USER',
+    // }
+    )
     const users = ref<User[]>([])
     const totalUsers = 0
     return {

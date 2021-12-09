@@ -5,7 +5,6 @@ import { useUserStore } from '~/stores/user'
 import { isDark, toggleDark } from '~/composables'
 
 const userStore = useUserStore()
-const { t } = useI18n()
 const router = useRouter()
 const sdk = useSdk()
 const showDrawer = ref(false)
@@ -61,9 +60,12 @@ const signout = async () => {
       >
         <tabler-menu-2 />
       </button>
-      <div class="flex flex-grow lg:pl-5 cursor-pointer">
-        <router-link to="/" class="font-bold">Logo here</router-link>
+      <div class="flex lg:pl-5 cursor-pointer">
+        <div class="vuwi-text" @click="router.push('/')">
+          <span>Logo here</span>
+        </div>
       </div>
+      <div class="flex-grow"></div>
       <div class="hidden lg:block relative top-0 cursor-pointer">
         <button
           class="
