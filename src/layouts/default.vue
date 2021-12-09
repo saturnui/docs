@@ -31,16 +31,7 @@ onAddMessage(() => {
       <router-view />
     </div>
     <!-- :: Navigation :: -->
-    <Drawer
-      class="
-        flex flex-col
-        vuwi-light-dark
-        border-r
-        dark:border-none
-        overflow-y-auto overflow-x-hidden
-        pt-14
-      "
-    >
+    <Drawer class="vuwi-light-dark border-r dark:border-none overflow-y-auto overflow-x-hidden pt-14">
       <Navigation />
     </Drawer>
   </main>
@@ -53,16 +44,7 @@ onAddMessage(() => {
     <div class="flex items-center justify-between">
       <div class="flex justify-center items-center gap-4">
         <tabler-message class="text-5xl" />
-        <div
-          class="
-            flex
-            h-full
-            text-left
-            justify-center
-            border-l border-opacity-20
-            pl-4
-          "
-        >
+        <div class="flex h-full text-left justify-center border-l border-opacity-20 pl-4">
           This is a toast message example. It supports multiple lines.
         </div>
       </div>
