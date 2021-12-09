@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import IconLock from '~icons/tabler/lock'
 import IconFiles from '~icons/tabler/files'
+import IconFileText from '~icons/tabler/fileText'
 import IconBox from '~icons/tabler/box'
 import { isDark, toggleDark, useSdk } from '~/composables'
 
@@ -43,7 +44,7 @@ const signout = async () => {
 }
 
 const menuItems: MenuItem[] = [
-  { title: 'Form', to: '/pages/form', icon: IconLock },
+  { title: 'Form', to: '/pages/form', icon: IconFileText },
   { title: 'Protected', to: '/pages/protected', icon: IconLock },
   {
     title: 'Pages',
