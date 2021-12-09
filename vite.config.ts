@@ -49,7 +49,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
         {
-          '~/modules/vuwi/src/composables': [
+          '~/modules/vuwi/composables': [
             'isDark',
             'toggleDark',
             'useMessenger',
@@ -64,7 +64,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      dirs: ['./src/components', './src/modules/vuwi/src/components'],
+      dirs: ['./src/components', './src/modules/vuwi/components'],
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
 

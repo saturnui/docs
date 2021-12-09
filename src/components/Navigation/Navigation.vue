@@ -26,19 +26,49 @@ const signout = async () => {
 }
 
 const links = [
-  { title: 'Form', to: '/examples/form' },
-  { title: 'Protected', to: '/examples/protected', icon: IconLock },
+  { title: 'Form', to: '/pages/form' },
+  { title: 'Protected', to: '/pages/protected', icon: IconLock },
 ]
 
 const menus = [
   {
-    title: 'First Section',
-    open: true,
-    links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
+    title: 'Pages',
+    links: [{ title: 'Form', to: '/pages/form' }, { title: 'Protected', to: '/pages/protected' }],
   },
   {
-    title: 'Second Section',
-    links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
+    title: 'Components',
+    open: true,
+    links: [
+      { title: 'Alert', to: '/components/alert' },
+      { title: 'Avatar', to: '/components/alert' },
+      { title: 'Button', to: '/components/alert' },
+      { title: 'Card', to: '/components/alert' },
+      { title: 'CodeInput', to: '/components/alert' },
+      { title: 'Collapse', to: '/components/alert' },
+      { title: 'Color', to: '/components/alert' },
+      { title: 'DatePicker', to: '/components/alert' },
+      { title: 'Decoration', to: '/components/alert' },
+      { title: 'Dialog', to: '/components/alert' },
+      { title: 'Drawer', to: '/components/alert' },
+      { title: 'Dropdown', to: '/components/alert' },
+      { title: 'Dropzone', to: '/components/alert' },
+      { title: 'FilePreview', to: '/components/alert' },
+      { title: 'FileSelector', to: '/components/alert' },
+      { title: 'FormSection', to: '/components/alert' },
+      { title: 'Header', to: '/components/alert' },
+      { title: 'Layout', to: '/components/alert' },
+      { title: 'Line', to: '/components/alert' },
+      { title: 'Overlay', to: '/components/alert' },
+      { title: 'Pagination', to: '/components/alert' },
+      { title: 'Select', to: '/components/alert' },
+      { title: 'Spinner', to: '/components/alert' },
+      { title: 'Switch', to: '/components/alert' },
+      { title: 'Textarea', to: '/components/alert' },
+      { title: 'Textfield', to: '/components/alert' },
+      { title: 'Toast', to: '/components/alert' },
+      { title: 'Tooltip', to: '/components/alert' },
+      { title: 'Window', to: '/components/alert' },
+    ],
   },
   {
     title: 'Third Section',

@@ -29,7 +29,7 @@ export const createApp = ViteSSG(App, { routes }, (ctx) => {
     // eslint-disable-next-line no-console
     if (to.meta.requiresAuth) {
       const { user } = useUserStore()
-      if (!user) return next(`/examples/signin?redirect=${to.path}`)
+      if (!user) return next(`/signin?redirect=${to.path}`)
     }
     next()
   })

@@ -1,5 +1,5 @@
 @import './markdown.css';
-@import '../modules/vuwi/src/components/index.css';
+@import '../modules/vuwi/index.css';
 @import '../components/index.css';
 
 html,
