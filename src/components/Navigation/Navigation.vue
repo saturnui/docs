@@ -82,7 +82,8 @@ const menus = [
     v-for="(link, n) in links"
     :key="n"
     :to="link.to"
-    class="menu-link">
+    class="menu-link"
+  >
     {{ link.title }}
     <Component :is="link.icon" />
   </router-link>
@@ -90,14 +91,16 @@ const menus = [
     v-for="(menu, i) in menus"
     :key="i"
     v-model="menu.open"
-    group="menu">
+    group="menu"
+  >
     <template #header="{ open }">
       <div class="p-3 flex items-center gap-4">
         <tabler-box />
         <span class="font-bold flex-grow">{{ menu.title }}</span>
         <tabler-chevron-right
           class="transition duration-150 transform"
-          :class="{ 'rotate-90': open }" />
+          :class="{ 'rotate-90': open }"
+        />
       </div>
     </template>
 
@@ -114,14 +117,16 @@ const menus = [
       class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
       role="menuitem"
       tabindex="-1"
-      @click="navTo('profile')">
+      @click="navTo('profile')"
+    >
       <tabler-user />
     </div>
     <div
       class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
       role="menuitem"
       tabindex="-1"
-      @click="toggleDarkMode">
+      @click="toggleDarkMode"
+    >
       <carbon-moon v-if="isDark" />
       <carbon-sun v-else />
     </div>
@@ -129,7 +134,8 @@ const menus = [
       class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
       role="menuitem"
       tabindex="-1"
-      @click="signout">
+      @click="signout"
+    >
       <tabler-logout />
     </div>
   </div>

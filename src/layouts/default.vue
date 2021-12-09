@@ -31,7 +31,7 @@ onAddMessage(() => {
       <router-view />
     </div>
     <!-- :: Navigation :: -->
-    <Drawer class="vuwi-light-dark border-r dark:border-none overflow-y-auto overflow-x-hidden pt-14">
+    <Drawer class="flex flex-col vuwi-light-dark border-r dark:border-none overflow-y-auto overflow-x-hidden pt-14">
       <Navigation />
     </Drawer>
   </main>

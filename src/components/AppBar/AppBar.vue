@@ -155,8 +155,8 @@ const signout = async () => {
       position="left"
       @swipe:end="handleSwipeEnd"
     >
-      <div class="flex flex-col rounded-none h-full w-90 vuwi-light-dark">
-        <div class="p-2 flex items-center h-14 gap-4">
+      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
+        <div class="sticky top-0 z-10 w-full p-2 flex items-center h-14 gap-4 vuwi-light-dark">
           <button
             class="vuwi-btn vuwi-btn-icon"
             @click="showDrawer = !showDrawer"
