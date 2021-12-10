@@ -87,12 +87,12 @@ const menuItems: MenuItem[] = [
       { title: 'Window', to: '/components/alert' },
     ],
   },
-  {
-    collapsible: true,
-    title: 'Third Section',
-    icon: IconBox,
-    links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
-  },
+  // {
+  //   collapsible: true,
+  //   title: 'Third Section',
+  //   icon: IconBox,
+  //   links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
+  // },
 ]
 </script>
 
