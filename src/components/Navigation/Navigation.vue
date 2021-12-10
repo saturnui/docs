@@ -104,7 +104,7 @@ const menuItems: MenuItem[] = [
       group="menu"
     >
       <template #header="{ open }">
-        <div class="p-3 flex items-center gap-4">
+        <div class="p-3 flex items-center gap-4 menu-link">
           <Component :is="item.icon" v-if="item.icon" />
           <div v-else class="spacer w-5"></div>
           <span class="font-bold flex-grow">{{ item.title }}</span>
@@ -116,15 +116,15 @@ const menuItems: MenuItem[] = [
       </template>
 
       <div class="overflow-y-auto">
-        <div v-for="(link, n) in item.links" :key="n" class="menu-link">
+        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="menu-link">
           {{ link.title }}
-        </div>
+        </router-link>
       </div>
     </Collapse>
     <router-link
       v-else-if="item.to"
       :to="item.to"
-      :class="item.icon ? 'p-3 flex items-center gap-4' : 'menu-link'"
+      :class="item.icon ? 'p-3 flex items-center gap-4 menu-link' : 'menu-link'"
     >
       <Component :is="item.icon" />
       {{ item.title }}
@@ -136,9 +136,9 @@ const menuItems: MenuItem[] = [
         {{ item.title }}
       </div>
       <div class="flex flex-col">
-        <div v-for="(link, n) in item.links" :key="n" class="menu-link">
+        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="menu-link">
           {{ link.title }}
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
