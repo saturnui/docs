@@ -11,7 +11,7 @@ const open = ref(false)
         <div class="flex-grow"></div>
       </div>
       <VuwiLine />
-      <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">
+      <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">
         <span>Headless</span>
       </div>
       <div class="px-4 py-3 flex">
@@ -32,7 +32,7 @@ const open = ref(false)
           </VuwiCollapse>
         </div>
       </div>
-      <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">
+      <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">
         <span>Header</span>
       </div>
       <div class="px-4 py-3 flex">
@@ -58,7 +58,7 @@ const open = ref(false)
         </VuwiCollapse>
       </div>
 
-      <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Group</div>
+      <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">Group</div>
       <div class="px-4 py-3 -space-y-1">
         <VuwiCollapse v-for="i in 3" :key="i" group="myCustomGroup" class="w-full">
           <template #header="{ open: isOpen }">

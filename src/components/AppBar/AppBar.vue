@@ -66,8 +66,8 @@ const signout = async () => {
         </div>
       </div>
       <div class="flex-grow"></div>
-      <ToggleDarkMode />
-      <div class="hidden lg:block relative top-0 cursor-pointer">
+      <ToggleDarkMode class="hidden lg:flex" />
+      <div v-if="user" class="hidden lg:block relative top-0 cursor-pointer">
         <button
           class="
             vuwi-btn vuwi-btn-icon

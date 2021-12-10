@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <button type="button" class="vuwi-btn vuwi-btn-icon text-gray-400 dark:text-gray-400" @click="$emit('update:modelValue', !modelValue)">
+  <button type="button" class="vuwi-btn vuwi-btn-icon text-dark-400 dark:text-dark-400" @click="$emit('update:modelValue', !modelValue)">
     <tabler-eye-off v-if="modelValue" />
     <tabler-eye v-else />
   </button>

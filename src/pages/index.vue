@@ -34,7 +34,7 @@ const features = [
     <div class="flex flex-col items-center w-full max-w-lg gap-4">
       <div v-if="user" class="flex flex-col items-center text-2xl gap-4">
         <router-link to="profile">
-          <Avatar
+          <VuwiAvatar
             :name="displayName"
             :photo="photoUrl"
             class="
@@ -50,7 +50,7 @@ const features = [
         </div>
       </div>
       <div v-else class="flex flex-col items-center text-2xl gap-4">
-        <Avatar
+        <VuwiAvatar
           name="Stranger"
           photo="https://cdn4.iconfinder.com/data/icons/diversity-v2-0-volume-02/64/bandit-asian-male-cowboy-1024.png"
           class="vuwi-avatar-xl rounded-full overflow-hidden text-white" />

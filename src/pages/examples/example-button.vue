@@ -6,7 +6,7 @@
       >Button</span>
       <VuwiLine />
       <div class="space-y-4">
-        <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Default</div>
+        <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">Default</div>
         <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button class="vuwi-btn vuwi-btn-xs">Extra Small</button>
           <button class="vuwi-btn vuwi-btn-sm">Small</button>
@@ -15,7 +15,7 @@
           <button class="vuwi-btn vuwi-btn-xl">Extra Large</button>
         </div>
 
-        <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Solid</div>
+        <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">Solid</div>
 
         <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button class="vuwi-btn vuwi-btn-xs vuwi-btn-primary">Extra Small</button>
@@ -25,7 +25,7 @@
           <button class="vuwi-btn vuwi-btn-xl vuwi-btn-primary">Extra Large</button>
         </div>
 
-        <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Outline</div>
+        <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">Outline</div>
         <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button class="vuwi-btn vuwi-btn-xs vuwi-btn-outline">Extra Small</button>
           <button class="vuwi-btn vuwi-btn-sm vuwi-btn-outline vuwi-btn-primary">Small</button>
@@ -34,7 +34,7 @@
           <button class="vuwi-btn vuwi-btn-xl vuwi-btn-outline">Extra Large</button>
         </div>
 
-        <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Pill</div>
+        <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">Pill</div>
         <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button
             class="vuwi-btn vuwi-btn-xs vuwi-btn-outline vuwi-btn-pill vuwi-btn-primary"
@@ -47,7 +47,7 @@
           >Extra Large</button>
         </div>
 
-        <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Icon</div>
+        <div class="font-bold text-sm bg-dark-100 dark:bg-dark-300 px-4 py-2">Icon</div>
         <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4 pb-6">
           <button class="vuwi-btn vuwi-btn-xs vuwi-btn-icon vuwi-btn-primary">
             <tabler-box class="text-[0.5rem]" />
