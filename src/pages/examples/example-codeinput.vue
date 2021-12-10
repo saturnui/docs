@@ -23,7 +23,7 @@ const code = ref('')
       <VuwiLine />
       <div class="p-4 vuwi-dark text-sm text-teal-400">
         <code>
-          &lt;CodeInput v-model="code" pattern="XXX-XXX" class="border-2 vuwi-border vuwi-shade" />
+          &lt;VuwiCodeInput v-model="code" pattern="XXX-XXX" class="border-2 vuwi-border vuwi-shade" />
         </code>
       </div>
     </div>

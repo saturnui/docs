@@ -62,7 +62,6 @@
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import DatePicker from '~/modules/vuwi/components/DatePicker/VuwiDatePicker.vue'
 
 const customDateFormatter = {
   date: 'YYYY-MM-DD',

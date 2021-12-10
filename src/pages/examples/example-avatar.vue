@@ -37,7 +37,7 @@ const photo
       <VuwiLine />
       <div class="p-4 vuwi-dark text-sm text-teal-400">
         <code>
-          &lt;Avatar name="Alex Lifeson" photo="/placeholder.jpg" class="vuwi-avatar-xl" />
+          &lt;VuwiAvatar name="Alex Lifeson" photo="/placeholder.jpg" class="vuwi-avatar-xl" />
         </code>
       </div>
     </div>
