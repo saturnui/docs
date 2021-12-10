@@ -101,7 +101,7 @@ const menuItems: MenuItem[] = [
 
 <template>
   <div v-for="(item, i) in menuItems" :key="i">
-    <Collapse v-if="item.collapsible" v-model="item.open" group="menu">
+    <VuwiCollapse v-if="item.collapsible" v-model="item.open" group="menu">
       <template #header="{ open }">
         <div class="p-3 flex items-center gap-4 menu-link">
           <Component :is="item.icon" v-if="item.icon" />
@@ -120,7 +120,7 @@ const menuItems: MenuItem[] = [
           {{ link.title }}
         </router-link>
       </div>
-    </Collapse>
+    </VuwiCollapse>
     <router-link
       v-else-if="item.to"
       :to="item.to"
@@ -147,7 +147,7 @@ const menuItems: MenuItem[] = [
   </div>
 
   <div class="flex-grow" />
-  <Line class="lg:hidden" />
+  <VuwiLine class="lg:hidden" />
   <div class="flex items-center px-3 py-2 lg:hidden">
     <div
       class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"

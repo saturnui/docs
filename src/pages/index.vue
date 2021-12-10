@@ -74,9 +74,9 @@ const features = [
   </div>
 
   <teleport to="body">
-    <Overlay v-model="showDialog" :modal="true" class="relative z-1">
+    <VuwiOverlay v-model="showDialog" :modal="true" class="relative z-1">
       <!-- Use Dialog Component -->
-      <Dialog class="w-full max-w-xl" @close="showDialog = false">
+      <VuwiDialog class="w-full max-w-xl" @close="showDialog = false">
         <template #title>
           <span class="pl-3 font-bold">Dialog example</span>
         </template>
@@ -92,7 +92,7 @@ const features = [
             </button>
           </div>
         </template>
-      </Dialog>
+      </VuwiDialog>
       <!-- Or create your own -->
       <!-- <div class="vuwi-card vuwi-dialog w-full max-w-xl">
         <div class="flex items-center justify-between p-2 pl-4">
@@ -104,7 +104,7 @@ const features = [
             <tabler-x class="vuwi-dialog-close-icon h-6 w-6" />
           </button>
         </div>
-        <Line />
+        <VuwiLine />
         <div class="p-4">This is an example of a modal dialog.</div>
         <div class="vuwi-row justify-end p-2">
           <button
@@ -115,6 +115,6 @@ const features = [
           </button>
         </div>
       </div> -->
-    </Overlay>
+    </VuwiOverlay>
   </teleport>
 </template>

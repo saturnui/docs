@@ -26,18 +26,18 @@ onAddMessage(() => {
 
 <template>
   <main class="vuwi-main flex flex-col">
-    <AppBar class="vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
-    <div class="vuwi-container vuwi-text navbar">
+    <AppBar class="fixed top-0 vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
+    <div class="vuwi-container vuwi-text navbar pt-14">
       <router-view />
     </div>
     <!-- :: Navigation :: -->
-    <Drawer class="flex flex-col vuwi-light-dark border-r dark:border-none overflow-y-auto overflow-x-hidden pt-14">
+    <VuwiDrawer class="flex flex-col vuwi-light-dark border-r dark:border-none overflow-y-auto overflow-x-hidden pt-14">
       <Navigation />
-    </Drawer>
+    </VuwiDrawer>
   </main>
 
   <!-- :: Toast :: -->
-  <Toast
+  <VuwiToast
     v-model="showToast"
     class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar"
   >
@@ -78,5 +78,5 @@ onAddMessage(() => {
         </div>
       </div>
     </template>
-  </Toast>
+  </VuwiToast>
 </template>

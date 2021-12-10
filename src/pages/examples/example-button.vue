@@ -1,13 +1,13 @@
 <template>
-  <div class="p-8 space-y-8">
-    <div class="vuwi-window filter drop-shadow-lg relative">
+  <div class="vuwi-content sm:p-8 space-y-8">
+    <div class="vuwi-window filter sm:drop-shadow-lg relative">
       <span
         class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
       >Button</span>
-      <Line />
+      <VuwiLine />
       <div class="space-y-4">
         <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Default</div>
-        <div class="vuwi-content flex flex-wrap items-center gap-4">
+        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button class="vuwi-btn vuwi-btn-xs">Extra Small</button>
           <button class="vuwi-btn vuwi-btn-sm">Small</button>
           <button class="vuwi-btn">Normal</button>
@@ -17,7 +17,7 @@
 
         <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Solid</div>
 
-        <div class="vuwi-content flex flex-wrap items-center gap-4">
+        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button class="vuwi-btn vuwi-btn-xs vuwi-btn-primary">Extra Small</button>
           <button class="vuwi-btn vuwi-btn-sm vuwi-btn-primary">Small</button>
           <button class="vuwi-btn vuwi-btn-primary">Normal</button>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Outline</div>
-        <div class="vuwi-content flex flex-wrap items-center gap-4">
+        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button class="vuwi-btn vuwi-btn-xs vuwi-btn-outline">Extra Small</button>
           <button class="vuwi-btn vuwi-btn-sm vuwi-btn-outline vuwi-btn-primary">Small</button>
           <button class="vuwi-btn vuwi-btn-outline">Normal</button>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Pill</div>
-        <div class="vuwi-content flex flex-wrap items-center gap-4">
+        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
           <button
             class="vuwi-btn vuwi-btn-xs vuwi-btn-outline vuwi-btn-pill vuwi-btn-primary"
           >Extra Small</button>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="font-bold text-sm bg-gray-100 dark:bg-gray-700 px-4 py-2">Icon</div>
-        <div class="vuwi-content flex flex-wrap items-center gap-4 pb-6">
+        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4 pb-6">
           <button class="vuwi-btn vuwi-btn-xs vuwi-btn-icon vuwi-btn-primary">
             <tabler-box class="text-[0.5rem]" />
           </button>
@@ -95,7 +95,7 @@
       <span
         class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
       >Code Snippet</span>
-      <Line />
+      <VuwiLine />
       <div class="p-4 vuwi-dark text-sm text-teal-400">
         <code>&lt;button class="vuwi-btn">Normal&lt;/button></code>
       </div>

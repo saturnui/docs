@@ -1,11 +1,11 @@
 <template>
-  <div class="p-4">
+  <div class="vuwi-content sm:p-4">
     <div>Date Picker Examples:</div>
     <div class="vuwi-card p-2 my-2 rounded-md">
       <div class="m-1">
         Single Date
       </div>
-      <DatePicker
+      <VuwiDatePicker
         v-model="singleDateValue"
         :as-single="true"
       />
@@ -17,7 +17,7 @@
       <div class="m-1">
         Date Range
       </div>
-      <DatePicker
+      <VuwiDatePicker
         v-model="rangeDateValue"
       />
       <div class="p-2">
@@ -34,7 +34,7 @@
       <div class="p-2">
         The date is for the returned and displayed values and the month is for the month picker in the actual picker
       </div>
-      <DatePicker
+      <VuwiDatePicker
         v-model="customDateValue"
         :formatter="customDateFormatter"
       />
@@ -49,7 +49,7 @@
       <div class="p-2">
         :disable-date: (date: any) => date > new Date()
       </div>
-      <DatePicker
+      <VuwiDatePicker
         v-model="disableDateValue"
         :disable-date="(date: any) => date > new Date()"
       />
@@ -62,7 +62,7 @@
 
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import DatePicker from '~/modules/vuwi/components/DatePicker/DatePicker.vue'
+import DatePicker from '~/modules/vuwi/components/DatePicker/VuwiDatePicker.vue'
 
 const customDateFormatter = {
   date: 'YYYY-MM-DD',

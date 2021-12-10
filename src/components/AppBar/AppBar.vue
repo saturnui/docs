@@ -76,7 +76,7 @@ const signout = async () => {
           "
           @click="openMenu"
         >
-          <Avatar
+          <VuwiAvatar
             v-if="user"
             :name="displayName"
             :photo="photoUrl"
@@ -150,7 +150,7 @@ const signout = async () => {
         </transition>
       </div>
     </div>
-    <Overlay
+    <VuwiOverlay
       v-model="showDrawer"
       class="z-0"
       position="left"
@@ -170,6 +170,6 @@ const signout = async () => {
         </div>
         <Navigation @close="showDrawer = false" />
       </div>
-    </Overlay>
+    </VuwiOverlay>
   </div>
 </template>

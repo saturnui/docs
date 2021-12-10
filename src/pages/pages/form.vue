@@ -1,6 +1,6 @@
 <template>
   <div v-for="i in 3" :key="i">
-    <Line v-if="i > 1" />
+    <VuwiLine v-if="i > 1" />
 
     <FormSection
       title="Section Title"

@@ -54,7 +54,7 @@ export default defineComponent({
         <img :src="icon" class="actioncard-image" />
       </div>
     </div>
-    <Line />
+    <VuwiLine />
     <div
       v-if="action"
       class="
