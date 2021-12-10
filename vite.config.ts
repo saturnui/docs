@@ -14,6 +14,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -78,6 +79,9 @@ export default defineConfig({
         IconsResolver({
           componentPrefix: '',
           // enabledCollections: ['carbon']
+          customCollections: [
+            'vuwi',
+          ],
         }),
       ],
 
@@ -87,6 +91,12 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-icons
     Icons({
       autoInstall: true,
+      customCollections: {
+        // key as the collection name
+        vuwi: FileSystemIconLoader(
+          './src/assets/icons',
+        ),
+      },
     }),
 
     // https://github.com/antfu/vite-plugin-windicss

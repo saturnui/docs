@@ -141,7 +141,9 @@ const menuItems: MenuItem[] = [
           :key="n"
           :to="link.to"
           class="menu-link"
-        >{{ link.title }}</router-link>
+        >
+          {{ link.title }}
+        </router-link>
       </div>
     </div>
   </div>

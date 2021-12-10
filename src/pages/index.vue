@@ -43,17 +43,19 @@ const features = [
               overflow-hidden
               bg-blue-500
               text-white
-            " />
+            "
+          />
         </router-link>
         <div class="text-2xl">
           <span>Welcome, {{ displayName }}</span>
         </div>
       </div>
       <div v-else class="flex flex-col items-center text-2xl gap-4">
-        <VuwiAvatar
+        <vuwi-logo class="h-36 w-36" />
+        <!-- <VuwiAvatar
           name="Stranger"
           photo="https://cdn4.iconfinder.com/data/icons/diversity-v2-0-volume-02/64/bandit-asian-male-cowboy-1024.png"
-          class="vuwi-avatar-xl rounded-full overflow-hidden text-white" />
+          class="vuwi-avatar-xl rounded-full overflow-hidden text-white" /> -->
         <span>Howdy, stranger!</span>
       </div>
       <div class="text-center text-sm vuwi-text px-8 pb-4 md:pb-0">
@@ -69,7 +71,8 @@ const features = [
         :desc="feature.desc"
         :action="feature.action"
         :icon="feature.icon"
-        @click="feature.handle"></ActionCard>
+        @click="feature.handle"
+      ></ActionCard>
     </div>
   </div>
 
@@ -87,7 +90,8 @@ const features = [
           <div class="vuwi-row justify-end p-2">
             <button
               class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-              @click="showDialog = false">
+              @click="showDialog = false"
+            >
               Submit
             </button>
           </div>
