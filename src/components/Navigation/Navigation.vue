@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import IconTailwind from './IconTailwind.svg'
+import IconVue from './IconVue.svg'
 import IconLock from '~icons/tabler/lock'
 import IconFiles from '~icons/tabler/files'
 import IconFileText from '~icons/tabler/fileText'
@@ -8,6 +10,7 @@ import { isDark, toggleDark, useSdk } from '~/composables'
 type MenuLink = {
   title: string
   to?: string
+  icon?: string
 }
 
 type MenuItem = {
@@ -56,35 +59,35 @@ const menuItems: MenuItem[] = [
     title: 'Components',
     icon: IconBox,
     links: [
-      { title: 'Alert', to: '/examples/example-alert' },
-      { title: 'Avatar', to: '/examples/example-avatar' },
-      { title: 'Button', to: '/examples/example-button' },
-      { title: 'Card', to: '/examples/example-card' },
-      { title: 'CodeInput', to: '/examples/example-codeinput' },
-      { title: 'Collapse', to: '/examples/example-collapse' },
-      { title: 'Color', to: '/examples/example-color' },
-      { title: 'DatePicker', to: '/examples/example-datepicker' },
-      { title: 'Decoration', to: '/examples/example-decoration' },
-      { title: 'Dialog', to: '/examples/example-dialog' },
-      { title: 'Drawer', to: '/examples/example-drawer' },
-      { title: 'Dropdown', to: '/examples/example-dropdown' },
-      { title: 'Dropzone', to: '/examples/example-dropzone' },
-      { title: 'FilePreview', to: '/examples/example-filepreview' },
-      { title: 'FileSelector', to: '/examples/example-fileselector' },
-      { title: 'FormSection', to: '/examples/example-formsection' },
-      { title: 'Header', to: '/examples/example-header' },
-      { title: 'Layout', to: '/examples/example-layout' },
-      { title: 'Line', to: '/examples/example-line' },
-      { title: 'Overlay', to: '/examples/example-overlay' },
-      { title: 'Pagination', to: '/examples/example-pagination' },
-      { title: 'Select', to: '/examples/example-select' },
-      { title: 'Spinner', to: '/examples/example-spinner' },
-      { title: 'Switch', to: '/examples/example-switch' },
-      { title: 'Textarea', to: '/examples/example-textarea' },
-      { title: 'Textfield', to: '/examples/example-textfield' },
-      { title: 'Toast', to: '/examples/example-toast' },
-      { title: 'Tooltip', to: '/examples/example-tooltip' },
-      { title: 'Window', to: '/examples/example-window' },
+      { title: 'Alert', to: '/examples/example-alert', icon: IconTailwind },
+      { title: 'Avatar', to: '/examples/example-avatar', icon: IconVue },
+      { title: 'Button', to: '/examples/example-button', icon: IconTailwind },
+      { title: 'Card', to: '/examples/example-card', icon: IconTailwind },
+      { title: 'CodeInput', to: '/examples/example-codeinput', icon: IconVue },
+      { title: 'Collapse', to: '/examples/example-collapse', icon: IconVue },
+      { title: 'Color', to: '/examples/example-color', icon: IconTailwind },
+      { title: 'DatePicker', to: '/examples/example-datepicker', icon: IconVue },
+      { title: 'Decoration', to: '/examples/example-decoration', icon: IconTailwind },
+      { title: 'Dialog', to: '/examples/example-dialog', icon: IconVue },
+      { title: 'Drawer', to: '/examples/example-drawer', icon: IconVue },
+      { title: 'Dropdown', to: '/examples/example-dropdown', icon: IconVue },
+      { title: 'Dropzone', to: '/examples/example-dropzone', icon: IconVue },
+      { title: 'FilePreview', to: '/examples/example-filepreview', icon: IconVue },
+      { title: 'FileSelector', to: '/examples/example-fileselector', icon: IconVue },
+      { title: 'FormSection', to: '/examples/example-formsection', icon: IconVue },
+      { title: 'Header', to: '/examples/example-header', icon: IconTailwind },
+      { title: 'Layout', to: '/examples/example-layout', icon: IconTailwind },
+      { title: 'Line', to: '/examples/example-line', icon: IconVue },
+      { title: 'Overlay', to: '/examples/example-overlay', icon: IconVue },
+      { title: 'Pagination', to: '/examples/example-pagination', icon: IconVue },
+      { title: 'Select', to: '/examples/example-select', icon: IconVue },
+      { title: 'Spinner', to: '/examples/example-spinner', icon: IconTailwind },
+      { title: 'Switch', to: '/examples/example-switch', icon: IconVue },
+      { title: 'Textarea', to: '/examples/example-textarea', icon: IconVue },
+      { title: 'Textfield', to: '/examples/example-textfield', icon: IconVue },
+      { title: 'Toast', to: '/examples/example-toast', icon: IconVue },
+      { title: 'Tooltip', to: '/examples/example-tooltip', icon: IconVue },
+      { title: 'Window', to: '/examples/example-window', icon: IconTailwind },
     ],
   },
   // {
@@ -98,11 +101,7 @@ const menuItems: MenuItem[] = [
 
 <template>
   <div v-for="(item, i) in menuItems" :key="i">
-    <Collapse
-      v-if="item.collapsible"
-      v-model="item.open"
-      group="menu"
-    >
+    <Collapse v-if="item.collapsible" v-model="item.open" group="menu">
       <template #header="{ open }">
         <div class="p-3 flex items-center gap-4 menu-link">
           <Component :is="item.icon" v-if="item.icon" />
@@ -117,6 +116,7 @@ const menuItems: MenuItem[] = [
 
       <div class="overflow-y-auto">
         <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="menu-link">
+          <img :src="link.icon" width="18" />
           {{ link.title }}
         </router-link>
       </div>
@@ -136,9 +136,12 @@ const menuItems: MenuItem[] = [
         {{ item.title }}
       </div>
       <div class="flex flex-col">
-        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="menu-link">
-          {{ link.title }}
-        </router-link>
+        <router-link
+          v-for="(link, n) in item.links"
+          :key="n"
+          :to="link.to"
+          class="menu-link"
+        >{{ link.title }}</router-link>
       </div>
     </div>
   </div>

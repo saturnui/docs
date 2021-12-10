@@ -37,6 +37,7 @@ declare module 'vue' {
     TablerCheck: typeof import('~icons/tabler/check')['default']
     TablerChevronLeft: typeof import('~icons/tabler/chevron-left')['default']
     TablerChevronRight: typeof import('~icons/tabler/chevron-right')['default']
+    TablerChevronUp: typeof import('~icons/tabler/chevron-up')['default']
     TablerEye: typeof import('~icons/tabler/eye')['default']
     TablerEyeOff: typeof import('~icons/tabler/eye-off')['default']
     TablerLogout: typeof import('~icons/tabler/logout')['default']

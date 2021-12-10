@@ -4,29 +4,41 @@ const photo
 </script>
 
 <template>
-  <div class="p-8">
-    <div class="vuwi-window">
+  <div class="p-8 space-y-6">
+    <div class="vuwi-window filter drop-shadow-lg relative">
+      <span
+        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
+      >Avatar</span>
       <Line />
-      <div class="vuwi-content p-3 space-y-1">
-        <div class="font-bold text-lg bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded">Avatars</div>
-        <div class="flex gap-4 p-4 overflow-x-auto">
-          <Avatar
-            name="Alex Lifeson"
-            :photo="photo"
-            class="vuwi-avatar-sm rounded-full overflow-hidden"
-          />
-          <Avatar name="Rob Taylor" :photo="photo" />
-          <Avatar
-            name="Bryan Adams"
-            :photo="photo"
-            class="vuwi-avatar-lg rounded-full overflow-hidden"
-          />
-          <Avatar name="Rob Taylor" :photo="photo" class="vuwi-avatar-xl" />
-          <Avatar name="Geddy Lee" class="vuwi-avatar-sm bg-primary text-white" />
-          <Avatar name="Steve Vai" class="rounded-full bg-primary text-white" />
-          <Avatar name="Neil Peart" class="vuwi-avatar-lg bg-primary text-white" />
-          <Avatar name="Eddie Van Halen" class="vuwi-avatar-xl rounded-full bg-primary text-white" />
-        </div>
+      <div class="flex flex-wrap gap-4 p-8">
+        <Avatar
+          name="Alex Lifeson"
+          :photo="photo"
+          class="vuwi-avatar-sm rounded-full overflow-hidden"
+        />
+        <Avatar name="Rob Taylor" :photo="photo" />
+        <Avatar
+          name="Bryan Adams"
+          :photo="photo"
+          class="vuwi-avatar-lg rounded-full overflow-hidden"
+        />
+        <Avatar name="Alex Lifeson" :photo="photo" class="vuwi-avatar-xl" />
+        <Avatar name="Geddy Lee" class="vuwi-avatar-sm bg-primary text-white" />
+        <Avatar name="Steve Vai" class="rounded-full bg-primary text-white" />
+        <Avatar name="Neil Peart" class="vuwi-avatar-lg bg-primary text-white" />
+        <Avatar name="Eddie Van Halen" class="vuwi-avatar-xl rounded-full bg-primary text-white" />
+      </div>
+    </div>
+    <!-- Code Snippet -->
+    <div class="vuwi-window filter drop-shadow-lg relative">
+      <span
+        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
+      >Code Snippet</span>
+      <Line />
+      <div class="p-4 vuwi-dark text-sm text-teal-400">
+        <code>
+          &lt;Avatar name="Alex Lifeson" photo="/placeholder.jpg" class="vuwi-avatar-xl" />
+        </code>
       </div>
     </div>
   </div>
