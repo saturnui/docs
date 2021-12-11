@@ -37,14 +37,14 @@ const passwordType = computed(() => {
       <span>Create an account</span>
     </div>
     <vuwi-form class="space-y-4" @submit="submit">
-      <Textfield
+      <VuwiTextfield
         v-model="email"
         name="email"
         label="Email"
         :rules="emailRule"
         class="vuwi-border vuwi-shade"
       />
-      <Textfield
+      <VuwiTextfield
         v-model="password"
         name="password"
         label="Password"
@@ -54,7 +54,7 @@ const passwordType = computed(() => {
         class="vuwi-border vuwi-shade"
       >
         <ToggleVisible v-model="showPassword" />
-      </Textfield>
+      </VuwiTextfield>
       <div class="flex items-center justify-end">
         <button
           v-if="busy"

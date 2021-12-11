@@ -51,7 +51,7 @@ const features = [
         </div>
       </div>
       <div v-else class="flex flex-col items-center text-2xl gap-4">
-        <vuwi-logo class="h-36 w-36" />
+        <assets-logo class="h-36 w-36" />
         <!-- <VuwiAvatar
           name="Stranger"
           photo="https://cdn4.iconfinder.com/data/icons/diversity-v2-0-volume-02/64/bandit-asian-male-cowboy-1024.png"

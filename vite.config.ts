@@ -80,7 +80,7 @@ export default defineConfig({
           componentPrefix: '',
           // enabledCollections: ['carbon']
           customCollections: [
-            'vuwi',
+            'assets',
           ],
         }),
       ],
@@ -93,8 +93,8 @@ export default defineConfig({
       autoInstall: true,
       customCollections: {
         // key as the collection name
-        vuwi: FileSystemIconLoader(
-          './src/assets/icons',
+        assets: FileSystemIconLoader(
+          './src/assets',
         ),
       },
     }),
