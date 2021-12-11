@@ -25,13 +25,15 @@ onAddMessage(() => {
 </script>
 
 <template>
-  <main class="vuwi-main flex flex-col">
-    <AppBar class="fixed top-0 vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
-    <div class="vuwi-container vuwi-text navbar pt-14">
+  <AppBar class="fixed top-0 vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
+  <main class="vuwi-main app-has-appbar">
+    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0  h-full vuwi-light-dark border-r dark:border-none">
+      <Navigation />
+    </VuwiDrawer>
+    <div class="vuwi-drawer-left vuwi-drawer-right vuwi-text">
       <router-view />
     </div>
-    <!-- :: Navigation :: -->
-    <VuwiDrawer class="flex flex-col vuwi-light-dark border-r dark:border-none overflow-y-auto overflow-x-hidden pt-14">
+    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0 right-0 h-full vuwi-light-dark border-l dark:border-none">
       <Navigation />
     </VuwiDrawer>
   </main>

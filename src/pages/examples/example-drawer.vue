@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const showDrawer = ref(false)
+const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.'
 </script>
 
 <template>
@@ -10,8 +11,8 @@ const showDrawer = ref(false)
         <div class="flex-grow"></div>
       </div>
       <VuwiLine />
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2 mb-2">Default</div>
-      <div class="relative h-64 overflow-hidden">
+      <div class="vuwi-highlight font-bold text-sm px-4 py-2 my-2">Default</div>
+      <div class="relative flex h-64 overflow-hidden">
         <VuwiDrawer v-model="showDrawer" class="vuwi-highlight">
           <div class="m-2 space-y-2">
             <div
@@ -23,11 +24,15 @@ const showDrawer = ref(false)
             </div>
           </div>
         </VuwiDrawer>
+        <div class="p-4">{{ lipsum }}</div>
       </div>
 
-      <div class="relative h-64 overflow-hidden my-2">
-        <div class="vuwi-highlight font-bold text-sm px-4 py-2 mb-2">Responsive</div>
-        <VuwiDrawer v-model="showDrawer" class="responsive static vuwi-highlight">
+      <div class="vuwi-highlight font-bold text-sm px-4 py-2 my-2">Responsive</div>
+      <div class="relative flex h-64 overflow-hidden my-2">
+        <VuwiDrawer
+          v-model="showDrawer"
+          class="vuwi-drawer-responsive static vuwi-highlight"
+        >
           <div class="hidden xl:block m-2 space-y-2">
             <div
               v-for="i in 3"
@@ -47,11 +52,15 @@ const showDrawer = ref(false)
             </button>
           </div>
         </VuwiDrawer>
+        <div class="p-4">{{ lipsum }}</div>
       </div>
 
       <div class="vuwi-highlight font-bold text-sm px-4 py-2 my-2">Mini</div>
-      <div class="relative h-64 overflow-hidden">
-        <VuwiDrawer v-model="showDrawer" class="mini static vuwi-highlight">
+      <div class="relative flex h-64 overflow-hidden">
+        <VuwiDrawer
+          v-model="showDrawer"
+          class="vuwi-drawer-mini static vuwi-highlight"
+        >
           <div class="flex flex-col items-center py-2 gap-2">
             <button
               v-for="i in 3"
@@ -62,6 +71,7 @@ const showDrawer = ref(false)
             </button>
           </div>
         </VuwiDrawer>
+        <div class="p-4">{{ lipsum }}</div>
       </div>
     </div>
   </div>
