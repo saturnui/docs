@@ -52,60 +52,37 @@ const signout = async () => {
 </script>
 
 <template>
-  <div class="app-appbar vuwi-light-dark">
+  <div class="app-appbar">
     <div class="flex w-full items-center gap-4">
-      <button
-        class="lg:hidden vuwi-btn vuwi-btn-icon"
-        @click="showDrawer = !showDrawer"
-      >
+      <button class="lg:hidden vuwi-btn vuwi-btn-icon" @click="showDrawer = !showDrawer">
         <tabler-menu-2 />
       </button>
-      <div class="flex lg:pl-5 cursor-pointer">
-        <div class="vuwi-text" @click="router.push('/')">
-          <span>Logo here</span>
+      <!-- Logo -->
+      <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
+        <assets-logo-vuwi class="w-8 h-8" />
+        <div class="font-bold">
+          <span>Vuwi</span>
         </div>
       </div>
       <div class="flex-grow"></div>
       <ToggleDarkMode class="hidden lg:flex" />
       <div v-if="user" class="hidden lg:block relative top-0 cursor-pointer">
         <button
-          class="
-            vuwi-btn vuwi-btn-icon
-            bg-white bg-opacity-10
-            hover:bg-white hover:bg-opacity-10
-          "
+          class="vuwi-btn vuwi-btn-icon bg-white bg-opacity-10 hover:bg-white hover:bg-opacity-10"
           @click="openMenu"
         >
           <VuwiAvatar
             v-if="user"
             :name="displayName"
             :photo="photoUrl"
-            class="
-              vuwi-avatar-sm
-              bg-primary
-              text-white
-              rounded-full
-              overflow-hidden
-            "
+            class="vuwi-avatar-sm bg-primary text-white rounded-full overflow-hidden"
           />
         </button>
         <transition name="slide-down">
           <div
             v-if="showMenu"
             ref="menu"
-            class="
-              grid
-              origin-top-right
-              absolute
-              right-0
-              mt-2
-              rounded-md
-              shadow-lg
-              py-1
-              vuwi-light-dark
-              ring-1 ring-black ring-opacity-5
-              focus:outline-none
-            "
+            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 vuwi-light-dark ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
@@ -128,14 +105,8 @@ const signout = async () => {
             >
               <carbon-moon v-if="isDark" />
               <carbon-sun v-else />
-              <span
-                v-if="isDark"
-                class="whitespace-nowrap pr-2"
-              >Appearance: Dark</span>
-              <span
-                v-else
-                class="whitespace-nowrap pr-2"
-              >Appearance: Light</span>
+              <span v-if="isDark" class="whitespace-nowrap pr-2">Appearance: Dark</span>
+              <span v-else class="whitespace-nowrap pr-2">Appearance: Light</span>
             </div>
             <div
               class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
@@ -150,22 +121,17 @@ const signout = async () => {
         </transition>
       </div>
     </div>
-    <VuwiOverlay
-      v-model="showDrawer"
-      class="z-0"
-      position="left"
-      @swipe:end="handleSwipeEnd"
-    >
+    <VuwiOverlay v-model="showDrawer" class="z-0" position="left" @swipe:end="handleSwipeEnd">
       <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
         <div class="sticky top-0 z-10 w-full p-2 flex items-center h-14 gap-4 vuwi-light-dark">
-          <button
-            class="vuwi-btn vuwi-btn-icon"
-            @click="showDrawer = !showDrawer"
-          >
+          <button class="vuwi-btn vuwi-btn-icon" @click="showDrawer = !showDrawer">
             <tabler-menu-2 />
           </button>
-          <div class="flex">
-            <span class="font-bold">Logo here</span>
+          <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
+            <assets-logo-vuwi class="w-8 h-8" />
+            <div class="vuwi-text font-bold">
+              <span>Vuwi</span>
+            </div>
           </div>
         </div>
         <Navigation @close="showDrawer = false" />

@@ -4,6 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.10.0
   '@iconify-json/carbon': ^1.0.8
   '@iconify-json/fa': ^1.0.1
+  '@iconify-json/mdi': ^1.0.1
   '@iconify-json/tabler': ^1.0.2
   '@intlify/vite-plugin-vue-i18n': ^3.0.0
   '@popperjs/core': ^2.10.2
@@ -23,6 +24,7 @@ specifiers:
   email-validator: ^2.0.4
   eslint: ^8.1.0
   eslint-plugin-cypress: ^2.12.1
+  highlight.js: ^11.3.1
   https-localhost: ^4.7.0
   lodash: ^4.17.21
   markdown-it-link-attributes: ^3.0.0
@@ -59,6 +61,7 @@ dependencies:
   '@vueuse/head': 0.6.0_vue@3.2.20
   dayjs: 1.10.7
   email-validator: 2.0.4
+  highlight.js: 11.3.1
   lodash: 4.17.21
   maska: 1.4.7
   mitt: 3.0.0
@@ -76,6 +79,7 @@ devDependencies:
   '@antfu/eslint-config': 0.10.0_eslint@8.1.0+typescript@4.4.4
   '@iconify-json/carbon': 1.0.8
   '@iconify-json/fa': 1.0.1
+  '@iconify-json/mdi': 1.0.12
   '@iconify-json/tabler': 1.0.2
   '@intlify/vite-plugin-vue-i18n': 3.0.0_vue-i18n@9.1.9
   '@types/lodash': 4.14.177
@@ -1427,6 +1431,12 @@ packages:
 
   /@iconify-json/fa/1.0.1:
     resolution: {integrity: sha512-GKi6TqDX/kA4K3A4ULm7Jg2t01Sg1WQ/pRfkJOgbCvQ96Ib+2GNA50ntd6MSdhYhUddy/GPEIMvsVgWTO7vR0w==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
+  /@iconify-json/mdi/1.0.12:
+    resolution: {integrity: sha512-smYQpxDqSCUdySFSYZpH0BAEVbgFnU4IE/Hb36zavseOl3zFlKDvGOEFPC7djkEabrIWi9KDAUdbtIREcgVE8A==}
     dependencies:
       '@iconify/types': 1.0.10
     dev: true
@@ -4215,6 +4225,11 @@ packages:
   /highlight.js/10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
     dev: true
+
+  /highlight.js/11.3.1:
+    resolution: {integrity: sha512-PUhCRnPjLtiLHZAQ5A/Dt5F8cWZeMyj9KRsACsWT+OD6OP0x6dp5OmT5jdx0JgEyPxPZZIPQpRN2TciUT7occw==}
+    engines: {node: '>=12.0.0'}
+    dev: false
 
   /hosted-git-info/2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}

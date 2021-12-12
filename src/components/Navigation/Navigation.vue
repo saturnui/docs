@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import IconTailwind from './IconTailwind.svg'
-import IconVue from './IconVue.svg'
-import IconLock from '~icons/tabler/lock'
+import LogoTailwind from '~/assets/logo-tailwind.svg'
+import LogoVue from '~/assets/logo-vue.svg'
 import IconFiles from '~icons/tabler/files'
-import IconFileText from '~icons/tabler/fileText'
+import IconNotebook from '~icons/tabler/notebook'
 import IconBox from '~icons/tabler/box'
+import IconComposable from '~icons/tabler/math-function'
+import IconExample from '~icons/tabler/photo'
 import { isDark, toggleDark, useSdk } from '~/composables'
 
 type MenuLink = {
@@ -47,64 +48,77 @@ const signout = async () => {
 }
 
 const menuItems: MenuItem[] = [
-  { title: 'Form', to: '/pages/form', icon: IconFileText },
-  { title: 'Protected', to: '/pages/protected', icon: IconLock },
+  // { title: 'Form', to: '/pages/form', icon: IconFileText },
+  // { title: 'Protected', to: '/pages/protected', icon: IconLock },
   {
-    title: 'Pages',
-    icon: IconFiles,
-    links: [{ title: 'Form', to: '/pages/form' }, { title: 'Protected', to: '/pages/protected' }],
+    collapsible: true,
+    title: 'Introduction',
+    icon: IconNotebook,
+    links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
   },
   {
     collapsible: true,
-    title: 'Components',
+    title: 'Getting Started',
+    icon: IconFiles,
+    links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
+  },
+  {
+    collapsible: true,
+    title: 'UI',
     icon: IconBox,
     links: [
-      { title: 'Alert', to: '/examples/example-alert', icon: IconTailwind },
-      { title: 'Avatar', to: '/examples/example-avatar', icon: IconVue },
-      { title: 'Button', to: '/examples/example-button', icon: IconTailwind },
-      { title: 'Card', to: '/examples/example-card', icon: IconTailwind },
-      { title: 'CodeInput', to: '/examples/example-codeinput', icon: IconVue },
-      { title: 'Collapse', to: '/examples/example-collapse', icon: IconVue },
-      { title: 'Color', to: '/examples/example-color', icon: IconTailwind },
-      { title: 'DatePicker', to: '/examples/example-datepicker', icon: IconVue },
-      { title: 'Decoration', to: '/examples/example-decoration', icon: IconTailwind },
-      { title: 'Dialog', to: '/examples/example-dialog', icon: IconVue },
-      { title: 'Drawer', to: '/examples/example-drawer', icon: IconVue },
-      { title: 'Dropdown', to: '/examples/example-dropdown', icon: IconVue },
-      { title: 'Dropzone', to: '/examples/example-dropzone', icon: IconVue },
-      { title: 'FilePreview', to: '/examples/example-filepreview', icon: IconVue },
-      { title: 'FileSelector', to: '/examples/example-fileselector', icon: IconVue },
-      { title: 'FormSection', to: '/examples/example-formsection', icon: IconVue },
-      { title: 'Header', to: '/examples/example-header', icon: IconTailwind },
-      { title: 'Layout', to: '/examples/example-layout', icon: IconTailwind },
-      { title: 'Line', to: '/examples/example-line', icon: IconVue },
-      { title: 'Overlay', to: '/examples/example-overlay', icon: IconVue },
-      { title: 'Pagination', to: '/examples/example-pagination', icon: IconVue },
-      { title: 'Select', to: '/examples/example-select', icon: IconVue },
-      { title: 'Spinner', to: '/examples/example-spinner', icon: IconTailwind },
-      { title: 'Switch', to: '/examples/example-switch', icon: IconVue },
-      { title: 'Textarea', to: '/examples/example-textarea', icon: IconVue },
-      { title: 'Textfield', to: '/examples/example-textfield', icon: IconVue },
-      { title: 'Toast', to: '/examples/example-toast', icon: IconVue },
-      { title: 'Tooltip', to: '/examples/example-tooltip', icon: IconVue },
-      { title: 'Window', to: '/examples/example-window', icon: IconTailwind },
+      { title: 'Alert', to: '/ui/alert', icon: LogoTailwind },
+      { title: 'Avatar', to: '/ui/avatar', icon: LogoVue },
+      { title: 'Button', to: '/ui/button', icon: LogoTailwind },
+      { title: 'Card', to: '/ui/card', icon: LogoTailwind },
+      { title: 'CodeInput', to: '/ui/codeinput', icon: LogoVue },
+      { title: 'Collapse', to: '/ui/collapse', icon: LogoVue },
+      { title: 'Color', to: '/ui/color', icon: LogoTailwind },
+      { title: 'DatePicker', to: '/ui/datepicker', icon: LogoVue },
+      { title: 'Decoration', to: '/ui/decoration', icon: LogoTailwind },
+      { title: 'Dialog', to: '/ui/dialog', icon: LogoVue },
+      { title: 'Drawer', to: '/ui/drawer', icon: LogoVue },
+      { title: 'Dropdown', to: '/ui/dropdown', icon: LogoVue },
+      { title: 'Dropzone', to: '/ui/dropzone', icon: LogoVue },
+      { title: 'FilePreview', to: '/ui/filepreview', icon: LogoVue },
+      { title: 'FileSelector', to: '/ui/fileselector', icon: LogoVue },
+      { title: 'FormSection', to: '/ui/formsection', icon: LogoVue },
+      { title: 'Header', to: '/ui/header', icon: LogoTailwind },
+      { title: 'Layout', to: '/ui/layout', icon: LogoTailwind },
+      { title: 'Line', to: '/ui/line', icon: LogoVue },
+      { title: 'Overlay', to: '/ui/overlay', icon: LogoVue },
+      { title: 'Pagination', to: '/ui/pagination', icon: LogoVue },
+      { title: 'Select', to: '/ui/select', icon: LogoVue },
+      { title: 'Spinner', to: '/ui/spinner', icon: LogoTailwind },
+      { title: 'Switch', to: '/ui/switch', icon: LogoVue },
+      { title: 'Textarea', to: '/ui/textarea', icon: LogoVue },
+      { title: 'Textfield', to: '/ui/textfield', icon: LogoVue },
+      { title: 'Toast', to: '/ui/toast', icon: LogoVue },
+      { title: 'Tooltip', to: '/ui/tooltip', icon: LogoVue },
+      { title: 'Window', to: '/ui/window', icon: LogoTailwind },
     ],
   },
-  // {
-  //   collapsible: true,
-  //   title: 'Third Section',
-  //   icon: IconBox,
-  //   links: [{ title: 'Menu #1' }, { title: 'Menu #2' }, { title: 'Menu #3' }],
-  // },
+  {
+    collapsible: true,
+    title: 'Composables',
+    icon: IconComposable,
+    links: [{ title: 'Dark Mode', to: '/examples/protected' }, { title: 'SDK', to: '/examples/protected' }, { title: 'Validators', to: '/examples/protected' }],
+  },
+  {
+    collapsible: true,
+    title: 'Examples',
+    icon: IconExample,
+    links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
+  },
 ]
 </script>
 
 <template>
   <div v-for="(item, i) in menuItems" :key="i">
-    <VuwiCollapse v-if="item.collapsible" v-model="item.open" group="menu">
+    <VuwiCollapse v-if="item.collapsible" v-model="item.open">
       <template #header="{ open }">
-        <div class="p-3 flex items-center gap-4 menu-link">
-          <Component :is="item.icon" v-if="item.icon" />
+        <div class="px-3 py-2 flex items-center gap-2 menu-link">
+          <Component :is="item.icon" v-if="item.icon" class="w-5 h-5" />
           <div v-else class="spacer w-5"></div>
           <span class="font-bold flex-grow">{{ item.title }}</span>
           <tabler-chevron-right
@@ -116,7 +130,7 @@ const menuItems: MenuItem[] = [
 
       <div class="overflow-y-auto">
         <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="menu-link">
-          <img :src="link.icon" width="18" />
+          <img :src="link.icon" width="14" />
           {{ link.title }}
         </router-link>
       </div>

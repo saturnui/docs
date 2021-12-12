@@ -21,7 +21,7 @@ const features = [
     title: 'Show a dialog',
     desc: 'Open a dialog modal window defined in pages/index.vue',
     action: 'Open dialog',
-    icon: 'https://cdn2.iconfinder.com/data/icons/computer-displays/512/Computer_Display_iMac_Monitor_Modal-1024.png',
+    icon: 'https://cdn2.iconfinder.com/data/icons/cms-flat/60/Website-Content-browser-window-site-page-web-1024.png',
     handle: () => {
       showDialog.value = true
     },
@@ -51,15 +51,15 @@ const features = [
         </div>
       </div>
       <div v-else class="flex flex-col items-center text-2xl gap-4">
-        <assets-logo class="h-36 w-36" />
+        <assets-logo-vuwi class="h-36 w-36" />
         <!-- <VuwiAvatar
           name="Stranger"
           photo="https://cdn4.iconfinder.com/data/icons/diversity-v2-0-volume-02/64/bandit-asian-male-cowboy-1024.png"
           class="vuwi-avatar-xl rounded-full overflow-hidden text-white" /> -->
-        <span>Howdy, stranger!</span>
+        <span class="font-bold text-4xl">Vuwi</span>
       </div>
-      <div class="text-center text-sm vuwi-text px-8 pb-4 md:pb-0">
-        Example Dashboard Page
+      <div class="text-center vuwi-text px-8 pb-4 md:pb-0">
+        Vue 3 + Tailwind + Vitesse
       </div>
       <!-- <button @click="signout" class="btn btn-lg btn-primary font-bold w-56 mt-5">Logout</button> -->
     </div>
@@ -122,3 +122,8 @@ const features = [
     </VuwiOverlay>
   </teleport>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: vuwi
+</route>
