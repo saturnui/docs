@@ -80,6 +80,11 @@ const sidenavItems = [
   },
 ]
 
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
 const mounted = ref(false)
 onMounted(() => {
   mounted.value = true
@@ -90,6 +95,24 @@ onMounted(() => {
   <teleport v-if="mounted" to="#sidenav">
     <Sidenav :data="sidenavItems" />
   </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" />
+      </div>
+    </VuwiOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button
+      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      @click="showDrawer = true"
+    >
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
   <div class="vuwi-content p-2 sm:p-8 space-y-6">
     <div class="space-y-4">
       <div class="text-4xl">Alert</div>
@@ -150,7 +173,6 @@ onMounted(() => {
       source="https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/alert.vue"
       :code="alertExample"
     >
-      <!-- <div v-html="alertCode"></div> -->
       <div class="vuwi-alert" role="alert">
         <span class="p-3">{{ text }}</span>
       </div>

@@ -22,6 +22,7 @@ declare module 'vue' {
     Navigation: typeof import('./components/Navigation/Navigation.vue')['default']
     README: typeof import('./components/README.md')['default']
     Sidenav: typeof import('./components/Sidenav/Sidenav.vue')['default']
+    TablerArrowBarToLeft: typeof import('~icons/tabler/arrow-bar-to-left')['default']
     TablerBox: typeof import('~icons/tabler/box')['default']
     TablerCalendar: typeof import('~icons/tabler/calendar')['default']
     TablerCheck: typeof import('~icons/tabler/check')['default']

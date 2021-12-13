@@ -27,7 +27,9 @@ onAddMessage(() => {
 <template>
   <AppBar class="fixed top-0 vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
   <main class="vuwi-main app-has-appbar">
-    <VuwiDrawer class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-light-dark text-dark-50 border-r dark:border-none">
+    <VuwiDrawer
+      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-light-dark text-dark-50 border-r dark:border-none"
+    >
       <Navigation />
     </VuwiDrawer>
     <div class="vuwi-drawer-left vuwi-drawer-right-xl vuwi-text">
@@ -37,18 +39,16 @@ onAddMessage(() => {
       <div id="sidenav"></div>
     </VuwiDrawer>
   </main>
+  <div id="sidemenu" class="absolute z-1"></div>
 
   <!-- :: Toast :: -->
-  <VuwiToast
-    v-model="showToast"
-    class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar"
-  >
+  <VuwiToast v-model="showToast" class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar">
     <div class="flex items-center justify-between">
       <div class="flex justify-center items-center gap-4">
         <tabler-message class="text-5xl" />
-        <div class="flex h-full text-left justify-center border-l border-opacity-20 pl-4">
-          This is a toast message example. It supports multiple lines.
-        </div>
+        <div
+          class="flex h-full text-left justify-center border-l border-opacity-20 pl-4"
+        >This is a toast message example. It supports multiple lines.</div>
       </div>
     </div>
 
@@ -64,15 +64,7 @@ onAddMessage(() => {
             <span>Dismiss</span>
           </button>
           <button
-            class="
-              vuwi-btn
-              rounded
-              vuwi-btn-primary
-              text-xs
-              uppercase
-              font-bold
-              text-white
-            "
+            class="vuwi-btn rounded vuwi-btn-primary text-xs uppercase font-bold text-white"
             @click="showToast = false"
           >
             <span>Ok</span>
