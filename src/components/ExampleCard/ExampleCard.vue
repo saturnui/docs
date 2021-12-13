@@ -12,15 +12,21 @@ const props = defineProps({
     type: String,
     default: '',
   },
-  code: {
-    type: String,
-    default: '',
-  },
 })
+const source = `https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/examples/ui/${props.source}`
 const isDark = ref(false)
 const showCode = ref(false)
+const html = ref('')
 
-const html = hljs.highlight(props.code, { language: 'html' }).value
+onBeforeMount(async () => {
+  const result = await fetch(source)
+  if (result) {
+    const text = await result.text()
+    // Grab contents and remove indent
+    const rawHTML = text.replace(/^[^\0]*<template>\n([^\0]*)?<\/template>/g, '$1').replace(/(\n) {2}/g, '$1').trim()
+    html.value = hljs.highlight(rawHTML, { language: 'html' }).value
+  }
+})
 
 </script>
 
@@ -42,16 +48,14 @@ const html = hljs.highlight(props.code, { language: 'html' }).value
     <VuwiCollapse v-model="showCode">
       <div class="relative max-w-4xl p-4 bg-dark-900 text-purple-400 text-sm">
         <pre><code v-html="html"></code></pre>
-        <button class="vuwi-btn vuwi-btn-icon absolute top-4 right-4 text-light-900">
+        <button class="vuwi-btn vuwi-btn-icon absolute top-2 right-4 text-light-900">
           <tabler-copy class="h-6 w-6" />
         </button>
       </div>
     </VuwiCollapse>
     <VuwiLine v-if="showCode" />
     <div :class="{ dark: isDark, light: !isDark }">
-      <div
-        class="p-4 vuwi-text light:bg-light-100 dark:bg-dark-700"
-      >
+      <div class="p-4 vuwi-text light:bg-light-100 dark:bg-dark-700">
         <slot />
       </div>
     </div>

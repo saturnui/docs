@@ -1,52 +1,10 @@
 <script setup lang="ts">
 import AlertBasicVue from '../examples/ui/alert/basic.vue'
+import AlertTransitionVue from '../examples/ui/alert/transition.vue'
+import AlertExamplesVue from '../examples/ui/alert/examples.vue'
 
 const showAlert = ref(false)
 const text = 'I\'m an alert that informs you of stuff'
-
-const basicExample = `<div class="vuwi-alert bg-purple-200 text-purple-500 text-sm font-medium" role="alert">
-  <span class="p-3">{{ text }}</span>
-</div>
-<div class="vuwi-alert bg-purple-200 text-purple-500 text-sm font-medium" role="alert">
-  <span class="p-3">{{ text }}.</span>
-  <button class="vuwi-btn vuwi-btn-icon mr-2">
-    <tabler-x class="text-xl" />
-  </button>
-</div>`
-
-const transitionExample = `<transition name="vuwi-alert">
-  <div v-if="showAlert" class="vuwi-alert bg-red-700 text-white" role="alert">
-    <span class="p-3">${text}</span>
-    <button class="vuwi-btn vuwi-btn-icon mr-2" @click="showAlert = false">
-      <tabler-x class="text-xl" />
-    </button>
-  </div>
-</transition>`
-
-const alertExample = `<div class="vuwi-alert" role="alert">
-  <span class="p-3">${text}</span>
-</div>
-
-<div class="vuwi-alert vuwi-highlight" role="alert">
-  <span class="p-3">${text}</span>
-</div>
-
-<div class="vuwi-alert bg-primary text-white" role="alert">
-  <span class="p-3">${text}</span>
-</div>
-
-<div class="vuwi-alert bg-yellow-100 text-yellow-800" role="alert">
-  <span class="p-3">${text}</span>
-</div>
-
-<div class="vuwi-alert bg-yellow-600 text-white" role="alert">
-  <span class="p-3">${text}</span>
-  <button class="vuwi-btn vuwi-btn-icon mr-2">
-    <tabler-x class="text-xl" />
-  </button>
-</div>`
-
-// const alertCode = alertExample.replace(/(<(pre|script|style|textarea)[^]+?<\/\2)|(^|>)\s+|\s+(?=<|$)/g, '$1$3')
 
 const api = [
   {
@@ -87,9 +45,8 @@ const handleSwipeEnd = (data: { direction: string }) => {
 }
 
 const mounted = ref(false)
-onMounted(() => {
+onMounted(async () => {
   mounted.value = true
-  console.log('location.href:', location.origin + '/examples/ui/alert/basic')
 })
 </script>
 
@@ -124,10 +81,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="text-2xl">Basic</div>
-    <ExampleCard
-      source="https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/alert.vue"
-      :code="basicExample"
-    >
+    <ExampleCard source="alert/basic.vue">
       <AlertBasicVue :text="text" />
     </ExampleCard>
 
@@ -139,10 +93,7 @@ onMounted(() => {
       <assets-logo-vue class="w-4 h-4" />
     </div>
 
-    <ExampleCard
-      source="https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/alert.vue"
-      :code="transitionExample"
-    >
+    <ExampleCard source="alert/transition.vue">
       <div class="flex items-center">
         <div>Shows an alert using Vue transition</div>
         <div class="flex-grow"></div>
@@ -152,43 +103,12 @@ onMounted(() => {
           </template>
         </VuwiSwitch>
       </div>
-      <transition name="vuwi-alert">
-        <div v-if="showAlert" class="vuwi-alert bg-red-700 text-white mt-4" role="alert">
-          <span class="p-3">{{ text }}</span>
-          <button class="vuwi-btn vuwi-btn-icon mr-2" @click="showAlert = false">
-            <tabler-x class="text-xl" />
-          </button>
-        </div>
-      </transition>
+      <AlertTransitionVue :text="text" :show-alert="showAlert" />
     </ExampleCard>
 
     <div class="text-2xl">Examples</div>
-    <ExampleCard
-      source="https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/alert.vue"
-      :code="alertExample"
-    >
-      <div class="vuwi-alert" role="alert">
-        <span class="p-3">{{ text }}</span>
-      </div>
-
-      <div class="vuwi-alert vuwi-highlight" role="alert">
-        <span class="p-3">{{ text }}</span>
-      </div>
-
-      <div class="vuwi-alert bg-primary text-white" role="alert">
-        <span class="p-3">{{ text }}</span>
-      </div>
-
-      <div class="vuwi-alert bg-yellow-100 text-yellow-800" role="alert">
-        <span class="p-3">{{ text }}</span>
-      </div>
-
-      <div class="vuwi-alert bg-yellow-600 text-white" role="alert">
-        <span class="p-3">{{ text }}</span>
-        <button class="vuwi-btn vuwi-btn-icon mr-2">
-          <tabler-x class="text-xl" />
-        </button>
-      </div>
+    <ExampleCard source="alert/examples.vue">
+      <AlertExamplesVue :text="text" />
     </ExampleCard>
   </div>
 </template>
