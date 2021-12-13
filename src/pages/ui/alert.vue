@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import ApiCard from '~/components/ApiCard/ApiCard.vue'
+import AlertBasicVue from '../examples/ui/alert/basic.vue'
+
 const showAlert = ref(false)
 const text = 'I\'m an alert that informs you of stuff'
 
@@ -88,6 +89,7 @@ const handleSwipeEnd = (data: { direction: string }) => {
 const mounted = ref(false)
 onMounted(() => {
   mounted.value = true
+  console.log('location.href:', location.origin + '/examples/ui/alert/basic')
 })
 </script>
 
@@ -126,15 +128,7 @@ onMounted(() => {
       source="https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/alert.vue"
       :code="basicExample"
     >
-      <div class="vuwi-alert bg-purple-200 text-purple-500 text-sm font-medium" role="alert">
-        <span class="p-3">{{ text }}</span>
-      </div>
-      <div class="vuwi-alert bg-purple-200 text-purple-500 text-sm font-medium" role="alert">
-        <span class="p-3">{{ text }}.</span>
-        <button class="vuwi-btn vuwi-btn-icon mr-2">
-          <tabler-x class="text-xl" />
-        </button>
-      </div>
+      <AlertBasicVue :text="text" />
     </ExampleCard>
 
     <div class="text-2xl">API</div>
