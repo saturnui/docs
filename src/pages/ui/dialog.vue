@@ -15,7 +15,7 @@ const showDialog = ref(false)
       </div>
       <teleport to="body">
         <VuwiOverlay v-model="showDialog" :modal="true" class="relative z-1">
-          <VuwiDialog class="w-full max-w-xl vuwi-border" @close="showDialog = false">
+          <VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
             <template #title>
               <span class="pl-3 font-bold">Dialog example</span>
             </template>
@@ -37,7 +37,7 @@ const showDialog = ref(false)
       <div class="p-4 vuwi-dark text-sm text-teal-400">
         <pre><code>&lt;teleport to="body">
   &lt;VuwiOverlay v-model="showDialog" :modal="true" class="relative z-1">
-    &lt;VuwiDialog class="w-full max-w-xl vuwi-border" @close="showDialog = false">
+    &lt;VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
       &lt;template #title>
         &lt;span class="pl-3 font-bold">Dialog example&lt;/span>
       &lt;/template>
@@ -66,7 +66,7 @@ const showDialog = ref(false)
       <VuwiLine />
       <div class="vuwi-highlight font-bold text-sm px-4 py-2">Component</div>
       <div class="p-8 flex justify-center">
-        <VuwiDialog class="w-full max-w-xl vuwi-border" @close="showDialog = false">
+        <VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
           <template #title>
             <span class="pl-3 font-bold">Dialog example</span>
           </template>
@@ -85,7 +85,7 @@ const showDialog = ref(false)
       </div>
       <div class="vuwi-highlight font-bold text-sm px-4 py-2">Code Snippet</div>
       <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <pre><code>&lt;VuwiDialog class="w-full max-w-xl vuwi-border" @close="showDialog = false">
+        <pre><code>&lt;VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
   &lt;template #title>
     &lt;span class="pl-3 font-bold">Dialog example&lt;/span>
   &lt;/template>
@@ -112,7 +112,7 @@ const showDialog = ref(false)
       <VuwiLine />
       <div class="vuwi-highlight font-bold text-sm px-4 py-2">Custom</div>
       <div class="p-8 flex justify-center">
-        <div class="vuwi-dialog vuwi-border w-full max-w-xl">
+        <div class="vuwi-dialog border vuwi-border w-full max-w-xl">
           <div class="flex items-center justify-between p-2 pl-4">
             <span class="font-bold">Dialog example</span>
             <button class="vuwi-btn vuwi-btn-icon rounded-full h-8 w-8" @click="showDialog = false">
@@ -131,7 +131,7 @@ const showDialog = ref(false)
       </div>
       <div class="vuwi-highlight font-bold text-sm px-4 py-2">Code Snippet</div>
       <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <pre><code>&lt;div class="vuwi-dialog vuwi-border w-full max-w-xl">
+        <pre><code>&lt;div class="vuwi-dialog border vuwi-border w-full max-w-xl">
   &lt;div class="flex items-center justify-between p-2 pl-4">
     &lt;span class="font-bold">Dialog example&lt;/span>
     &lt;button class="vuwi-btn vuwi-btn-icon rounded-full h-8 w-8" @click="showDialog = false">

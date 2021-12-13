@@ -10,8 +10,8 @@
         class="p-4"
       >
         <div class="space-y-4">
-          <VuwiTextfield label="Name" required class="vuwi-shade vuwi-border" />
-          <VuwiTextfield label="Email" class="vuwi-shade vuwi-border" :loading="true" />
+          <VuwiTextfield label="Name" required class="vuwi-shade border vuwi-border" />
+          <VuwiTextfield label="Email" class="vuwi-shade border vuwi-border" :loading="true" />
         </div>
       </VuwiFormSection>
     </div>

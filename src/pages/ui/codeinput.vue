@@ -8,7 +8,7 @@ const code = ref('')
       <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex items-center w-full px-4">
         <div class="border-l dark:border-dark-600 px-6 py-2">Code Input</div>
         <div class="flex-grow"></div>
-        <span v-if="code" class="vuwi-border vuwi-shade px-4 py-1 rounded">{{ code }}</span>
+        <span v-if="code" class="border vuwi-border vuwi-shade px-4 py-1 rounded">{{ code }}</span>
       </div>
       <VuwiLine />
       <div class="px-4 py-3 flex">

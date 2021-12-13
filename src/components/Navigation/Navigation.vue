@@ -117,7 +117,7 @@ const menuItems: MenuItem[] = [
   <div v-for="(item, i) in menuItems" :key="i">
     <VuwiCollapse v-if="item.collapsible" v-model="item.open">
       <template #header="{ open }">
-        <div class="px-3 py-2 flex items-center gap-2 menu-link">
+        <div class="px-3 py-2 flex items-center gap-2 nav-link">
           <Component :is="item.icon" v-if="item.icon" class="w-5 h-5" />
           <div v-else class="spacer w-5"></div>
           <span class="font-bold flex-grow">{{ item.title }}</span>
@@ -129,7 +129,7 @@ const menuItems: MenuItem[] = [
       </template>
 
       <div class="overflow-y-auto">
-        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="menu-link">
+        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="nav-link">
           <img :src="link.icon" width="14" />
           {{ link.title }}
         </router-link>
@@ -138,14 +138,14 @@ const menuItems: MenuItem[] = [
     <router-link
       v-else-if="item.to"
       :to="item.to"
-      :class="item.icon ? 'p-3 flex items-center gap-4 menu-link' : 'menu-link'"
+      :class="item.icon ? 'p-3 flex items-center gap-4 nav-link' : 'nav-link'"
     >
       <Component :is="item.icon" />
       {{ item.title }}
     </router-link>
 
     <div v-else>
-      <div :class="item.icon ? 'p-3 flex items-center gap-4' : 'menu-link'">
+      <div :class="item.icon ? 'p-3 flex items-center gap-4' : 'nav-link'">
         <Component :is="item.icon" />
         {{ item.title }}
       </div>
@@ -154,7 +154,7 @@ const menuItems: MenuItem[] = [
           v-for="(link, n) in item.links"
           :key="n"
           :to="link.to"
-          class="menu-link"
+          class="nav-link"
         >
           {{ link.title }}
         </router-link>

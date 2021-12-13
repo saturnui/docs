@@ -39,7 +39,7 @@ const open = ref(false)
         <VuwiCollapse v-model="open" class="w-full">
           <template #header="{ open: isOpen }">
             <div
-              class="relative p-3 flex items-center gap-4 w-full vuwi-border z-0 vuwi-light-dark"
+              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-light-dark"
             >
               <span class="font-bold flex-grow">Title here</span>
               <tabler-chevron-up
@@ -48,7 +48,7 @@ const open = ref(false)
               />
             </div>
           </template>
-          <div class="vuwi-border vuwi-shade p-4 -mt-1">
+          <div class="border vuwi-border vuwi-shade p-4 -mt-1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nulla vitae purus ornare vulputate. Maecenas elementum ornare massa, sed sagittis lorem placerat in. Nullam ullamcorper erat vel vestibulum feugiat. Integer commodo augue a mauris rutrum, at luctus massa iaculis. Integer tempus sit amet erat id luctus. Morbi ut iaculis odio. Etiam dictum, ipsum nec congue elementum, quam orci ultrices lorem, in porttitor tortor urna sed orci. Pellentesque congue porttitor nulla, in aliquet eros dapibus in. Sed vulputate dapibus porta. Morbi consequat finibus sem, at laoreet dui fermentum ut. Fusce vulputate nisi ut velit mollis mattis. Nullam id tincidunt felis. Nulla euismod justo ut sodales hendrerit. Donec suscipit, orci et condimentum efficitur, sem lacus dictum dolor, imperdiet tincidunt dolor sapien nec risus.
             <span
               class="cursor-pointer text-blue-500 pl-1"
@@ -63,7 +63,7 @@ const open = ref(false)
         <VuwiCollapse v-for="i in 3" :key="i" group="myCustomGroup" class="w-full">
           <template #header="{ open: isOpen }">
             <div
-              class="relative p-3 flex items-center gap-4 w-full vuwi-border z-0 vuwi-light-dark"
+              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-light-dark"
             >
               <span class="font-bold flex-grow">Title here</span>
               <tabler-chevron-up
@@ -72,7 +72,7 @@ const open = ref(false)
               />
             </div>
           </template>
-          <div class="vuwi-border vuwi-shade p-4 -mt-1">
+          <div class="border vuwi-border vuwi-shade p-4 -mt-1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nulla vitae purus ornare vulputate. Maecenas elementum ornare massa, sed sagittis lorem placerat in. Nullam ullamcorper erat vel vestibulum feugiat. Integer commodo augue a mauris rutrum, at luctus massa iaculis. Integer tempus sit amet erat id luctus. Morbi ut iaculis odio. Etiam dictum, ipsum nec congue elementum, quam orci ultrices lorem, in porttitor tortor urna sed orci. Pellentesque congue porttitor nulla, in aliquet eros dapibus in. Sed vulputate dapibus porta. Morbi consequat finibus sem, at laoreet dui fermentum ut. Fusce vulputate nisi ut velit mollis mattis. Nullam id tincidunt felis. Nulla euismod justo ut sodales hendrerit. Donec suscipit, orci et condimentum efficitur, sem lacus dictum dolor, imperdiet tincidunt dolor sapien nec risus.
           </div>
         </VuwiCollapse>
@@ -96,7 +96,7 @@ const open = ref(false)
       />
     &lt;/div>
   &lt;/template>
-  &lt;div class="vuwi-border vuwi-shade p-4 -mt-1">
+  &lt;div class="border vuwi-border vuwi-shade p-4 -mt-1">
     Lorem ipsum dolor sit amet...
   &lt;/div>
 &lt;/VuwiCollapse></code></pre>

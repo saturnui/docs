@@ -42,7 +42,7 @@ const passwordType = computed(() => {
         name="email"
         label="Email"
         :rules="emailRule"
-        class="vuwi-border vuwi-shade"
+        class="border vuwi-border vuwi-shade"
       />
       <VuwiTextfield
         v-model="password"
@@ -51,7 +51,7 @@ const passwordType = computed(() => {
         :type="passwordType"
         placeholder="••••••••"
         :rules="passwordRule"
-        class="vuwi-border vuwi-shade"
+        class="border vuwi-border vuwi-shade"
       >
         <ToggleVisible v-model="showPassword" />
       </VuwiTextfield>

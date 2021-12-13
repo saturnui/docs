@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     ActionCard: typeof import('./components/ActionCard/ActionCard.vue')['default']
+    ApiCard: typeof import('./components/ApiCard/ApiCard.vue')['default']
     AppBar: typeof import('./components/AppBar/AppBar.vue')['default']
     AssetsLogo: typeof import('~icons/assets/logo')['default']
     AssetsLogoTailwind: typeof import('~icons/assets/logo-tailwind')['default']
@@ -20,6 +21,7 @@ declare module 'vue' {
     MdiInvertColors: typeof import('~icons/mdi/invert-colors')['default']
     Navigation: typeof import('./components/Navigation/Navigation.vue')['default']
     README: typeof import('./components/README.md')['default']
+    Sidenav: typeof import('./components/Sidenav/Sidenav.vue')['default']
     TablerBox: typeof import('~icons/tabler/box')['default']
     TablerCalendar: typeof import('~icons/tabler/calendar')['default']
     TablerCheck: typeof import('~icons/tabler/check')['default']
@@ -27,6 +29,7 @@ declare module 'vue' {
     TablerChevronRight: typeof import('~icons/tabler/chevron-right')['default']
     TablerChevronUp: typeof import('~icons/tabler/chevron-up')['default']
     TablerCode: typeof import('~icons/tabler/code')['default']
+    TablerCopy: typeof import('~icons/tabler/copy')['default']
     TablerEye: typeof import('~icons/tabler/eye')['default']
     TablerEyeOff: typeof import('~icons/tabler/eye-off')['default']
     TablerLogout: typeof import('~icons/tabler/logout')['default']

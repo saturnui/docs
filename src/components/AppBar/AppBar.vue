@@ -59,7 +59,7 @@ const signout = async () => {
       </button>
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
-        <assets-logo-vuwi class="w-8 h-8" />
+        <!-- <assets-logo-vuwi class="w-8 h-8" /> -->
         <div class="font-bold">
           <span>Vuwi</span>
         </div>
@@ -128,7 +128,7 @@ const signout = async () => {
             <tabler-menu-2 />
           </button>
           <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
-            <assets-logo-vuwi class="w-8 h-8" />
+            <!-- <assets-logo-vuwi class="w-8 h-8" /> -->
             <div class="vuwi-text font-bold">
               <span>Vuwi</span>
             </div>
