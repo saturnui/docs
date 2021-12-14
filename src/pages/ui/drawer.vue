@@ -18,7 +18,7 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
             <div
               v-for="i in 3"
               :key="i"
-              class="p-4 flex items-center w-full border vuwi-border vuwi-light-dark rounded-lg gap-3"
+              class="p-4 flex items-center w-full border vuwi-border vuwi-card rounded-lg gap-3"
             >
               <tabler-box />Menu Item
             </div>
@@ -37,7 +37,7 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
             <div
               v-for="i in 3"
               :key="i"
-              class="p-4 flex items-center w-full border vuwi-border vuwi-light-dark rounded-lg gap-3"
+              class="p-4 flex items-center w-full border vuwi-border vuwi-card rounded-lg gap-3"
             >
               <tabler-box />Menu Item
             </div>
@@ -46,7 +46,7 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
             <button
               v-for="i in 3"
               :key="i"
-              class="p-4 flex justify-center items-center border vuwi-border vuwi-light-dark rounded-lg"
+              class="p-4 flex justify-center items-center border vuwi-border vuwi-card rounded-lg"
             >
               <tabler-box />
             </button>
@@ -65,7 +65,7 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
             <button
               v-for="i in 3"
               :key="i"
-              class="p-4 flex justify-center items-center border vuwi-border vuwi-light-dark rounded-lg"
+              class="p-4 flex justify-center items-center border vuwi-border vuwi-card rounded-lg"
             >
               <tabler-box />
             </button>

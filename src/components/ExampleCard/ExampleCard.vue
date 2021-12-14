@@ -8,11 +8,11 @@ const props = defineProps({
     default: '',
   },
 })
-const source = `https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/examples/ui/${props.source}`
+const source = `https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/examples/${props.source}`
 const mode = ref('')
 const toggleMode = () => {
   if (mode.value === '')
-    mode.value = 'dark'
+    mode.value = document.querySelector('html.dark') ? 'light' : 'dark'
 
   else if (mode.value === 'dark')
     mode.value = 'light'
@@ -21,15 +21,17 @@ const toggleMode = () => {
     mode.value = 'dark'
 }
 const showCode = ref(false)
+const decoratedHTML = ref('')
 const html = ref('')
+const { copy, copied } = useClipboard({ source })
 
 onBeforeMount(async () => {
   const result = await fetch(source)
   if (result) {
     const text = await result.text()
     // Grab contents and remove indent
-    const rawHTML = text.replace(/^[^\0]*<template>\n([^\0]*)?<\/template>/g, '$1').replace(/(\n) {2}/g, '$1').trim()
-    html.value = hljs.highlight(rawHTML, { language: 'html' }).value
+    html.value = text.replace(/^[^\0]*<template>\n([^\0]*)?<\/template>/g, '$1').replace(/(\n) {2}/g, '$1').trim()
+    decoratedHTML.value = hljs.highlight(html.value, { language: 'html' }).value
   }
 })
 
@@ -52,10 +54,13 @@ onBeforeMount(async () => {
     <VuwiLine />
     <VuwiCollapse v-model="showCode">
       <div class="relative max-w-4xl p-4 bg-dark-900 text-purple-400 text-sm">
-        <pre><code v-html="html"></code></pre>
-        <button class="vuwi-btn vuwi-btn-icon absolute top-2 right-4 text-light-900">
-          <tabler-copy class="h-6 w-6" />
-        </button>
+        <pre><code v-html="decoratedHTML"></code></pre>
+        <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
+          <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
+          <button class="vuwi-btn vuwi-btn-icon">
+            <tabler-copy class="h-6 w-6" @click="copy(html)" />
+          </button>
+        </div>
       </div>
     </VuwiCollapse>
     <VuwiLine v-if="showCode" />

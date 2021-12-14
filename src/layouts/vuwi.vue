@@ -25,10 +25,10 @@ onAddMessage(() => {
 </script>
 
 <template>
-  <AppBar class="fixed top-0 vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
+  <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900 z-1" />
   <main class="vuwi-main app-has-appbar">
     <VuwiDrawer
-      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-light-dark text-dark-50 border-r dark:border-none"
+      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-card text-dark-50 border-r dark:border-none"
     >
       <Navigation />
     </VuwiDrawer>

@@ -53,7 +53,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
         <Sidenav :data="sidenavItems" />
       </div>
     </VuwiOverlay>
@@ -83,7 +83,15 @@ onMounted(async () => {
       <AvatarImage />
     </ExampleCard>
 
-    <div class="doc-subtitle">API</div>
+    <div class="doc-subtitle">
+      <assets-logo-tailwind />
+      <span>Class</span>
+    </div>
+    <StyleCard :api="api" class="w-full" />
+    <div class="doc-subtitle">
+      <assets-logo-vue />
+      <span>API</span>
+    </div>
     <ApiCard :api="api" class="w-full" />
   </div>
 </template>

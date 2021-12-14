@@ -39,7 +39,7 @@ const open = ref(false)
         <VuwiCollapse v-model="open" class="w-full">
           <template #header="{ open: isOpen }">
             <div
-              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-light-dark"
+              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-card"
             >
               <span class="font-bold flex-grow">Title here</span>
               <tabler-chevron-up
@@ -63,7 +63,7 @@ const open = ref(false)
         <VuwiCollapse v-for="i in 3" :key="i" group="myCustomGroup" class="w-full">
           <template #header="{ open: isOpen }">
             <div
-              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-light-dark"
+              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-card"
             >
               <span class="font-bold flex-grow">Title here</span>
               <tabler-chevron-up
@@ -88,7 +88,7 @@ const open = ref(false)
         <pre><code>&lt;VuwiCollapse v-model="open" class="w-full">
   &lt;template #header="{ open: isOpen }">
     &lt;div
-      class="relative p-3 flex items-center gap-4 w-full vuwi-border z-0 vuwi-light-dark">
+      class="relative p-3 flex items-center gap-4 w-full vuwi-border z-0 vuwi-card">
       &lt;span class="font-bold flex-grow">Title here&lt;/span>
       &lt;tabler-chevron-up
         class="transition duration-150 transform"

@@ -83,7 +83,7 @@ const signout = async () => {
           <div
             v-if="showMenu"
             ref="menu"
-            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 vuwi-light-dark ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 vuwi-card ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
@@ -123,8 +123,8 @@ const signout = async () => {
       </div>
     </div>
     <VuwiOverlay v-model="showDrawer" class="z-0" position="left" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
-        <div class="sticky top-0 z-10 w-full p-2 flex items-center h-14 gap-4 vuwi-light-dark">
+      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+        <div class="sticky top-0 z-10 w-full p-2 flex items-center h-14 gap-4 vuwi-card">
           <button class="vuwi-btn vuwi-btn-icon" @click="showDrawer = !showDrawer">
             <tabler-menu-2 />
           </button>

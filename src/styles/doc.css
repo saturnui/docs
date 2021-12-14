@@ -4,7 +4,7 @@
       @apply text-4xl px-2;
     }
     &-subtitle {
-      @apply text-2xl px-2 pt-4 pb-2;
+      @apply flex items-center gap-2 text-xl px-2 pt-8 pb-4;
     }
   }
 }

@@ -1,42 +1,16 @@
 <script setup lang="ts">
-import AlertBasicVue from './examples/alert/basic.vue'
-import AlertTransitionVue from './examples/alert/transition.vue'
-import AlertExamplesVue from './examples/alert/examples.vue'
+import AlertBasic from './examples/alert/basic.vue'
+import AlertTransition from './examples/alert/transition.vue'
+import AlertExamples from './examples/alert/examples.vue'
 
 const showAlert = ref(false)
 const text = 'I\'m an alert that informs you of stuff'
 
-const api = [
-  {
-    name: 'border',
-    type: 'string',
-    default: 'undefined',
-    desc: 'Puts a border on the alert',
-  },
-  {
-    name: 'border',
-    type: 'string',
-    default: 'undefined',
-    desc: 'Puts a border on the alert',
-  },
-  {
-    name: 'border',
-    type: 'string',
-    default: 'undefined',
-    desc: 'Puts a border on the alert',
-  },
-]
-
 const sidenavItems = [
-  { title: 'Quick Reference', to: '/pages/form' },
-  {
-    title: 'Basic Usage',
-    links: [{ title: 'Auto', to: '/examples/form' }, { title: 'Fixed', to: '/examples/protected' }],
-  },
-  {
-    title: 'Apply conditionally',
-    links: [{ title: 'Hover, focus, and other states', to: '/examples/form' }, { title: 'Breakouts and other media queries', to: '/examples/protected' }],
-  },
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Transition', anchor: '#transition' },
+  { title: 'Examples', anchor: '#examples' },
+  { title: 'Style Guide', anchor: '#styles' },
 ]
 
 const showDrawer = ref(false)
@@ -57,7 +31,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
         <Sidenav :data="sidenavItems" />
       </div>
     </VuwiOverlay>
@@ -72,19 +46,23 @@ onMounted(async () => {
     </button>
   </teleport>
 
-  <div class="vuwi-content p-2 sm:p-8 space-y-6">
-    <div class="space-y-4">
-      <div class="text-4xl">Alert</div>
+  <div class="vuwi-content p-2 sm:p-8">
+    <div class="doc-title">
+      <div id="alert" class="text-4xl">
+        <span>Alert</span>
+      </div>
     </div>
-    <div class="text-2xl">Basic</div>
+    <!-- Basic Usage -->
+    <div id="basic" class="doc-subtitle">
+      <span>Basic Usage</span>
+    </div>
     <ExampleCard source="alert/basic.vue">
-      <AlertBasicVue :text="text" />
+      <AlertBasic :text="text" />
     </ExampleCard>
-
-    <div class="flex items-center text-2xl gap-2">
+    <!-- Transition -->
+    <div id="transition" class="doc-subtitle">
       <span>Transition</span>
     </div>
-
     <ExampleCard source="alert/transition.vue">
       <div class="flex items-center">
         <div>Shows an alert using Vue transition</div>
@@ -95,15 +73,19 @@ onMounted(async () => {
           </template>
         </VuwiSwitch>
       </div>
-      <AlertTransitionVue :text="text" :show-alert="showAlert" @close="showAlert = false" />
+      <AlertTransition :text="text" :show-alert="showAlert" @close="showAlert = false" />
     </ExampleCard>
-
-    <div class="text-2xl">
+    <!-- Examples -->
+    <div id="examples" class="doc-subtitle">
       <span>Examples</span>
     </div>
     <ExampleCard source="alert/examples.vue">
-      <AlertExamplesVue :text="text" />
+      <AlertExamples :text="text" />
     </ExampleCard>
+    <div id="styles" class="doc-subtitle">
+      <span>Style Guide</span>
+    </div>
+    <StyleCard source="Alert/VuwiAlert.css" />
   </div>
 </template>
 

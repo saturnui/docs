@@ -7,8 +7,8 @@
       </div>
       <VuwiLine />
       <div class="flex flex-wrap gap-4 p-4 bg-purple-500">
-        <div class="p-4 vuwi-light-dark">
-          <code>.vuwi-light-dark</code>
+        <div class="p-4 vuwi-card">
+          <code>.vuwi-card</code>
         </div>
         <div class="p-4 vuwi-light">
           <code>.vuwi-light</code>
