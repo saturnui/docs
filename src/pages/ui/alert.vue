@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AlertBasicVue from '../examples/ui/alert/basic.vue'
-import AlertTransitionVue from '../examples/ui/alert/transition.vue'
-import AlertExamplesVue from '../examples/ui/alert/examples.vue'
+import AlertBasicVue from './examples/alert/basic.vue'
+import AlertTransitionVue from './examples/alert/transition.vue'
+import AlertExamplesVue from './examples/alert/examples.vue'
 
 const showAlert = ref(false)
 const text = 'I\'m an alert that informs you of stuff'
@@ -75,22 +75,14 @@ onMounted(async () => {
   <div class="vuwi-content p-2 sm:p-8 space-y-6">
     <div class="space-y-4">
       <div class="text-4xl">Alert</div>
-      <div class="flex items-center gap-2">
-        <span>Vuwi + Tailwind CSS</span>
-        <assets-logo-tailwind />
-      </div>
     </div>
     <div class="text-2xl">Basic</div>
     <ExampleCard source="alert/basic.vue">
       <AlertBasicVue :text="text" />
     </ExampleCard>
 
-    <div class="text-2xl">API</div>
-    <ApiCard :api="api" class="w-full" />
-
     <div class="flex items-center text-2xl gap-2">
       <span>Transition</span>
-      <assets-logo-vue class="w-4 h-4" />
     </div>
 
     <ExampleCard source="alert/transition.vue">
@@ -103,10 +95,12 @@ onMounted(async () => {
           </template>
         </VuwiSwitch>
       </div>
-      <AlertTransitionVue :text="text" :show-alert="showAlert" />
+      <AlertTransitionVue :text="text" :show-alert="showAlert" @close="showAlert = false" />
     </ExampleCard>
 
-    <div class="text-2xl">Examples</div>
+    <div class="text-2xl">
+      <span>Examples</span>
+    </div>
     <ExampleCard source="alert/examples.vue">
       <AlertExamplesVue :text="text" />
     </ExampleCard>

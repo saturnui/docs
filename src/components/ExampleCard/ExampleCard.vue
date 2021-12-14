@@ -1,11 +1,6 @@
 <script setup lang="ts">
-// import 'ace-builds/src-noconflict/mode-text'
-// import 'ace-builds/src-noconflict/theme-chrome'
-// import { VAceEditor } from 'vue3-ace-editor'
-// import htmlPrettier from 'html-prettify'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github-dark-dimmed.css'
-// import 'highlight.js/styles/monokai-sublime.css'
 
 const props = defineProps({
   source: {
@@ -14,7 +9,17 @@ const props = defineProps({
   },
 })
 const source = `https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/examples/ui/${props.source}`
-const isDark = ref(false)
+const mode = ref('')
+const toggleMode = () => {
+  if (mode.value === '')
+    mode.value = 'dark'
+
+  else if (mode.value === 'dark')
+    mode.value = 'light'
+
+  else
+    mode.value = 'dark'
+}
 const showCode = ref(false)
 const html = ref('')
 
@@ -34,7 +39,7 @@ onBeforeMount(async () => {
   <div class="vuwi-card border vuwi-border vuwi-text relative">
     <div class="flex items-center px-4 py-2">
       <div class="flex-grow"></div>
-      <button class="vuwi-btn vuwi-btn-icon" @click="isDark = !isDark">
+      <button class="vuwi-btn vuwi-btn-icon" @click="toggleMode">
         <mdi-invert-colors />
       </button>
       <a :href="source" target="_blank" class="vuwi-btn vuwi-btn-icon">
@@ -54,10 +59,16 @@ onBeforeMount(async () => {
       </div>
     </VuwiCollapse>
     <VuwiLine v-if="showCode" />
-    <div :class="{ dark: isDark, light: !isDark }">
-      <div class="p-4 vuwi-text light:bg-light-100 dark:bg-dark-700">
+    <div :class="mode">
+      <div class="p-4 preview vuwi-text overflow-y-auto dark:bg-dark-700">
         <slot />
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.light .preview {
+  background: #fefefe;
+}
+</style>

@@ -1,105 +1,84 @@
+<script setup lang="ts">
+import ButtonDefault from './examples/button/default.vue'
+import ButtonIcon from './examples/button/icon.vue'
+import ButtonOutline from './examples/button/outline.vue'
+import ButtonPill from './examples/button/pill.vue'
+import ButtonSolid from './examples/button/solid.vue'
+import ButtonMisc from './examples/button/misc.vue'
+
+const sidenavItems = [
+  { title: 'Quick Reference', to: '/pages/form' },
+  {
+    title: 'Basic Usage',
+    links: [{ title: 'Auto', to: '/examples/form' }, { title: 'Fixed', to: '/examples/protected' }],
+  },
+  {
+    title: 'Apply conditionally',
+    links: [{ title: 'Hover, focus, and other states', to: '/examples/form' }, { title: 'Breakouts and other media queries', to: '/examples/protected' }],
+  },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
+</script>
+
 <template>
-  <div class="vuwi-content sm:p-8 space-y-8">
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <span
-        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
-      >Button</span>
-      <VuwiLine />
-      <div class="space-y-4">
-        <div class="vuwi-highlight font-bold text-sm px-4 py-2">Default</div>
-        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
-          <button class="vuwi-btn vuwi-btn-xs">Extra Small</button>
-          <button class="vuwi-btn vuwi-btn-sm">Small</button>
-          <button class="vuwi-btn">Normal</button>
-          <button class="vuwi-btn vuwi-btn-lg">Large</button>
-          <button class="vuwi-btn vuwi-btn-xl">Extra Large</button>
-        </div>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
 
-        <div class="vuwi-highlight font-bold text-sm px-4 py-2">Solid</div>
-
-        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
-          <button class="vuwi-btn vuwi-btn-xs vuwi-btn-primary">Extra Small</button>
-          <button class="vuwi-btn vuwi-btn-sm vuwi-btn-primary">Small</button>
-          <button class="vuwi-btn vuwi-btn-primary">Normal</button>
-          <button class="vuwi-btn vuwi-btn-lg vuwi-btn-primary">Large</button>
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-primary">Extra Large</button>
-        </div>
-
-        <div class="vuwi-highlight font-bold text-sm px-4 py-2">Outline</div>
-        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
-          <button class="vuwi-btn vuwi-btn-xs vuwi-btn-outline">Extra Small</button>
-          <button class="vuwi-btn vuwi-btn-sm vuwi-btn-outline vuwi-btn-primary">Small</button>
-          <button class="vuwi-btn vuwi-btn-outline">Normal</button>
-          <button class="vuwi-btn vuwi-btn-lg vuwi-btn-outline vuwi-btn-primary">Large</button>
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-outline">Extra Large</button>
-        </div>
-
-        <div class="vuwi-highlight font-bold text-sm px-4 py-2">Pill</div>
-        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
-          <button
-            class="vuwi-btn vuwi-btn-xs vuwi-btn-outline vuwi-btn-pill vuwi-btn-primary"
-          >Extra Small</button>
-          <button class="vuwi-btn vuwi-btn-sm vuwi-btn-pill vuwi-btn-primary">Small</button>
-          <button class="vuwi-btn vuwi-btn-outline vuwi-btn-pill">Normal</button>
-          <button class="vuwi-btn vuwi-btn-lg vuwi-btn-pill vuwi-btn-primary">Large</button>
-          <button
-            class="vuwi-btn vuwi-btn-xl vuwi-btn-outline vuwi-btn-pill vuwi-btn-primary"
-          >Extra Large</button>
-        </div>
-
-        <div class="vuwi-highlight font-bold text-sm px-4 py-2">Icon</div>
-        <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4 pb-6">
-          <button class="vuwi-btn vuwi-btn-xs vuwi-btn-icon vuwi-btn-primary">
-            <tabler-box class="text-[0.5rem]" />
-          </button>
-          <button class="vuwi-btn vuwi-btn-sm vuwi-btn-icon vuwi-btn-primary">
-            <tabler-box class="text-sm" />
-          </button>
-          <button class="vuwi-btn vuwi-btn-icon vuwi-btn-primary">
-            <tabler-box />
-          </button>
-          <button class="vuwi-btn vuwi-btn-lg vuwi-btn-icon vuwi-btn-primary">
-            <tabler-box class="text-2xl" />
-          </button>
-
-          <!-- Alternatives -->
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-icon vuwi-btn-primary">
-            <tabler-box class="text-3xl" />
-          </button>
-
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-icon">
-            <tabler-box class="text-3xl" />
-          </button>
-
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-icon vuwi-btn-outline vuwi-btn-primary">
-            <tabler-box class="text-3xl" />
-          </button>
-
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-icon vuwi-btn-outline">
-            <tabler-box class="text-3xl" />
-          </button>
-
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-outline px-4 vuwi-btn-primary">
-            <tabler-box class="text-3xl mr-2" />Text
-          </button>
-
-          <button class="vuwi-btn vuwi-btn-xl vuwi-btn-outline vuwi-btn-pill px-4 vuwi-btn-primary">
-            <tabler-box class="text-3xl mr-2" />Text
-          </button>
-        </div>
+  <teleport v-if="mounted" to="#sidemenu">
+    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" />
       </div>
-    </div>
+    </VuwiOverlay>
+  </teleport>
 
-    <!-- Code Snippet -->
-    <div class="vuwi-window filter drop-shadow-lg relative">
-      <span
-        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
-      >Code Snippet</span>
-      <VuwiLine />
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <code>&lt;button class="vuwi-btn">Normal&lt;/button></code>
-      </div>
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button
+      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      @click="showDrawer = true"
+    >
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="vuwi-content p-2 sm:p-8">
+    <div class="space-y-4">
+      <div class="doc-title">Button</div>
     </div>
+    <div class="doc-subtitle">Default</div>
+    <ExampleCard source="button/default.vue">
+      <ButtonDefault />
+    </ExampleCard>
+    <div class="doc-subtitle">Solid</div>
+    <ExampleCard source="button/sold.vue">
+      <ButtonSolid />
+    </ExampleCard>
+    <div class="doc-subtitle">Outline</div>
+    <ExampleCard source="button/outline.vue">
+      <ButtonOutline />
+    </ExampleCard>
+    <div class="doc-subtitle">Pill</div>
+    <ExampleCard source="button/pill.vue">
+      <ButtonPill />
+    </ExampleCard>
+    <div class="doc-subtitle">Icon</div>
+    <ExampleCard source="button/icon.vue">
+      <ButtonIcon />
+    </ExampleCard>
+    <div class="doc-subtitle">Misc</div>
+    <ExampleCard source="button/misc.vue">
+      <ButtonMisc />
+    </ExampleCard>
   </div>
 </template>
 

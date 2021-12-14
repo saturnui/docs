@@ -1,46 +1,90 @@
 <script setup lang="ts">
-const photo
-  = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+import AvatarImage from './examples/avatar/image.vue'
+import AvatarName from './examples/avatar/name.vue'
+
+const api = [
+  {
+    name: 'theme',
+    type: 'string',
+    defaultVal: 'vuwi',
+    desc: 'Used as the prefix for all Vuwi CSS classes',
+  },
+  {
+    name: 'photo',
+    type: 'string',
+    defaultVal: '',
+    desc: 'Url to image to be used for avatar',
+  },
+  {
+    name: 'name',
+    type: 'string',
+    defaultVal: '',
+    desc: 'Name to be used to display an initial if photo is not provided.',
+  },
+]
+
+const sidenavItems = [
+  { title: 'Quick Reference', to: '/pages/form' },
+  {
+    title: 'Basic Usage',
+    links: [{ title: 'Auto', to: '/examples/form' }, { title: 'Fixed', to: '/examples/protected' }],
+  },
+  {
+    title: 'Apply conditionally',
+    links: [{ title: 'Hover, focus, and other states', to: '/examples/form' }, { title: 'Breakouts and other media queries', to: '/examples/protected' }],
+  },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
 </script>
 
 <template>
-  <div class="vuwi-content sm:p-8 space-y-6">
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <span
-        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
-      >Avatar</span>
-      <VuwiLine />
-      <div class="flex flex-wrap gap-4 p-8">
-        <VuwiAvatar
-          name="Alex Lifeson"
-          :photo="photo"
-          class="vuwi-avatar-sm rounded-full overflow-hidden"
-        />
-        <VuwiAvatar name="Rob Taylor" :photo="photo" />
-        <VuwiAvatar
-          name="Bryan Adams"
-          :photo="photo"
-          class="vuwi-avatar-lg rounded-full overflow-hidden"
-        />
-        <VuwiAvatar name="Alex Lifeson" :photo="photo" class="vuwi-avatar-xl" />
-        <VuwiAvatar name="Geddy Lee" class="vuwi-avatar-sm bg-primary text-white" />
-        <VuwiAvatar name="Steve Vai" class="rounded-full bg-primary text-white" />
-        <VuwiAvatar name="Neil Peart" class="vuwi-avatar-lg bg-primary text-white" />
-        <VuwiAvatar name="Eddie Van Halen" class="vuwi-avatar-xl rounded-full bg-primary text-white" />
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 vuwi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" />
       </div>
+    </VuwiOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button
+      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      @click="showDrawer = true"
+    >
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="vuwi-content p-2 sm:p-8 space-y-6">
+    <div class="space-y-4">
+      <div class="doc-title">Avatar</div>
     </div>
-    <!-- Code Snippet -->
-    <div class="vuwi-window filter drop-shadow-lg relative">
-      <span
-        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
-      >Code Snippet</span>
-      <VuwiLine />
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <code>
-          &lt;VuwiAvatar name="Alex Lifeson" photo="/placeholder.jpg" class="vuwi-avatar-xl" />
-        </code>
-      </div>
-    </div>
+    <div class="doc-subtitle">Name</div>
+    <ExampleCard source="avatar/name.vue">
+      <AvatarName />
+    </ExampleCard>
+
+    <div class="doc-subtitle">Photo</div>
+
+    <ExampleCard source="avatar/image.vue">
+      <AvatarImage />
+    </ExampleCard>
+
+    <div class="doc-subtitle">API</div>
+    <ApiCard :api="api" class="w-full" />
   </div>
 </template>
 

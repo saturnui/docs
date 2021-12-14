@@ -1,0 +1,10 @@
+@layer components {
+  .doc {
+    &-title {
+      @apply text-4xl px-2;
+    }
+    &-subtitle {
+      @apply text-2xl px-2 pt-4 pb-2;
+    }
+  }
+}
