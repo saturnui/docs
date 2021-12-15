@@ -57,41 +57,41 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#appbar-actions">
     <button
-      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn"
       @click="showDrawer = true"
     >
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content p-2 sm:p-8">
-    <div class="space-y-4">
-      <div class="doc-title">Avatar</div>
-    </div>
+  <div class="vuwi-content doc-content">
+    <!-- Title -->
+    <div class="doc-title">Avatar</div>
+
+    <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <ExampleCard source="avatar/name.vue">
       <AvatarName />
     </ExampleCard>
 
+    <!-- Name -->
     <div id="name" class="doc-subtitle">Name</div>
     <ExampleCard source="avatar/name.vue">
       <AvatarName />
     </ExampleCard>
 
+    <!-- Photo -->
     <div id="photo" class="doc-subtitle">Photo</div>
-
     <ExampleCard source="avatar/image.vue">
       <AvatarImage />
     </ExampleCard>
 
-    <div id="api" class="doc-subtitle">
-      <span>API</span>
-    </div>
+    <!-- API -->
+    <div id="api" class="doc-subtitle">API</div>
     <ApiCard :api="api" class="w-full" />
 
-    <div id="styles" class="doc-subtitle">
-      <span>Style Guide</span>
-    </div>
+    <!-- Style Guide -->
+    <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Avatar/VuwiAvatar.css" />
   </div>
 </template>

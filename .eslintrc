@@ -1,6 +1,8 @@
 {
   "rules": {
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "no-trailing-spaces": "off",
+    "vue/singleline-html-element-content-newline": "off"
   },
   "extends": [
     "@antfu"
