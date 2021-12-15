@@ -41,15 +41,36 @@ onBeforeMount(async () => {
   <div class="vuwi-card border vuwi-border vuwi-text relative">
     <div class="flex items-center px-4 py-2">
       <div class="flex-grow"></div>
-      <button class="vuwi-btn vuwi-btn-icon" @click="toggleMode">
-        <mdi-invert-colors />
-      </button>
-      <a :href="source" target="_blank" class="vuwi-btn vuwi-btn-icon">
-        <carbon-logo-github />
-      </a>
-      <button class="vuwi-btn vuwi-btn-icon" @click="showCode = !showCode">
-        <tabler-code />
-      </button>
+      <VuwiTooltip placement="bottom">
+        <template #tooltip>
+          <div class="px-3 py-2 text-sm">
+            <span>Toggle Dark</span>
+          </div>
+        </template>
+        <button class="vuwi-btn vuwi-btn-icon" @click="toggleMode">
+          <mdi-invert-colors />
+        </button>
+      </VuwiTooltip>
+      <VuwiTooltip placement="bottom">
+        <template #tooltip>
+          <div class="px-3 py-2 text-sm">
+            <span>Github Source</span>
+          </div>
+        </template>
+        <a :href="source" target="_blank" class="vuwi-btn vuwi-btn-icon">
+          <carbon-logo-github />
+        </a>
+      </VuwiTooltip>
+      <VuwiTooltip placement="bottom">
+        <template #tooltip>
+          <div class="px-3 py-2 text-sm">
+            <span>View Source</span>
+          </div>
+        </template>
+        <button class="vuwi-btn vuwi-btn-icon" @click="showCode = !showCode">
+          <tabler-code />
+        </button>
+      </VuwiTooltip>
     </div>
     <VuwiLine />
     <VuwiCollapse v-model="showCode">

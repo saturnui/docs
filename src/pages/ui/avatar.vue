@@ -24,15 +24,11 @@ const api = [
 ]
 
 const sidenavItems = [
-  { title: 'Quick Reference', to: '/pages/form' },
-  {
-    title: 'Basic Usage',
-    links: [{ title: 'Auto', to: '/examples/form' }, { title: 'Fixed', to: '/examples/protected' }],
-  },
-  {
-    title: 'Apply conditionally',
-    links: [{ title: 'Hover, focus, and other states', to: '/examples/form' }, { title: 'Breakouts and other media queries', to: '/examples/protected' }],
-  },
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Name', anchor: '#name' },
+  { title: 'Photo', anchor: '#photo' },
+  { title: 'API', anchor: '#api' },
+  { title: 'Style Guide', anchor: '#styles' },
 ]
 
 const showDrawer = ref(false)
@@ -54,7 +50,7 @@ onMounted(async () => {
   <teleport v-if="mounted" to="#sidemenu">
     <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
       <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
-        <Sidenav :data="sidenavItems" />
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VuwiOverlay>
   </teleport>
@@ -68,31 +64,35 @@ onMounted(async () => {
     </button>
   </teleport>
 
-  <div class="vuwi-content p-2 sm:p-8 space-y-6">
+  <div class="vuwi-content p-2 sm:p-8">
     <div class="space-y-4">
       <div class="doc-title">Avatar</div>
     </div>
-    <div class="doc-subtitle">Name</div>
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
     <ExampleCard source="avatar/name.vue">
       <AvatarName />
     </ExampleCard>
 
-    <div class="doc-subtitle">Photo</div>
+    <div id="name" class="doc-subtitle">Name</div>
+    <ExampleCard source="avatar/name.vue">
+      <AvatarName />
+    </ExampleCard>
+
+    <div id="photo" class="doc-subtitle">Photo</div>
 
     <ExampleCard source="avatar/image.vue">
       <AvatarImage />
     </ExampleCard>
 
-    <div class="doc-subtitle">
-      <assets-logo-tailwind />
-      <span>Class</span>
-    </div>
-    <StyleCard :api="api" class="w-full" />
-    <div class="doc-subtitle">
-      <assets-logo-vue />
+    <div id="api" class="doc-subtitle">
       <span>API</span>
     </div>
     <ApiCard :api="api" class="w-full" />
+
+    <div id="styles" class="doc-subtitle">
+      <span>Style Guide</span>
+    </div>
+    <StyleCard source="Avatar/VuwiAvatar.css" />
   </div>
 </template>
 

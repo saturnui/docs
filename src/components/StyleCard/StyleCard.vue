@@ -27,7 +27,6 @@ onBeforeMount(async () => {
     decoratedCSS.value = hljs.highlight(css.value, { language: 'css' }).value
   }
 })
-
 </script>
 
 <template>

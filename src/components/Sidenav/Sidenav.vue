@@ -20,6 +20,8 @@ const props = defineProps({
   },
 })
 
+const emit = defineEmits(['click:link'])
+
 const scrollToTargetAdjusted = (selector: string, offset = 52) => {
   const element = document.querySelector(selector)
   if (element) {
@@ -36,6 +38,7 @@ const scrollToTargetAdjusted = (selector: string, offset = 52) => {
 const navTo = (item: SidenavItem) => {
   if (item.anchor)
     scrollToTargetAdjusted(item.anchor)
+  emit('click:link', item)
 }
 </script>
 
