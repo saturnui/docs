@@ -78,7 +78,7 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Tooltip</div>
     <div class="doc-desc">
-      Tooltip extends
+      Tooltip uses the library
       <a
         href="https://popper.js.org/"
         target="_blank"
@@ -101,6 +101,7 @@ onMounted(async () => {
 
     <!-- Variations -->
     <div id="variations" class="doc-subtitle">Variations</div>
+    <div class="doc-detail">Tooltips can be completely customomized with any style / content.</div>
     <ExampleCard source="tooltip/variations.vue">
       <TooltipVariations />
     </ExampleCard>

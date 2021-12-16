@@ -7,7 +7,7 @@
       @apply text-4xl px-2;
     }
     &-subtitle {
-      @apply flex items-center gap-2 text-xl px-2 pt-8;
+      @apply flex items-center gap-2 text-xl px-2 pt-8 pb-4;
     }
     &-desc {
       @apply p-3 pt-6;

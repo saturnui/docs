@@ -16,12 +16,12 @@
 
 // const user = {}
 // const showDrawer = ref(false)
-const showToast = ref(false)
+// const showToast = ref(false)
 
-const { onAddMessage } = useMessenger()
-onAddMessage(() => {
-  showToast.value = true
-})
+// const { onAddMessage } = useMessenger()
+// onAddMessage(() => {
+//   showToast.value = true
+// })
 </script>
 
 <template>
@@ -39,7 +39,7 @@ onAddMessage(() => {
   </main>
 
   <!-- :: Toast :: -->
-  <VuwiToast
+  <!-- <VuwiToast
     v-model="showToast"
     class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar"
   >
@@ -80,5 +80,5 @@ onAddMessage(() => {
         </div>
       </div>
     </template>
-  </VuwiToast>
+  </VuwiToast> -->
 </template>
