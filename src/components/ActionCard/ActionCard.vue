@@ -46,7 +46,7 @@ export default defineComponent({
         <div class="text-xl">
           <span>{{ title }}</span>
         </div>
-        <div class="text-sm flex-grow dark:text-gray-400">
+        <div class="vuwi-text text-sm flex-grow">
           <span>{{ desc }}</span>
         </div>
       </div>
@@ -54,17 +54,17 @@ export default defineComponent({
         <img :src="icon" class="actioncard-image" />
       </div>
     </div>
-    <Line />
+    <VuwiLine />
     <div
       v-if="action"
       class="
         py-4
         px-4
-        group-hover:bg-gray-50
+        group-hover:bg-light-50
         dark:group-hover:bg-white dark:group-hover:bg-opacity-5
       "
     >
-      <div class="text-primary dark:text-gray-300 text-sm font-medium">
+      <div class="text-primary dark:text-light-900 text-sm font-medium">
         {{ action }}
       </div>
     </div>

@@ -14,6 +14,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
@@ -49,7 +50,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
         {
-          '~/modules/vuwi/src/composables': [
+          '~/modules/vuwi/composables': [
             'isDark',
             'toggleDark',
             'useMessenger',
@@ -64,7 +65,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      dirs: ['./src/components', './src/modules/vuwi/src/components'],
+      dirs: ['./src/components', './src/modules/vuwi/components'],
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
 
@@ -78,6 +79,9 @@ export default defineConfig({
         IconsResolver({
           componentPrefix: '',
           // enabledCollections: ['carbon']
+          customCollections: [
+            'assets',
+          ],
         }),
       ],
 
@@ -87,6 +91,12 @@ export default defineConfig({
     // https://github.com/antfu/unplugin-icons
     Icons({
       autoInstall: true,
+      customCollections: {
+        // key as the collection name
+        assets: FileSystemIconLoader(
+          './src/assets',
+        ),
+      },
     }),
 
     // https://github.com/antfu/vite-plugin-windicss

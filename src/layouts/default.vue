@@ -16,53 +16,37 @@
 
 // const user = {}
 // const showDrawer = ref(false)
-const showToast = ref(false)
+// const showToast = ref(false)
 
-const { onAddMessage } = useMessenger()
-onAddMessage(() => {
-  showToast.value = true
-})
+// const { onAddMessage } = useMessenger()
+// onAddMessage(() => {
+//   showToast.value = true
+// })
 </script>
 
 <template>
-  <main class="vuwi-main flex flex-col">
-    <AppBar class="vuwi-light-dark border-b dark:border-b-dark-900 z-1" />
-    <div class="vuwi-container vuwi-text navbar">
+  <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900 z-1" />
+  <main class="vuwi-main app-has-appbar">
+    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0  h-full vuwi-card border-r dark:border-none">
+      <Navigation />
+    </VuwiDrawer>
+    <div class="vuwi-drawer-left vuwi-drawer-right vuwi-text">
       <router-view />
     </div>
-    <!-- :: Navigation :: -->
-    <Drawer
-      class="
-        flex flex-col
-        vuwi-light-dark
-        border-r
-        dark:border-none
-        overflow-y-auto overflow-x-hidden
-        pt-14
-      "
-    >
+    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0 right-0 h-full vuwi-card border-l dark:border-none">
       <Navigation />
-    </Drawer>
+    </VuwiDrawer>
   </main>
 
   <!-- :: Toast :: -->
-  <Toast
+  <!-- <VuwiToast
     v-model="showToast"
     class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar"
   >
     <div class="flex items-center justify-between">
       <div class="flex justify-center items-center gap-4">
         <tabler-message class="text-5xl" />
-        <div
-          class="
-            flex
-            h-full
-            text-left
-            justify-center
-            border-l border-opacity-20
-            pl-4
-          "
-        >
+        <div class="flex h-full text-left justify-center border-l border-opacity-20 pl-4">
           This is a toast message example. It supports multiple lines.
         </div>
       </div>
@@ -96,5 +80,5 @@ onAddMessage(() => {
         </div>
       </div>
     </template>
-  </Toast>
+  </VuwiToast> -->
 </template>
