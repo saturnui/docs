@@ -86,15 +86,19 @@ onBeforeMount(async () => {
     </VuwiCollapse>
     <VuwiLine v-if="showCode" />
     <div :class="mode">
-      <div class="p-4 preview vuwi-text overflow-y-auto dark:bg-dark-700">
+      <div class="example-preview vuwi-text overflow-y-auto dark:bg-dark-700">
         <slot />
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.light .preview {
+<style>
+.example-preview {
+  padding: 12px;
+}
+
+.light .example-preview {
   background: #fefefe;
 }
 </style>
