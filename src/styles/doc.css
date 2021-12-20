@@ -18,5 +18,8 @@
     &-sidenav-btn {
       @apply hover:bg-primary hover:text-white;
     }
+    &-link {
+      @apply font-semibold text-blue-500 hover:underline;
+    }
   }
 }

@@ -31,6 +31,7 @@ declare module 'vue' {
     TablerCopy: typeof import('~icons/tabler/copy')['default']
     TablerEye: typeof import('~icons/tabler/eye')['default']
     TablerEyeOff: typeof import('~icons/tabler/eye-off')['default']
+    TablerLock: typeof import('~icons/tabler/lock')['default']
     TablerLogout: typeof import('~icons/tabler/logout')['default']
     TablerMenu2: typeof import('~icons/tabler/menu2')['default']
     TablerMessage: typeof import('~icons/tabler/message')['default']
@@ -56,6 +57,7 @@ declare module 'vue' {
     VuwiFileSelector: typeof import('./modules/vuwi/components/FileSelector/VuwiFileSelector.vue')['default']
     VuwiFormSection: typeof import('./modules/vuwi/components/FormSection/VuwiFormSection.vue')['default']
     VuwiLine: typeof import('./modules/vuwi/components/Line/VuwiLine.vue')['default']
+    VuwiNotification: typeof import('./modules/vuwi/components/Notification/VuwiNotification.vue')['default']
     VuwiOverlay: typeof import('./modules/vuwi/components/Overlay/VuwiOverlay.vue')['default']
     VuwiPagination: typeof import('./modules/vuwi/components/Pagination/VuwiPagination.vue')['default']
     VuwiSelect: typeof import('./modules/vuwi/components/Select/VuwiSelect.vue')['default']
@@ -63,6 +65,7 @@ declare module 'vue' {
     VuwiTextarea: typeof import('./modules/vuwi/components/Textarea/VuwiTextarea.vue')['default']
     VuwiTextfield: typeof import('./modules/vuwi/components/Textfield/VuwiTextfield.vue')['default']
     VuwiToast: typeof import('./modules/vuwi/components/Toast/VuwiToast.vue')['default']
+    VuwiToastie: typeof import('./modules/vuwi/components/Toast/VuwiToastie.vue')['default']
     VuwiTooltip: typeof import('./modules/vuwi/components/Tooltip/VuwiTooltip.vue')['default']
   }
 }
