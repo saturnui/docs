@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import TextfieldBasic from './examples/textfield/basic.vue'
-import TextfieldSlots from './examples/textfield/slots.vue'
+import TextInputBasic from './examples/textinput/basic.vue'
+import TextInputMultlineBasic from './examples/textinput/multiline/basic.vue'
+import TextInputSlotsBusy from './examples/textinput/slots/busy.vue'
+import TextInputSlotsClearable from './examples/textinput/slots/clearable.vue'
+import TextInputSlotsPassword from './examples/textinput/slots/password.vue'
+// import TextInputSlots from './examples/textinput/slots.vue'
 
 const api = [
   {
@@ -19,19 +23,19 @@ const api = [
     name: 'disabled',
     type: 'boolean',
     defaultVal: false,
-    desc: 'Disables textfield from user input.',
+    desc: 'Disables TextInput from user input.',
   },
   {
     name: 'error',
     type: 'string',
     defaultVal: '',
-    desc: 'Displays error message for textfield. Eror message is added to the label.',
+    desc: 'Displays error message for TextInput. Eror message is added to the label.',
   },
   {
     name: 'label',
     type: 'string',
     defaultVal: '',
-    desc: 'Label to be displayed for textfield.',
+    desc: 'Label to be displayed for TextInput.',
   },
   {
     name: 'mask',
@@ -43,25 +47,31 @@ const api = [
     name: 'modelValue',
     type: 'string',
     defaultVal: '',
-    desc: 'Binds property to textfield value.',
+    desc: 'Binds property to TextInput value.',
+  },
+  {
+    name: 'multiline',
+    type: 'boolean',
+    defaultVal: false,
+    desc: 'Text input will use a "textarea" HTML element',
   },
   {
     name: 'name',
     type: 'string',
     defaultVal: 'uuid',
-    desc: 'Name of the textfield. If one is not provided a UUID is generated.',
+    desc: 'Name of the TextInput. If one is not provided a UUID is generated.',
   },
   {
     name: 'placeholder',
     type: 'string',
     defaultVal: '',
-    desc: 'Placeholder for textfield.',
+    desc: 'Placeholder for TextInput.',
   },
   {
     name: 'required',
     type: 'boolean',
     defaultVal: false,
-    desc: 'Provides indicator if textfield is required. When used with VuwiForm, will indicate if field is valid.',
+    desc: 'Provides indicator if TextInput is required. When used with VuwiForm, will indicate if field is valid.',
   },
   {
     name: 'rules',
@@ -117,30 +127,58 @@ onMounted(async () => {
 
   <div class="vuwi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Textfield</div>
-    <div class="doc-desc">TODO: Text input description here</div>
+    <div class="doc-title">Text Input</div>
+    <div class="doc-desc">
+      Text input is a single component comprising of both a
+      <span
+        class="text-purple-500 font-bold"
+      >text input</span> and a
+      <span class="text-purple-500 font-bold">textarea</span>. The behaviors and styling are the same.
+    </div>
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <div class="doc-detail">
-      Bare-bones basic example.
+      Default behavior is as a single-line
+      <span class="text-purple-500 font-bold">input</span> field.
     </div>
 
-    <ExampleCard source="textfield/basic.vue">
-      <TextfieldBasic />
+    <ExampleCard source="TextInput/basic.vue">
+      <TextInputBasic />
+    </ExampleCard>
+
+    <div id="basic" class="doc-subtitle">Basic Multiline Usage</div>
+    <div class="doc-detail">
+      Multiline changes the behavior to a
+      <span class="text-purple-500 font-bold">textarea</span>.
+    </div>
+    <ExampleCard source="TextInput/basic.vue">
+      <TextInputMultlineBasic />
     </ExampleCard>
 
     <!-- Slots -->
     <div id="slots" class="doc-subtitle">Slots</div>
     <div class="doc-detail">
       Slots provide the ability to enhance the component. There are two slots a
-      <span class="text-purple-500 font-bold">prepend</span> and an
+      <span
+        class="text-purple-500 font-bold"
+      >prepend</span> and an
       <span class="text-purple-500 font-bold">append</span> slot.
     </div>
 
-    <ExampleCard source="textfield/slots.vue">
-      <TextfieldSlots />
-    </ExampleCard>
+    <div class="grid gap-4">
+      <ExampleCard title="Clearable example with icon" source="textinput/slots/clearable.vue">
+        <TextInputSlotsClearable />
+      </ExampleCard>
+
+      <ExampleCard title="Toggle show password with icon" source="textinput/slots/password.vue">
+        <TextInputSlotsPassword />
+      </ExampleCard>
+
+      <ExampleCard title="Busy indicator with check" source="textinput/slots/busy.vue">
+        <TextInputSlotsBusy />
+      </ExampleCard>
+    </div>
 
     <!-- API -->
     <div id="api" class="doc-subtitle">API</div>
@@ -148,7 +186,7 @@ onMounted(async () => {
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Textfield/VuwiTextfield.css" />
+    <StyleCard source="TextInput/VuwiTextInput.css" />
   </div>
 </template>
 

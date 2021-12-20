@@ -3,12 +3,16 @@ import hljs from 'highlight.js'
 import 'highlight.js/styles/github-dark-dimmed.css'
 
 const props = defineProps({
+  title: {
+    type: String,
+    default: '',
+  },
   source: {
     type: String,
     default: '',
   },
 })
-const source = `https://raw.githubusercontent.com/vuwijs/starter/feature/vuwi-refactor/src/pages/ui/examples/${props.source}`
+const source = `https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/ui/examples/${props.source}`
 const mode = ref('')
 const toggleMode = () => {
   if (mode.value === '')
@@ -40,6 +44,7 @@ onBeforeMount(async () => {
 <template>
   <div class="vuwi-card border vuwi-border vuwi-text relative">
     <div class="flex items-center px-4 py-2">
+      <div class="pl-1 font-bold">{{ title }}</div>
       <div class="flex-grow"></div>
       <VuwiTooltip placement="bottom">
         <template #tooltip>

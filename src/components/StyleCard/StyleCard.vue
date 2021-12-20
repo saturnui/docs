@@ -8,7 +8,7 @@ const props = defineProps({
     default: '',
   },
 })
-const source = `https://raw.githubusercontent.com/vuwijs/vuwi/feature/components/components/${props.source}`
+const source = `https://raw.githubusercontent.com/vuwijs/vuwi/main/components/${props.source}`
 const decoratedCSS = ref('')
 const css = ref('')
 const { copy, copied } = useClipboard({ source })
