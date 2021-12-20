@@ -26,8 +26,15 @@ const toggleMode = () => {
 }
 const showCode = ref(false)
 const decoratedHTML = ref('')
+const decoratedScript = ref('')
 const html = ref('')
+const js = ref('')
+const view = ref('html')
 const { copy, copied } = useClipboard({ source })
+const tabClass = (isActive: boolean) => {
+  if (isActive) return 'bg-purple-600 text-white'
+  return 'vuwi-highlight-stronger'
+}
 
 onBeforeMount(async () => {
   const result = await fetch(source)
@@ -36,6 +43,9 @@ onBeforeMount(async () => {
     // Grab contents and remove indent
     html.value = text.replace(/^[^\0]*<template>\n([^\0]*)?<\/template>/g, '$1').replace(/(\n) {2}/g, '$1').trim()
     decoratedHTML.value = hljs.highlight(html.value, { language: 'html' }).value
+    
+    js.value = text.includes('<script') ? text.replace(/<script setup lang="ts">([^\0]*?)<\/script>[^\0]*/g, '$1').trim() : ''
+    decoratedScript.value = hljs.highlight(js.value, { language: 'typescript' }).value
   }
 })
 
@@ -79,11 +89,26 @@ onBeforeMount(async () => {
     </div>
     <VuwiLine />
     <VuwiCollapse v-model="showCode">
-      <div class="relative max-w-4xl p-4 bg-dark-900 text-purple-400 text-sm">
-        <pre><code v-html="decoratedHTML"></code></pre>
-        <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
+      <div v-if="html && js" class="px-2 py-2 flex item-center gap-2 vuwi-highlight">
+        <button v-if="html" class="vuwi-btn vuwi-btn-sm" :class="tabClass(view === 'html')" @click="view = 'html'">HTML</button>
+        <button v-if="js" class="vuwi-btn vuwi-btn-sm" :class="tabClass(view === 'js')" @click="view = 'js'">Script</button>
+      </div>
+      <!-- Script -->
+      <div v-if="view === 'js'" class="relative max-w-4xl p-4 pr-14 bg-dark-900 text-purple-400 text-sm">
+        <pre><code v-html="decoratedScript"></code></pre>
+        <div class="flex items-center gap-2 absolute top-2 right-4 text-light-900">
           <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
-          <button class="vuwi-btn vuwi-btn-icon">
+          <button class="vuwi-btn vuwi-btn-icon bg-white bg-opacity-20 hover:bg-primary-light">
+            <tabler-copy class="h-6 w-6" @click="copy(js)" />
+          </button>
+        </div>
+      </div>
+      <!-- Template -->
+      <div v-if="view === 'html'" class="relative max-w-4xl p-4 pr-14 bg-dark-900 text-purple-400 text-sm">
+        <pre><code v-html="decoratedHTML"></code></pre>
+        <div class="flex items-center gap-2 absolute top-2 right-4 text-light-900">
+          <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
+          <button class="vuwi-btn vuwi-btn-icon bg-white bg-opacity-20 hover:bg-primary-light">
             <tabler-copy class="h-6 w-6" @click="copy(html)" />
           </button>
         </div>
