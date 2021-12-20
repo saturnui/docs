@@ -59,7 +59,7 @@ defineProps({
           <code v-else-if="item.defaultVal === null" class="vuwi-text">null</code>
         </td>
         <td class="px-5 py-5 border-b vuwi-border vuwi-card vuwi-text text-sm">
-          <p class="whitespace-no-wrap">{{ item.desc }}</p>
+          <p class="whitespace-no-wrap" v-html="item.desc"></p>
         </td>
       </tr>
     </tbody>

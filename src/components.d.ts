@@ -31,6 +31,7 @@ declare module 'vue' {
     TablerCopy: typeof import('~icons/tabler/copy')['default']
     TablerEye: typeof import('~icons/tabler/eye')['default']
     TablerEyeOff: typeof import('~icons/tabler/eye-off')['default']
+    TablerLock: typeof import('~icons/tabler/lock')['default']
     TablerLogout: typeof import('~icons/tabler/logout')['default']
     TablerMenu2: typeof import('~icons/tabler/menu2')['default']
     TablerMessage: typeof import('~icons/tabler/message')['default']
