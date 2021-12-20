@@ -143,7 +143,7 @@ onMounted(async () => {
       <span class="text-purple-500 font-bold">input</span> field.
     </div>
 
-    <ExampleCard source="TextInput/basic.vue">
+    <ExampleCard source="textinput/basic.vue">
       <TextInputBasic />
     </ExampleCard>
 
@@ -152,7 +152,7 @@ onMounted(async () => {
       Multiline changes the behavior to a
       <span class="text-purple-500 font-bold">textarea</span>.
     </div>
-    <ExampleCard source="TextInput/basic.vue">
+    <ExampleCard source="textinput/multiline/basic.vue">
       <TextInputMultlineBasic />
     </ExampleCard>
 
