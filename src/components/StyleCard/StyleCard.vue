@@ -38,7 +38,7 @@ onBeforeMount(async () => {
       </a>
     </div>
     <VuwiLine />
-    <div class="relative max-w-4xl p-4 vuwi-dark text-yellow-300 text-sm">
+    <div class="relative max-w-4xl p-4 bg-gray-700 dark:bg-dark-800 text-yellow-300 text-sm">
       <pre><code v-html="decoratedCSS"></code></pre>
       <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
         <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
