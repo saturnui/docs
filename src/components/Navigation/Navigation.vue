@@ -89,6 +89,8 @@ const menuItems: MenuItem[] = [
       { title: 'Notification', to: '/ui/notification', icon: LogoVue },
       { title: 'Overlay', to: '/ui/overlay', icon: LogoVue },
       { title: 'Pagination', to: '/ui/pagination', icon: LogoVue },
+      { title: 'Progress Bar', to: '/ui/progress-bar', icon: LogoVue },
+      { title: 'Progress Circle', to: '/ui/progress-circle', icon: LogoVue },
       { title: 'Select', to: '/ui/select', icon: LogoVue },
       { title: 'Spinner', to: '/ui/spinner', icon: LogoTailwind },
       { title: 'Switch', to: '/ui/switch', icon: LogoVue },
@@ -129,7 +131,8 @@ const menuItems: MenuItem[] = [
 
       <div class="overflow-y-auto">
         <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="nav-link">
-          <img :src="link.icon" width="14" />
+          <!-- <img :src="link.icon" width="14" /> -->
+          <div class="w-3"></div>
           {{ link.title }}
         </router-link>
       </div>
