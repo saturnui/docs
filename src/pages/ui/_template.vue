@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SwitchBasic from './examples/switch/basic.vue'
+import TextInputBasic from './examples/textinput/basic.vue'
 
 const api = [
   {
@@ -59,8 +59,8 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="switch/basic.vue">
-      <SwitchBasic />
+    <ExampleCard source="textinput/basic.vue">
+      <TextInputBasic />
     </ExampleCard>
 
     <!-- API -->
