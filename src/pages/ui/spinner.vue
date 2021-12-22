@@ -1,17 +1,11 @@
 <script setup lang="ts">
 import SpinnerBasic from './examples/spinner/basic.vue'
-
-const api = [
-  {
-    name: 'theme',
-    type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
-  },
-]
+import SpinnerVariants from './examples/spinner/variants.vue'
+import SpinnerProgressCircle from './examples/spinner/progresscircle.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'ProgressCircle', anchor: '#progresscircle' },
   { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
@@ -50,26 +44,51 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Spinner</div>
     <div class="doc-desc">
-      Description here...
+      Vuwi provides classes that can spin using CSS animate. In addition there is a very light-weight class that
+      will show a css only spinner for simple usage. If you need a more complex spinner, then you can combine
+      Vuwi spin classes with the
+      <router-link to="/ui/progresscircle" class="doc-link">VuwiProgressCircle</router-link>component.
     </div>
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div
+      class="doc-detail"
+    >The following demonstrates how to use the CSS only version of the spinner to change its appearance.</div>
+
+    <ExampleCard source="spinner/basic.vue">
+      <div class="doc-card-content">
+        <SpinnerBasic />
+      </div>
+    </ExampleCard>
+
+    <!-- Variants -->
+    <div id="variants" class="doc-subtitle">Variants</div>
+    <div
+      class="doc-detail"
+    >Here are some examples of style changes you can make to change the appearance</div>
+
+    <ExampleCard source="spinner/basic.vue">
+      <div class="doc-card-content">
+        <SpinnerVariants />
+      </div>
+    </ExampleCard>
+
+    <div id="progresscircle" class="doc-subtitle">ProgressCircle</div>
     <div class="doc-detail">
-      Details here...
+      You can also use the
+      <router-link to="/ui/progresscircle" class="doc-link">VuwiProgressCircle</router-link> in conjunction with the spinner animations to achieve custom effects.
     </div>
 
     <ExampleCard source="spinner/basic.vue">
-      <SpinnerBasic />
+      <div class="doc-card-content">
+        <SpinnerProgressCircle />
+      </div>
     </ExampleCard>
-
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <StyleCard source="Spinner/VuwiSpinner.css" />
   </div>
 </template>
 

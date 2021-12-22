@@ -21,5 +21,8 @@
     &-link {
       @apply font-semibold text-blue-500 hover:underline;
     }
+    &-card-content {
+      @apply p-4;
+    }
   }
 }

@@ -25,7 +25,7 @@ watch(text, (val: string) => {
     <template #append>
       <div
         v-if="busy"
-        class="vuwi-spinner w-6 h-6 border-3 dark:border-gray-500 dark:border-r-transparent"
+        class="vuwi-spinner w-6 h-6 min-w-6 min-h-6 border-3 border-primary border-r-transparent dark:border-gray-500 dark:border-r-transparent"
         role="status"
       >
         <span class="sr-only">Busy...</span>

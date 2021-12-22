@@ -144,7 +144,9 @@ onMounted(async () => {
     </div>
 
     <ExampleCard source="textinput/basic.vue">
-      <TextInputBasic />
+      <div class="doc-card-content">
+        <TextInputBasic />
+      </div>
     </ExampleCard>
 
     <div id="basic" class="doc-subtitle">Basic Multiline Usage</div>
@@ -153,7 +155,9 @@ onMounted(async () => {
       <span class="text-purple-500 font-bold">textarea</span>.
     </div>
     <ExampleCard source="textinput/multiline/basic.vue">
-      <TextInputMultlineBasic />
+      <div class="doc-card-content">
+        <TextInputMultlineBasic />
+      </div>
     </ExampleCard>
 
     <!-- Slots -->
@@ -168,15 +172,21 @@ onMounted(async () => {
 
     <div class="grid gap-4">
       <ExampleCard title="Clearable example with icon" source="textinput/slots/clearable.vue">
-        <TextInputSlotsClearable />
+        <div class="doc-card-content">
+          <TextInputSlotsClearable />
+        </div>
       </ExampleCard>
 
       <ExampleCard title="Toggle show password with icon" source="textinput/slots/password.vue">
-        <TextInputSlotsPassword />
+        <div class="doc-card-content">
+          <TextInputSlotsPassword />
+        </div>
       </ExampleCard>
 
       <ExampleCard title="Busy indicator with check" source="textinput/slots/busy.vue">
-        <TextInputSlotsBusy />
+        <div class="doc-card-content">
+          <TextInputSlotsBusy />
+        </div>
       </ExampleCard>
     </div>
 
