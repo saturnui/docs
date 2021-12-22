@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import ProgressCircleBasic from './examples/progress/circle/basic.vue'
-import ProgressCircleVariants from './examples/progress/circle/variants.vue'
+import ProgressBarBasic from './examples/progress/bar/basic.vue'
 
 const percent = ref(35)
 const animate = ref(false)
@@ -12,40 +11,16 @@ watch(animate, (v: boolean) => {
     timer = setInterval(() => {
       if (percent.value >= 100) percent.value = 0
       else percent.value += 1
-    }, 20)
+    }, 100)
   }
 })
 
 const api = [
   {
-    name: 'theme',
-    type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
-  },
-  {
-    name: 'size',
-    type: 'number',
-    defaultVal: 5,
-    desc: 'Height and width of progress circle',
-  },
-  {
-    name: 'color',
-    type: 'string',
-    defaultVal: 'border-primary',
-    desc: 'Color of ring / wedge',
-  },
-  {
-    name: 'width',
-    type: 'number',
-    defaultVal: 5,
-    desc: 'Size of ring',
-  },
-  {
     name: 'percent',
     type: 'number',
-    defaultVal: 5,
-    desc: 'Progression amount of progress circle',
+    defaultVal: 0,
+    desc: 'Amount of the bar to display',
   },
 ]
 
@@ -87,40 +62,23 @@ onMounted(async () => {
 
   <div class="vuwi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Progress Circle</div>
-    <div class="doc-desc">Displays progression in a circular view</div>
+    <div class="doc-title">Progress Bar</div>
+    <div class="doc-desc">Displays progression in a bar view</div>
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <div
       class="doc-detail"
-    >These examples demonstrate only a few different ways to style the progress circle.</div>
+    >These examples demonstrate only a few different ways to style the progress circle</div>
 
-    <ExampleCard source="spinner/basic.vue">
+    <ExampleCard source="progress/bar/basic.vue">
       <div class="p-2 vuwi-highlight">
         <VuwiSwitch v-model="animate" class="vuwi-switch-sm">
           <span class="pl-2">Animate</span>
         </VuwiSwitch>
       </div>
       <div class="p-4">
-        <ProgressCircleBasic :percent="percent" />
-      </div>
-    </ExampleCard>
-
-    <!-- Variants -->
-    <div id="basic" class="doc-subtitle">Variants</div>
-    <div
-      class="doc-detail"
-    >Demonstrates different sizes and widths.</div>
-
-    <ExampleCard source="spinner/basic.vue">
-      <div class="p-2 vuwi-highlight">
-        <VuwiSwitch v-model="animate" class="vuwi-switch-sm">
-          <span class="pl-2">Animate</span>
-        </VuwiSwitch>
-      </div>
-      <div class="p-4">
-        <ProgressCircleVariants :percent="percent" />
+        <ProgressBarBasic :percent="percent" />
       </div>
     </ExampleCard>
 
@@ -130,7 +88,7 @@ onMounted(async () => {
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Progress/VuwiProgressCircle.css" />
+    <StyleCard source="Progress/VuwiProgressBar.css" />
   </div>
 </template>
 
