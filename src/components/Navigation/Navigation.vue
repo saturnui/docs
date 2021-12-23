@@ -78,7 +78,6 @@ const menuItems: MenuItem[] = [
       { title: 'Decoration', to: '/ui/decoration', icon: LogoTailwind },
       { title: 'Dialog', to: '/ui/dialog', icon: LogoVue },
       { title: 'Drawer', to: '/ui/drawer', icon: LogoVue },
-      { title: 'Dropdown', to: '/ui/dropdown', icon: LogoVue },
       { title: 'Dropzone', to: '/ui/dropzone', icon: LogoVue },
       { title: 'FilePreview', to: '/ui/filepreview', icon: LogoVue },
       { title: 'FileSelector', to: '/ui/fileselector', icon: LogoVue },

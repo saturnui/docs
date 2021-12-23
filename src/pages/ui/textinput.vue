@@ -247,19 +247,19 @@ onMounted(async () => {
     >Rules require the user input to meet certain requirements in order to be valid. Rules are implemented using <a href="https://vee-validate.logaretm.com/v4/" target="_blank" class="doc-link">vee-validate</a>.</div>
 
     <div class="grid gap-4">
-      <ExampleCard source="textinput/rules.vue" title="Required example">
+      <ExampleCard source="textinput/rules/required.vue" title="Required example">
         <div class="doc-card-content">
           <TextInputRules />
         </div>
       </ExampleCard>
 
-      <ExampleCard source="textinput/rules.vue" title="Email example">
+      <ExampleCard source="textinput/rules/email.vue" title="Email example">
         <div class="doc-card-content">
           <TextInputEmail />
         </div>
       </ExampleCard>
 
-      <ExampleCard source="textinput/rules.vue" title="Password example using custom validator">
+      <ExampleCard source="textinput/rules/password.vue" title="Password example using custom validator">
         <div class="doc-card-content">
           <TextInputPassword />
         </div>
