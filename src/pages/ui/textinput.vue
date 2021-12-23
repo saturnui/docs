@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import TextInputBasic from './examples/textinput/basic.vue'
+import TextInputStyle from './examples/textinput/style.vue'
 import TextInputMultlineBasic from './examples/textinput/multiline/basic.vue'
 import TextInputSlotsBusy from './examples/textinput/slots/busy.vue'
 import TextInputSlotsClearable from './examples/textinput/slots/clearable.vue'
 import TextInputSlotsPassword from './examples/textinput/slots/password.vue'
 import TextInputDisabled from './examples/textinput/disabled.vue'
+import TextInputMask from './examples/textinput/mask.vue'
+import TextInputRules from './examples/textinput/rules/required.vue'
+import TextInputEmail from './examples/textinput/rules/email.vue'
+import TextInputPassword from './examples/textinput/rules/password.vue'
 import TextInputError from './examples/textinput/error.vue'
 
 const api = [
@@ -42,7 +47,7 @@ const api = [
     name: 'mask',
     type: 'string',
     defaultVal: '',
-    desc: 'Masks user input to conform to a pattern. See <a href="https://beholdr.github.io/maska/" target="blank">vee-validate</a> for details.',
+    desc: 'Masks user input to conform to a pattern. See <a href="https://beholdr.github.io/maska/" target="blank" class="doc-link">maska</a> for details.',
   },
   {
     name: 'modelValue',
@@ -78,7 +83,7 @@ const api = [
     name: 'rules',
     type: 'function',
     defaultVal: null,
-    desc: 'Provides rules for validation.',
+    desc: 'Provides rules for validation. See <a href="https://vee-validate.logaretm.com/v4/" target="blank" class="doc-link">vee-validate</a> for details.',
   },
   {
     name: 'type',
@@ -91,9 +96,12 @@ const api = [
 const sidenavItems = [
   { title: 'Textfield', anchor: '#textfield' },
   { title: 'Textarea', anchor: '#textarea' },
+  { title: 'Styling', anchor: '#styling' },
   { title: 'Slots', anchor: '#slots' },
-  { title: 'Disabled', anchor: '#disabled' },
+  { title: 'Masking', anchor: '#mask' },
+  { title: 'Rules', anchor: '#rules' },
   { title: 'Errors', anchor: '#errors' },
+  { title: 'Disabled', anchor: '#disabled' },
   { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
@@ -130,13 +138,14 @@ onMounted(async () => {
 
   <div class="vuwi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Text Input</div>
+    <div class="doc-title">TextInput</div>
     <div class="doc-desc">
-      Text input is a single component comprising of both a
+      TextInput is a single component comprising of both a
       <span
         class="text-purple-500 font-bold"
       >textfield</span> and a
-      <span class="text-purple-500 font-bold">textarea</span>. The behaviors and styling are the same.
+      <span class="text-purple-500 font-bold">textarea</span>. The underlying styles and script are the same. TextInput can be used
+      as a standalone or with VuwiForm.
     </div>
 
     <!-- Basic -->
@@ -146,12 +155,14 @@ onMounted(async () => {
       <span class="text-purple-500 font-bold">textfield</span>.
     </div>
 
+    <!-- Textfield -->
     <ExampleCard source="textinput/basic.vue">
       <div class="doc-card-content">
         <TextInputBasic />
       </div>
     </ExampleCard>
 
+    <!-- Textarea -->
     <div id="textarea" class="doc-subtitle">Textarea</div>
     <div class="doc-detail">
       Multiline changes the behavior to a
@@ -160,6 +171,18 @@ onMounted(async () => {
     <ExampleCard source="textinput/multiline/basic.vue">
       <div class="doc-card-content">
         <TextInputMultlineBasic />
+      </div>
+    </ExampleCard>
+
+    <!-- Styling -->
+    <div id="styling" class="doc-subtitle">Styling</div>
+    <div class="doc-detail">
+      By default, textinput doesn't have any styling applied allowing you to determine the appearance. Helper
+      classes are provided to easily give it a traditional appearance.
+    </div>
+    <ExampleCard source="textinput/style.vue">
+      <div class="doc-card-content">
+        <TextInputStyle />
       </div>
     </ExampleCard>
 
@@ -201,8 +224,56 @@ onMounted(async () => {
       </div>
     </ExampleCard>
 
+    <!-- Masking -->
+    <div id="mask" class="doc-subtitle">Masking</div>
+    <div class="doc-detail">
+      Masks the text input to conform to a pattern. Masks are supported using the library
+      <a
+        href="https://github.com/beholdr/maska"
+        target="_blank"
+        class="doc-link"
+      >maska</a>.
+    </div>
+    <ExampleCard source="textinput/mask.vue">
+      <div class="doc-card-content">
+        <TextInputMask />
+      </div>
+    </ExampleCard>
+
+    <!-- Rules -->
+    <div id="rules" class="doc-subtitle">Rules</div>
+    <div
+      class="doc-detail"
+    >Rules require the user input to meet certain requirements in order to be valid. Rules are implemented using <a href="https://vee-validate.logaretm.com/v4/" target="_blank" class="doc-link">vee-validate</a>.</div>
+
+    <div class="grid gap-4">
+      <ExampleCard source="textinput/rules.vue" title="Required example">
+        <div class="doc-card-content">
+          <TextInputRules />
+        </div>
+      </ExampleCard>
+
+      <ExampleCard source="textinput/rules.vue" title="Email example">
+        <div class="doc-card-content">
+          <TextInputEmail />
+        </div>
+      </ExampleCard>
+
+      <ExampleCard source="textinput/rules.vue" title="Password example using custom validator">
+        <div class="doc-card-content">
+          <TextInputPassword />
+        </div>
+      </ExampleCard>
+    </div>
+
+    <!-- Errors -->
     <div id="errors" class="doc-subtitle">Errors</div>
-    <div class="doc-detail">Indicates text input errors</div>
+    <div class="doc-detail">
+      Indicates text input errors. An error will be indicated when a rule is not met or an error is added using the
+      <span
+        class="text-purple-600"
+      >error</span> property
+    </div>
     <ExampleCard source="textinput/error.vue">
       <div class="doc-card-content">
         <TextInputError />

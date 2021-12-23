@@ -3,12 +3,8 @@
 import { defineRule } from 'vee-validate'
 import { required } from '@vee-validate/rules'
 
-const text = ref('  ')
+const text = ref('')
 defineRule('required', required)
-
-nextTick(() => {
-  text.value = ''
-})
 </script>
 
 <template>
@@ -21,11 +17,5 @@ nextTick(() => {
       class="border vuwi-border vuwi-shade vuwi-text-input-error"
       rules="required"
     />
-    <VuwiTextInput
-      v-model="text"
-      label="First name"
-      error="Manually inserted error"
-      class="border vuwi-border vuwi-shade"
-    ></VuwiTextInput>
   </div>
 </template>

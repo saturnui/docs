@@ -1,11 +1,9 @@
 <script setup lang="ts">
 // https://vee-validate.logaretm.com/v4/guide/global-validators
 import { defineRule } from 'vee-validate'
-defineRule('required', (value: string) => {
-  if (!value || !value.length) 
-    return 'is required'
-  return true
-})
+import { required } from '@vee-validate/rules'
+
+defineRule('required', required)
 
 const selectedItem = ref('happy')
 const items = [
