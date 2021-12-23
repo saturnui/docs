@@ -38,6 +38,7 @@ export const useValidPassword = (v: string) => {
   return true
 }
 
-export const useRequired = (v: string) => {
-  return !!`${v}`.trim() || 'is required'
+export const useRequired = (v: string): string => {
+  if (v.trim()) return ''
+  return 'is required'
 }

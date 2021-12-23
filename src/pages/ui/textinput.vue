@@ -4,7 +4,8 @@ import TextInputMultlineBasic from './examples/textinput/multiline/basic.vue'
 import TextInputSlotsBusy from './examples/textinput/slots/busy.vue'
 import TextInputSlotsClearable from './examples/textinput/slots/clearable.vue'
 import TextInputSlotsPassword from './examples/textinput/slots/password.vue'
-// import TextInputSlots from './examples/textinput/slots.vue'
+import TextInputDisabled from './examples/textinput/disabled.vue'
+import TextInputError from './examples/textinput/error.vue'
 
 const api = [
   {
@@ -88,9 +89,11 @@ const api = [
 ]
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'Static', anchor: '#static' },
-  { title: 'Variations', anchor: '#variations' },
+  { title: 'Textfield', anchor: '#textfield' },
+  { title: 'Textarea', anchor: '#textarea' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Disabled', anchor: '#disabled' },
+  { title: 'Errors', anchor: '#errors' },
   { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
@@ -132,15 +135,15 @@ onMounted(async () => {
       Text input is a single component comprising of both a
       <span
         class="text-purple-500 font-bold"
-      >text input</span> and a
+      >textfield</span> and a
       <span class="text-purple-500 font-bold">textarea</span>. The behaviors and styling are the same.
     </div>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div id="textfield" class="doc-subtitle">Textfield</div>
     <div class="doc-detail">
       Default behavior is as a single-line
-      <span class="text-purple-500 font-bold">input</span> field.
+      <span class="text-purple-500 font-bold">textfield</span>.
     </div>
 
     <ExampleCard source="textinput/basic.vue">
@@ -149,7 +152,7 @@ onMounted(async () => {
       </div>
     </ExampleCard>
 
-    <div id="basic" class="doc-subtitle">Basic Multiline Usage</div>
+    <div id="textarea" class="doc-subtitle">Textarea</div>
     <div class="doc-detail">
       Multiline changes the behavior to a
       <span class="text-purple-500 font-bold">textarea</span>.
@@ -189,6 +192,22 @@ onMounted(async () => {
         </div>
       </ExampleCard>
     </div>
+
+    <div id="disabled" class="doc-subtitle">Disabled</div>
+    <div class="doc-detail">Indicates text input is disabled</div>
+    <ExampleCard source="textinput/disabled.vue">
+      <div class="doc-card-content">
+        <TextInputDisabled />
+      </div>
+    </ExampleCard>
+
+    <div id="errors" class="doc-subtitle">Errors</div>
+    <div class="doc-detail">Indicates text input errors</div>
+    <ExampleCard source="textinput/error.vue">
+      <div class="doc-card-content">
+        <TextInputError />
+      </div>
+    </ExampleCard>
 
     <!-- API -->
     <div id="api" class="doc-subtitle">API</div>

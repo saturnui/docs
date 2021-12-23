@@ -54,7 +54,7 @@ onBeforeMount(async () => {
 <template>
   <div class="vuwi-card border vuwi-border vuwi-text relative">
     <div class="flex items-center px-4 py-2">
-      <div class="pl-1 font-bold">{{ title }}</div>
+      <div class="pl-1 font-medium">{{ title }}</div>
       <div class="flex-grow"></div>
       <VuwiTooltip placement="bottom">
         <template #tooltip>

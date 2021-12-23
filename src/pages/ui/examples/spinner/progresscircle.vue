@@ -17,11 +17,8 @@ setInterval(() => {
 </script>
 
 <template>
-  <!-- <div class="block origin-left-top transform -rotate-90">
-              SUBSCRIBE AND CANCEL ANYTIME ANYWHERE
-            </div> -->
-
   <div class="flex justify-center gap-12">
+    
     <!-- Variation #1 example -->
     <div class="relative w-12 h-12">
       <div class="vuwi-spinner vuwi-spin-none border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 vuwi-border" />

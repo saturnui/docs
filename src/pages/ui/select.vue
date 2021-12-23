@@ -1,5 +1,129 @@
+<script setup lang="ts">
+import SelectBasic from './examples/select/basic.vue'
+import SelectSlotsBusy from './examples/select/slots/busy.vue'
+import SelectSlotsClearable from './examples/select/slots/clearable.vue'
+import SelectDisabled from './examples/select/disabled.vue'
+import SelectError from './examples/select/error.vue'
+
+const api = [
+  {
+    name: 'theme',
+    type: 'string',
+    defaultVal: 'vuwi',
+    desc: 'Used as the prefix for all Vuwi CSS classes.',
+  },
+]
+
+const sidenavItems = [
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Disabled', anchor: '#disabled' },
+  { title: 'Errors', anchor: '#errors' },
+  { title: 'API', anchor: '#api' },
+  { title: 'Style Guide', anchor: '#styles' },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
+</script>
+
 <template>
-  <div>Select</div>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
+      </div>
+    </VuwiOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="vuwi-content doc-content">
+    <!-- Header -->
+    <div class="doc-title">Select</div>
+    <div class="doc-desc">
+      Select decorates the default
+      <span class="text-purple-500 font-bold">&lt;select&gt;</span> HTML component.
+    </div>
+
+    <!-- Basic -->
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="select/basic.vue">
+      <div class="doc-card-content">
+        <SelectBasic />
+      </div>
+    </ExampleCard>
+
+    <!-- Slots -->
+    <div id="slots" class="doc-subtitle">Slots</div>
+    <div class="doc-detail">
+      Slots provide the ability to enhance the component. There are two slots a
+      <span
+        class="text-purple-500 font-bold"
+      >prepend</span> and an
+      <span class="text-purple-500 font-bold">append</span> slot.
+    </div>
+
+    <div class="grid gap-4">
+      <ExampleCard source="select/slots/clearable.vue" title="Clearable example with icon">
+        <div class="doc-card-content">
+          <SelectSlotsClearable />
+        </div>
+      </ExampleCard>
+  
+      <ExampleCard source="select/slots/busy.vue" title="Busy indicator with check">
+        <div class="doc-card-content">
+          <SelectSlotsBusy />
+        </div>
+      </ExampleCard>
+    </div>
+
+
+    <!-- Disabled -->
+    <div id="disabled" class="doc-subtitle">Disabled</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="select/disabled.vue">
+      <div class="doc-card-content">
+        <SelectDisabled />
+      </div>
+    </ExampleCard>
+
+    <!-- Errors -->
+    <div id="errors" class="doc-subtitle">Errors</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="select/error.vue">
+      <div class="doc-card-content">
+        <SelectError />
+      </div>
+    </ExampleCard>
+
+    <!-- API -->
+    <div id="api" class="doc-subtitle">API</div>
+    <ApiCard :api="api" class="w-full" />
+
+    <!-- Style Guide -->
+    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="Select/VuwiSelect.css" />
+  </div>
 </template>
 
 <route lang="yaml">

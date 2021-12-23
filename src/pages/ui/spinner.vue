@@ -68,7 +68,7 @@ onMounted(async () => {
       class="doc-detail"
     >Here are some examples of style changes you can make to change the appearance</div>
 
-    <ExampleCard source="spinner/basic.vue">
+    <ExampleCard source="spinner/variants.vue">
       <div class="doc-card-content">
         <SpinnerVariants />
       </div>
@@ -80,7 +80,7 @@ onMounted(async () => {
       <router-link to="/ui/progresscircle" class="doc-link">VuwiProgressCircle</router-link> in conjunction with the spinner animations to achieve custom effects.
     </div>
 
-    <ExampleCard source="spinner/basic.vue">
+    <ExampleCard source="spinner/progresscircle.vue">
       <div class="doc-card-content">
         <SpinnerProgressCircle />
       </div>
