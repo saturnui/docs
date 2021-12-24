@@ -24,7 +24,7 @@ const enableAbsolute = ref(false)
 
   <!-- Preview -->
   <div
-    class="relative demo h-100 flex flex-col text-white rounded-b vuwi-highlight overflow-hidden"
+    class="relative doc-preview h-100 flex flex-col text-white rounded-b vuwi-highlight overflow-hidden"
   >
     <div :class="{ 'absolute top-0 w-full z-10': enableAbsolute }">
       <VuwiCollapse v-model="showToast" class="pointer-events-none" slide="down">
@@ -122,27 +122,3 @@ const enableAbsolute = ref(false)
     </div>
   </div>
 </template>
-
-<style>
-.demo {
-  background-color: #eee;
-  background-image: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.05) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(0, 0, 0, 0.05) 75%,
-      rgba(0, 0, 0, 0.05)
-    ),
-    linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 0.05) 25%,
-      transparent 25%,
-      transparent 75%,
-      rgba(0, 0, 0, 0.05) 75%,
-      rgba(0, 0, 0, 0.05)
-    );
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
-}
-</style>

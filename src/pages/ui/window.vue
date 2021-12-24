@@ -48,17 +48,13 @@ onMounted(async () => {
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <ExampleCard source="window/basic.vue">
-      <div class="doc-card-content">
-        <WindowBasic />
-      </div>
+      <WindowBasic />
     </ExampleCard>
 
     <!-- Variations -->
     <div id="variations" class="doc-subtitle">Variations</div>
     <ExampleCard source="window/variations.vue">
-      <div class="doc-card-content">
-        <WindowVariations />
-      </div>
+      <WindowVariations />
     </ExampleCard>
 
     <!-- Style -->

@@ -60,9 +60,7 @@ onMounted(async () => {
     </div>
 
     <ExampleCard source="switch/basic.vue">
-      <div class="doc-card-content">
-        <SwitchBasic />
-      </div>
+      <SwitchBasic />
     </ExampleCard>
 
     <!-- API -->

@@ -71,7 +71,7 @@ onMounted(async () => {
       class="doc-detail"
     >These examples demonstrate only a few different ways to style the progress circle</div>
 
-    <ExampleCard source="progress/bar/basic.vue">
+    <ExampleCard source="progress/bar/basic.vue" class="doc-padding-none">
       <div class="p-2 vuwi-highlight">
         <VuwiSwitch v-model="animate" class="vuwi-switch-sm">
           <span class="pl-2">Animate</span>

@@ -28,7 +28,7 @@ const showRegion = ref(false)
   </div>
 
   <!-- Preview -->
-  <div class="relative demo h-60 flex flex-col text-white rounded-b vuwi-highlight overflow-hidden">
+  <div class="relative doc-preview h-60 flex flex-col text-white rounded-b vuwi-highlight overflow-hidden">
     <div :class="{ 'absolute top-0 w-full z-10': enableAbsolute }">
       <VuwiCollapse v-model="showToast" class="pointer-events-none" slide="down">
         <div class="flex items-center justify-between bg-black pointer-events-auto">

@@ -66,9 +66,7 @@ onMounted(async () => {
     <div class="doc-detail">Details here...</div>
 
     <ExampleCard source="select/basic.vue">
-      <div class="doc-card-content">
-        <SelectBasic />
-      </div>
+      <SelectBasic />
     </ExampleCard>
 
     <!-- Slots -->
@@ -83,15 +81,11 @@ onMounted(async () => {
 
     <div class="grid gap-4">
       <ExampleCard source="select/slots/clearable.vue" title="Clearable example with icon">
-        <div class="doc-card-content">
-          <SelectSlotsClearable />
-        </div>
+        <SelectSlotsClearable />
       </ExampleCard>
   
       <ExampleCard source="select/slots/busy.vue" title="Busy indicator with check">
-        <div class="doc-card-content">
-          <SelectSlotsBusy />
-        </div>
+        <SelectSlotsBusy />
       </ExampleCard>
     </div>
 
@@ -101,9 +95,7 @@ onMounted(async () => {
     <div class="doc-detail">Details here...</div>
 
     <ExampleCard source="select/disabled.vue">
-      <div class="doc-card-content">
-        <SelectDisabled />
-      </div>
+      <SelectDisabled />
     </ExampleCard>
 
     <!-- Errors -->
@@ -111,9 +103,7 @@ onMounted(async () => {
     <div class="doc-detail">Details here...</div>
 
     <ExampleCard source="select/error.vue">
-      <div class="doc-card-content">
-        <SelectError />
-      </div>
+      <SelectError />
     </ExampleCard>
 
     <!-- API -->

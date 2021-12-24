@@ -81,9 +81,7 @@ onMounted(async () => {
     </div>
 
     <ExampleCard source="pagination/basic.vue">
-      <div class="doc-card-content">
-        <PaginationBasic />
-      </div>
+      <PaginationBasic />
     </ExampleCard>
 
     <!-- API -->

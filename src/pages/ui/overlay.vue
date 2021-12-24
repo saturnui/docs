@@ -1,5 +1,108 @@
+<script setup lang="ts">
+import OverlayBasic from './examples/overlay/basic.vue'
+
+const api = [
+  {
+    name: 'theme',
+    type: 'string',
+    defaultVal: 'vuwi',
+    desc: 'Used as the prefix for all Vuwi CSS classes.',
+  },
+  {
+    name: 'modelValue',
+    type: 'boolean',
+    defaultVal: false,
+    desc: 'Shows / hides overlay and its contents.',
+  },
+  {
+    name: 'position',
+    type: 'string',
+    defaultVal: 'center',
+    desc: 'Position of content. Accepted values are "center", "left", "right", "top", "bottom"',
+  },
+  {
+    name: 'modal',
+    type: 'boolean',
+    defaultVal: false,
+    desc: 'Prevents closing the overlay outside of content area.',
+  },
+  {
+    name: 'blocking',
+    type: 'boolean',
+    defaultVal: true,
+    desc: 'Prevents user interaction with underlying content when overlay is active.',
+  },
+  {
+    name: 'disableScrollTarget',
+    type: 'string',
+    defaultVal: 'body',
+    desc: 'Disables scroll target when overlay if active. Accepted values are "body", "parent" or a custom selector',
+  },
+]
+
+const sidenavItems = [
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'API', anchor: '#api' },
+  { title: 'Style Guide', anchor: '#styles' },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
+</script>
+
 <template>
-  <div>Overlay</div>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
+      </div>
+    </VuwiOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="vuwi-content doc-content">
+    <!-- Header -->
+    <div class="doc-title">Overlay</div>
+    <div class="doc-desc">
+      The overlay component is used to provide emphasis on a particular element 
+      or parts of it. It signals to the user of a state change within the application 
+      and can be used for creating loaders, dialogs and more.
+    </div>
+
+    <!-- Basic -->
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div class="doc-detail">
+      Details here...
+    </div>
+
+    <ExampleCard source="textinput/basic.vue" class="doc-padding-none">
+      <OverlayBasic />
+    </ExampleCard>
+
+    <!-- API -->
+    <div id="api" class="doc-subtitle">API</div>
+    <ApiCard :api="api" class="w-full" />
+
+    <!-- Style Guide -->
+    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="TextInput/VuwiTextInput.css" />
+  </div>
 </template>
 
 <route lang="yaml">

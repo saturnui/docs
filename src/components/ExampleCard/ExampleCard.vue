@@ -115,7 +115,7 @@ onBeforeMount(async () => {
       </div>
     </VuwiCollapse>
     <VuwiLine v-if="showCode" />
-    <div :class="mode">
+    <div class="doc-card-content" :class="mode">
       <div class="vuwi-text overflow-y-auto dark:bg-dark-700">
         <slot />
       </div>

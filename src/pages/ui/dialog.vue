@@ -14,7 +14,7 @@ const showDialog = ref(false)
         <button class="vuwi-btn vuwi-btn-primary" @click="showDialog = true">Open Dialog</button>
       </div>
       <teleport to="body">
-        <VuwiOverlay v-model="showDialog" :modal="true" class="relative z-1">
+        <VuwiOverlay v-model="showDialog" name="dialog" :modal="true" class="fixed vuwi-overlay-fixed vuwi-overlay-shade z-10">
           <VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
             <template #title>
               <span class="pl-3 font-bold">Dialog example</span>

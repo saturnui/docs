@@ -57,9 +57,7 @@ onMounted(async () => {
     >The following demonstrates how to use the CSS only version of the spinner to change its appearance.</div>
 
     <ExampleCard source="spinner/basic.vue">
-      <div class="doc-card-content">
-        <SpinnerBasic />
-      </div>
+      <SpinnerBasic />
     </ExampleCard>
 
     <!-- Variants -->
@@ -69,9 +67,7 @@ onMounted(async () => {
     >Here are some examples of style changes you can make to change the appearance</div>
 
     <ExampleCard source="spinner/variants.vue">
-      <div class="doc-card-content">
-        <SpinnerVariants />
-      </div>
+      <SpinnerVariants />
     </ExampleCard>
 
     <div id="progresscircle" class="doc-subtitle">ProgressCircle</div>
@@ -81,9 +77,7 @@ onMounted(async () => {
     </div>
 
     <ExampleCard source="spinner/progresscircle.vue">
-      <div class="doc-card-content">
-        <SpinnerProgressCircle />
-      </div>
+      <SpinnerProgressCircle />
     </ExampleCard>
 
     <!-- Style Guide -->

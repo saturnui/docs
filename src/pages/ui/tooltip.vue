@@ -89,27 +89,21 @@ onMounted(async () => {
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <ExampleCard source="tooltip/basic.vue">
-      <div class="doc-card-content">
-        <TooltipBasic />
-      </div>
+      <TooltipBasic />
     </ExampleCard>
 
     <!-- Static -->
     <div id="static" class="doc-subtitle">Static</div>
     <div class="doc-detail">Tooltips can be shown on demand.</div>
     <ExampleCard source="tooltip/static.vue">
-      <div class="doc-card-content">
-        <TooltipStatic />
-      </div>
+      <TooltipStatic />
     </ExampleCard>
 
     <!-- Variations -->
     <div id="variations" class="doc-subtitle">Variations</div>
     <div class="doc-detail">Tooltips can be completely customomized with any style / content.</div>
     <ExampleCard source="tooltip/variations.vue">
-      <div class="doc-card-content">
-        <TooltipVariations />
-      </div>
+      <TooltipVariations />
     </ExampleCard>
 
     <!-- API -->
