@@ -88,10 +88,10 @@ onMounted(async () => {
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <div class="doc-detail">
-      Details here...
+      The example below shows different features available in the overlay.
     </div>
 
-    <ExampleCard source="textinput/basic.vue" class="doc-padding-none">
+    <ExampleCard source="overlay/basic.vue" class="doc-padding-none">
       <OverlayBasic />
     </ExampleCard>
 
@@ -101,7 +101,7 @@ onMounted(async () => {
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <StyleCard source="Overlay/VuwiOverlay.css" />
   </div>
 </template>
 
