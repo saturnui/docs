@@ -56,7 +56,7 @@ onBeforeMount(async () => {
     <div class="flex items-center px-4 py-2">
       <div class="pl-1 font-medium">{{ title }}</div>
       <div class="flex-grow"></div>
-      <VuwiTooltip placement="bottom">
+      <!-- <VuwiTooltip placement="bottom">
         <template #tooltip>
           <div class="px-3 py-2 text-sm">
             <span>Toggle Dark</span>
@@ -65,7 +65,7 @@ onBeforeMount(async () => {
         <button class="vuwi-btn vuwi-btn-icon" @click="toggleMode">
           <mdi-invert-colors />
         </button>
-      </VuwiTooltip>
+      </VuwiTooltip> -->
       <VuwiTooltip placement="bottom">
         <template #tooltip>
           <div class="px-3 py-2 text-sm">

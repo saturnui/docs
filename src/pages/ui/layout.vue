@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import TextInputBasic from './examples/textinput/basic.vue'
-
-const api = [
-  {
-    name: 'theme',
-    type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
-  },
-]
+import LayoutPositions from './examples/layout/positions.vue'
+import LayoutCols321 from './examples/layout/col-3-2-1.vue'
+import LayoutCols31 from './examples/layout/col-3-1.vue'
+import LayoutCols3 from './examples/layout/col-3.vue'
+import LayoutCols21 from './examples/layout/col-2-1.vue'
+import LayoutCols2 from './examples/layout/col-2.vue'
+import LayoutCols1 from './examples/layout/col-1.vue'
+import LayoutRow from './examples/layout/row.vue'
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
+  { title: 'Positioning', anchor: '#positoning' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
 
@@ -48,30 +45,74 @@ onMounted(async () => {
 
   <div class="vuwi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Title here...</div>
+    <div class="doc-title">Layout</div>
     <div class="doc-desc">
-      Description here...
+      Vuwi provides some classes for common layout configurations.
     </div>
 
-    <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <!-- Positioning -->
+    <div id="positoning" class="doc-subtitle">Positioning</div>
     <div class="doc-detail">
-      Details here...
+      Some style to provide common layout positons.
     </div>
 
-    <ExampleCard source="textinput/basic.vue">
-      <TextInputBasic />
+    <ExampleCard source="layout/positions.vue" class="doc-padding-none">
+      <LayoutPositions />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Columns and Rows -->
+    <div id="positoning" class="doc-subtitle">Columns and Rows</div>
+    <div class="doc-detail">
+      A set of classes for managing common column and row layouts.
+    </div>
+
+    <ExampleCard source="layout/col-3-2-1.vue" class="doc-padding-none" title=".vuwi-col-3-2-1">
+      <LayoutCols321 />
+    </ExampleCard>
+
+    <ExampleCard source="layout/col-3-1.vue" class="doc-padding-none" title=".vuwi-col-3-1">
+      <LayoutCols31 />
+    </ExampleCard>
+
+    <ExampleCard source="layout/col-3.vue" class="doc-padding-none" title=".vuwi-col-3">
+      <LayoutCols3 />
+    </ExampleCard>
+
+    <ExampleCard source="layout/col-2-1.vue" class="doc-padding-none" title=".vuwi-col-2-1">
+      <LayoutCols21 />
+    </ExampleCard>
+
+    <ExampleCard source="layout/col-2.vue" class="doc-padding-none" title=".vuwi-col-2">
+      <LayoutCols2 />
+    </ExampleCard>
+
+    <ExampleCard source="layout/col-1.vue" class="doc-padding-none" title=".vuwi-col-1">
+      <LayoutCols1 />
+    </ExampleCard>
+
+    <ExampleCard source="layout/row.vue" class="doc-padding-none" title=".vuwi-row">
+      <LayoutRow />
+    </ExampleCard>
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
   </div>
 </template>
+
+<style>
+.pos-label {
+  @apply absolute border border-purple-500 bg-purple-500 text-purple-700 dark:text-white bg-opacity-20 rounded-full px-3 py-1 font-mono text-sm;
+}
+
+.layout-box {
+  @apply border border-purple-500 bg-purple-500 bg-opacity-20 text-purple-700 dark:text-white h-8 flex items-center justify-center font-bold;
+}
+
+.layout-box2 {
+  @apply border border-green-500 bg-green-500 bg-opacity-20 text-green-700 dark:text-white h-8 flex items-center justify-center font-bold;
+}
+</style>
 
 <route lang="yaml">
 meta:

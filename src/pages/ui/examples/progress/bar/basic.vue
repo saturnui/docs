@@ -47,7 +47,7 @@ defineProps({
     <div>Further enhance the progress bar with things like a label</div>
     <VuwiProgressBar :percent="percent" class="vuwi-highlight rounded-full overflow-hidden">
       <div class="bg-green-500 vuwi-progress-stripe vuwi-progress-slow h-10">
-        <div class="absolute vuwi-vcenter right-1 min-w-12 text-center px-3 py-1 rounded-3xl font-bold bg-gray-800 text-white">
+        <div class="absolute vuwi-mr right-1 min-w-12 text-center px-3 py-1 rounded-3xl font-bold bg-gray-800 text-white">
           <span>{{ percent }}</span>
         </div>
       </div>
