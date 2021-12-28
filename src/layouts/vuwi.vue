@@ -25,19 +25,34 @@ onAddMessage(() => {
 </script>
 
 <template>
-  <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900" />
-  <main class="vuwi-main app-has-appbar vuwi-text">
-    <VuwiDrawer
-      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full"
-    >
-      <Navigation />
-    </VuwiDrawer>
-    <div class="vuwi-drawer-left vuwi-drawer-right-xl">
-      <router-view />
+  <img src="/vuwi-background.png" class="absolute top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40">
+  <AppBar
+    class="fixed top-0 bg-white/90 dark:bg-dark-900/90 vuwi-text border-b dark:border-dark-800"
+  />
+  <div class="pt-13 flex justify-center">
+    <div class="flex w-full max-w-8xl vuwi-text">
+      <VuwiDrawer class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-6 pr-4 h-full">
+        <Navigation />
+      </VuwiDrawer>
+      <div class="vuwi-drawer-left w-full">
+        <router-view />
+      </div>
+      <div class="w-80 vuwi-drawer-autohide-xl relative h-full">
+        <div id="sidenav" class="fixed"></div>
+      </div>
     </div>
-    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide-xl fixed top-0 right-0 h-full">
-      <div id="sidenav"></div>
-    </VuwiDrawer>
-  </main>
-  <div id="sidemenu" class="absolute z-10"></div>
+    <div id="sidemenu" class="absolute z-10"></div>
+    <!-- <main class="vuwi-main flex max-w-8xl app-has-appbar vuwi-text">
+      <VuwiDrawer class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full">
+        <Navigation />
+      </VuwiDrawer>
+      <div class="vuwi-drawer-left">
+        <router-view />
+      </div>
+      <VuwiDrawer class="vuwi-drawer-autohide-xl relative h-full bg-red-500">
+        <div id="sidenav" class="fixed"></div>
+      </VuwiDrawer>
+    </main>
+    <div id="sidemenu" class="absolute z-10"></div>-->
+  </div>
 </template>

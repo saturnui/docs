@@ -53,7 +53,7 @@ const signout = async () => {
 
 <template>
   <div class="app-appbar">
-    <div class="flex w-full items-center gap-4">
+    <div class="flex w-full max-w-8xl items-center gap-4 px-6">
       <button class="lg:hidden vuwi-btn vuwi-btn-icon" @click="showDrawer = !showDrawer">
         <tabler-menu-2 />
       </button>
