@@ -7,7 +7,7 @@ const text = ref('')
     <VuwiTextInput
       v-model="text"
       placeholder="Name"
-      class="border vuwi-border vuwi-shade"
+      class="border vuwi-border"
       disabled
     />
   </div>

@@ -9,13 +9,13 @@ const text = ref('')
       v-model="dob"
       label="Date of Birth"
       placeholder="DD/MM/YYYY"
-      class="border vuwi-border vuwi-shade vuwi-text-input-error"
+      class="border vuwi-border vuwi-text-input-error"
       mask="##/##/####"
     />
     <VuwiTextInput
       v-model="text"
       label="7 digit code using letters and numbers"
-      class="border vuwi-border vuwi-shade"
+      class="border vuwi-border"
       mask="XXX-X-XXX"
     ></VuwiTextInput>
   </div>

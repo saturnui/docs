@@ -5,8 +5,8 @@ const text = ref('')
 <template>
   <div class="grid gap-4">
     <VuwiTextInput placeholder="No style" />
-    <VuwiTextInput placeholder="Styled with a subtle background" class="vuwi-shade" />
-    <VuwiTextInput placeholder="Styled with border" class="vuwi-shade border vuwi-border" />
+    <VuwiTextInput placeholder="Background style" class="bg-dark-900 bg-opacity-3 dark:bg-opacity-20" />
+    <VuwiTextInput placeholder="Background and border style" class="dark:bg-dark-900 dark:bg-opacity-20 border vuwi-border" />
     <VuwiTextInput
       v-model="text"
       label="Fully customized"

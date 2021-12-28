@@ -4,7 +4,7 @@
       <tabler-x />
     </button>
     <VuwiLine />
-    <div class="bg-light-100 text-dark-300 p-4">
+    <div class="bg-light-100 text-dark-900 p-4">
       <span>Hello, world!</span>
     </div>
   </div>

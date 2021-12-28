@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TextInputBasic from './examples/textinput/textfield.vue'
+import TabBasic from './examples/tab/basic.vue'
 
 const api = [
   {
@@ -48,7 +48,7 @@ onMounted(async () => {
 
   <div class="vuwi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Title here...</div>
+    <div class="doc-title">Tabs</div>
     <div class="doc-desc">
       Description here...
     </div>
@@ -59,8 +59,8 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="textinput/basic.vue">
-      <TextInputBasic />
+    <ExampleCard source="tab/basic.vue">
+      <TabBasic />
     </ExampleCard>
 
     <!-- API -->

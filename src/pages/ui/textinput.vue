@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TextInputBasic from './examples/textinput/basic.vue'
+import TextInputTextfield from './examples/textinput/textfield.vue'
 import TextInputStyle from './examples/textinput/style.vue'
-import TextInputMultlineBasic from './examples/textinput/multiline/basic.vue'
+import TextInputTextarea from './examples/textinput/textarea.vue'
 import TextInputSlotsBusy from './examples/textinput/slots/busy.vue'
 import TextInputSlotsClearable from './examples/textinput/slots/clearable.vue'
 import TextInputSlotsPassword from './examples/textinput/slots/password.vue'
@@ -157,7 +157,7 @@ onMounted(async () => {
 
     <!-- Textfield -->
     <ExampleCard source="textinput/basic.vue">
-      <TextInputBasic />
+      <TextInputTextfield />
     </ExampleCard>
 
     <!-- Textarea -->
@@ -167,7 +167,7 @@ onMounted(async () => {
       <span class="text-purple-500 font-bold">textarea</span>.
     </div>
     <ExampleCard source="textinput/multiline/basic.vue">
-      <TextInputMultlineBasic />
+      <TextInputTextarea />
     </ExampleCard>
 
     <!-- Styling -->

@@ -12,6 +12,6 @@ const items = [
   <VuwiSelect
     v-model="selectedItem"
     :options="items"
-    class="border vuwi-border vuwi-shade min-w-60"
+    class="border vuwi-border min-w-60"
   />
 </template>

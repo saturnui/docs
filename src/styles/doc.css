@@ -28,7 +28,7 @@
       @apply p-0;
     }
     &-preview {
-      background-color: #eee;
+      background-color: #FFFFFF20;
       background-image: linear-gradient(
           45deg,
           rgba(0, 0, 0, 0.05) 25%,

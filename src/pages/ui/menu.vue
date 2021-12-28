@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TextInputBasic from './examples/textinput/textfield.vue'
+import TextInputBasic from './examples/menu/basic.vue'
 
 const api = [
   {
@@ -48,7 +48,7 @@ onMounted(async () => {
 
   <div class="vuwi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Title here...</div>
+    <div class="doc-title">Menu</div>
     <div class="doc-desc">
       Description here...
     </div>

@@ -24,7 +24,7 @@ watch(selectedItem, (val: string) => {
     v-model="selectedItem"
     label="Select an option"
     :options="items"
-    class="border vuwi-border vuwi-shade min-w-60"
+    class="border vuwi-border min-w-60"
   >
     <template #prepend>
       <tabler-mood-neutral class="text-xl opacity-30 w-10 min-w-10 -ml-2 text-left" />

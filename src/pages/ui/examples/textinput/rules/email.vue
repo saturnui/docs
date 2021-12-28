@@ -15,7 +15,7 @@ defineRule('email', email)
       name="Email"
       label="Username"
       placeholder="Your email address..."
-      class="border vuwi-border vuwi-shade vuwi-text-input-error"
+      class="border vuwi-border vuwi-text-input-error"
       rules="required|email"
     />
   </div>

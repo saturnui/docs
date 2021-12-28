@@ -17,7 +17,7 @@ watch(text, (val: string) => {
   <VuwiTextInput
     v-model="text"
     placeholder="Your name"
-    class="border vuwi-border vuwi-shade h-14"
+    class="border vuwi-border h-14"
   >
     <template #prepend>
       <tabler-user class="text-xl opacity-30" />

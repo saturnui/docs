@@ -14,7 +14,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
 </script>
 
 <template>
-  <div class="flex justify-center p-3 px-4 gap-4 border-b vuwi-border vuwi-highlight">
+  <div class="flex justify-center p-3 px-4 gap-4 border-b vuwi-border">
     <VuwiTooltip>
       <template #tooltip>
         <span class="max-w-50 text-center">Cannot click outside content to close overlay</span>
@@ -111,7 +111,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
     </div>
   </div>
 
-  <div class="relative h-80 w-full doc-preview vuwi-highlight border-t vuwi-border overflow-hidden">
+  <div class="relative h-80 w-full doc-preview border-t vuwi-border overflow-hidden vuwi-text">
     <div id="demo-content" class="absolute top-0 left-0 w-full h-80 overflow-y-auto">
       <div v-for="i in 5" :key="i" class="p-4">
         Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.

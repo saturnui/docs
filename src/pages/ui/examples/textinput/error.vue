@@ -18,14 +18,14 @@ nextTick(() => {
       name="Your name"
       label="Your name"
       placeholder="Name"
-      class="border vuwi-border vuwi-shade vuwi-text-input-error"
+      class="border vuwi-border vuwi-text-input-error"
       rules="required"
     />
     <VuwiTextInput
       v-model="text"
       label="First name"
       error="Manually inserted error"
-      class="border vuwi-border vuwi-shade"
+      class="border vuwi-border"
     ></VuwiTextInput>
   </div>
 </template>

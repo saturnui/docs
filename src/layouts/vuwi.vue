@@ -26,13 +26,13 @@ onAddMessage(() => {
 
 <template>
   <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900" />
-  <main class="vuwi-main app-has-appbar">
+  <main class="vuwi-main app-has-appbar vuwi-text">
     <VuwiDrawer
-      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-card text-dark-50 border-r dark:border-none"
+      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-card border-r dark:border-none"
     >
       <Navigation />
     </VuwiDrawer>
-    <div class="vuwi-drawer-left vuwi-drawer-right-xl vuwi-text">
+    <div class="vuwi-drawer-left vuwi-drawer-right-xl">
       <router-view />
     </div>
     <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide-xl fixed top-0 right-0 h-full">

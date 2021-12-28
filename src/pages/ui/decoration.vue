@@ -29,7 +29,7 @@ const decors = [
 
 <template>
   <div class="vuwi-content sm:p-8 space-y-6">
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
+    <div class="vuwi-window bg-yellow-400 filter sm:drop-shadow-lg relative doc-preview1">
       <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex w-full px-4">
         <div class="border-l dark:border-dark-600 px-6 py-2">Color</div>
         <div class="flex-grow"></div>
