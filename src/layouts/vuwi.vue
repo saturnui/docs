@@ -28,7 +28,7 @@ onAddMessage(() => {
   <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900" />
   <main class="vuwi-main app-has-appbar vuwi-text">
     <VuwiDrawer
-      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full vuwi-card border-r dark:border-none"
+      class="app-has-appbar text-sm vuwi-drawer-autohide fixed top-0 h-full"
     >
       <Navigation />
     </VuwiDrawer>
@@ -39,5 +39,5 @@ onAddMessage(() => {
       <div id="sidenav"></div>
     </VuwiDrawer>
   </main>
-  <div id="sidemenu" class="absolute z-1"></div>
+  <div id="sidemenu" class="absolute z-10"></div>
 </template>

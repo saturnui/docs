@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import LogoTailwind from '~/assets/logo-tailwind.svg'
-import LogoVue from '~/assets/logo-vue.svg'
 import IconFiles from '~icons/tabler/files'
 import IconNotebook from '~icons/tabler/notebook'
 import IconBox from '~icons/tabler/box'
@@ -64,39 +62,39 @@ const menuItems: MenuItem[] = [
   },
   {
     collapsible: true,
-    title: 'UI',
+    title: 'Components',
     icon: IconBox,
     links: [
-      { title: 'Alert', to: '/ui/alert', icon: LogoTailwind },
-      { title: 'Avatar', to: '/ui/avatar', icon: LogoVue },
-      { title: 'Button', to: '/ui/button', icon: LogoTailwind },
-      { title: 'Card', to: '/ui/card', icon: LogoTailwind },
-      { title: 'CodeInput', to: '/ui/codeinput', icon: LogoVue },
-      { title: 'Collapse', to: '/ui/collapse', icon: LogoVue },
-      { title: 'Color', to: '/ui/color', icon: LogoTailwind },
-      { title: 'DatePicker', to: '/ui/datepicker', icon: LogoVue },
-      { title: 'Decoration', to: '/ui/decoration', icon: LogoTailwind },
-      { title: 'Dialog', to: '/ui/dialog', icon: LogoVue },
-      { title: 'Drawer', to: '/ui/drawer', icon: LogoVue },
-      { title: 'Dropzone', to: '/ui/dropzone', icon: LogoVue },
-      { title: 'FilePreview', to: '/ui/filepreview', icon: LogoVue },
-      { title: 'FileSelector', to: '/ui/fileselector', icon: LogoVue },
-      { title: 'FormSection', to: '/ui/formsection', icon: LogoVue },
-      { title: 'Layout', to: '/ui/layout', icon: LogoTailwind },
-      { title: 'Line', to: '/ui/line', icon: LogoVue },
-      { title: 'Menu', to: '/ui/menu', icon: LogoVue },
-      { title: 'Notification', to: '/ui/notification', icon: LogoVue },
-      { title: 'Overlay', to: '/ui/overlay', icon: LogoVue },
-      { title: 'Pagination', to: '/ui/pagination', icon: LogoVue },
-      { title: 'Progress Bar', to: '/ui/progressbar', icon: LogoVue },
-      { title: 'Progress Circle', to: '/ui/progresscircle', icon: LogoVue },
-      { title: 'Select', to: '/ui/select', icon: LogoVue },
-      { title: 'Spinner', to: '/ui/spinner', icon: LogoTailwind },
-      { title: 'Switch', to: '/ui/switch', icon: LogoVue },
-      { title: 'Tab', to: '/ui/tab', icon: LogoVue },
-      { title: 'TextInput', to: '/ui/textinput', icon: LogoVue },
-      { title: 'Tooltip', to: '/ui/tooltip', icon: LogoVue },
-      { title: 'Window', to: '/ui/window', icon: LogoTailwind },
+      { title: 'Alert', to: '/ui/alert' },
+      { title: 'Avatar', to: '/ui/avatar' },
+      { title: 'Button', to: '/ui/button' },
+      { title: 'Card', to: '/ui/card' },
+      { title: 'CodeInput', to: '/ui/codeinput' },
+      { title: 'Collapse', to: '/ui/collapse' },
+      { title: 'Color', to: '/ui/color' },
+      { title: 'DatePicker', to: '/ui/datepicker' },
+      { title: 'Decoration', to: '/ui/decoration' },
+      { title: 'Dialog', to: '/ui/dialog' },
+      { title: 'Drawer', to: '/ui/drawer' },
+      { title: 'Dropzone', to: '/ui/dropzone' },
+      { title: 'FilePreview', to: '/ui/filepreview' },
+      { title: 'FileSelector', to: '/ui/fileselector' },
+      { title: 'FormSection', to: '/ui/formsection' },
+      { title: 'Layout', to: '/ui/layout' },
+      { title: 'Line', to: '/ui/line' },
+      { title: 'Menu', to: '/ui/menu' },
+      { title: 'Notification', to: '/ui/notification' },
+      { title: 'Overlay', to: '/ui/overlay' },
+      { title: 'Pagination', to: '/ui/pagination' },
+      { title: 'Progress Bar', to: '/ui/progressbar' },
+      { title: 'Progress Circle', to: '/ui/progresscircle' },
+      { title: 'Select', to: '/ui/select' },
+      { title: 'Spinner', to: '/ui/spinner' },
+      { title: 'Switch', to: '/ui/switch' },
+      { title: 'Tab', to: '/ui/tab' },
+      { title: 'TextInput', to: '/ui/textinput' },
+      { title: 'Tooltip', to: '/ui/tooltip' },
+      { title: 'Window', to: '/ui/window' },
     ],
   },
   {
@@ -118,10 +116,12 @@ const menuItems: MenuItem[] = [
   <div v-for="(item, i) in menuItems" :key="i">
     <VuwiCollapse v-if="item.collapsible" v-model="item.open">
       <template #header="{ open }">
-        <div class="px-3 py-2 flex items-center gap-2 nav-link">
-          <Component :is="item.icon" v-if="item.icon" class="w-5 h-5" />
+        <div class="px-3 flex items-center gap-3 nav-link">
+          <div v-if="item.icon" class="nav-link-icon">
+            <Component :is="item.icon" class="w-4 h-4" />
+          </div>
           <div v-else class="spacer w-5"></div>
-          <span class="font-bold flex-grow">{{ item.title }}</span>
+          <span class="font-medium flex-grow">{{ item.title }}</span>
           <tabler-chevron-right
             class="transition duration-150 transform"
             :class="{ 'rotate-90': open }"
@@ -130,9 +130,7 @@ const menuItems: MenuItem[] = [
       </template>
 
       <div class="overflow-y-auto">
-        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="nav-link">
-          <!-- <img :src="link.icon" width="14" /> -->
-          <div class="w-3"></div>
+        <router-link v-for="(link, n) in item.links" :key="n" :to="link.to" class="nav-sublink vuwi-border">
           {{ link.title }}
         </router-link>
       </div>
@@ -157,9 +155,7 @@ const menuItems: MenuItem[] = [
           :key="n"
           :to="link.to"
           class="nav-link"
-        >
-          {{ link.title }}
-        </router-link>
+        >{{ link.title }}</router-link>
       </div>
     </div>
   </div>

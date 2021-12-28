@@ -59,9 +59,9 @@ const signout = async () => {
       </button>
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
-        <!-- <assets-logo-vuwi class="w-8 h-8" /> -->
-        <div class="font-bold">
-          <span>Vuwi</span>
+        <assets-logo-vuwi class="w-8 h-8" />
+        <div class="font-medium text-2xl">
+          <span>vuwi</span>
         </div>
       </div>
       <div class="flex-grow"></div>
