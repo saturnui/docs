@@ -77,7 +77,6 @@ const menuItems: MenuItem[] = [
       { title: 'Dialog', to: '/ui/dialog' },
       { title: 'Drawer', to: '/ui/drawer' },
       { title: 'Dropzone', to: '/ui/dropzone' },
-      { title: 'FilePreview', to: '/ui/filepreview' },
       { title: 'FileSelector', to: '/ui/fileselector' },
       { title: 'FormSection', to: '/ui/formsection' },
       { title: 'Layout', to: '/ui/layout' },

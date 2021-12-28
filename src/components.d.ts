@@ -40,6 +40,8 @@ declare module 'vue' {
     TablerMessage: typeof import('~icons/tabler/message')['default']
     TablerMoodNeutral: typeof import('~icons/tabler/mood-neutral')['default']
     TablerPalette: typeof import('~icons/tabler/palette')['default']
+    TablerPencil: typeof import('~icons/tabler/pencil')['default']
+    TablerPhoto: typeof import('~icons/tabler/photo')['default']
     TablerUser: typeof import('~icons/tabler/user')['default']
     TablerX: typeof import('~icons/tabler/x')['default']
     ToggleDarkMode: typeof import('./components/ToggleDarkMode/ToggleDarkMode.vue')['default']

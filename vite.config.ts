@@ -27,6 +27,11 @@ export default defineConfig({
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],
+      // template: {
+      //   compilerOptions: {
+      //     isCustomElement: (tag: string) => tag.startsWith('vuwi-'),
+      //   },
+      // },
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -79,9 +84,7 @@ export default defineConfig({
         IconsResolver({
           componentPrefix: '',
           // enabledCollections: ['carbon']
-          customCollections: [
-            'assets',
-          ],
+          customCollections: ['assets'],
         }),
       ],
 
@@ -93,9 +96,7 @@ export default defineConfig({
       autoInstall: true,
       customCollections: {
         // key as the collection name
-        assets: FileSystemIconLoader(
-          './src/assets',
-        ),
+        assets: FileSystemIconLoader('./src/assets'),
       },
     }),
 

@@ -21,6 +21,9 @@
     &-link {
       @apply font-semibold text-blue-500 hover:underline;
     }
+    &-emphasis {
+      @apply text-purple-600 font-medium;
+    }
     &-card-content {
       @apply p-4;
     }
