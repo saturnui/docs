@@ -25,7 +25,7 @@ onAddMessage(() => {
 </script>
 
 <template>
-  <img src="/vuwi-background.png" class="absolute top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40">
+  <img src="/vuwi-background.png" class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40">
   <AppBar
     class="fixed top-0 bg-white/90 dark:bg-dark-900/90 vuwi-text border-b dark:border-dark-800"
   />
