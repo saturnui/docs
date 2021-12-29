@@ -25,6 +25,7 @@ declare module 'vue' {
     TablerChevronLeft: typeof import('~icons/tabler/chevron-left')['default']
     TablerChevronRight: typeof import('~icons/tabler/chevron-right')['default']
     TablerChevronUp: typeof import('~icons/tabler/chevron-up')['default']
+    TablerCloudUpload: typeof import('~icons/tabler/cloud-upload')['default']
     TablerCode: typeof import('~icons/tabler/code')['default']
     TablerCopy: typeof import('~icons/tabler/copy')['default']
     TablerEye: typeof import('~icons/tabler/eye')['default']
