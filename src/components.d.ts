@@ -77,6 +77,8 @@ declare module 'vue' {
     VuwiProgressCircle: typeof import('./modules/vuwi/components/Progress/VuwiProgressCircle.vue')['default']
     VuwiSelect: typeof import('./modules/vuwi/components/Select/VuwiSelect.vue')['default']
     VuwiSlider: typeof import('./modules/vuwi/components/Slider/VuwiSlider.vue')['default']
+    'VuwiSlider copy': typeof import('./modules/vuwi/components/Slider/VuwiSlider copy.vue')['default']
+    'VuwiSlider copy 2': typeof import('./modules/vuwi/components/Slider/VuwiSlider copy 2.vue')['default']
     VuwiSwitch: typeof import('./modules/vuwi/components/Switch/VuwiSwitch.vue')['default']
     VuwiTab: typeof import('./modules/vuwi/components/Group/VuwiTab.vue')['default']
     VuwiTextInput: typeof import('./modules/vuwi/components/TextInput/VuwiTextInput.vue')['default']
