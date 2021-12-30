@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import IconFiles from '~icons/tabler/files'
 import IconNotebook from '~icons/tabler/notebook'
-import IconBox from '~icons/tabler/box'
+// import IconBox from '~icons/tabler/box'
 import IconComposable from '~icons/tabler/math-function'
 import IconExample from '~icons/tabler/photo'
 import { isDark, toggleDark, useSdk } from '~/composables'
@@ -15,6 +15,7 @@ type MenuLink = {
 type MenuItem = {
   collapsible?: boolean
   icon: any
+  image: any
   links?: MenuLink[]
   open?: boolean
   title: string
@@ -52,18 +53,21 @@ const menuItems: MenuItem[] = [
     collapsible: true,
     title: 'Introduction',
     icon: IconNotebook,
+    image: '',
     links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
   },
   {
     collapsible: true,
     title: 'Getting Started',
     icon: IconFiles,
+    image: '',
     links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
   },
   {
     collapsible: true,
     title: 'Components',
-    icon: IconBox,
+    icon: undefined,
+    image: '/icons/components.png',
     links: [
       { title: 'Alert', to: '/ui/alert' },
       { title: 'Avatar', to: '/ui/avatar' },
@@ -102,12 +106,14 @@ const menuItems: MenuItem[] = [
     collapsible: true,
     title: 'Composables',
     icon: IconComposable,
+    image: '',
     links: [{ title: 'Dark Mode', to: '/examples/protected' }, { title: 'SDK', to: '/examples/protected' }, { title: 'Validators', to: '/examples/protected' }],
   },
   {
     collapsible: true,
     title: 'Examples',
     icon: IconExample,
+    image: '',
     links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
   },
 ]
@@ -120,6 +126,9 @@ const menuItems: MenuItem[] = [
         <div class="px-3 flex items-center gap-3 nav-link">
           <div v-if="item.icon" class="nav-link-icon">
             <Component :is="item.icon" class="w-4 h-4" />
+          </div>
+          <div v-else-if="item.image" class="nav-link-icon">
+            <img :src="item.image" class="w-5 h-5">
           </div>
           <div v-else class="spacer w-5"></div>
           <span class="font-medium flex-grow">{{ item.title }}</span>

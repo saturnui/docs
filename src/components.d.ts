@@ -7,6 +7,8 @@ declare module 'vue' {
     ActionCard: typeof import('./components/ActionCard/ActionCard.vue')['default']
     ApiCard: typeof import('./components/ApiCard/ApiCard.vue')['default']
     AppBar: typeof import('./components/AppBar/AppBar.vue')['default']
+    AssetsComponent: typeof import('~icons/assets/component')['default']
+    AssetsComponents: typeof import('~icons/assets/components')['default']
     AssetsLogoVuwi: typeof import('~icons/assets/logo-vuwi')['default']
     Backup: typeof import('./modules/vuwi/components/Carousel/backup.vue')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
