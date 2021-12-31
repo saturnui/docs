@@ -3,14 +3,14 @@
   "description": "Vuwi - Vuw 3 + Vitesse + Tailwind + Custom Components",
   "private": true,
   "scripts": {
-    "build": "cross-env NODE_ENV=production build",
-    "build:server": "cross-env NODE_ENV=production vite-ssg build",
+    "build": "vite-ssg build",
     "dev": "vite --port 4444 --open",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
     "test": "cypress open",
     "preview": "vite preview",
     "preview-https": "serve dist",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "deploy": "firebase deploy -P default --only hosting:vuwijs"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",

@@ -57,5 +57,5 @@ defineProps({
 
 <route lang="yaml">
 meta:
-  layout: vuwi
+  layout: default
 </route>

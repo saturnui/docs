@@ -32,5 +32,5 @@ const code = ref('')
 
 <route lang="yaml">
 meta:
-  layout: vuwi
+  layout: default
 </route>

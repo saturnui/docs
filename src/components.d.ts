@@ -11,6 +11,7 @@ declare module 'vue' {
     AssetsComponents: typeof import('~icons/assets/components')['default']
     AssetsLogoVuwi: typeof import('~icons/assets/logo-vuwi')['default']
     Backup: typeof import('./modules/vuwi/components/Carousel/backup.vue')['default']
+    CarbonDicomOverlay: typeof import('~icons/carbon/dicom-overlay')['default']
     CarbonLogoGithub: typeof import('~icons/carbon/logo-github')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']

@@ -60,7 +60,7 @@ const signout = async () => {
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
         <assets-logo-vuwi class="w-8 h-8" />
-        <div class="font-medium text-2xl">
+        <div class="font-medium text-2xl -mt-1">
           <span>vuwi</span>
         </div>
       </div>
@@ -123,18 +123,7 @@ const signout = async () => {
       </div>
     </div>
     <VuwiOverlay v-model="showDrawer" class="z-0" position="left" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
-        <div class="sticky top-0 z-10 w-full p-2 flex items-center h-14 gap-4 vuwi-card">
-          <button class="vuwi-btn vuwi-btn-icon" @click="showDrawer = !showDrawer">
-            <tabler-menu-2 />
-          </button>
-          <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
-            <!-- <assets-logo-vuwi class="w-8 h-8" /> -->
-            <div class="vuwi-text font-bold">
-              <span>Vuwi</span>
-            </div>
-          </div>
-        </div>
+      <div class="h-full flex flex-col w-80 vuwi-card border-r vuwi-border overflow-y-auto pt-4">
         <Navigation @close="showDrawer = false" />
       </div>
     </VuwiOverlay>

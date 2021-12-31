@@ -36,7 +36,7 @@ const open = ref(false)
         <span>Header</span>
       </div>
       <div class="px-4 py-3 flex">
-        <VuwiCollapse v-model="open" class="w-full">
+        <VuwiCollapse v-model="open" slide="up" class="w-full">
           <template #header="{ open: isOpen }">
             <div
               class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-card"
@@ -107,5 +107,5 @@ const open = ref(false)
 
 <route lang="yaml">
 meta:
-  layout: vuwi
+  layout: default
 </route>

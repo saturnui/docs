@@ -88,7 +88,7 @@ onBeforeMount(async () => {
       </VuwiTooltip>
     </div>
     <VuwiLine />
-    <VuwiCollapse v-model="showCode">
+    <VuwiCollapse v-model="showCode" slide="up">
       <div v-if="html && js" class="px-2 py-2 flex item-center gap-2 vuwi-highlight">
         <button v-if="html" class="vuwi-btn vuwi-btn-sm" :class="tabClass(view === 'html')" @click="view = 'html'">HTML</button>
         <button v-if="js" class="vuwi-btn vuwi-btn-sm" :class="tabClass(view === 'js')" @click="view = 'js'">Script</button>

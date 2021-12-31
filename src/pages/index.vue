@@ -1,129 +1,69 @@
-<script lang="ts" setup>
-import { storeToRefs } from 'pinia'
-import { useUserStore } from '~/stores/user'
-
-const showDialog = ref(false)
-const { user, displayName, photoUrl } = storeToRefs(useUserStore())
-const { addMessage } = useMessenger()
-const features = [
-  {
-    title: 'Show a toast',
-    desc: 'Send a toast to the default toast defined in layouts/default.vue',
-    action: 'Send notification',
-    icon: 'https://cdn2.iconfinder.com/data/icons/cute-bread-slice-emoji-in-different-expressions/200/BREAD_14-1024.png',
-    handle: () => {
-      addMessage({
-        text: 'Hello, world!',
-      })
-    },
-  },
-  {
-    title: 'Show a dialog',
-    desc: 'Open a dialog modal window defined in pages/index.vue',
-    action: 'Open dialog',
-    icon: 'https://cdn2.iconfinder.com/data/icons/cms-flat/60/Website-Content-browser-window-site-page-web-1024.png',
-    handle: () => {
-      showDialog.value = true
-    },
-  },
-]
-</script>
-
 <template>
-  <div class="w-full flex flex-col items-center py-8 sm:py-12">
-    <div class="flex flex-col items-center w-full max-w-lg gap-4">
-      <div v-if="user" class="flex flex-col items-center text-2xl gap-4">
-        <router-link to="profile">
-          <VuwiAvatar
-            :name="displayName"
-            :photo="photoUrl"
-            class="
-              vuwi-avatar-xl
-              rounded-full
-              overflow-hidden
-              bg-blue-500
-              text-white
-            "
-          />
-        </router-link>
-        <div class="text-2xl">
-          <span>Welcome, {{ displayName }}</span>
+  <img
+    src="/vuwi-background.png"
+    class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none pointer-events-none"
+  />
+  <div class="flex flex-col h-screen items-center">
+    <div class="vuwi-content flex flex-col items-center px-10 gap-8">
+      <assets-logo-vuwi class="h-60 w-60 mt-20 -mr-13" />
+      <div class="grid gap-12">
+        <div class="font-light space-y-2 text-center">
+          <div class="text-5xl">Tailwind UI Framework</div>
+          <div class="text-3xl pl-2">powered by Vue</div>
+        </div>
+        <div class="relative grid gap-4 w-full p-3">
+          <div class="vuwi-col-3-1 gap-4">
+            <router-link
+              to="/getting-started"
+              class="vuwi-btn vuwi-btn-primary vuwi-btn-lg vuwi-btn-pill"
+            >Get Started</router-link>
+            <router-link
+              to="/introduction"
+              class="vuwi-btn vuwi-btn-primary vuwi-btn-outline vuwi-btn-lg vuwi-btn-pill"
+            >Why Vuwi?</router-link>
+            <a
+              href="https://github.com/vuwijs/vuwi"
+              target="_blank"
+              class="vuwi-btn vuwi-btn-lg vuwi-btn-pill bg-dark-600 bg-opacity-10 gap-2"
+            >
+              <carbon-logo-github />
+              <span>Github</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div v-else class="flex flex-col items-center text-2xl gap-4">
-        <assets-logo-vuwi class="h-36 w-36" />
-        <!-- <VuwiAvatar
-          name="Stranger"
-          photo="https://cdn4.iconfinder.com/data/icons/diversity-v2-0-volume-02/64/bandit-asian-male-cowboy-1024.png"
-          class="vuwi-avatar-xl rounded-full overflow-hidden text-white" /> -->
-        <span class="font-bold text-4xl">Vuwi</span>
+      <div class="text-xl font-light max-w-xl text-center text-dark-700 dark:text-dark-300">
+        Vuwi is a Vue UI Library with beautifly handcrafted Tailwind Components. Leverage the power
+        of Tailwind CSS on top of Vue 3. Everything you need to create fully
+        customizable applications is at your fingertips.
       </div>
-      <div class="text-center vuwi-text px-8 pb-4 md:pb-0">
-        Vue 3 + Tailwind + Vitesse
+      <div class="flex justify-center gap-4 w-full p-3">
+        <div class="vuwi-col-3-1 gap-5 max-w-80 lg:max-w-max">
+          <div class="text-center space-y-4">
+            <div class="text-3xl text-primary-light font-light">Simple</div>
+            <div>Leverage the power of Tailwind instead of a bunch of properties defined by an API</div>
+          </div>
+          <div class="text-center space-y-4">
+            <div class="text-3xl text-primary-light font-light">Performant</div>
+            <div>Each component has been designed to leverage Tailwind CSS where possible sprinking Vue when needed</div>
+          </div>
+          <div class="text-center space-y-4">
+            <div class="text-3xl text-primary-light font-light">Powerful</div>
+            <div>Vuwi uses modern developer tools such as Vite, Vitesse and WindiCSS to build applications</div>
+          </div>
+        </div>
       </div>
-      <!-- <button @click="signout" class="btn btn-lg btn-primary font-bold w-56 mt-5">Logout</button> -->
     </div>
-    <div class="p-1 md:p-8 w-full max-w-4xl vuwi-col-2">
-      <ActionCard
-        v-for="(feature, i) in features"
-        :key="i"
-        :title="feature.title"
-        :desc="feature.desc"
-        :action="feature.action"
-        :icon="feature.icon"
-        @click="feature.handle"
-      ></ActionCard>
+    <div class="flex-grow"></div>
+    <div class="w-full text-center p-14 bg-dark-400 bg-opacity-10 text-sm mt-14">
+      <div>Released under the MIT License</div>
+      <div>Copyright &copy; 2021-2022 Vuwi</div>
     </div>
   </div>
-
-  <teleport to="body">
-    <VuwiOverlay v-model="showDialog" :modal="true" class="relative z-1">
-      <!-- Use Dialog Component -->
-      <VuwiDialog class="w-full max-w-xl" @close="showDialog = false">
-        <template #title>
-          <span class="pl-3 font-bold">Dialog example</span>
-        </template>
-        <div class="py-3 px-5">
-          <span>This is an example of a modal dialog.</span>
-        </div>
-        <template #actions>
-          <div class="vuwi-row justify-end p-2">
-            <button
-              class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-              @click="showDialog = false"
-            >
-              Submit
-            </button>
-          </div>
-        </template>
-      </VuwiDialog>
-      <!-- Or create your own -->
-      <!-- <div class="vuwi-card vuwi-dialog w-full max-w-xl">
-        <div class="flex items-center justify-between p-2 pl-4">
-          <span class="font-bold">Dialog example</span>
-          <button
-            class="vuwi-btn vuwi-btn-icon rounded-full h-8 w-8"
-            @click="showDialog = false"
-          >
-            <tabler-x class="vuwi-dialog-close-icon h-6 w-6" />
-          </button>
-        </div>
-        <VuwiLine />
-        <div class="p-4">This is an example of a modal dialog.</div>
-        <div class="vuwi-row justify-end p-2">
-          <button
-            class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-            @click="showDialog = false"
-          >
-            Submit
-          </button>
-        </div>
-      </div> -->
-    </VuwiOverlay>
-  </teleport>
+  <ToggleDarkMode class="fixed vuwi-tr m-4" />
 </template>
 
 <route lang="yaml">
 meta:
-  layout: vuwi
+  layout: plain
 </route>

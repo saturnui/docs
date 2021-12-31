@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useValidEmail, useValidPassword } from '~/composables'
+// import { useValidEmail, useValidPassword } from '~/composables'
 import { useUserStore } from '~/stores/user'
 
 const { setUser } = useUserStore()
@@ -24,8 +24,8 @@ const password = ref('Password@1')
 const showPassword = ref(false)
 const busy = ref(false)
 // const requireRule = (v: string) => useRequired(v)
-const emailRule = (v: string) => useValidEmail(v)
-const passwordRule = (v: string) => useValidPassword(v)
+// const emailRule = (v: string) => useValidEmail(v)
+// const passwordRule = (v: string) => useValidPassword(v)
 const passwordType = computed(() => {
   return showPassword.value ? 'text' : 'password'
 })
@@ -41,7 +41,6 @@ const passwordType = computed(() => {
         v-model="email"
         name="email"
         label="Email"
-        :rules="emailRule"
         class="border vuwi-border vuwi-shade"
       />
       <VuwiTextfield
@@ -50,7 +49,6 @@ const passwordType = computed(() => {
         label="Password"
         :type="passwordType"
         placeholder="••••••••"
-        :rules="passwordRule"
         class="border vuwi-border vuwi-shade"
       >
         <ToggleVisible v-model="showPassword" />

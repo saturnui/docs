@@ -16,69 +16,34 @@
 
 // const user = {}
 // const showDrawer = ref(false)
-// const showToast = ref(false)
+const showToast = ref(false)
 
-// const { onAddMessage } = useMessenger()
-// onAddMessage(() => {
-//   showToast.value = true
-// })
+const { onAddMessage } = useMessenger()
+onAddMessage(() => {
+  showToast.value = true
+})
 </script>
 
 <template>
-  <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900 z-1" />
-  <main class="vuwi-main app-has-appbar">
-    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0  h-full vuwi-card border-r dark:border-none">
-      <Navigation />
-    </VuwiDrawer>
-    <div class="vuwi-drawer-left vuwi-drawer-right vuwi-text">
-      <router-view />
-    </div>
-    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0 right-0 h-full vuwi-card border-l dark:border-none">
-      <Navigation />
-    </VuwiDrawer>
-  </main>
-
-  <!-- :: Toast :: -->
-  <!-- <VuwiToast
-    v-model="showToast"
-    class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar"
-  >
-    <div class="flex items-center justify-between">
-      <div class="flex justify-center items-center gap-4">
-        <tabler-message class="text-5xl" />
-        <div class="flex h-full text-left justify-center border-l border-opacity-20 pl-4">
-          This is a toast message example. It supports multiple lines.
-        </div>
+  <img src="/vuwi-background.png" class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none pointer-events-none">
+  <AppBar
+    class="fixed top-0 bg-white/90 dark:bg-dark-900/90 vuwi-text border-b dark:border-dark-800"
+  />
+  <div class="pt-13 flex justify-center">
+    <div class="flex w-full max-w-8xl vuwi-text">
+      <VuwiDrawer class="app-has-appbar text-sm vuwi-drawer-autohide fixed pr-4 top-0 h-screen">
+        <Navigation class="py-8" />
+      </VuwiDrawer>
+      <div class="vuwi-drawer-left w-full">
+        <router-view />
+      </div>
+      <div class="w-80 vuwi-drawer-autohide-xl relative h-full">
+        <div id="sidenav" class="fixed"></div>
       </div>
     </div>
-
-    <template #action>
-      <div class="pt-4 px-2 flex items-center">
-        <span class="text-sm">1 of 3</span>
-        <div class="flex-grow"></div>
-        <div class="flex gap-4">
-          <button
-            class="vuwi-btn rounded uppercase text-xs font-bold text-white"
-            @click="showToast = false"
-          >
-            <span>Dismiss</span>
-          </button>
-          <button
-            class="
-              vuwi-btn
-              rounded
-              vuwi-btn-primary
-              text-xs
-              uppercase
-              font-bold
-              text-white
-            "
-            @click="showToast = false"
-          >
-            <span>Ok</span>
-          </button>
-        </div>
-      </div>
-    </template>
-  </VuwiToast> -->
+    <div id="sidemenu" class="absolute z-10"></div>
+  </div>
+  <div class="fixed z-50 vuwi-tr top-12 -right-14 p-2 px-24 transform rotate-45 bg-red-600 text-white font-bold select-none">
+    <div>Preview</div>
+  </div>
 </template>

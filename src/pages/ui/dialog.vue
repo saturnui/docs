@@ -154,5 +154,5 @@ const showDialog = ref(false)
 
 <route lang="yaml">
 meta:
-  layout: vuwi
+  layout: default
 </route>

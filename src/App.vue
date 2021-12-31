@@ -6,8 +6,8 @@ import { useSdk } from './composables/sdk'
 
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'My App',
-  meta: [{ name: 'description', content: 'Vuwi - Vue + Vitesse' }],
+  title: 'Vuwi.js',
+  meta: [{ name: 'description', content: 'Vuwi - Vue 3 + Tailwind' }],
 })
 
 // TODO: Create an SDK that contains all of your API calls to a server

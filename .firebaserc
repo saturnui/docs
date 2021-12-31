@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "vuwijs"
+  },
+  "targets": {
+    "vuwijs": {
+      "hosting": {
+        "vuwijs": [
+          "vuwijs"
+        ]
+      }
+    }
+  }
+}

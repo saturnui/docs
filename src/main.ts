@@ -21,9 +21,14 @@ const routes = setupLayouts(generatedRoutes)
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(App, { routes }, (ctx) => {
   // install all modules under `modules/`
-  Object.values(import.meta.globEager('./modules/*.ts')).map(i =>
+  Object.values(import.meta.globEager('./modules/*.ts')).map((i) =>
     i.install?.(ctx),
   )
+
+  // https://next.router.vuejs.org/guide/advanced/scroll-behavior.html#scroll-behavior
+  ctx.router.options.scrollBehavior = () => {
+    return { top: 0 }
+  }
 
   ctx.router.beforeEach((to, from, next) => {
     // eslint-disable-next-line no-console

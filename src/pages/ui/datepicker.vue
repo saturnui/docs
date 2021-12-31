@@ -75,5 +75,5 @@ const disableDateValue = ref([dayjs().startOf('month'), dayjs().endOf('day')])
 
 <route lang="yaml">
 meta:
-  layout: vuwi
+  layout: default
 </route>
