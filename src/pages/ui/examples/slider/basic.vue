@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const val = ref([40])
+// const val = ref([40])
+const val = ref(2)
 const range = ref([40, 160])
 const busy = ref(false)
 let tooltipTimer: any
@@ -13,14 +14,15 @@ watch(range, (newVal, oldVal) => {
 
 <template>
   <div class="grid gap-6">
-    <VuwiSlider v-model="val" :min="0" :max="200" root-class="vuwi-slider" />
-    
+    {{ range }} :: {{ val }}
+    <VuwiSlider v-model="val" :min="1" :max="10" :step="2" root-class="vuwi-slider" />
+
     <VuwiSlider v-model="range" :min="0" :max="200" root-class="vuwi-slider-sm" />
-    
+
     <VuwiSlider v-model="range" :min="10" :max="190" />
-    
+
     <VuwiSlider v-model="range" :min="20" :max="180" root-class="vuwi-slider-lg" />
-    
+
     <VuwiSlider v-model="range" :min="10" :max="190" root-class="vuwi-slider-xl" />
 
     <VuwiSlider v-model="range" :min="0" :max="200" root-class="vuwi-slider-xl">
@@ -31,17 +33,13 @@ watch(range, (newVal, oldVal) => {
       <template #thumb-left>
         <transition name="fade-up">
           <div v-if="busy" class="block absolute bottom-12">
-            <div
-              class="slider-tooltip"
-            >
+            <div class="slider-tooltip">
               <span>{{ range[0] }}</span>
             </div>
           </div>
         </transition>
         <div v-if="busy" class="w-10 h-10 flex items-center justify-center text-white">
-          <div
-            class="vuwi-spinner slider-busy"
-          />
+          <div class="vuwi-spinner slider-busy" />
         </div>
       </template>
 
@@ -53,7 +51,6 @@ watch(range, (newVal, oldVal) => {
     </VuwiSlider>
   </div>
 </template>
-
 
 <style>
 .slider-tooltip {
