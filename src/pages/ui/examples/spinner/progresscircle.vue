@@ -21,7 +21,7 @@ setInterval(() => {
     
     <!-- Variation #1 example -->
     <div class="relative w-12 h-12">
-      <div class="vuwi-spinner vuwi-spin-none border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 vuwi-border" />
+      <div class="rounded-full border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 vuwi-border" />
       <div class="absolute top-0 left-0 vuwi-spin-slowest">
         <div class="absolute top-0 left-0">
           <VuwiProgressCircle

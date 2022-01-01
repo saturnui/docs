@@ -18,23 +18,23 @@ setInterval(() => {
 
 <template>
   <div class="flex justify-center items-center gap-8">
-    <div
-      class="vuwi-spinner w-4 h-4 min-w-4 min-h-4 border-2 border-green-400 border-r-transparent"
+    <VuwiSpinner
+      class="w-4 h-4 min-w-4 min-h-4 border-2 border-green-400 border-r-transparent"
     />
 
-    <div
-      class="vuwi-spinner vuwi-spin-fastest w-10 h-10 min-w-10 min-h-10 border-3 border-blue-500 border-r-transparent border-l-transparent"
+    <VuwiSpinner
+      class="vuwi-spin-fastest w-10 h-10 min-w-10 min-h-10 border-3 border-blue-500 border-r-transparent border-l-transparent"
     />
 
-    <div
-      class="vuwi-spinner vuwi-spin-fast w-16 h-16 min-w-10 min-h-10 border-16 border-purple-500 border-r-purple-800 border-l-purple-800"
+    <VuwiSpinner
+      class="vuwi-spin-fast w-16 h-16 min-w-10 min-h-10 border-16 border-purple-500 border-r-purple-800 border-l-purple-800"
     />
 
-    <div
-      class="vuwi-spinner vuwi-spin-slowest w-20 h-20 min-w-8 min-h-8 border-10 border-r-yellow-400 border-l-green-400 border-t-blue-400 border-b-red-400"
+    <VuwiSpinner
+      class="vuwi-spin-slowest w-20 h-20 min-w-8 min-h-8 border-10 border-r-yellow-400 border-l-green-400 border-t-blue-400 border-b-red-400"
       role="status"
     >
       <span class="sr-only">Loading...</span>
-    </div>
+    </VuwiSpinner>
   </div>
 </template>

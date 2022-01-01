@@ -43,7 +43,7 @@ onAddMessage(() => {
     </div>
     <div id="sidemenu" class="absolute z-10"></div>
   </div>
-  <div class="fixed z-50 vuwi-tr top-12 -right-14 p-2 px-24 transform rotate-45 bg-red-600 text-white font-bold select-none">
+  <div class="fixed z-50 vuwi-tr top-12 -right-14 p-2 px-24 transform rotate-45 bg-red-700 dark:bg-red-500 text-white font-bold select-none">
     <div>Preview</div>
   </div>
 </template>

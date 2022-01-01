@@ -4,6 +4,7 @@ import IconNotebook from '~icons/tabler/notebook'
 import IconBox from '~icons/tabler/box'
 import IconComposable from '~icons/tabler/math-function'
 import IconExample from '~icons/tabler/photo'
+import IconStyle from '~icons/tabler/palette'
 import { isDark, toggleDark, useSdk } from '~/composables'
 
 import { useAppStore } from '~/stores/app'
@@ -71,11 +72,19 @@ const menuItems: MenuItem[] = [
   // },
   {
     collapsible: false,
+    title: 'Styling',
+    icon: IconStyle,
+    image: '',
+    // image: '/icons/components.png',
+    links: appStore.stylingPages,
+  },
+  {
+    collapsible: false,
     title: 'Components',
     icon: IconBox,
     image: '',
     // image: '/icons/components.png',
-    links: appStore.components,
+    links: appStore.componentPages,
   },
   {
     collapsible: false,

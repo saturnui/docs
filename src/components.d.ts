@@ -82,11 +82,13 @@ declare module 'vue' {
     VuwiSlider: typeof import('./modules/vuwi/components/Slider/VuwiSlider.vue')['default']
     'VuwiSlider copy': typeof import('./modules/vuwi/components/Slider/VuwiSlider copy.vue')['default']
     'VuwiSlider copy 2': typeof import('./modules/vuwi/components/Slider/VuwiSlider copy 2.vue')['default']
+    VuwiSpinner: typeof import('./modules/vuwi/components/Spinner/VuwiSpinner.vue')['default']
     VuwiSwitch: typeof import('./modules/vuwi/components/Switch/VuwiSwitch.vue')['default']
-    VuwiTab: typeof import('./modules/vuwi/components/Group/VuwiTab.vue')['default']
+    VuwiTab: typeof import('./modules/vuwi/components/Tab/VuwiTab.vue')['default']
     VuwiTextInput: typeof import('./modules/vuwi/components/TextInput/VuwiTextInput.vue')['default']
     VuwiToast: typeof import('./modules/vuwi/components/Toast/VuwiToast.vue')['default']
     VuwiTooltip: typeof import('./modules/vuwi/components/Tooltip/VuwiTooltip.vue')['default']
+    VuwiWindow: typeof import('./modules/vuwi/components/Window/VuwiWindow.vue')['default']
   }
 }
 

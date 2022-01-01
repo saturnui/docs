@@ -24,7 +24,7 @@ export const useAppStore = defineStore('app', () => {
   //   savedName.value = name
   // }
 
-  const components = [
+  const componentPages = [
     { title: 'Alert', to: '/ui/alert' },
     { title: 'Avatar', to: '/ui/avatar' },
     { title: 'Button', to: '/ui/button' },
@@ -32,7 +32,6 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Carousel', to: '/ui/carousel' },
     { title: 'CodeInput', to: '/ui/codeinput' },
     { title: 'Collapse', to: '/ui/collapse' },
-    { title: 'Color', to: '/ui/color' },
     { title: 'DatePicker', to: '/ui/datepicker' },
     { title: 'Decoration', to: '/ui/decoration' },
     { title: 'Dialog', to: '/ui/dialog' },
@@ -40,7 +39,6 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Dropzone', to: '/ui/dropzone' },
     { title: 'FileSelector', to: '/ui/fileselector' },
     { title: 'FormSection', to: '/ui/formsection' },
-    { title: 'Layout', to: '/ui/layout' },
     { title: 'Line', to: '/ui/line' },
     { title: 'Menu', to: '/ui/menu' },
     { title: 'Notification', to: '/ui/notification' },
@@ -55,11 +53,17 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Tab', to: '/ui/tab' },
     { title: 'TextInput', to: '/ui/textinput' },
     { title: 'Tooltip', to: '/ui/tooltip' },
-    { title: 'Window', to: '/ui/window' },
+  ]
+
+  const stylingPages = [
+    { title: 'Color', to: '/ui/color' },
+    { title: 'Layout', to: '/ui/layout' },
+    { title: 'Mocks', to: '/ui/window' },
   ]
 
   return {
-    components,
+    componentPages,
+    stylingPages,
     name,
     // setNewName,
     // otherNames,

@@ -1,8 +1,7 @@
 <template>
-  <div class="vuwi-window border vuwi-border">
-    <VuwiLine />
-    <div class="p-4">
+  <VuwiWindow class="border vuwi-border">
+    <div class="p-4 border-t vuwi-border">
       <span>Hello, world!</span>
     </div>
-  </div>
+  </VuwiWindow>
 </template>

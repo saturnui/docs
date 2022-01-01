@@ -18,6 +18,6 @@ setInterval(() => {
 
 <template>
   <div class="flex justify-center">
-    <div class="vuwi-spinner" />
+    <VuwiSpinner />
   </div>
 </template>
