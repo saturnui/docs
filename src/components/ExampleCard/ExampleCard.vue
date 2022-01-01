@@ -12,7 +12,7 @@ const props = defineProps({
     default: '',
   },
 })
-const source = `https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/ui/examples/${props.source}`
+const source = `https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/components/examples/${props.source}`
 const mode = ref('')
 const toggleMode = () => {
   if (mode.value === '')

@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import WindowBasic from './examples/window/basic.vue'
-import WindowVariations from './examples/window/variations.vue'
+import TextInputBasic from '~/pages/components/examples/textinput/textfield.vue'
+
+const api = [
+  {
+    name: 'theme',
+    type: 'string',
+    defaultVal: 'vuwi',
+    desc: 'Used as the prefix for all Vuwi CSS classes.',
+  },
+]
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'Variations', anchor: '#variations' },
+  { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
 
@@ -33,33 +41,35 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button
-      class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn"
-      @click="showDrawer = true"
-    >
+    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
   <div class="vuwi-content doc-content">
-    <!-- Title -->
-    <div class="doc-title">Window</div>
+    <!-- Header -->
+    <div class="doc-title">Title here...</div>
+    <div class="doc-desc">
+      Description here...
+    </div>
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <ExampleCard source="window/basic.vue">
-      <WindowBasic />
+    <div class="doc-detail">
+      Details here...
+    </div>
+
+    <ExampleCard source="textinput/basic.vue">
+      <TextInputBasic />
     </ExampleCard>
 
-    <!-- Variations -->
-    <div id="variations" class="doc-subtitle">Variations</div>
-    <ExampleCard source="window/variations.vue">
-      <WindowVariations />
-    </ExampleCard>
+    <!-- API -->
+    <div id="api" class="doc-subtitle">API</div>
+    <ApiCard :api="api" class="w-full" />
 
-    <!-- Style -->
+    <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Window/VuwiWindow.css" />
+    <StyleCard source="TextInput/VuwiTextInput.css" />
   </div>
 </template>
 

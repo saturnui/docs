@@ -47,7 +47,7 @@ onMounted(async () => {
       Vuwi provides classes that can spin using CSS animate. In addition there is a very light-weight class that
       will show a css only spinner for simple usage. If you need a more complex spinner, then you can combine
       Vuwi spin classes with the
-      <router-link to="/ui/progresscircle" class="doc-link">VuwiProgressCircle</router-link>component.
+      <router-link to="/components/progresscircle" class="doc-link">VuwiProgressCircle</router-link>component.
     </div>
 
     <!-- Basic -->
@@ -73,7 +73,7 @@ onMounted(async () => {
     <div id="progresscircle" class="doc-subtitle">ProgressCircle</div>
     <div class="doc-detail">
       You can also use the
-      <router-link to="/ui/progresscircle" class="doc-link">VuwiProgressCircle</router-link> in conjunction with the spinner animations to achieve custom effects.
+      <router-link to="/components/progresscircle" class="doc-link">VuwiProgressCircle</router-link> in conjunction with the spinner animations to achieve custom effects.
     </div>
 
     <ExampleCard source="spinner/progresscircle.vue">
