@@ -2,20 +2,20 @@
 
 # Introduction
 
-Vuwi was created around the concept of leveraging the power of the popular CSS framework, TailwindCSS. 
-Rather than building a framework that uses Tailwind as a styling guide, Vuwi treats
-Tailwind as a first-class citizen. Vue was the chosen JavaScript framework because of its small footprint, 
+Vuwi has been developed as CSS components powered by Vue. 
+Rather than building a framework that uses Tailwind CSS as a styling guide, Vuwi treats
+the CSS as a first-class citizen. Vue was the chosen JavaScript framework because of its small footprint, 
 versatility and range of functionality.
 
 ## What is Vuwi?
 
-Vuwi is a complete UI framework built using Vue.js and TailwindCSS. The goal of the project is to provide
-a platform designers could easily use to turn their CSS concepts into full-fledged applications with
-ease while providing developers with a JavaScript framework that has been proven and is well-supported by
-the community.
+Vuwi is a complete UI framework built using Vue.js and Tailwind CSS. The goal of the project is to enable 
+designers to turn their CSS concepts into full-fledged applications, while at the same time providing 
+developers with UI components that are easy to use and if needed modify.
 
-Vuwi takes a design-first approach which means you should be able to take a design and using Vuwi develop
-that design into a fully working application or set of components.
+Vuwi takes a design-first approach, taking your designs and turning them into working applications.
+
+> Vuwi is designed to allow designers and developers to modify every aspect with ease.
 
 ## Why Vuwi?
 
@@ -26,30 +26,29 @@ that make up the core of Vuwi:
 
 Vuwi's component APIs are simple without compromising customization. There are two parts to a component, 
 *functionality* and *styling*. Too often UI frameworks mix both in their APIs. Vuwi separates the two
-when possible so the look and feel is driven by Tailwind and the functionality is driven by Vue. The components
-themselves could be considered headless component designs and Vue is the driving engine to make them functional.
+when possible so the look and feel is driven by CSS and the functionality (or behavior) is driven by JavaScript.
 
 ### Customization
 
-In Vuwi, each component can be overwritten at different levels, here are example from highest to lowest level:
+In Vuwi, each component style can be overwritten at different levels, here are example from highest to lowest level:
 
 #### Class
 
-Many times you can change or add to a component's style using the HTML *class* tag.
+Most of the time, by adding additional classes, the look of the component can be changed to something completely different.
 
 #### Theme
 
-*Coming soon.* In Vuwi you can change theme which will change all styles.
+Vuwi is built around theming. It is as simple as copying the default theme and them modifying the css files. Mutiple themes
+can be supported in your application allowing the user to drive the look they desire to have.
 
 #### Component
 
-Each component has a property called **root-class** which will allow you to create one-off style
-changes for overriding the component's style.
+Single changes can be made to each component to allow for uniqueness without having to create an entirely new theme. 
 
 #### Configuration
 
-Vuwi uses WindiCSS as its configuration and compiler. Windi provides some additional features that Tailwind
-does not currently offer. You can globally control any styling feature of Tailwind via the configuration, such
+Vuwi uses Tailwind CSS as its configuration and compiler. Tailwind provides some additional features that Tailwind CSS
+does not currently offer. You can globally control any styling feature of Tailwind CSS via the configuration, such
 as default theme, spacing, sizing, etc.
 
 ### Developer tooling

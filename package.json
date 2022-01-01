@@ -35,8 +35,11 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.10.0",
     "@iconify-json/carbon": "^1.0.8",
+    "@iconify-json/clarity": "^1.0.1",
     "@iconify-json/fa": "^1.0.1",
+    "@iconify-json/logos": "^1.0.2",
     "@iconify-json/mdi": "^1.0.1",
+    "@iconify-json/simple-icons": "^1.0.15",
     "@iconify-json/tabler": "^1.0.2",
     "@intlify/vite-plugin-vue-i18n": "^3.0.0",
     "@types/lodash": "^4.14.177",
@@ -65,7 +68,7 @@
     "vite-plugin-pages": "^0.18.2",
     "vite-plugin-pwa": "^0.11.3",
     "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-plugin-windicss": "^1.4.12",
+    "vite-plugin-windicss": "^1.6.1",
     "vite-ssg": "^0.15.6",
     "vue-tsc": "^0.28.10"
   }

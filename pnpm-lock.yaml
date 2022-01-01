@@ -3,8 +3,11 @@ lockfileVersion: 5.3
 specifiers:
   '@antfu/eslint-config': ^0.10.0
   '@iconify-json/carbon': ^1.0.8
+  '@iconify-json/clarity': ^1.0.1
   '@iconify-json/fa': ^1.0.1
+  '@iconify-json/logos': ^1.0.2
   '@iconify-json/mdi': ^1.0.1
+  '@iconify-json/simple-icons': ^1.0.15
   '@iconify-json/tabler': ^1.0.2
   '@intlify/vite-plugin-vue-i18n': ^3.0.0
   '@popperjs/core': ^2.10.2
@@ -78,8 +81,11 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.10.0_eslint@8.1.0+typescript@4.4.4
   '@iconify-json/carbon': 1.0.8
+  '@iconify-json/clarity': 1.0.1
   '@iconify-json/fa': 1.0.1
+  '@iconify-json/logos': 1.0.2
   '@iconify-json/mdi': 1.0.12
+  '@iconify-json/simple-icons': 1.0.15
   '@iconify-json/tabler': 1.0.2
   '@intlify/vite-plugin-vue-i18n': 3.0.0_vue-i18n@9.1.9
   '@types/lodash': 4.14.177
@@ -1429,14 +1435,32 @@ packages:
       '@iconify/types': 1.0.10
     dev: true
 
+  /@iconify-json/clarity/1.0.1:
+    resolution: {integrity: sha512-sidMad7j89gRBmclZ6WQUDv7NSSzMGlJsz0tarHJnM67ObPOrM9hkdyIi9LUbc8dg5rnk+qi669nqdBE2NEGfg==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
   /@iconify-json/fa/1.0.1:
     resolution: {integrity: sha512-GKi6TqDX/kA4K3A4ULm7Jg2t01Sg1WQ/pRfkJOgbCvQ96Ib+2GNA50ntd6MSdhYhUddy/GPEIMvsVgWTO7vR0w==}
     dependencies:
       '@iconify/types': 1.0.10
     dev: true
 
+  /@iconify-json/logos/1.0.2:
+    resolution: {integrity: sha512-tr0WmmSiik9hSZz3Yh7WshZ1sofgVDB7zIf7FuVsfF7qIzksC4RrR4nXRzIL+QH2AMdrefobcnOAgO6ejYU/hQ==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
   /@iconify-json/mdi/1.0.12:
     resolution: {integrity: sha512-smYQpxDqSCUdySFSYZpH0BAEVbgFnU4IE/Hb36zavseOl3zFlKDvGOEFPC7djkEabrIWi9KDAUdbtIREcgVE8A==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
+  /@iconify-json/simple-icons/1.0.15:
+    resolution: {integrity: sha512-iKFY+5FDujt42BcBTwhWH+H6RLGkCosri/FH9R6UtRWwxSQcGXB9+fckddZgDSeu4E787WXj7W0qNqRxeFvNHA==}
     dependencies:
       '@iconify/types': 1.0.10
     dev: true

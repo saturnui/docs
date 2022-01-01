@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import IconFiles from '~icons/tabler/files'
 import IconNotebook from '~icons/tabler/notebook'
 import IconBox from '~icons/tabler/box'
 import IconComposable from '~icons/tabler/math-function'
-import IconExample from '~icons/tabler/photo'
 import IconStyle from '~icons/tabler/palette'
 import { isDark, toggleDark, useSdk } from '~/composables'
 

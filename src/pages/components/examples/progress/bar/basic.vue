@@ -36,17 +36,17 @@ defineProps({
     <div>The striped style can be animated</div>
 
     <VuwiProgressBar :percent="percent" class="vuwi-bg rounded-full overflow-hidden">
-      <div class="bg-green-500 vuwi-progress-stripe vuwi-progress h-10"></div>
+      <div class="bg-green-500 vuwi-progress-stripe vuwi-progress-stripe-animate h-10"></div>
     </VuwiProgressBar>
 
     <div>Controlling the speed can be adjusted with using the Vuwi classes</div>
     <VuwiProgressBar :percent="percent" class="vuwi-bg rounded-full overflow-hidden">
-      <div class="bg-green-500 vuwi-progress-stripe vuwi-progress-slow h-10"></div>
+      <div class="bg-green-500 vuwi-progress-stripe vuwi-progress-stripe-animate-slow h-10"></div>
     </VuwiProgressBar>
 
     <div>Further enhance the progress bar with things like a label</div>
     <VuwiProgressBar :percent="percent" class="vuwi-bg rounded-full overflow-hidden">
-      <div class="bg-green-500 vuwi-progress-stripe vuwi-progress-slow h-10">
+      <div class="bg-green-500 vuwi-progress-stripe vuwi-progress-stripe-animate-slow h-10">
         <div class="absolute vuwi-mr right-1 min-w-12 text-center px-3 py-1 rounded-3xl font-bold bg-gray-800 text-white">
           <span>{{ percent }}</span>
         </div>
