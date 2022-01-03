@@ -25,23 +25,23 @@
 </script>
 
 <template>
-  <AppBar class="fixed top-0 vuwi-card border-b dark:border-b-dark-900 z-1" />
-  <main class="vuwi-main app-has-appbar">
-    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0  h-full vuwi-card border-r dark:border-none">
+  <AppBar class="fixed top-0 wi-light-dark border-b dark:border-b-dark-900 z-1" />
+  <main class="wi-main app-has-appbar">
+    <VDrawer class="app-has-appbar wi-drawer-autohide fixed top-0  h-full wi-light-dark border-r dark:border-none">
       <Navigation />
-    </VuwiDrawer>
-    <div class="vuwi-drawer-left vuwi-drawer-right vuwi-text">
+    </VDrawer>
+    <div class="wi-drawer-left wi-drawer-right wi-text">
       <router-view />
     </div>
-    <VuwiDrawer class="app-has-appbar vuwi-drawer-autohide fixed top-0 right-0 h-full vuwi-card border-l dark:border-none">
+    <VDrawer class="app-has-appbar wi-drawer-autohide fixed top-0 right-0 h-full wi-light-dark border-l dark:border-none">
       <Navigation />
-    </VuwiDrawer>
+    </VDrawer>
   </main>
 
   <!-- :: Toast :: -->
-  <!-- <VuwiToast
+  <!-- <VToast
     v-model="showToast"
-    class="vuwi-dark text-gray-200 vuwi-toast-left vuwi-toast-navbar"
+    class="wi-dark text-gray-200 wi-toast-left wi-toast-navbar"
   >
     <div class="flex items-center justify-between">
       <div class="flex justify-center items-center gap-4">
@@ -58,16 +58,16 @@
         <div class="flex-grow"></div>
         <div class="flex gap-4">
           <button
-            class="vuwi-btn rounded uppercase text-xs font-bold text-white"
+            class="wi-btn rounded uppercase text-xs font-bold text-white"
             @click="showToast = false"
           >
             <span>Dismiss</span>
           </button>
           <button
             class="
-              vuwi-btn
+              wi-btn
               rounded
-              vuwi-btn-primary
+              wi-btn-primary
               text-xs
               uppercase
               font-bold
@@ -80,5 +80,5 @@
         </div>
       </div>
     </template>
-  </VuwiToast> -->
+  </VToast> -->
 </template>

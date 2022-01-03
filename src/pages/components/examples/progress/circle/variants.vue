@@ -9,17 +9,17 @@ defineProps({
 
 <template>
   <div class="relative h-85">
-    <div class="absolute vuwi-mc">
-      <VuwiProgressCircle :percent="percent" color="border-pink-500" :width="4" :size="2" />
+    <div class="absolute wi-mc">
+      <VProgressCircle :percent="percent" color="border-pink-500" :width="4" :size="2" />
     </div>
-    <div class="absolute vuwi-mc">
-      <VuwiProgressCircle :percent="percent" color="border-yellow-500" :width="8" :size="6" />
+    <div class="absolute wi-mc">
+      <VProgressCircle :percent="percent" color="border-yellow-500" :width="8" :size="6" />
     </div>
-    <div class="absolute vuwi-mc">
-      <VuwiProgressCircle :percent="percent" color="border-green-500" :width="16" :size="12" />
+    <div class="absolute wi-mc">
+      <VProgressCircle :percent="percent" color="border-green-500" :width="16" :size="12" />
     </div>
-    <div class="absolute vuwi-mc">
-      <VuwiProgressCircle :percent="percent" color="border-blue-500" :width="24" :size="20" />
+    <div class="absolute wi-mc">
+      <VProgressCircle :percent="percent" color="border-blue-500" :width="24" :size="20" />
     </div>
   </div>
 </template>

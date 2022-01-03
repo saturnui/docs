@@ -1,27 +1,32 @@
 <template>
   <div class="space-x-4">
     <!-- Right -->
-    <VuwiTooltip placement="right">
+    <VTooltip placement="right">
       <template #tooltip>This is a tooltip</template>
-      <button class="vuwi-btn vuwi-btn-primary">Right</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Right</button>
+    </VTooltip>
 
     <!-- Bottom -->
-    <VuwiTooltip placement="bottom">
+    <VTooltip placement="bottom">
       <template #tooltip>This is a tooltip</template>
-      <button class="vuwi-btn vuwi-btn-primary">Bottom</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Bottom</button>
+    </VTooltip>
 
     <!-- Top -->
-    <VuwiTooltip placement="top">
+    <VTooltip placement="top">
       <template #tooltip>This is a tooltip</template>
-      <button class="vuwi-btn vuwi-btn-primary">Top</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Top</button>
+    </VTooltip>
 
     <!-- Left -->
-    <VuwiTooltip placement="left">
+    <VTooltip placement="left">
       <template #tooltip>This is a tooltip</template>
-      <button class="vuwi-btn vuwi-btn-primary">Left</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Left</button>
+    </VTooltip>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: plain
+</route>

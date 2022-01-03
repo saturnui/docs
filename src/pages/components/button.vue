@@ -35,48 +35,53 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
     <button
-      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      class="xl:hidden wi-btn wi-btn-icon hover:bg-primary hover:text-white"
       @click="showDrawer = true"
     >
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content p-2 sm:p-8">
+  <div class="wi-content p-2 sm:p-8">
     <div class="space-y-4">
       <div class="doc-title">Button</div>
     </div>
     <div class="doc-subtitle">Default</div>
-    <ExampleCard source="button/default.vue">
+    <ExampleCard source="/button/default">
       <ButtonDefault />
     </ExampleCard>
+    
     <div class="doc-subtitle">Solid</div>
-    <ExampleCard source="button/solid.vue">
+    <ExampleCard source="/button/solid">
       <ButtonSolid />
     </ExampleCard>
+    
     <div class="doc-subtitle">Outline</div>
-    <ExampleCard source="button/outline.vue">
+    <ExampleCard source="/button/outline">
       <ButtonOutline />
     </ExampleCard>
+    
     <div class="doc-subtitle">Pill</div>
-    <ExampleCard source="button/pill.vue">
+    <ExampleCard source="/button/pill">
       <ButtonPill />
     </ExampleCard>
+    
     <div class="doc-subtitle">Icon</div>
-    <ExampleCard source="button/icon.vue">
+    <ExampleCard source="/button/icon">
       <ButtonIcon />
     </ExampleCard>
+    
     <div class="doc-subtitle">Misc</div>
-    <ExampleCard source="button/misc.vue">
+    <ExampleCard source="/button/misc">
       <ButtonMisc />
     </ExampleCard>
   </div>

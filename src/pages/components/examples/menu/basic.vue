@@ -7,27 +7,27 @@ const toggleMenu = () => {
 
 <template>
   <div class="relative inline-block h-20">
-    <!-- <VuwiGroup v-model="selectedIndex">
+    <!-- <VGroup v-model="selectedIndex">
       <template #="{ activeEl, setActive }">
-        <button class="vuwi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 1</button>
-        <button class="vuwi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 2</button>
-        <button class="vuwi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 3</button>
+        <button class="wi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 1</button>
+        <button class="wi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 2</button>
+        <button class="wi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 3</button>
       </template>
-    </VuwiGroup>-->
+    </VGroup>-->
 
-    <button class="vuwi-btn vuwi-btn-primary" @click="toggleMenu">Open Menu</button>
+    <button class="wi-btn wi-btn-primary" @click="toggleMenu">Open Menu</button>
     <transition name="slide-down">
       <div
         v-if="showMenu"
         ref="menu"
-        class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 vuwi-card ring-1 ring-black ring-opacity-5 focus:outline-none"
+        class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 wi-light-dark ring-1 ring-black ring-opacity-5 focus:outline-none"
         role="menu"
         aria-orientation="vertical"
         aria-labelledby="user-menu-button"
         tabindex="-1"
       >
         <div
-          class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+          class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
           role="menuitem"
           tabindex="-1"
         >
@@ -35,7 +35,7 @@ const toggleMenu = () => {
           <span>Your Profile</span>
         </div>
         <div
-          class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+          class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
           role="menuitem"
           tabindex="-1"
         >
@@ -43,7 +43,7 @@ const toggleMenu = () => {
           <span class="whitespace-nowrap pr-2">Dark Mode</span>
         </div>
         <div
-          class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+          class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
           role="menuitem"
           tabindex="-1"
         >

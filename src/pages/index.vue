@@ -5,9 +5,9 @@
   />
   <div class="flex flex-col h-screen items-center gap-4 overflow-y-auto">
     <div>
-      <assets-logo-vuwi class="h-60 w-60 -mr-13" />
+      <assets-logo-vuwi class="h-60 w-60 -mr-13 mt-30" />
     </div>
-    <div class="vuwi-content flex flex-col items-center px-10 gap-8">
+    <div class="wi-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
           <div class="text-5xl">Web UI Framework</div>
@@ -17,19 +17,19 @@
           </div>
         </div>
         <div class="relative grid gap-4 w-full">
-          <div class="vuwi-col-3-1 gap-4">
+          <div class="wi-col-3-1 gap-4">
             <router-link
               to="/getting-started"
-              class="vuwi-btn vuwi-btn-primary vuwi-btn-lg vuwi-btn-pill"
+              class="wi-btn wi-fill-primary wi-btn-lg wi-btn-pill"
             >Get Started</router-link>
             <router-link
               to="/introduction"
-              class="vuwi-btn vuwi-btn-primary vuwi-btn-outline vuwi-btn-lg vuwi-btn-pill"
+              class="wi-btn wi-btn-primary wi-btn-outline wi-btn-lg wi-btn-pill"
             >Why Vuwi?</router-link>
             <a
               href="https://github.com/vuwijs/vuwi"
               target="_blank"
-              class="vuwi-btn vuwi-btn-lg vuwi-btn-pill bg-dark-600 bg-opacity-10 gap-2"
+              class="wi-btn wi-btn-lg wi-btn-pill bg-dark-600 bg-opacity-10 gap-2"
             >
               <carbon-logo-github />
               <span>Github</span>
@@ -45,19 +45,19 @@
 
       <div>
         Supports using third-party Tailwind components such as
-        <a href="https://tailwindui.com/" class="text-primary vuwi-btn-link">Tailwind UI</a>,
+        <a href="https://tailwindui.com/" class="text-primary wi-btn-link">Tailwind UI</a>,
         <a
           href="https://www.themes.dev/library/aircontrol-tailwindcss-admin-theme"
-          class="text-primary vuwi-btn-link"
+          class="text-primary wi-btn-link"
         >Aircontrol</a> and others.
       </div>
 
       <router-link
         to="/getting-started"
-        class="vuwi-btn vuwi-btn-primary font-medium px-6 py-4 rounded-lg my-8"
+        class="wi-btn wi-btn-primary wi-btn-pill font-medium px-6 py-4 rounded-lg my-8"
       >Style components with CSS instead of JavaScript APIs</router-link>
       <div class="flex justify-center gap-4 w-full p-3">
-        <div class="vuwi-col-3-1 gap-12 max-w-80 lg:max-w-max">
+        <div class="wi-col-3-1 gap-12 max-w-80 lg:max-w-max">
           <div class="text-center space-y-4">
             <div class="text-3xl text-primary-light font-light">Simple</div>
             <div>Style components with CSS instead of a bunch of properties defined by APIs</div>
@@ -79,7 +79,7 @@
       <div>Copyright &copy; 2021-2022 Vuwi</div>
     </div>
   </div>
-  <ToggleDarkMode class="fixed vuwi-tr m-4" />
+  <ToggleDarkMode class="fixed wi-tr m-4" />
   <Banner class="top-8 right-8" />
 </template>
 

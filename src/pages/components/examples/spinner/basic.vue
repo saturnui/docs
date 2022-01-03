@@ -18,6 +18,11 @@ setInterval(() => {
 
 <template>
   <div class="flex justify-center">
-    <VuwiSpinner />
+    <VSpinner />
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: examples/default
+</route>

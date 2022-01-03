@@ -1,33 +1,38 @@
 <template>
-  <div class="px-4 max-w-2xl flex flex-wrap items-center gap-4">
-    <VuwiButton class="vuwi-btn-xs vuwi-btn-icon vuwi-btn-primary">
+  <div class="max-w-2xl flex flex-wrap items-center gap-4">
+    <VButton class="wi-btn-xs wi-btn-icon wi-btn-primary">
       <tabler-box class="text-[0.5rem]" />
-    </VuwiButton>
-    <VuwiButton class="vuwi-btn-sm vuwi-btn-icon vuwi-btn-primary">
+    </VButton>
+    <VButton class="wi-btn-sm wi-btn-icon wi-btn-primary">
       <tabler-box class="text-sm" />
-    </VuwiButton>
-    <VuwiButton class="vuwi-btn-icon vuwi-btn-primary">
+    </VButton>
+    <VButton class="wi-btn-icon wi-btn-primary">
       <tabler-box />
-    </VuwiButton>
-    <VuwiButton class="vuwi-btn-lg vuwi-btn-icon vuwi-btn-primary">
+    </VButton>
+    <VButton class="wi-btn-lg wi-btn-icon wi-btn-primary">
       <tabler-box class="text-2xl" />
-    </VuwiButton>
+    </VButton>
 
     <!-- Alternatives -->
-    <VuwiButton class="vuwi-btn-xl vuwi-btn-icon vuwi-btn-primary">
+    <VButton class="wi-btn-xl wi-btn-icon wi-btn-primary">
       <tabler-box class="text-3xl" />
-    </VuwiButton>
+    </VButton>
 
-    <VuwiButton class="vuwi-btn-xl vuwi-btn-icon">
+    <VButton class="wi-btn-xl wi-btn-icon">
       <tabler-box class="text-3xl" />
-    </VuwiButton>
+    </VButton>
 
-    <VuwiButton class="vuwi-btn-xl vuwi-btn-icon vuwi-btn-outline vuwi-btn-primary">
+    <VButton class="wi-btn-xl wi-btn-icon wi-btn-outline wi-btn-primary">
       <tabler-box class="text-3xl" />
-    </VuwiButton>
+    </VButton>
 
-    <VuwiButton class="vuwi-btn-xl vuwi-btn-icon vuwi-btn-outline">
+    <VButton class="wi-btn-xl wi-btn-icon wi-btn-outline">
       <tabler-box class="text-3xl" />
-    </VuwiButton>
+    </VButton>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: examples/default
+</route>

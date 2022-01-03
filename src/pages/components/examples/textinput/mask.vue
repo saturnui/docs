@@ -5,18 +5,18 @@ const text = ref('')
 
 <template>
   <div class="grid gap-4">
-    <VuwiTextInput
+    <VTextInput
       v-model="dob"
       label="Date of Birth"
       placeholder="DD/MM/YYYY"
-      class="border vuwi-border vuwi-text-input-error"
+      class="border wi-border wi-text-input-error"
       mask="##/##/####"
     />
-    <VuwiTextInput
+    <VTextInput
       v-model="text"
       label="7 digit code using letters and numbers"
-      class="border vuwi-border"
+      class="border wi-border"
       mask="XXX-X-XXX"
-    ></VuwiTextInput>
+    ></VTextInput>
   </div>
 </template>

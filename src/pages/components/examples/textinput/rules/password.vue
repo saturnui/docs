@@ -27,12 +27,12 @@ const text = ref('')
 
 <template>
   <div class="grid gap-4">
-    <VuwiTextInput
+    <VTextInput
       v-model="text"
       name="Password"
       label="Password"
       placeholder="Type here..."
-      class="border vuwi-border vuwi-text-input-error"
+      class="border wi-border wi-text-input-error"
       rules="required|password"
     />
   </div>

@@ -3,5 +3,5 @@ const text = ref('')
 </script>
 
 <template>
-  <VuwiTextInput v-model="text" placeholder="Your name" class="border vuwi-border" />
+  <VTextInput v-model="text" placeholder="Your name" class="border wi-border" />
 </template>

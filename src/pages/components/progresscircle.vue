@@ -72,20 +72,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Progress Circle</div>
     <div class="doc-desc">Displays progression in a circular view</div>
@@ -97,10 +97,10 @@ onMounted(async () => {
     >These examples demonstrate only a few different ways to style the progress circle.</div>
 
     <ExampleCard source="progress/circle/basic.vue" class="doc-padding-none">
-      <div class="p-2 vuwi-highlight">
-        <VuwiSwitch v-model="animate" class="vuwi-switch-sm">
+      <div class="p-2 wi-highlight">
+        <VSwitch v-model="animate" class="wi-switch-sm">
           <span class="pl-2">Animate</span>
-        </VuwiSwitch>
+        </VSwitch>
       </div>
       <div class="p-4">
         <ProgressCircleBasic :percent="percent" />
@@ -113,11 +113,11 @@ onMounted(async () => {
       class="doc-detail"
     >Demonstrates different sizes and widths.</div>
 
-    <ExampleCard source="progress/circle/basic.vue" class="doc-padding-none">
-      <div class="p-2 vuwi-highlight">
-        <VuwiSwitch v-model="animate" class="vuwi-switch-sm">
+    <ExampleCard source="progress/circle/basic.vue" content-class="">
+      <div class="p-2 wi-highlight">
+        <VSwitch v-model="animate" class="wi-switch-sm">
           <span class="pl-2">Animate</span>
-        </VuwiSwitch>
+        </VSwitch>
       </div>
       <div class="p-4">
         <ProgressCircleVariants :percent="percent" />

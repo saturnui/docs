@@ -9,12 +9,12 @@ defineRule('required', required)
 
 <template>
   <div class="grid gap-4">
-    <VuwiTextInput
+    <VTextInput
       v-model="text"
       name="Your name"
       label="Your name"
       placeholder="Name"
-      class="border vuwi-border vuwi-text-input-error"
+      class="border wi-border wi-text-input-error"
       rules="required"
     />
   </div>

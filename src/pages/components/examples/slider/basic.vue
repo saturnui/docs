@@ -15,19 +15,19 @@ watch(range, (newVal, oldVal) => {
 <template>
   <div class="grid gap-6">
     {{ range }} :: {{ val }}
-    <VuwiSlider v-model="val" :min="1" :max="10" :step="2" root-class="vuwi-slider" />
+    <VSlider v-model="val" :min="1" :max="10" :step="2" root-class="wi-slider" />
 
-    <VuwiSlider v-model="range" :min="0" :max="200" root-class="vuwi-slider-sm" />
+    <VSlider v-model="range" :min="0" :max="200" root-class="wi-slider-sm" />
 
-    <VuwiSlider v-model="range" :min="10" :max="190" />
+    <VSlider v-model="range" :min="10" :max="190" />
 
-    <VuwiSlider v-model="range" :min="20" :max="180" root-class="vuwi-slider-lg" />
+    <VSlider v-model="range" :min="20" :max="180" root-class="wi-slider-lg" />
 
-    <VuwiSlider v-model="range" :min="10" :max="190" root-class="vuwi-slider-xl" />
+    <VSlider v-model="range" :min="10" :max="190" root-class="wi-slider-xl" />
 
-    <VuwiSlider v-model="range" :min="0" :max="200" root-class="vuwi-slider-xl">
+    <VSlider v-model="range" :min="0" :max="200" root-class="wi-slider-xl">
       <template #highlight>
-        <div class="h-full w-full vuwi-progress-stripe vuwi-progress bg-yellow-500 rounded-full"></div>
+        <div class="h-full w-full wi-progress-stripe wi-progress bg-yellow-500 rounded-full"></div>
       </template>
 
       <template #thumb-left>
@@ -39,7 +39,7 @@ watch(range, (newVal, oldVal) => {
           </div>
         </transition>
         <div v-if="busy" class="w-10 h-10 flex items-center justify-center text-white">
-          <div class="vuwi-spinner slider-busy" />
+          <div class="wi-spinner slider-busy" />
         </div>
       </template>
 
@@ -48,7 +48,7 @@ watch(range, (newVal, oldVal) => {
           class="w-10 h-10 flex items-center justify-center bg-yellow-600 rounded-full text-white font-bold text-sm"
         >{{ range[1] }}</div>
       </template>
-    </VuwiSlider>
+    </VSlider>
   </div>
 </template>
 

@@ -10,7 +10,7 @@ const removeFile = (file: File) => {
 </script>
 
 <template>
-  <VuwiDropzone class="flex flex-col text-gray-100" @change="handleChange">
+  <VDropzone class="flex flex-col text-gray-100" @change="handleChange">
     <template #default="{ active, files }">
       <div
         v-if="files"
@@ -23,13 +23,13 @@ const removeFile = (file: File) => {
           class="relative flex flex-col items-center w-50"
         >
           <div class="bg-white p-2 rounded-lg filter drop-shadow-lg">
-            <VuwiFilePreview :src="file" width="200" height="200" class="rounded" />
+            <VFilePreview :src="file" width="200" height="200" class="rounded" />
           </div>
           <div class="flex items-center justify-center bg-gray-900 rounded-lg mt-2 px-3 py-2">
             <div class="truncate text-sm font-bold max-w-40">{{ file.name }}</div>
           </div>
           <button
-            class="absolute -top-2 -right-2 vuwi-btn vuwi-btn-icon bg-black border-3"
+            class="absolute -top-2 -right-2 wi-btn wi-btn-icon bg-black border-3"
             @click="removeFile(file)"
           >
             <tabler-x />
@@ -41,11 +41,11 @@ const removeFile = (file: File) => {
         <div class="p-2">Drop Files</div>
       </div>
       <div class="py-2">
-        <div class="flex gap-2 px-3 py-2 vuwi-text bg-dark-50 dark:bg-gray-900 rounded font-medium">
+        <div class="flex gap-2 px-3 py-2 wi-text bg-dark-50 dark:bg-gray-900 rounded font-medium">
           <span>Total files:</span>
           <span>{{ files?.length || 0 }}</span>
         </div>
       </div>
     </template>
-  </VuwiDropzone>
+  </VDropzone>
 </template>

@@ -4,10 +4,10 @@ const text = ref('')
 
 <template>
   <div class="grid gap-4">
-    <VuwiTextInput placeholder="No style" />
-    <VuwiTextInput placeholder="Background style" class="bg-dark-900 bg-opacity-3 dark:bg-opacity-20" />
-    <VuwiTextInput placeholder="Background and border style" class="dark:bg-dark-900 dark:bg-opacity-20 border vuwi-border" />
-    <VuwiTextInput
+    <VTextInput placeholder="No style" />
+    <VTextInput placeholder="Background style" class="bg-dark-900 bg-opacity-3 dark:bg-opacity-20" />
+    <VTextInput placeholder="Background and border style" class="dark:bg-dark-900 dark:bg-opacity-20 border wi-border" />
+    <VTextInput
       v-model="text"
       label="Fully customized"
       placeholder="Type here..."
@@ -18,11 +18,11 @@ const text = ref('')
       </template>
 
       <template #append>
-        <button v-if="text" class="vuwi-btn w-12 min-w-12 h-12 min-h-12 vuwi-btn-icon bg-purple-400" @click="text = ''">
+        <button v-if="text" class="wi-btn w-12 min-w-12 h-12 min-h-12 wi-btn-icon bg-purple-400" @click="text = ''">
           <tabler-x class="text-purple-600 text-4xl" />
         </button>
       </template>
-    </VuwiTextInput>
+    </VTextInput>
   </div>
 </template>
 

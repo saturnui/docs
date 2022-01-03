@@ -7,21 +7,21 @@ const fieldType = computed(() => {
 </script>
 
 <template>
-  <VuwiTextInput
+  <VTextInput
     v-model="text"
     :type="fieldType"
     label="Password"
     placeholder="*****"
-    class="border vuwi-border h-14"
+    class="border wi-border h-14"
   >
     <template #prepend>
       <tabler-lock class="text-xl opacity-30" />
     </template>
     <template #append>
-      <button class="vuwi-btn vuwi-btn-icon" @click="showPassword = !showPassword">
+      <button class="wi-btn wi-btn-icon" @click="showPassword = !showPassword">
         <tabler-eye v-if="showPassword" />
         <tabler-eye-off v-else />
       </button>
     </template>
-  </VuwiTextInput>
+  </VTextInput>
 </template>

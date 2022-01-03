@@ -6,30 +6,30 @@ const enableAbsolute = ref(false)
 
 <template>
   <!-- Action Bar -->
-  <div class="flex items-center gap-4 p-2 px-4 vuwi-highlight-strongest text-sm font-bold">
-    <VuwiSwitch v-model="showToast" class="vuwi-text">
+  <div class="flex items-center gap-4 p-2 px-4 wi-highlight-strongest text-sm font-bold">
+    <VSwitch v-model="showToast" class="wi-text">
       <span class="pl-2">Show</span>
-    </VuwiSwitch>
+    </VSwitch>
 
-    <VuwiSwitch v-model="enableAbsolute" class="vuwi-text">
+    <VSwitch v-model="enableAbsolute" class="wi-text">
       <span class="pl-2">Float</span>
-    </VuwiSwitch>
+    </VSwitch>
 
     <div class="flex-grow"></div>
 
-    <VuwiSwitch v-model="showRegion" class="vuwi-text">
+    <VSwitch v-model="showRegion" class="wi-text">
       <span class="pl-2">Show Region</span>
-    </VuwiSwitch>
+    </VSwitch>
   </div>
 
   <!-- Preview -->
   <div
-    class="relative doc-preview h-100 flex flex-col text-white rounded-b vuwi-highlight overflow-hidden"
+    class="relative doc-preview h-100 flex flex-col text-white rounded-b wi-highlight overflow-hidden"
   >
     <div :class="{ 'absolute top-0 w-full z-10': enableAbsolute }">
-      <VuwiCollapse v-model="showToast" class="pointer-events-none" slide="down">
+      <VCollapse v-model="showToast" class="pointer-events-none" slide="down">
         <div class="flex justify-start p-2 pointer-events-auto">
-          <div class="p-3 vuwi-dark text-gray-200 w-85 rounded-lg">
+          <div class="p-3 wi-dark text-gray-200 w-85 rounded-lg">
             <div class="flex items-center justify-between">
               <div class="flex justify-center items-center gap-4">
                 <div class="w-10 h-10">
@@ -47,13 +47,13 @@ const enableAbsolute = ref(false)
               <div class="flex-grow"></div>
               <div class="flex gap-4">
                 <button
-                  class="vuwi-btn vuwi-btn-sm rounded uppercase text-xs font-bold text-white"
+                  class="wi-btn wi-btn-sm rounded uppercase text-xs font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Dismiss</span>
                 </button>
                 <button
-                  class="vuwi-btn vuwi-btn-sm rounded vuwi-btn-primary text-xs uppercase font-bold text-white"
+                  class="wi-btn wi-btn-sm rounded wi-btn-primary text-xs uppercase font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Ok</span>
@@ -62,7 +62,7 @@ const enableAbsolute = ref(false)
             </div>
           </div>
         </div>
-      </VuwiCollapse>
+      </VCollapse>
     </div>
 
     <!-- Content -->
@@ -71,21 +71,21 @@ const enableAbsolute = ref(false)
       :class="{ 'bg-blue-400 bg-opacity-20 border-dash outline-blue-400': showRegion }"
     >
       <button
-        class="absolute top-2 left-2 vuwi-btn vuwi-btn-icon vuwi-btn-xl filter drop-shadow-lg vuwi-btn-primary"
+        class="absolute top-2 left-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-btn-primary"
       >
         <tabler-message class="text-2xl" />
       </button>
       <button
-        class="absolute bottom-2 right-2 vuwi-btn vuwi-btn-icon vuwi-btn-xl filter drop-shadow-lg vuwi-btn-primary"
+        class="absolute bottom-2 right-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-btn-primary"
       >
         <tabler-message class="text-2xl" />
       </button>
     </div>
 
     <div :class="{ 'absolute bottom-0 w-full z-10': enableAbsolute }">
-      <VuwiCollapse v-model="showToast" class="pointer-events-none" slide="up">
+      <VCollapse v-model="showToast" class="pointer-events-none" slide="up">
         <div class="flex justify-end p-2 pointer-events-auto">
-          <div class="p-3 vuwi-dark text-gray-200 w-85 rounded-lg">
+          <div class="p-3 wi-dark text-gray-200 w-85 rounded-lg">
             <div class="flex items-center justify-between">
               <div class="flex justify-center items-center gap-4">
                 <div class="w-10 h-10">
@@ -103,13 +103,13 @@ const enableAbsolute = ref(false)
               <div class="flex-grow"></div>
               <div class="flex gap-4">
                 <button
-                  class="vuwi-btn vuwi-btn-sm rounded uppercase text-xs font-bold text-white"
+                  class="wi-btn wi-btn-sm rounded uppercase text-xs font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Dismiss</span>
                 </button>
                 <button
-                  class="vuwi-btn vuwi-btn-sm rounded vuwi-btn-primary text-xs uppercase font-bold text-white"
+                  class="wi-btn wi-btn-sm rounded wi-btn-primary text-xs uppercase font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Ok</span>
@@ -118,7 +118,7 @@ const enableAbsolute = ref(false)
             </div>
           </div>
         </div>
-      </VuwiCollapse>
+      </VCollapse>
     </div>
   </div>
 </template>

@@ -104,7 +104,7 @@ const menuItems: MenuItem[] = [
 <template>
   <div>
     <div v-for="(item, i) in menuItems" :key="i">
-      <VuwiCollapse v-if="item.collapsible" v-model="item.open">
+      <VCollapse v-if="item.collapsible" v-model="item.open">
         <template #header="{ open }">
           <div class="px-3 flex items-center gap-3 nav-link">
             <div v-if="item.icon" class="nav-link-icon">
@@ -127,10 +127,10 @@ const menuItems: MenuItem[] = [
             v-for="(link, n) in item.links"
             :key="n"
             :to="link.to"
-            class="nav-sublink vuwi-border"
+            class="nav-sublink wi-border"
           >{{ link.title }}</router-link>
         </div>
-      </VuwiCollapse>
+      </VCollapse>
       <router-link
         v-else-if="item.to"
         :to="item.to"
@@ -151,7 +151,7 @@ const menuItems: MenuItem[] = [
             v-for="(link, n) in item.links"
             :key="n"
             :to="link.to"
-            class="nav-sublink vuwi-border"
+            class="nav-sublink wi-border"
           >
             <span>{{ link.title }}</span>
           </router-link>
@@ -160,10 +160,10 @@ const menuItems: MenuItem[] = [
     </div>
 
     <div class="flex-grow" />
-    <VuwiLine class="lg:hidden" />
+    <VLine class="lg:hidden" />
     <div class="flex items-center px-3 py-2 lg:hidden">
       <div
-        class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+        class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
         role="menuitem"
         tabindex="-1"
         @click="navTo('profile')"
@@ -171,7 +171,7 @@ const menuItems: MenuItem[] = [
         <tabler-user />
       </div>
       <div
-        class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+        class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
         role="menuitem"
         tabindex="-1"
         @click="toggleDarkMode"
@@ -180,7 +180,7 @@ const menuItems: MenuItem[] = [
         <carbon-sun v-else />
       </div>
       <div
-        class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+        class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
         role="menuitem"
         tabindex="-1"
         @click="signout"

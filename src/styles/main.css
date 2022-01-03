@@ -1,6 +1,6 @@
 @import './markdown.css';
 @import './doc.css';
-@import '../modules/vuwi/index.css';
+@import './themes/skyline/index.css';
 @import '../components/index.css';
 
 html,

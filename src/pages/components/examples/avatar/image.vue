@@ -5,17 +5,14 @@ const photo
 
 <template>
   <div class="flex items-center gap-4">
-    <VuwiAvatar
-      name="Alex Lifeson"
-      :photo="photo"
-      class="vuwi-avatar-sm rounded-full overflow-hidden"
-    />
-    <VuwiAvatar name="Rob Taylor" :photo="photo" />
-    <VuwiAvatar
-      name="Bryan Adams"
-      :photo="photo"
-      class="vuwi-avatar-lg rounded-full overflow-hidden"
-    />
-    <VuwiAvatar name="Alex Lifeson" :photo="photo" class="vuwi-avatar-xl" />
+    <VAvatar name="Alex Lifeson" :photo="photo" class="wi-avatar-sm rounded-full overflow-hidden" />
+    <VAvatar name="Rob Taylor" :photo="photo" />
+    <VAvatar name="Bryan Adams" :photo="photo" class="wi-avatar-lg rounded-full overflow-hidden" />
+    <VAvatar name="Alex Lifeson" :photo="photo" class="wi-avatar-xl" />
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: examples/default
+</route>

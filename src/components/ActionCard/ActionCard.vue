@@ -46,7 +46,7 @@ export default defineComponent({
         <div class="text-xl">
           <span>{{ title }}</span>
         </div>
-        <div class="vuwi-text text-sm flex-grow">
+        <div class="wi-text text-sm flex-grow">
           <span>{{ desc }}</span>
         </div>
       </div>
@@ -54,7 +54,7 @@ export default defineComponent({
         <img :src="icon" class="actioncard-image" />
       </div>
     </div>
-    <VuwiLine />
+    <VLine />
     <div
       v-if="action"
       class="

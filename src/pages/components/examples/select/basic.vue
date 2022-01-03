@@ -9,9 +9,9 @@ const items = [
 </script>
 
 <template>
-  <VuwiSelect
+  <VSelect
     v-model="selectedItem"
     :options="items"
-    class="border vuwi-border min-w-60"
+    class="border wi-border min-w-60"
   />
 </template>

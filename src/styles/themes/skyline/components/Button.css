@@ -1,0 +1,17 @@
+@layer components {
+  .skyline {
+    .wi {
+      &-btn-primary {
+        @apply bg-purple-600 dark:bg-purple-700 hover:bg-purple-800 text-white;
+      }
+
+      &-btn-outline {
+        @apply border dark:border-purple-600 bg-transparent text-white dark:text-white;
+      }
+
+      &-btn-outline&-btn-primary {
+        @apply border-purple-600 bg-transparent text-purple-600 hover:bg-purple-700 hover:bg-opacity-10;
+      }
+    }
+  }
+}

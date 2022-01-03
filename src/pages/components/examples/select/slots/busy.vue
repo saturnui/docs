@@ -20,11 +20,11 @@ watch(selectedItem, (val: string) => {
 </script>
 
 <template>
-  <VuwiSelect
+  <VSelect
     v-model="selectedItem"
     label="Select an option"
     :options="items"
-    class="border vuwi-border min-w-60"
+    class="border wi-border min-w-60"
   >
     <template #prepend>
       <tabler-mood-neutral class="text-xl opacity-30 w-10 min-w-10 -ml-2 text-left" />
@@ -32,12 +32,12 @@ watch(selectedItem, (val: string) => {
     <template #append>
       <div
         v-if="busy"
-        class="vuwi-spinner w-6 h-6 min-w-6 min-h-6 border-3 border-primary border-r-transparent dark:border-gray-500 dark:border-r-transparent"
+        class="wi-spinner w-6 h-6 min-w-6 min-h-6 border-3 border-primary border-r-transparent dark:border-gray-500 dark:border-r-transparent"
         role="status"
       >
         <span class="sr-only">Busy...</span>
       </div>
       <tabler-check v-else-if="valid" class="text-green-500 mr-1" />
     </template>
-  </VuwiSelect>
+  </VSelect>
 </template>

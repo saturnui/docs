@@ -4,13 +4,13 @@ const currentPage = ref(0)
 
 <template>
   <div class="grid gap-6">
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="1" />
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="2" />
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="3" />
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="4" />
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="5" />
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="6" />
-    <VuwiPagination v-model="currentPage" :length="12" :total-visible="7" />
-    <VuwiPagination v-model="currentPage" :length="12" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="1" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="2" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="3" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="4" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="5" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="6" />
+    <VPagination v-model="currentPage" :length="12" :total-visible="7" />
+    <VPagination v-model="currentPage" :length="12" />
   </div>
 </template>

@@ -1,0 +1,9 @@
+@layer components {
+  .skyline {
+    .wi {
+      &-alert {
+        @apply flex justify-between items-center rounded mb-2;
+      }
+    }
+  }
+}

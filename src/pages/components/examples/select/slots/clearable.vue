@@ -9,19 +9,19 @@ const items = [
 </script>
 
 <template>
-  <VuwiSelect
+  <VSelect
     v-model="selectedItem"
     label="Select your mood"
     :options="items"
-    class="border vuwi-border min-w-60"
+    class="border wi-border min-w-60"
   >
     <template #prepend>
       <tabler-mood-neutral class="text-xl opacity-30 w-10 min-w-10 -ml-2 text-left" />
     </template>
     <template #append>
-      <button v-if="selectedItem" class="vuwi-btn vuwi-btn-icon" @click="selectedItem = ''">
+      <button v-if="selectedItem" class="wi-btn wi-btn-icon" @click="selectedItem = ''">
         <tabler-x />
       </button>
     </template>
-  </VuwiSelect>
+  </VSelect>
 </template>

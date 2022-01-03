@@ -1,15 +1,40 @@
 <script setup lang="ts">
-defineEmits(['close'])
-defineProps({ text: String, showAlert: Boolean })
+const text = 'I\'m an alert that informs you of stuff.'
+const showAlert = ref(false)
+
 </script>
 
 <template>
-  <transition name="vuwi-slide-down">
-    <div v-if="showAlert" class="vuwi-alert bg-red-700 text-white mt-4" role="alert">
-      <span class="p-3">{{ text }}</span>
-      <button class="vuwi-btn vuwi-btn-icon mr-2" @click="$emit('close')">
-        <tabler-x class="text-xl" />
-      </button>
-    </div>
-  </transition>
+  <div class="h-full flex flex-col justify-center items-center">
+    <VButton class="absolute wi-mc wi-btn-primary" @click="showAlert = true">Show Alert</VButton>
+    <transition name="alert">
+      <VAlert v-if="showAlert" class="bg-red-700 text-white z-50" role="alert">
+        <span class="p-3">{{ text }}</span>
+        <button class="wi-btn wi-btn-icon mr-2" @click="showAlert = false">
+          <tabler-x class="text-xl" />
+        </button>
+      </VAlert>
+    </transition>
+  </div>
 </template>
+
+<style scoped>
+.alert-enter-active {
+  transition: all 200ms ease-out;
+}
+
+.alert-leave-active {
+  transition: all 200ms ease-in;
+}
+
+.alert-enter-from,
+.alert-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+</style>
+
+<route lang="yaml">
+meta:
+  layout: examples/default
+</route>

@@ -24,7 +24,6 @@ const api = [
 ]
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Name', anchor: '#name' },
   { title: 'Photo', anchor: '#photo' },
   { title: 'API', anchor: '#api' },
@@ -48,41 +47,35 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
     <button
-      class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn"
+      class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn"
       @click="showDrawer = true"
     >
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Title -->
     <div class="doc-title">Avatar</div>
 
-    <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <ExampleCard source="avatar/name.vue">
-      <AvatarName />
-    </ExampleCard>
-
     <!-- Name -->
     <div id="name" class="doc-subtitle">Name</div>
-    <ExampleCard source="avatar/name.vue">
+    <ExampleCard source="/avatar/name">
       <AvatarName />
     </ExampleCard>
 
     <!-- Photo -->
     <div id="photo" class="doc-subtitle">Photo</div>
-    <ExampleCard source="avatar/image.vue">
+    <ExampleCard source="/avatar/image">
       <AvatarImage />
     </ExampleCard>
 
@@ -92,7 +85,7 @@ onMounted(async () => {
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Avatar/VuwiAvatar.css" />
+    <StyleCard source="Avatar.css" />
   </div>
 </template>
 

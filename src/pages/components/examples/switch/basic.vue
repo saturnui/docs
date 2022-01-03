@@ -5,35 +5,35 @@ const val = ref(false)
 <template>
   <div class="flex items-center gap-8">
     <!-- Small -->
-    <VuwiSwitch v-model="val" class="vuwi-switch-sm">
+    <VSwitch v-model="val" class="wi-switch-sm">
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />
       </template>
-    </VuwiSwitch>
+    </VSwitch>
 
     <!-- Medium (Default) -->
-    <VuwiSwitch v-model="val">
+    <VSwitch v-model="val">
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />
       </template>
-    </VuwiSwitch>
+    </VSwitch>
 
     <!-- Large -->
-    <VuwiSwitch v-model="val" class="vuwi-switch-lg">
+    <VSwitch v-model="val" class="wi-switch-lg">
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />
       </template>
-    </VuwiSwitch>
+    </VSwitch>
 
     <!-- Disabled -->
-    <VuwiSwitch v-model="val" class="vuwi-switch-lg" disabled>
+    <VSwitch v-model="val" class="wi-switch-lg" disabled>
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />
       </template>
-    </VuwiSwitch>
+    </VSwitch>
   </div>
 </template>

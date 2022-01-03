@@ -3,18 +3,18 @@ const text = ref('')
 </script>
 
 <template>
-  <VuwiTextInput
+  <VTextInput
     v-model="text"
     placeholder="Your name"
-    class="border vuwi-border h-14"
+    class="border wi-border h-14"
   >
     <template #prepend>
       <tabler-user class="text-xl opacity-30" />
     </template>
     <template #append>
-      <button v-if="text" class="vuwi-btn vuwi-btn-icon" @click="text = ''">
+      <button v-if="text" class="wi-btn wi-btn-icon" @click="text = ''">
         <tabler-x />
       </button>
     </template>
-  </VuwiTextInput>
+  </VTextInput>
 </template>

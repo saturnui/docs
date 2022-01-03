@@ -1,34 +1,82 @@
 <script setup lang="ts">
-const code = ref('')
+import CodeBasic from '../components/examples/codeinput/basic.vue'
+
+const api = [
+  {
+    name: 'theme',
+    type: 'string',
+    defaultVal: 'vuwi',
+    desc: 'Used as the prefix for all Vuwi CSS classes.',
+  },
+]
+
+const sidenavItems = [
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'API', anchor: '#api' },
+  { title: 'Style Guide', anchor: '#styles' },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
 </script>
 
 <template>
-  <div class="vuwi-content p-8 space-y-6">
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex items-center w-full px-4">
-        <div class="border-l dark:border-dark-600 px-6 py-2">Code Input</div>
-        <div class="flex-grow"></div>
-        <span v-if="code" class="border vuwi-border vuwi-shade px-4 py-1 rounded">{{ code }}</span>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-      <VuwiLine />
-      <div class="px-4 py-3 flex">
-        <VuwiCodeInput v-model="code" pattern="XXX-XXX" class="border-2 vuwi-border vuwi-shade" />
-      </div>
+    </VOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="wi-content doc-content">
+    <!-- Header -->
+    <div class="doc-title">Title here...</div>
+    <div class="doc-desc">
+      Description here...
     </div>
-    <!-- Code Snippet -->
-    <div class="vuwi-window filter drop-shadow-lg relative">
-      <span
-        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
-      >Code Snippet</span>
-      <VuwiLine />
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <code>
-          &lt;VuwiCodeInput v-model="code" pattern="XXX-XXX" class="border-2 vuwi-border vuwi-shade" />
-        </code>
-      </div>
+
+    <!-- Basic -->
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div class="doc-detail">
+      Details here...
     </div>
+
+    <ExampleCard source="/codeinput/basic">
+      <CodeBasic />
+    </ExampleCard>
+
+    <!-- API -->
+    <div id="api" class="doc-subtitle">API</div>
+    <ApiCard :api="api" class="w-full" />
+
+    <!-- Style Guide -->
+    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="TextInput.css" />
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: default
+</route>
 
 <route lang="yaml">
 meta:

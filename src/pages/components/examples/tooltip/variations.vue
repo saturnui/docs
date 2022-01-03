@@ -6,28 +6,33 @@ const photo
 <template>
   <div class="space-x-4">
     <!-- Image and Text -->
-    <VuwiTooltip placement="top">
+    <VTooltip placement="top">
       <template #tooltip>
         <img :src="photo" width="32" height="32" />
         <span>This is a tooltip</span>
       </template>
-      <button class="vuwi-btn vuwi-btn-primary">Image and Text</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Image and Text</button>
+    </VTooltip>
 
     <!-- Custom Color -->
-    <VuwiTooltip placement="top" tooltip-class="flex items-center gap-2 px-3 py-2 text-sm bg-purple-500 bg-opacity-90 text-white font-semibold rounded-lg">
+    <VTooltip placement="top" tooltip-class="flex items-center gap-2 px-3 py-2 text-sm bg-purple-500 bg-opacity-90 text-white font-semibold rounded-lg">
       <template #tooltip>
         <span>This is a tooltip</span>
       </template>
-      <button class="vuwi-btn vuwi-btn-primary">Custom color</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Custom color</button>
+    </VTooltip>
 
     <!-- Inverted Color -->
-    <VuwiTooltip placement="top" tooltip-class="flex items-center gap-2 px-3 py-2 text-sm vuwi-card-inverted bg-opacity-90 dark:bg-opacity-90 font-semibold rounded-lg">
+    <VTooltip placement="top" tooltip-class="flex items-center gap-2 px-3 py-2 text-sm wi-light-dark-inverted bg-opacity-90 dark:bg-opacity-90 font-semibold rounded-lg">
       <template #tooltip>
         <span>This is a tooltip</span>
       </template>
-      <button class="vuwi-btn vuwi-btn-primary">Inverted color</button>
-    </VuwiTooltip>
+      <button class="wi-btn wi-btn-primary">Inverted color</button>
+    </VTooltip>
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: plain
+</route>

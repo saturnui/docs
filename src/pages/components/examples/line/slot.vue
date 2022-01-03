@@ -1,7 +1,7 @@
 <template>
   <div class="grid gap-4 py-4">
-    <VuwiLine>
+    <VLine>
       <span class="px-2">Hello, world!</span>
-    </VuwiLine>
+    </VLine>
   </div>
 </template>

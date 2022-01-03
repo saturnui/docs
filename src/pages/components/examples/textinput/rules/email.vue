@@ -10,12 +10,12 @@ defineRule('email', email)
 
 <template>
   <div class="grid gap-4">
-    <VuwiTextInput
+    <VTextInput
       v-model="text"
       name="Email"
       label="Username"
       placeholder="Your email address..."
-      class="border vuwi-border vuwi-text-input-error"
+      class="border wi-border wi-text-input-error"
       rules="required|email"
     />
   </div>

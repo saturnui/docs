@@ -21,21 +21,21 @@ setInterval(() => {
     
     <!-- Variation #1 example -->
     <div class="relative w-12 h-12">
-      <div class="rounded-full border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 vuwi-border" />
-      <div class="absolute top-0 left-0 vuwi-spin-slowest">
+      <div class="rounded-full border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 wi-border" />
+      <div class="absolute top-0 left-0 wi-rotate-slowest">
         <div class="absolute top-0 left-0">
-          <VuwiProgressCircle
+          <VProgressCircle
             :percent="35"
             color="border-blue-500"
-            class="absolute top-0 left-0 vuwi-spin"
+            class="absolute top-0 left-0 wi-rotate"
             :width="10"
             :size="4"
           />
         </div>
-        <VuwiProgressCircle
+        <VProgressCircle
           :percent="20"
           color="border-blue-500"
-          class="vuwi-slow"
+          class="wi-slow"
           :width="10"
           :size="4"
         />
@@ -43,13 +43,18 @@ setInterval(() => {
     </div>
 
     <!-- Variation #2 example -->
-    <VuwiProgressCircle
+    <VProgressCircle
       :percent="percent"
       color="border-red-500"
-      class="vuwi-spin-faster"
+      class="wi-rotate-faster"
       :width="8"
       :size="4"
       :style="style"
     />
   </div>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: examples/default
+</route>

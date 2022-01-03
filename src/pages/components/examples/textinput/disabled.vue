@@ -4,10 +4,10 @@ const text = ref('')
 
 <template>
   <div class="grid gap-4">
-    <VuwiTextInput
+    <VTextInput
       v-model="text"
       placeholder="Name"
-      class="border vuwi-border"
+      class="border wi-border"
       disabled
     />
   </div>
