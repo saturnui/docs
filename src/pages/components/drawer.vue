@@ -5,7 +5,7 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
 
 <template>
   <div class="wi-content sm:p-8 space-y-6">
-    <div class="wi-window filter sm:drop-shadow-lg relative">
+    <div class="wi-mock-window filter sm:drop-shadow-lg relative">
       <div class="absolute top-1 left-0 pl-26 font-bold wi-text flex w-full px-4">
         <div class="border-l dark:border-dark-600 px-6 py-2">Drawer</div>
         <div class="flex-grow"></div>

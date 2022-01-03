@@ -96,7 +96,7 @@ onMounted(async () => {
       class="doc-detail"
     >These examples demonstrate only a few different ways to style the progress circle.</div>
 
-    <ExampleCard source="progress/circle/basic.vue" class="doc-padding-none">
+    <ExampleCard source="progress/circle/basic.vue" content-class="">
       <div class="p-2 wi-highlight">
         <VSwitch v-model="animate" class="wi-switch-sm">
           <span class="pl-2">Animate</span>

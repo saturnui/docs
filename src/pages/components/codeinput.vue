@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CodeBasic from '../components/examples/codeinput/basic.vue'
+import CodeBasic from './examples/codeinput/basic.vue'
 
 const api = [
   {

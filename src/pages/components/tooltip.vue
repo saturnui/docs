@@ -88,21 +88,21 @@ onMounted(async () => {
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <ExampleCard source="/components/examples/tooltip/basic" height="h-100">
+    <ExampleCard source="tooltip/basic" height="h-100">
       <TooltipBasic />
     </ExampleCard>
 
     <!-- Static -->
     <div id="static" class="doc-subtitle">Static</div>
     <div class="doc-detail">Tooltips can be shown on demand.</div>
-    <ExampleCard source="/components/examples/tooltip/static" height="h-100">
+    <ExampleCard source="tooltip/static" height="h-100">
       <TooltipStatic />
     </ExampleCard>
 
     <!-- Variations -->
     <div id="variations" class="doc-subtitle">Variations</div>
     <div class="doc-detail">Tooltips can be completely customomized with any style / content.</div>
-    <ExampleCard source="/components/examples/tooltip/variations" height="h-100">
+    <ExampleCard source="tooltip/variations" height="h-100">
       <TooltipVariations />
     </ExampleCard>
 

@@ -57,7 +57,7 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="/components/examples/textinput/basic" height="h-100" />
+    <ExampleCard source="textinput/basic" height="h-100" />
 
     <!-- API -->
     <div id="api" class="doc-subtitle">API</div>

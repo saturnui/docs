@@ -1,11 +1,16 @@
+<script setup lang="ts">
+// eslint-disable-next-line no-console
+const close = () => console.log('close')
+</script>
+
 <template>
-  <div class="wi-dialog max-w-xl border wi-border filter shadow-lg">
+  <div class="wi-dialog bg-white dark:bg-dark-600 max-w-xl border wi-border filter shadow-lg">
     <!-- Title -->
     <div class="wi-dialog-titlebar">
       <tabler-box />
       <div class="font-bold">Dialog example</div>
       <div class="flex-grow"></div>
-      <VButton class="wi-btn wi-btn-icon">
+      <VButton class="wi-btn wi-btn-icon" @click="close">
         <tabler-x class="wi-dialog-close-icon" />
       </VButton>
     </div>

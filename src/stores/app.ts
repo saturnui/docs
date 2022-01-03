@@ -39,6 +39,7 @@ export const useAppStore = defineStore('app', () => {
     { title: 'FormSection', to: '/components/formsection' },
     { title: 'Line', to: '/components/line' },
     { title: 'Menu', to: '/components/menu' },
+    { title: 'Mocks', to: '/components/mock' },
     { title: 'Notification', to: '/components/notification' },
     { title: 'Overlay', to: '/components/overlay' },
     { title: 'Pagination', to: '/components/pagination' },
@@ -56,7 +57,6 @@ export const useAppStore = defineStore('app', () => {
   const stylingPages = [
     { title: 'Color', to: '/styling/color' },
     { title: 'Layout', to: '/styling/layout' },
-    { title: 'Mocks', to: '/styling/window' },
     { title: 'Themes', to: '/styling/themes' },
   ]
 

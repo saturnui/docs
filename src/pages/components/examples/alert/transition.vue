@@ -8,8 +8,8 @@ const showAlert = ref(false)
   <div class="h-full flex flex-col justify-center items-center">
     <VButton class="absolute wi-mc wi-btn-primary" @click="showAlert = true">Show Alert</VButton>
     <transition name="alert">
-      <VAlert v-if="showAlert" class="bg-red-700 text-white z-50" role="alert">
-        <span class="p-3">{{ text }}</span>
+      <VAlert v-if="showAlert" class="py-1 bg-red-700 text-white z-10" role="alert">
+        <span class="p-3 pl-5">{{ text }}</span>
         <button class="wi-btn wi-btn-icon mr-2" @click="showAlert = false">
           <tabler-x class="text-xl" />
         </button>

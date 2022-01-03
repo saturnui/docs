@@ -50,26 +50,35 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Title here...</div>
+    <div class="doc-title">Collapse</div>
     <div class="doc-desc">
-      Description here...
+      Shows and hides content in a collapsable transition. Items can be grouped together only
+      allowing one item in the group to be visible.
     </div>
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
+    <div class="doc-detail">By default, collapse will only animate the content. Headers
+      are optional.
     </div>
 
-    <ExampleCard source="/components/examples/collapse/headless">
+    <ExampleCard source="collapse/headless">
       <CollapseHeadless />
     </ExampleCard>
-    
-    <ExampleCard source="/components/examples/collapse/header">
+
+    <!-- Header -->
+    <div id="basic" class="doc-subtitle">Header</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="collapse/header">
       <CollapseHeader />
     </ExampleCard>
 
-    <ExampleCard source="/components/examples/collapse/group">
+    <!-- Group -->
+    <div id="basic" class="doc-subtitle">Group</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="collapse/group">
       <CollapseGroup />
     </ExampleCard>
 

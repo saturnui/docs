@@ -1,6 +1,11 @@
+<script setup lang="ts">
+// eslint-disable-next-line no-console
+const close = () => console.log('close')
+</script>
+
 <template>
   <!-- Vue -->
-  <VDialog class="max-w-xl border wi-border filter shadow-lg">
+  <VDialog class="bg-white dark:bg-dark-600 max-w-xl border wi-border filter shadow-lg" @close="close">
     <!-- Title -->
     <template #title>
       <tabler-box />

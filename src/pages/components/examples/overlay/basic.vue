@@ -130,7 +130,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
       class="wi-overlay-absolute wi-overlay-shade"
     >
       <div
-        class="wi-window wi-border w-80 h-40 filter drop-shadow-lg"
+        class="wi-mock-window wi-border w-80 h-40 filter drop-shadow-lg"
         :class="`box-${position}`"
       >
         <button

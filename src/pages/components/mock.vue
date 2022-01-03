@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import WindowBasic from '../components/examples/window/basic.vue'
-import WindowVariations from '../components/examples/window/variations.vue'
+import WindowBasic from './examples/mock/basic.vue'
+import WindowVariations from './examples/mock/variations.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
