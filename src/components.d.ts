@@ -62,6 +62,7 @@ declare module 'vue' {
     VDatePickerShortcut: typeof import('./modules/vuwi/components/DatePicker/components/VDatePickerShortcut.vue')['default']
     VDatePickerWeek: typeof import('./modules/vuwi/components/DatePicker/components/VDatePickerWeek.vue')['default']
     VDatePickerYear: typeof import('./modules/vuwi/components/DatePicker/components/VDatePickerYear.vue')['default']
+    VDialog: typeof import('./modules/vuwi/components/Dialog/VDialog.vue')['default']
     VDrawer: typeof import('./modules/vuwi/components/Drawer/VDrawer.vue')['default']
     VDropdown: typeof import('./modules/vuwi/components/Dropdown/VDropdown.vue')['default']
     VDropzone: typeof import('./modules/vuwi/components/Dropzone/VDropzone.vue')['default']

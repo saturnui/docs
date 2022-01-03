@@ -27,7 +27,9 @@ const props = defineProps({
 const exSource = `/components/examples${props.source}`
 // https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/components/examples/alert/css.vue
 // https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/components/alert/css.vue
-const rawSource = `https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/components/examples/${props.source}.vue`
+// const rawSource = `https://raw.githubusercontent.com/vuwijs/starter/main/src/pages/components/examples/${props.source}.vue`
+// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/components/Dialog/VuwiDialog.vue
+const rawSource = `https://raw.githubusercontent.com/vuwijs/starter/feature/theming/src/pages/components/examples/${props.source}.vue`
 
 // const mode = ref('')
 // const toggleMode = () => {
