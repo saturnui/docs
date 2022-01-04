@@ -55,10 +55,7 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button
-      class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn"
-      @click="showDrawer = true"
-    >
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
@@ -66,16 +63,26 @@ onMounted(async () => {
   <div class="wi-content doc-content">
     <!-- Title -->
     <div class="doc-title">Avatar</div>
-
+    <div class="doc-desc">
+      The VAvatar component is typically used to display user
+      profile pictures. The default behavior is to display a picture
+      or first initial.
+    </div>
     <!-- Name -->
     <div id="name" class="doc-subtitle">Name</div>
-    <ExampleCard source="/avatar/name" content-class="p-4 flex flex-wrap gap-4 items-center justify-center">
+    <ExampleCard
+      source="/avatar/name"
+      content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
+    >
       <AvatarName />
     </ExampleCard>
 
     <!-- Photo -->
     <div id="photo" class="doc-subtitle">Photo</div>
-    <ExampleCard source="/avatar/image" content-class="p-4 flex flex-wrap gap-4 items-center justify-center">
+    <ExampleCard
+      source="/avatar/image"
+      content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
+    >
       <AvatarImage />
     </ExampleCard>
 
