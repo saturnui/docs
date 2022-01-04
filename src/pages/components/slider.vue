@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SliderBasic from './examples/slider/basic.vue'
+import SliderBasic from './slider/basic.vue'
 
 const api = [
   {
@@ -70,6 +70,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

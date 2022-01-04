@@ -1,23 +1,74 @@
+<script setup lang="ts">
+import ColorBackground from './color/background.vue'
+import ColorText from './color/text.vue'
+
+const sidenavItems = [
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Transition', anchor: '#transition' },
+  { title: 'Examples', anchor: '#examples' },
+  { title: 'Default Theme', anchor: '#theme' },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
+</script>
+
 <template>
-  <div class="wi-content sm:p-8 space-y-6">
-    <div class="wi-mock-window filter sm:drop-shadow-lg relative">
-      <div class="absolute top-1 left-0 pl-26 font-bold wi-text flex w-full px-4">
-        <div class="border-l dark:border-dark-600 px-6 py-2">Color</div>
-        <div class="flex-grow"></div>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-      <VLine />
-      <div class="flex flex-wrap gap-4 p-4 bg-purple-500">
-        <div class="p-4 wi-light-dark">
-          <code>.wi-light-dark</code>
-        </div>
-        <div class="p-4 wi-light">
-          <code>.wi-light</code>
-        </div>
-        <div class="p-4 wi-dark">
-          <code>.wi-dark</code>
-        </div>
+    </VOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button
+      class="xl:hidden wi-btn wi-btn-icon hover:bg-primary hover:text-white"
+      @click="showDrawer = true"
+    >
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="wi-content p-2 sm:p-8">
+    <div class="doc-title">
+      <div id="alert" class="text-4xl">
+        <span>Colors</span>
       </div>
     </div>
+    <div class="doc-desc">
+      Desc here...
+    </div>
+
+    <!-- Background -->
+    <div id="background" class="doc-subtitle">
+      <span>Background Colors</span>
+    </div>
+    <ExampleCard source="/color/background">
+      <ColorBackground />
+    </ExampleCard>
+
+    <!-- Text -->
+    <div id="text" class="doc-subtitle">
+      <span>Text Colors</span>
+    </div>
+    <ExampleCard source="/color/text" content-class="">
+      <ColorText />
+    </ExampleCard>
+
   </div>
 </template>
 

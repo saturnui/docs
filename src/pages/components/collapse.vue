@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import CollapseHeadless from './examples/collapse/headless.vue'
-import CollapseHeader from './examples/collapse/header.vue'
-import CollapseGroup from './examples/collapse/group.vue'
+import CollapseHeadless from './collapse/headless.vue'
+import CollapseHeader from './collapse/header.vue'
+import CollapseGroup from './collapse/group.vue'
 
 const api = [
   {
@@ -13,7 +13,9 @@ const api = [
 ]
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Headless', anchor: '#headless' },
+  { title: 'Header', anchor: '#header' },
+  { title: 'Group', anchor: '#group' },
   { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
@@ -89,6 +91,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

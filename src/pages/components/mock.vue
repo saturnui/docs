@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import WindowBasic from './examples/mock/basic.vue'
-import WindowVariations from './examples/mock/variations.vue'
+import WindowBasic from './mock/basic.vue'
+import WindowVariations from './mock/variations.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
@@ -60,6 +60,9 @@ onMounted(async () => {
     <!-- Style -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Window/VuwiWindow.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

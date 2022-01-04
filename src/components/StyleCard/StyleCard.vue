@@ -8,7 +8,10 @@ const props = defineProps({
     default: '',
   },
 })
-const source = `https://raw.githubusercontent.com/vuwijs/vuwi/main/modules/vuwi/themes/base/${props.source}`
+// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/Alert.css
+// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/components/Alert.css
+const githubBaseUrl = 'https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/'
+const source = `${githubBaseUrl}/${props.source}`
 const decoratedCSS = ref('')
 const css = ref('')
 const { copy, copied } = useClipboard({ source })
@@ -19,10 +22,10 @@ onBeforeMount(async () => {
     const text = await result.text()
     // Grab contents and remove indent
     css.value = text
-      .replace(/^[^\0]*[^\0]vuwi {?([^\0]*?)}\n}/g, '$1')
+      .replace(/^[^\0]*[^\0]wi {?([^\0]*?)}\n}/g, '$1')
       .replace(/(\n) {3} /g, '$1')
       .replaceAll('&-', '.wi-')
-      .replaceAll('@apply ', '')
+      // .replaceAll('@apply ', '')
       .trim()
     decoratedCSS.value = hljs.highlight(css.value, { language: 'css' }).value
   }
@@ -38,7 +41,7 @@ onBeforeMount(async () => {
       </a>
     </div>
     <VLine />
-    <div class="relative max-w-4xl p-4 bg-gray-700 dark:bg-dark-800 text-yellow-300 text-sm">
+    <div class="relative max-w-4xl max-h-100 overflow-y-auto p-4 bg-gray-700 dark:bg-dark-800 text-yellow-300 text-sm">
       <pre><code v-html="decoratedCSS"></code></pre>
       <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
         <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>

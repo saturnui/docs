@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ToastExample from './examples/notification/toast.vue'
-import NotificationExample from './examples/notification/notification.vue'
+import ToastExample from './notification/toast.vue'
+import NotificationExample from './notification/notification.vue'
 
 // const api = [
 //   {
@@ -122,6 +122,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <!-- <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Toast/VuwiToast.css" />-->
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

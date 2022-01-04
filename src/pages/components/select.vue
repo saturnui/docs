@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import SelectBasic from './examples/select/basic.vue'
-import SelectSlotsBusy from './examples/select/slots/busy.vue'
-import SelectSlotsClearable from './examples/select/slots/clearable.vue'
-import SelectDisabled from './examples/select/disabled.vue'
-import SelectError from './examples/select/error.vue'
+import SelectBasic from './select/basic.vue'
+import SelectSlotsBusy from './select/slots/busy.vue'
+import SelectSlotsClearable from './select/slots/clearable.vue'
+import SelectDisabled from './select/disabled.vue'
+import SelectError from './select/error.vue'
 
 const api = [
   {
@@ -113,6 +113,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Select/VuwiSelect.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

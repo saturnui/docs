@@ -53,20 +53,17 @@ const signout = async () => {
 
 <template>
   <div class="app-appbar">
-    <div class="flex w-full max-w-8xl items-center gap-4 px-6">
+    <div class="flex w-full max-w-8xl items-center gap-4 px-0">
       <button class="lg:hidden wi-btn wi-btn-icon" @click="showDrawer = !showDrawer">
         <tabler-menu-2 />
       </button>
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
-        <assets-logo-vuwi class="w-8 h-8" />
-        <div class="font-medium text-2xl -mt-1">
-          <span>vuwi</span>
-        </div>
+        <assets-logo-vuwi class="w-20 h-12" />
       </div>
       <div class="flex-grow"></div>
       <div id="appbar-actions"></div>
-      <ToggleDarkMode class="hidden lg:flex" />
+      <ToggleDarkMode />
       <div v-if="user" class="hidden lg:block relative top-0 cursor-pointer">
         <button
           class="wi-btn wi-btn-icon bg-white bg-opacity-10 hover:bg-white hover:bg-opacity-10"

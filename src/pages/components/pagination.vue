@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PaginationBasic from './examples/pagination/basic.vue'
+import PaginationBasic from './pagination/basic.vue'
 
 const api = [
   {
@@ -91,6 +91,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

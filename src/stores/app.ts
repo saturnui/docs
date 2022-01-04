@@ -46,6 +46,7 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Progress Bar', to: '/components/progressbar' },
     { title: 'Progress Circle', to: '/components/progresscircle' },
     { title: 'Select', to: '/components/select' },
+    { title: 'Skeleton', to: '/components/skeleton' },
     { title: 'Slider', to: '/components/slider' },
     { title: 'Spinner', to: '/components/spinner' },
     { title: 'Switch', to: '/components/switch' },

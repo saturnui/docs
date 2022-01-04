@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import OverlayBasic from './examples/overlay/basic.vue'
+import OverlayBasic from './overlay/basic.vue'
 
 const api = [
   {
@@ -102,6 +102,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Overlay/VuwiOverlay.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

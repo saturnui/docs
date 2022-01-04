@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import LineBasic from './examples/line/basic.vue'
-import LineSlot from './examples/line/slot.vue'
-import LineSlot2 from './examples/line/slot2.vue'
+import LineBasic from './line/basic.vue'
+import LineSlot from './line/slot.vue'
+import LineSlot2 from './line/slot2.vue'
 
 const api = [
   {
@@ -87,6 +87,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Line/VuwiLine.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

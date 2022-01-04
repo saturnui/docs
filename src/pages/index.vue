@@ -5,13 +5,13 @@
   />
   <div class="flex flex-col h-screen items-center gap-4 overflow-y-auto">
     <div>
-      <assets-logo-vuwi class="h-60 w-60 -mr-13 mt-30" />
+      <assets-logo-vuwi class="h-60 w-60 mt-30" />
     </div>
     <div class="wi-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
-          <div class="text-5xl">Web UI Framework</div>
-          <div class="text-3xl pl-2">Built with Vue 3 and Tailwind CSS</div>
+          <div class="text-5xl">Web UI Library</div>
+          <div class="text-3xl pl-2">Tailwind CSS components powered by Vue 3</div>
           <div class="flex items-center justify-center gap-2">
             <simple-icons-windicss class="text-light-blue-400" />WindiCSS is also fully supported
           </div>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="text-xl font-light max-w-xl text-center text-dark-700 dark:text-dark-300">
-        Vuwi is a Vue UI Library built on top of theme-driven Tailwind CSS components. Everything you need to create
+        Vuwi is set of beautifully handcrafted Tailwind CSS and Vue 3 components. Everything you need to create
         fully customizable applications is at your fingertips.
       </div>
 

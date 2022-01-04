@@ -74,6 +74,9 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
         <div class="p-4">{{ lipsum }}</div>
       </div>
     </div>
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ProgressCircleBasic from './examples/progress/circle/basic.vue'
-import ProgressCircleVariants from './examples/progress/circle/variants.vue'
+import ProgressCircleBasic from './progress/circle/basic.vue'
+import ProgressCircleVariants from './progress/circle/variants.vue'
 
 const percent = ref(35)
 const animate = ref(false)
@@ -131,6 +131,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Progress/VuwiProgressCircle.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

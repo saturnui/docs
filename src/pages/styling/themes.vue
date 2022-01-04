@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TextInputBasic from '~/pages/components/examples/textinput/textfield.vue'
+// import TextInputBasic from '~/pages/components/examples/textinput/textfield.vue'
 
 const api = [
   {
@@ -59,9 +59,9 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="textinput/basic.vue">
+    <!-- <ExampleCard source="textinput/basic.vue">
       <TextInputBasic />
-    </ExampleCard>
+    </ExampleCard> -->
 
     <!-- API -->
     <div id="api" class="doc-subtitle">API</div>

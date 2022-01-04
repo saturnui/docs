@@ -1,31 +1,19 @@
 <script setup lang="ts">
-import AvatarImage from './avatar/image.vue'
-import AvatarName from './avatar/name.vue'
+import SkeletonListItem from './skeleton/listitem.vue'
+import SkeletonDecorated from './skeleton/decorated.vue'
 
 const api = [
   {
     name: 'theme',
     type: 'string',
     defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes',
-  },
-  {
-    name: 'photo',
-    type: 'string',
-    defaultVal: '',
-    desc: 'Url to image to be used for avatar',
-  },
-  {
-    name: 'name',
-    type: 'string',
-    defaultVal: '',
-    desc: 'Name to be used to display an initial if photo is not provided.',
+    desc: 'Used as the prefix for all Vuwi CSS classes.',
   },
 ]
 
 const sidenavItems = [
-  { title: 'Name', anchor: '#name' },
-  { title: 'Photo', anchor: '#photo' },
+  { title: 'List Item', anchor: '#listitem' },
+  { title: 'Decorated', anchor: '#decorated' },
   { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
@@ -55,28 +43,34 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button
-      class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn"
-      @click="showDrawer = true"
-    >
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
   <div class="wi-content doc-content">
-    <!-- Title -->
-    <div class="doc-title">Avatar</div>
+    <!-- Header -->
+    <div class="doc-title">Skeletons</div>
+    <div class="doc-desc">Skeletons can be used as boilerplate designs when creating mockups or while data is being loaded onto the screen.</div>
 
-    <!-- Name -->
-    <div id="name" class="doc-subtitle">Name</div>
-    <ExampleCard source="/avatar/name" content-class="p-4 flex flex-wrap gap-4 items-center justify-center">
-      <AvatarName />
+    <!-- List Item -->
+    <div id="listitem" class="doc-subtitle">List Item</div>
+    <div
+      class="doc-detail"
+    >Use as a multiline list item</div>
+
+    <ExampleCard source="skeleton/listitem">
+      <SkeletonListItem />
     </ExampleCard>
 
-    <!-- Photo -->
-    <div id="photo" class="doc-subtitle">Photo</div>
-    <ExampleCard source="/avatar/image" content-class="p-4 flex flex-wrap gap-4 items-center justify-center">
-      <AvatarImage />
+    <!-- Decorated -->
+    <div id="decorated" class="doc-subtitle">Decorated</div>
+    <div
+      class="doc-detail"
+    >This demonstrates how to add a border, shadow and pulse to any Skeleton component</div>
+
+    <ExampleCard source="skeleton/decorated">
+      <SkeletonDecorated />
     </ExampleCard>
 
     <!-- API -->
@@ -85,10 +79,7 @@ onMounted(async () => {
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Avatar.css" />
-
-    <!-- Page Nav -->
-    <PageNav />
+    <StyleCard source="TextInput.css" />
   </div>
 </template>
 

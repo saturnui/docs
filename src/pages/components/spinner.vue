@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SpinnerBasic from './examples/spinner/basic.vue'
-import SpinnerVariants from './examples/spinner/variants.vue'
-import SpinnerProgressCircle from './examples/spinner/progresscircle.vue'
+import SpinnerBasic from './spinner/basic.vue'
+import SpinnerVariants from './spinner/variants.vue'
+import SpinnerProgressCircle from './spinner/progresscircle.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
@@ -83,6 +83,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Spinner/VuwiSpinner.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

@@ -42,6 +42,9 @@ const decors = [
       </div>
     </div>
   </div>
+
+  <!-- Page Nav -->
+  <PageNav />
 </template>
 
 <route lang="yaml">

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ButtonDefault from './examples/button/default.vue'
-import ButtonIcon from './examples/button/icon.vue'
-import ButtonOutline from './examples/button/outline.vue'
-import ButtonPill from './examples/button/pill.vue'
-import ButtonSolid from './examples/button/solid.vue'
-import ButtonMisc from './examples/button/misc.vue'
+import ButtonDefault from './button/default.vue'
+import ButtonIcon from './button/icon.vue'
+import ButtonOutline from './button/outline.vue'
+import ButtonPill from './button/pill.vue'
+import ButtonSolid from './button/solid.vue'
+import ButtonMisc from './button/misc.vue'
 
 const sidenavItems = [
   { title: 'Quick Reference', to: '/pages/form' },
@@ -59,6 +59,9 @@ onMounted(async () => {
     <ExampleCard source="button/default.vue">
       <ButtonDefault />
     </ExampleCard>
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

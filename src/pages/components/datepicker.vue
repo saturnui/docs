@@ -57,6 +57,9 @@
         {{ disableDateValue }}
       </div>
     </div>
+    
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

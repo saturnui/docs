@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SwitchBasic from './examples/switch/basic.vue'
+import SwitchBasic from './switch/basic.vue'
 
 const api = [
   {
@@ -70,6 +70,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import CodeBasic from './examples/codeinput/basic.vue'
+import CodeBasic from './codeinput/basic.vue'
 
 const api = [
   {
@@ -48,9 +48,11 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Title here...</div>
+    <div class="doc-title">Code Input</div>
     <div class="doc-desc">
-      Description here...
+      The code input component is useful for items where a code is needed such as two-factor authentication,
+      forgot passwords, coupons, etc. The mask can be setup with any number of digits supporting both alpha and
+      numeric values as well as seperators.
     </div>
 
     <!-- Basic -->
@@ -70,6 +72,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

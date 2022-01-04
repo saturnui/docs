@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import DialogBasic from './examples/dialog/basic.vue'
-import DialogCss from './examples/dialog/css.vue'
-import DialogOverlay from './examples/dialog/overlay.vue'
+import DialogBasic from './dialog/basic.vue'
+import DialogCss from './dialog/css.vue'
+import DialogOverlay from './dialog/overlay.vue'
 
 const api = [
   {
@@ -123,6 +123,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

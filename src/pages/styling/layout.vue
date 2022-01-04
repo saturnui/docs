@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import LayoutPositions from '../components/examples/layout/positions.vue'
-import LayoutCols321 from '../components/examples/layout/col-3-2-1.vue'
-import LayoutCols31 from '../components/examples/layout/col-3-1.vue'
-import LayoutCols3 from '../components/examples/layout/col-3.vue'
-import LayoutCols21 from '../components/examples/layout/col-2-1.vue'
-import LayoutCols2 from '../components/examples/layout/col-2.vue'
-import LayoutCols1 from '../components/examples/layout/col-1.vue'
-import LayoutRow from '../components/examples/layout/row.vue'
+import LayoutPositions from './layout/positions.vue'
+import LayoutCols321 from './layout/col-3-2-1.vue'
+import LayoutCols31 from './layout/col-3-1.vue'
+import LayoutCols3 from './layout/col-3.vue'
+import LayoutCols21 from './layout/col-2-1.vue'
+import LayoutCols2 from './layout/col-2.vue'
+import LayoutCols1 from './layout/col-1.vue'
+import LayoutRow from './layout/row.vue'
 
 const sidenavItems = [
   { title: 'Positioning', anchor: '#positoning' },

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FileSelector from './examples/file/fileselector.vue'
+import FileSelector from './file/fileselector.vue'
 
 const api = [
   {
@@ -71,6 +71,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

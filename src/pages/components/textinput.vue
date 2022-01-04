@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import TextInputTextfield from './examples/textinput/textfield.vue'
-import TextInputStyle from './examples/textinput/style.vue'
-import TextInputTextarea from './examples/textinput/textarea.vue'
-import TextInputSlotsBusy from './examples/textinput/slots/busy.vue'
-import TextInputSlotsClearable from './examples/textinput/slots/clearable.vue'
-import TextInputSlotsPassword from './examples/textinput/slots/password.vue'
-import TextInputDisabled from './examples/textinput/disabled.vue'
-import TextInputMask from './examples/textinput/mask.vue'
-import TextInputRules from './examples/textinput/rules/required.vue'
-import TextInputEmail from './examples/textinput/rules/email.vue'
-import TextInputPassword from './examples/textinput/rules/password.vue'
-import TextInputError from './examples/textinput/error.vue'
+import TextInputTextfield from './textinput/textfield.vue'
+import TextInputStyle from './textinput/style.vue'
+import TextInputTextarea from './textinput/textarea.vue'
+import TextInputSlotsBusy from './textinput/slots/busy.vue'
+import TextInputSlotsClearable from './textinput/slots/clearable.vue'
+import TextInputSlotsPassword from './textinput/slots/password.vue'
+import TextInputDisabled from './textinput/disabled.vue'
+import TextInputMask from './textinput/mask.vue'
+import TextInputRules from './textinput/rules/required.vue'
+import TextInputEmail from './textinput/rules/email.vue'
+import TextInputPassword from './textinput/rules/password.vue'
+import TextInputError from './textinput/error.vue'
 
 const api = [
   {
@@ -263,6 +263,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

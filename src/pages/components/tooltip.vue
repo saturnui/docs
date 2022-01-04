@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TooltipBasic from './examples/tooltip/basic.vue'
-import TooltipStatic from './examples/tooltip/static.vue'
-import TooltipVariations from './examples/tooltip/variations.vue'
+import TooltipBasic from './tooltip/basic.vue'
+import TooltipStatic from './tooltip/static.vue'
+import TooltipVariations from './tooltip/variations.vue'
 
 const api = [
   {
@@ -113,6 +113,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Tooltip/VuwiTooltip.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

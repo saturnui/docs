@@ -47,6 +47,6 @@ onAddMessage(() => {
       </div>
       <div id="sidemenu" class="absolute z-10"></div>
     </div>
-    <Banner />
+    <!-- <Banner /> -->
   </div>
 </template>

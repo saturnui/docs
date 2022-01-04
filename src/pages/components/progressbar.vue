@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProgressBarBasic from './examples/progress/bar/basic.vue'
+import ProgressBarBasic from './progress/bar/basic.vue'
 
 const percent = ref(35)
 const animate = ref(false)
@@ -89,6 +89,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Progress/VuwiProgressBar.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 
