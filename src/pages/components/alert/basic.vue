@@ -13,8 +13,3 @@ const text = 'I\'m an alert that informs you of stuff.'
     </button>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

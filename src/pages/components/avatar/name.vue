@@ -6,8 +6,3 @@
     <VAvatar name="Eddie Van Halen" class="wi-avatar-xl rounded-full bg-purple-600 text-white" />
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

@@ -75,8 +75,3 @@ const rangeDateValue = ref([dayjs().startOf('month'), dayjs().endOf('day')])
 const singleDateValue = ref([dayjs().startOf('month')])
 const disableDateValue = ref([dayjs().startOf('month'), dayjs().endOf('day')])
 </script>
-
-<route lang="yaml">
-meta:
-  layout: default
-</route>

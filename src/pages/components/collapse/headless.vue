@@ -18,8 +18,3 @@ const showMore = ref(false)
     >Show less...</span>
   </VCollapse>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: plain
-</route>

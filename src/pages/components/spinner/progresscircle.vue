@@ -53,8 +53,3 @@ setInterval(() => {
     />
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

@@ -7,8 +7,3 @@
     <VButton class="wi-btn-xl wi-btn-outline wi-btn-pill wi-btn-primary">Extra Large</VButton>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

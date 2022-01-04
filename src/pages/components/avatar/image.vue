@@ -11,8 +11,3 @@ const photo
     <VAvatar name="Alex Lifeson" :photo="photo" class="wi-avatar-xl" />
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

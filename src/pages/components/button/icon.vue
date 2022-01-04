@@ -31,8 +31,3 @@
     </VButton>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

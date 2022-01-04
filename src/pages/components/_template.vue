@@ -68,8 +68,3 @@ onMounted(async () => {
     <StyleCard source="TextInput.css" />
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: default
-</route>

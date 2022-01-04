@@ -79,11 +79,3 @@ const lipsum = 'Lorem Ipsum es simplemente el texto de relleno de las imprentas 
     <PageNav />
   </div>
 </template>
-
-<style scoped>
-</style>
-
-<route lang="yaml">
-meta:
-  layout: default
-</route>

@@ -54,8 +54,3 @@ defineProps({
     </VProgressBar>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: plain
-</route>

@@ -8,8 +8,3 @@ const code = ref('')
     <div class="font-mono p-2">{{ code }}</div>
   </div>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>

@@ -24,8 +24,3 @@ const open = ref(false)
     </div>
   </VCollapse>
 </template>
-
-<route lang="yaml">
-meta:
-  layout: plain
-</route>

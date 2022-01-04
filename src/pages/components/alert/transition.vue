@@ -33,8 +33,3 @@ const showAlert = ref(false)
   transform: translateY(-10px);
 }
 </style>
-
-<route lang="yaml">
-meta:
-  layout: examples/default
-</route>
