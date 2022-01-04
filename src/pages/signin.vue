@@ -32,27 +32,27 @@ const passwordType = computed(() => {
 </script>
 
 <template>
-  <div class="vuwi-content vuwi-card hover:vuwi-hover border vuwi-border shadow rounded-b-lg -mt-1 p-4 max-w-xl">
+  <div class="wi-content wi-light-dark hover:wi-hover border wi-border shadow rounded-b-lg -mt-1 p-4 max-w-xl">
     <div class="pl-2 pb-5 text-2xl">
       <span>Create an account</span>
     </div>
-    <vuwi-form class="space-y-4" @submit="submit">
-      <VuwiTextfield
+    <VuForm class="space-y-4" @submit="submit">
+      <VTextfield
         v-model="email"
         name="email"
         label="Email"
-        class="border vuwi-border vuwi-shade"
+        class="border wi-border wi-shade"
       />
-      <VuwiTextfield
+      <VTextfield
         v-model="password"
         name="password"
         label="Password"
         :type="passwordType"
         placeholder="••••••••"
-        class="border vuwi-border vuwi-shade"
+        class="border wi-border wi-shade"
       >
         <ToggleVisible v-model="showPassword" />
-      </VuwiTextfield>
+      </VTextfield>
       <div class="flex items-center justify-end">
         <button
           v-if="busy"
@@ -65,10 +65,10 @@ const passwordType = computed(() => {
         <button
           v-else
           type="submit"
-          class="vuwi-btn vuwi-btn-xl vuwi-btn-primary w-full mt-3"
+          class="wi-btn wi-btn-xl wi-btn-primary w-full mt-3"
         >Signup</button>
       </div>
-    </vuwi-form>
+    </VuForm>
   </div>
 </template>
 

@@ -1,154 +1,131 @@
 <script setup lang="ts">
-const showDialog = ref(false)
+import DialogBasic from './dialog/basic.vue'
+import DialogCss from './dialog/css.vue'
+import DialogOverlay from './dialog/overlay.vue'
+
+const api = [
+  {
+    name: 'className',
+    type: 'string',
+    defaultVal: 'wi-dialog',
+    desc: 'Default class used by component',
+  },
+]
+
+const slots = [
+  {
+    name: 'default',
+    desc: 'This slot is for content',
+  },
+
+  {
+    name: 'title',
+    desc: 'Slot to place title, icon etc.',
+  },
+  {
+    name: 'actions',
+    desc: 'Slot to place buttons',
+  },
+]
+
+const events = [
+  {
+    name: 'close',
+    desc: 'Fired when close button is clicked',
+  },
+
+]
+
+const sidenavItems = [
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Overlay', anchor: '#overlay' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Events', anchor: '#events' },
+  { title: 'Style Guide', anchor: '#styles' },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
 </script>
 
 <template>
-  <div class="vuwi-content sm:p-8 space-y-6">
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex w-full px-4">
-        <div class="border-l dark:border-dark-600 px-6 py-2">Example</div>
-        <div class="flex-grow"></div>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
+
+  <teleport v-if="mounted" to="#sidemenu">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-      <VuwiLine />
-      <div class="p-4 flex justify-center">
-        <button class="vuwi-btn vuwi-btn-primary" @click="showDialog = true">Open Dialog</button>
-      </div>
-      <teleport to="body">
-        <VuwiOverlay v-model="showDialog" name="dialog" :modal="true" class="fixed vuwi-overlay-fixed vuwi-overlay-shade z-10">
-          <VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
-            <template #title>
-              <span class="pl-3 font-bold">Dialog example</span>
-            </template>
-            <div class="py-3 px-5">
-              <span>This is an example of a modal dialog.</span>
-            </div>
-            <template #actions>
-              <div class="vuwi-row justify-end p-2">
-                <button
-                  class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-                  @click="showDialog = false"
-                >OK</button>
-              </div>
-            </template>
-          </VuwiDialog>
-        </VuwiOverlay>
-      </teleport>
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">Code Snippet</div>
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <pre><code>&lt;teleport to="body">
-  &lt;VuwiOverlay v-model="showDialog" :modal="true" class="relative z-1">
-    &lt;VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
-      &lt;template #title>
-        &lt;span class="pl-3 font-bold">Dialog example&lt;/span>
-      &lt;/template>
-      &lt;div class="py-3 px-5">
-        &lt;span>This is an example of a modal dialog.&lt;/span>
-      &lt;/div>
-      &lt;template #actions>
-        &lt;div class="vuwi-row justify-end p-2">
-          &lt;button
-            class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-            @click="showDialog = false"
-          >OK&lt;/button>
-        &lt;/div>
-      &lt;/template>
-    &lt;/VuwiDialog>
-  &lt;/VuwiOverlay>
-&lt;/teleport></code></pre>
-      </div>
+    </VOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="wi-content doc-content">
+    <!-- Header -->
+    <div class="doc-title">Dialog</div>
+    <div class="doc-desc">
+      Dialog can be used in conjunction to
+      <router-link to="/components/overlay" class="text-primary wi-btn-link">Overlay</router-link> to display
+      content in the form of a dialog
     </div>
 
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex w-full px-4">
-        <div class="border-l dark:border-dark-600 px-6 py-2">Dialog</div>
-        <div class="flex-grow"></div>
-      </div>
-      <VuwiLine />
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">Component</div>
-      <div class="p-8 flex justify-center">
-        <VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
-          <template #title>
-            <span class="pl-3 font-bold">Dialog example</span>
-          </template>
-          <div class="py-3 px-5">
-            <span>This is an example of a modal dialog.</span>
-          </div>
-          <template #actions>
-            <div class="vuwi-row justify-end p-2">
-              <button
-                class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-                @click="showDialog = false"
-              >OK</button>
-            </div>
-          </template>
-        </VuwiDialog>
-      </div>
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">Code Snippet</div>
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <pre><code>&lt;VuwiDialog class="w-full max-w-xl border vuwi-border" @close="showDialog = false">
-  &lt;template #title>
-    &lt;span class="pl-3 font-bold">Dialog example&lt;/span>
-  &lt;/template>
-  &lt;div class="py-3 px-5">
-    &lt;span>This is an example of a modal dialog.&lt;/span>
-  &lt;/div>
-  &lt;template #actions>
-    &lt;div class="vuwi-row justify-end p-2">
-      &lt;button
-        class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-        @click="showDialog = false"
-      >OK&lt;/button>
-    &lt;/div>
-  &lt;/template>
-&lt;/VuwiDialog></code></pre>
-      </div>
-    </div>
+    <!-- Basic Usage -->
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div class="doc-detail">Show using all the available slots</div>
 
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex w-full px-4">
-        <div class="border-l dark:border-dark-600 px-6 py-2">Dialog (Alt.)</div>
-        <div class="flex-grow"></div>
-      </div>
-      <VuwiLine />
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">Custom</div>
-      <div class="p-8 flex justify-center">
-        <div class="vuwi-dialog border vuwi-border w-full max-w-xl">
-          <div class="flex items-center justify-between p-2 pl-4">
-            <span class="font-bold">Dialog example</span>
-            <button class="vuwi-btn vuwi-btn-icon rounded-full h-8 w-8" @click="showDialog = false">
-              <tabler-x class="vuwi-dialog-close-icon h-6 w-6" />
-            </button>
-          </div>
-          <VuwiLine />
-          <div class="p-4">This is an example of a modal dialog.</div>
-          <div class="vuwi-row justify-end p-2">
-            <button
-              class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-              @click="showDialog = false"
-            >OK</button>
-          </div>
-        </div>
-      </div>
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">Code Snippet</div>
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <pre><code>&lt;div class="vuwi-dialog border vuwi-border w-full max-w-xl">
-  &lt;div class="flex items-center justify-between p-2 pl-4">
-    &lt;span class="font-bold">Dialog example&lt;/span>
-    &lt;button class="vuwi-btn vuwi-btn-icon rounded-full h-8 w-8" @click="showDialog = false">
-      &lt;tabler-x class="vuwi-dialog-close-icon h-6 w-6" />
-    &lt;/button>
-  &lt;/div>
-  &lt;VuwiLine />
-  &lt;div class="p-4">This is an example of a modal dialog.&lt;/div>
-  &lt;div class="vuwi-row justify-end p-2">
-    &lt;button
-      class="vuwi-btn vuwi-btn-primary px-6 py-2 text-lg"
-      @click="showDialog = false"
-    >OK&lt;/button>
-  &lt;/div>
-&lt;/div></code></pre>
-      </div>
-    </div>
+    <ExampleCard source="dialog/basic" content-class="p-4 flex justify-center bg-dark-100">
+      <DialogBasic />
+    </ExampleCard>
+
+    <!-- CSS -->
+    <div id="css" class="doc-subtitle">CSS Only</div>
+    <div class="doc-detail">Only uses styles provided by Vuwi and Tailwind. No JavaScript.</div>
+
+    <ExampleCard source="dialog/css" content-class="p-4 flex justify-center bg-dark-100">
+      <DialogCss />
+    </ExampleCard>
+
+    <!-- Overlay -->
+    <div id="overlay" class="doc-subtitle">Overlay</div>
+    <div class="doc-detail">Show using dialog with overlay to create a modal window.</div>
+
+    <ExampleCard source="dialog/css" content-class="flex justify-center bg-dark-100 h-70">
+      <DialogOverlay />
+    </ExampleCard>
+
+    <!-- Properties -->
+    <div id="props" class="doc-subtitle">Properties</div>
+    <ApiCard :api="api" class="w-full" />
+
+    <!-- Slots -->
+    <div id="slots" class="doc-subtitle">Slots</div>
+    <NameDescCard :api="slots" class="w-full" />
+
+    <!-- Events -->
+    <div id="events" class="doc-subtitle">Events</div>
+    <NameDescCard :api="events" class="w-full" />
+
+    <!-- Style Guide -->
+    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="TextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

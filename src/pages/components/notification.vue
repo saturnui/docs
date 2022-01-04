@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ToastExample from './examples/notification/toast.vue'
-import NotificationExample from './examples/notification/notification.vue'
+import ToastExample from './notification/toast.vue'
+import NotificationExample from './notification/notification.vue'
 
 // const api = [
 //   {
@@ -67,20 +67,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="example-notification vuwi-content doc-content">
+  <div class="example-notification wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Notifications</div>
     <div class="doc-desc space-y-4">
@@ -100,7 +100,7 @@ onMounted(async () => {
     <!-- Toast -->
     <div id="toast" class="doc-subtitle">Toast</div>
     <div class="doc-detail">An example of a simple toast.</div>
-    <ExampleCard source="notification/toast.vue">
+    <ExampleCard source="notification/toast.vue" content-class="">
       <ToastExample />
     </ExampleCard>
 
@@ -111,7 +111,7 @@ onMounted(async () => {
       <a href="#" class="doc-link">useMessenger</a> and a
       custom component that supports pagination.
     </div>
-    <ExampleCard source="notification/notification.vue">
+    <ExampleCard source="notification/notification.vue" content-class="">
       <NotificationExample />
     </ExampleCard>
 
@@ -122,6 +122,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <!-- <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Toast/VuwiToast.css" />-->
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

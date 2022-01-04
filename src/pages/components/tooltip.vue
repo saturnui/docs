@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import TooltipBasic from './examples/tooltip/basic.vue'
-import TooltipStatic from './examples/tooltip/static.vue'
-import TooltipVariations from './examples/tooltip/variations.vue'
+import TooltipBasic from './tooltip/basic.vue'
+import TooltipStatic from './tooltip/static.vue'
+import TooltipVariations from './tooltip/variations.vue'
 
 const api = [
   {
@@ -61,20 +61,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Tooltip</div>
     <div class="doc-desc">
@@ -82,27 +82,27 @@ onMounted(async () => {
       <a
         href="https://popper.js.org/"
         target="_blank"
-        class="py-1 vuwi-btn-link text-blue-500"
+        class="py-1 wi-btn-link text-blue-500"
       >@popperjs/core</a>.
     </div>
 
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <ExampleCard source="tooltip/basic.vue">
+    <ExampleCard source="tooltip/basic" height="h-100">
       <TooltipBasic />
     </ExampleCard>
 
     <!-- Static -->
     <div id="static" class="doc-subtitle">Static</div>
     <div class="doc-detail">Tooltips can be shown on demand.</div>
-    <ExampleCard source="tooltip/static.vue">
+    <ExampleCard source="tooltip/static" height="h-100">
       <TooltipStatic />
     </ExampleCard>
 
     <!-- Variations -->
     <div id="variations" class="doc-subtitle">Variations</div>
     <div class="doc-detail">Tooltips can be completely customomized with any style / content.</div>
-    <ExampleCard source="tooltip/variations.vue">
+    <ExampleCard source="tooltip/variations" height="h-100">
       <TooltipVariations />
     </ExampleCard>
 
@@ -113,6 +113,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Tooltip/VuwiTooltip.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

@@ -1,0 +1,9 @@
+@layer components {
+  .skyline {
+    .wi {
+      &-dialog {
+        @apply rounded filter shadow-lg;
+      }
+    }
+  }
+}

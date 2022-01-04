@@ -53,44 +53,41 @@ const signout = async () => {
 
 <template>
   <div class="app-appbar">
-    <div class="flex w-full max-w-8xl items-center gap-4 px-6">
-      <button class="lg:hidden vuwi-btn vuwi-btn-icon" @click="showDrawer = !showDrawer">
+    <div class="flex w-full max-w-8xl items-center gap-4 px-0">
+      <button class="lg:hidden wi-btn wi-btn-icon" @click="showDrawer = !showDrawer">
         <tabler-menu-2 />
       </button>
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-1 cursor-pointer" @click="router.push('/')">
-        <assets-logo-vuwi class="w-8 h-8" />
-        <div class="font-medium text-2xl -mt-1">
-          <span>vuwi</span>
-        </div>
+        <assets-logo-vuwi class="w-20 h-12" />
       </div>
       <div class="flex-grow"></div>
       <div id="appbar-actions"></div>
-      <ToggleDarkMode class="hidden lg:flex" />
+      <ToggleDarkMode />
       <div v-if="user" class="hidden lg:block relative top-0 cursor-pointer">
         <button
-          class="vuwi-btn vuwi-btn-icon bg-white bg-opacity-10 hover:bg-white hover:bg-opacity-10"
+          class="wi-btn wi-btn-icon bg-white bg-opacity-10 hover:bg-white hover:bg-opacity-10"
           @click="openMenu"
         >
-          <VuwiAvatar
+          <VAvatar
             v-if="user"
             :name="displayName"
             :photo="photoUrl"
-            class="vuwi-avatar-sm bg-primary text-white rounded-full overflow-hidden"
+            class="wi-avatar-sm bg-primary text-white rounded-full overflow-hidden"
           />
         </button>
         <transition name="slide-down">
           <div
             v-if="showMenu"
             ref="menu"
-            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 vuwi-card ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 wi-light-dark ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1"
           >
             <div
-              class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+              class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
               role="menuitem"
               tabindex="-1"
               @click="navTo('profile')"
@@ -99,7 +96,7 @@ const signout = async () => {
               <span>Your Profile</span>
             </div>
             <div
-              class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+              class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
               role="menuitem"
               tabindex="-1"
               @click="toggleDarkMode"
@@ -110,7 +107,7 @@ const signout = async () => {
               <span v-else class="whitespace-nowrap pr-2">Appearance: Light</span>
             </div>
             <div
-              class="flex items-center gap-3 px-4 py-2 text-sm vuwi-hover"
+              class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
               role="menuitem"
               tabindex="-1"
               @click="signout"
@@ -122,10 +119,10 @@ const signout = async () => {
         </transition>
       </div>
     </div>
-    <VuwiOverlay v-model="showDrawer" class="z-0" position="left" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card border-r vuwi-border overflow-y-auto pt-4">
+    <VOverlay v-model="showDrawer" class="z-0" position="left" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark border-r wi-border overflow-y-auto pt-4">
         <Navigation @close="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </div>
 </template>

@@ -6,7 +6,7 @@ const { t } = useI18n()
 <template>
   <button
     class="
-      vuwi-btn vuwi-btn-icon
+      wi-btn wi-btn-icon
       bg-dark-400 bg-opacity-20
     "
     :title="t('button.toggle_dark')"

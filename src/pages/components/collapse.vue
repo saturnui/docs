@@ -1,107 +1,99 @@
 <script setup lang="ts">
-const showMore = ref(false)
-const open = ref(false)
+import CollapseHeadless from './collapse/headless.vue'
+import CollapseHeader from './collapse/header.vue'
+import CollapseGroup from './collapse/group.vue'
+
+const api = [
+  {
+    name: 'theme',
+    type: 'string',
+    defaultVal: 'vuwi',
+    desc: 'Used as the prefix for all Vuwi CSS classes.',
+  },
+]
+
+const sidenavItems = [
+  { title: 'Headless', anchor: '#headless' },
+  { title: 'Header', anchor: '#header' },
+  { title: 'Group', anchor: '#group' },
+  { title: 'API', anchor: '#api' },
+  { title: 'Style Guide', anchor: '#styles' },
+]
+
+const showDrawer = ref(false)
+const handleSwipeEnd = (data: { direction: string }) => {
+  if (data.direction === 'RIGHT') showDrawer.value = false
+}
+
+const mounted = ref(false)
+onMounted(async () => {
+  mounted.value = true
+})
 </script>
 
 <template>
-  <div class="vuwi-content sm:p-8 space-y-6">
-    <div class="vuwi-window filter sm:drop-shadow-lg relative">
-      <div class="absolute top-1 left-0 pl-26 font-bold vuwi-text flex items-center w-full px-4">
-        <div class="border-l dark:border-dark-600 px-6 py-2">Collapse</div>
-        <div class="flex-grow"></div>
-      </div>
-      <VuwiLine />
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">
-        <span>Headless</span>
-      </div>
-      <div class="px-4 py-3 flex">
-        <div class="flex flex-wrap">
-          <span v-if="!showMore">
-            Lorem ipsum dolor sit amet,
-            <span
-              class="cursor-pointer text-blue-500 pl-1"
-              @click="showMore = true"
-            >Show more...</span>
-          </span>
-          <VuwiCollapse v-model="showMore">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nulla vitae purus ornare vulputate. Maecenas elementum ornare massa, sed sagittis lorem placerat in. Nullam ullamcorper erat vel vestibulum feugiat. Integer commodo augue a mauris rutrum, at luctus massa iaculis. Integer tempus sit amet erat id luctus. Morbi ut iaculis odio. Etiam dictum, ipsum nec congue elementum, quam orci ultrices lorem, in porttitor tortor urna sed orci. Pellentesque congue porttitor nulla, in aliquet eros dapibus in. Sed vulputate dapibus porta. Morbi consequat finibus sem, at laoreet dui fermentum ut. Fusce vulputate nisi ut velit mollis mattis. Nullam id tincidunt felis. Nulla euismod justo ut sodales hendrerit. Donec suscipit, orci et condimentum efficitur, sem lacus dictum dolor, imperdiet tincidunt dolor sapien nec risus.
-            <span
-              class="cursor-pointer text-blue-500 pl-1"
-              @click="showMore = false"
-            >Show less...</span>
-          </VuwiCollapse>
-        </div>
-      </div>
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">
-        <span>Header</span>
-      </div>
-      <div class="px-4 py-3 flex">
-        <VuwiCollapse v-model="open" slide="up" class="w-full">
-          <template #header="{ open: isOpen }">
-            <div
-              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-card"
-            >
-              <span class="font-bold flex-grow">Title here</span>
-              <tabler-chevron-up
-                class="transition duration-150 transform"
-                :class="{ 'rotate-180': isOpen }"
-              />
-            </div>
-          </template>
-          <div class="border vuwi-border vuwi-card p-4 -mt-1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nulla vitae purus ornare vulputate. Maecenas elementum ornare massa, sed sagittis lorem placerat in. Nullam ullamcorper erat vel vestibulum feugiat. Integer commodo augue a mauris rutrum, at luctus massa iaculis. Integer tempus sit amet erat id luctus. Morbi ut iaculis odio. Etiam dictum, ipsum nec congue elementum, quam orci ultrices lorem, in porttitor tortor urna sed orci. Pellentesque congue porttitor nulla, in aliquet eros dapibus in. Sed vulputate dapibus porta. Morbi consequat finibus sem, at laoreet dui fermentum ut. Fusce vulputate nisi ut velit mollis mattis. Nullam id tincidunt felis. Nulla euismod justo ut sodales hendrerit. Donec suscipit, orci et condimentum efficitur, sem lacus dictum dolor, imperdiet tincidunt dolor sapien nec risus.
-            <span
-              class="cursor-pointer text-blue-500 pl-1"
-              @click="open = false"
-            >Close</span>
-          </div>
-        </VuwiCollapse>
-      </div>
+  <teleport v-if="mounted" to="#sidenav">
+    <Sidenav :data="sidenavItems" />
+  </teleport>
 
-      <div class="vuwi-highlight font-bold text-sm px-4 py-2">Group</div>
-      <div class="px-4 py-3 -space-y-1">
-        <VuwiCollapse v-for="i in 3" :key="i" group="myCustomGroup" class="w-full">
-          <template #header="{ open: isOpen }">
-            <div
-              class="relative p-3 flex items-center gap-4 w-full border vuwi-border z-0 vuwi-card"
-            >
-              <span class="font-bold flex-grow">Title here</span>
-              <tabler-chevron-up
-                class="transition duration-150 transform"
-                :class="{ 'rotate-180': isOpen }"
-              />
-            </div>
-          </template>
-          <div class="border vuwi-border vuwi-card p-4 -mt-1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eu nulla vitae purus ornare vulputate. Maecenas elementum ornare massa, sed sagittis lorem placerat in. Nullam ullamcorper erat vel vestibulum feugiat. Integer commodo augue a mauris rutrum, at luctus massa iaculis. Integer tempus sit amet erat id luctus. Morbi ut iaculis odio. Etiam dictum, ipsum nec congue elementum, quam orci ultrices lorem, in porttitor tortor urna sed orci. Pellentesque congue porttitor nulla, in aliquet eros dapibus in. Sed vulputate dapibus porta. Morbi consequat finibus sem, at laoreet dui fermentum ut. Fusce vulputate nisi ut velit mollis mattis. Nullam id tincidunt felis. Nulla euismod justo ut sodales hendrerit. Donec suscipit, orci et condimentum efficitur, sem lacus dictum dolor, imperdiet tincidunt dolor sapien nec risus.
-          </div>
-        </VuwiCollapse>
+  <teleport v-if="mounted" to="#sidemenu">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+        <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
+    </VOverlay>
+  </teleport>
+
+  <teleport v-if="mounted" to="#appbar-actions">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+      <tabler-arrow-bar-to-left />
+    </button>
+  </teleport>
+
+  <div class="wi-content doc-content">
+    <!-- Header -->
+    <div class="doc-title">Collapse</div>
+    <div class="doc-desc">
+      Shows and hides content in a collapsable transition. Items can be grouped together only
+      allowing one item in the group to be visible.
     </div>
-    <!-- Code Snippet -->
-    <div class="vuwi-window filter drop-shadow-lg relative">
-      <span
-        class="absolute top-1 left-26 px-6 py-2 font-bold border-l dark:border-dark-600 vuwi-text"
-      >Code Snippet</span>
-      <VuwiLine />
-      <div class="p-4 vuwi-dark text-sm text-teal-400">
-        <pre><code>&lt;VuwiCollapse v-model="open" class="w-full">
-  &lt;template #header="{ open: isOpen }">
-    &lt;div
-      class="relative p-3 flex items-center gap-4 w-full vuwi-border z-0 vuwi-card">
-      &lt;span class="font-bold flex-grow">Title here&lt;/span>
-      &lt;tabler-chevron-up
-        class="transition duration-150 transform"
-        :class="{ 'rotate-180': isOpen }"
-      />
-    &lt;/div>
-  &lt;/template>
-  &lt;div class="border vuwi-border p-4 -mt-1">
-    Lorem ipsum dolor sit amet...
-  &lt;/div>
-&lt;/VuwiCollapse></code></pre>
-      </div>
+
+    <!-- Basic -->
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div class="doc-detail">By default, collapse will only animate the content. Headers
+      are optional.
     </div>
+
+    <ExampleCard source="collapse/headless">
+      <CollapseHeadless />
+    </ExampleCard>
+
+    <!-- Header -->
+    <div id="basic" class="doc-subtitle">Header</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="collapse/header">
+      <CollapseHeader />
+    </ExampleCard>
+
+    <!-- Group -->
+    <div id="basic" class="doc-subtitle">Group</div>
+    <div class="doc-detail">Details here...</div>
+
+    <ExampleCard source="collapse/group">
+      <CollapseGroup />
+    </ExampleCard>
+
+    <!-- API -->
+    <div id="api" class="doc-subtitle">API</div>
+    <ApiCard :api="api" class="w-full" />
+
+    <!-- Style Guide -->
+    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="TextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

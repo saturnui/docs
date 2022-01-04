@@ -1,11 +1,11 @@
 <template>
-  <div class="vuwi-content sm:p-4">
+  <div class="wi-content sm:p-4">
     <div>Date Picker Examples:</div>
-    <div class="vuwi-card p-2 my-2 rounded-md">
+    <div class="wi-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Single Date
       </div>
-      <VuwiDatePicker
+      <VDatePicker
         v-model="singleDateValue"
         :as-single="true"
       />
@@ -13,18 +13,18 @@
         {{ singleDateValue }}
       </div>
     </div>
-    <div class="vuwi-card p-2 my-2 rounded-md">
+    <div class="wi-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Date Range
       </div>
-      <VuwiDatePicker
+      <VDatePicker
         v-model="rangeDateValue"
       />
       <div class="p-2">
         {{ rangeDateValue }}
       </div>
     </div>
-    <div class="vuwi-card p-2 my-2 rounded-md">
+    <div class="wi-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Custom Date Formatter
       </div>
@@ -34,7 +34,7 @@
       <div class="p-2">
         The date is for the returned and displayed values and the month is for the month picker in the actual picker
       </div>
-      <VuwiDatePicker
+      <VDatePicker
         v-model="customDateValue"
         :formatter="customDateFormatter"
       />
@@ -42,14 +42,14 @@
         {{ customDateValue }}
       </div>
     </div>
-    <div class="vuwi-card p-2 my-2 rounded-md">
+    <div class="wi-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Disable Dates
       </div>
       <div class="p-2">
         :disable-date: (date: any) => date > new Date()
       </div>
-      <VuwiDatePicker
+      <VDatePicker
         v-model="disableDateValue"
         :disable-date="(date: any) => date > new Date()"
       />
@@ -57,6 +57,9 @@
         {{ disableDateValue }}
       </div>
     </div>
+    
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

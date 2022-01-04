@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import SelectBasic from './examples/select/basic.vue'
-import SelectSlotsBusy from './examples/select/slots/busy.vue'
-import SelectSlotsClearable from './examples/select/slots/clearable.vue'
-import SelectDisabled from './examples/select/disabled.vue'
-import SelectError from './examples/select/error.vue'
+import SelectBasic from './select/basic.vue'
+import SelectSlotsBusy from './select/slots/busy.vue'
+import SelectSlotsClearable from './select/slots/clearable.vue'
+import SelectDisabled from './select/disabled.vue'
+import SelectError from './select/error.vue'
 
 const api = [
   {
@@ -40,20 +40,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Select</div>
     <div class="doc-desc">
@@ -113,6 +113,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Select/VuwiSelect.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

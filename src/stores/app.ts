@@ -39,12 +39,14 @@ export const useAppStore = defineStore('app', () => {
     { title: 'FormSection', to: '/components/formsection' },
     { title: 'Line', to: '/components/line' },
     { title: 'Menu', to: '/components/menu' },
+    { title: 'Mocks', to: '/components/mock' },
     { title: 'Notification', to: '/components/notification' },
     { title: 'Overlay', to: '/components/overlay' },
     { title: 'Pagination', to: '/components/pagination' },
     { title: 'Progress Bar', to: '/components/progressbar' },
     { title: 'Progress Circle', to: '/components/progresscircle' },
     { title: 'Select', to: '/components/select' },
+    { title: 'Skeleton', to: '/components/skeleton' },
     { title: 'Slider', to: '/components/slider' },
     { title: 'Spinner', to: '/components/spinner' },
     { title: 'Switch', to: '/components/switch' },
@@ -56,7 +58,6 @@ export const useAppStore = defineStore('app', () => {
   const stylingPages = [
     { title: 'Color', to: '/styling/color' },
     { title: 'Layout', to: '/styling/layout' },
-    { title: 'Mocks', to: '/styling/window' },
     { title: 'Themes', to: '/styling/themes' },
   ]
 

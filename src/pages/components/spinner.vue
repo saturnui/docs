@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import SpinnerBasic from './examples/spinner/basic.vue'
-import SpinnerVariants from './examples/spinner/variants.vue'
-import SpinnerProgressCircle from './examples/spinner/progresscircle.vue'
+import SpinnerBasic from './spinner/basic.vue'
+import SpinnerVariants from './spinner/variants.vue'
+import SpinnerProgressCircle from './spinner/progresscircle.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
@@ -27,20 +27,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Spinner</div>
     <div class="doc-desc">
@@ -56,7 +56,7 @@ onMounted(async () => {
       class="doc-detail"
     >The following demonstrates how to use the CSS only version of the spinner to change its appearance.</div>
 
-    <ExampleCard source="spinner/basic.vue">
+    <ExampleCard source="spinner/basic">
       <SpinnerBasic />
     </ExampleCard>
 
@@ -66,7 +66,7 @@ onMounted(async () => {
       class="doc-detail"
     >Here are some examples of style changes you can make to change the appearance</div>
 
-    <ExampleCard source="spinner/variants.vue">
+    <ExampleCard source="spinner/variants">
       <SpinnerVariants />
     </ExampleCard>
 
@@ -76,13 +76,16 @@ onMounted(async () => {
       <router-link to="/components/progresscircle" class="doc-link">VuwiProgressCircle</router-link> in conjunction with the spinner animations to achieve custom effects.
     </div>
 
-    <ExampleCard source="spinner/progresscircle.vue">
+    <ExampleCard source="spinner/progresscircle">
       <SpinnerProgressCircle />
     </ExampleCard>
 
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Spinner/VuwiSpinner.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

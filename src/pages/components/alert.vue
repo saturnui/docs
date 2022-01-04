@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import AlertBasic from './examples/alert/basic.vue'
-import AlertTransition from './examples/alert/transition.vue'
-import AlertExamples from './examples/alert/examples.vue'
-
-const showAlert = ref(false)
-const text = 'I\'m an alert that informs you of stuff'
+import AlertCss from './alert/css.vue'
+import AlertBasic from './alert/basic.vue'
+import AlertTransition from './alert/transition.vue'
+import AlertExamples from './alert/examples.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'CSS Only', anchor: '#css' },
   { title: 'Transition', anchor: '#transition' },
   { title: 'Examples', anchor: '#examples' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -30,62 +29,67 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
     <button
-      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      class="xl:hidden wi-btn wi-btn-icon hover:bg-primary hover:text-white"
       @click="showDrawer = true"
     >
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content p-2 sm:p-8">
+  <div class="wi-content p-2 sm:p-8">
     <div class="doc-title">
       <div id="alert" class="text-4xl">
         <span>Alert</span>
       </div>
     </div>
+    <div class="doc-desc">
+      The
+      <strong>VAlert</strong> component is used to convey important information to the user through the
+      use of contextual types, icons, and colors. Use in conjunction with <router-link to="/styling/color" class="wi-btn-link text-primary">Colors</router-link> for 4 variations: success, info,
+      warning, and error. Default icons are assigned which help represent different actions each type portrays.
+      Many parts of an alert such as border, icon, and color can also be customized to fit almost any situation.
+    </div>
+
     <!-- Basic Usage -->
-    <div id="basic" class="doc-subtitle">
-      <span>Basic Usage</span>
-    </div>
-    <ExampleCard source="alert/basic.vue">
-      <AlertBasic :text="text" />
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <ExampleCard source="/alert/basic">
+      <AlertBasic />
     </ExampleCard>
+
+    <!-- CSS Usage -->
+    <div id="basic" class="doc-subtitle">CSS Only</div>
+    <ExampleCard source="/alert/css">
+      <AlertCss />
+    </ExampleCard>
+
     <!-- Transition -->
-    <div id="transition" class="doc-subtitle">
-      <span>Transition</span>
-    </div>
-    <ExampleCard source="alert/transition.vue">
-      <div class="flex items-center">
-        <div>Shows an alert using Vue transition</div>
-        <div class="flex-grow"></div>
-        <VuwiSwitch v-model="showAlert">
-          <template #left>
-            <span class="mr-3 text-sm">Show Alert</span>
-          </template>
-        </VuwiSwitch>
-      </div>
-      <AlertTransition :text="text" :show-alert="showAlert" @close="showAlert = false" />
+    <div id="transition" class="doc-subtitle">Transition</div>
+    <ExampleCard source="/alert/transition" content-class="h-30">
+      <AlertTransition />
     </ExampleCard>
+
     <!-- Examples -->
-    <div id="examples" class="doc-subtitle">
-      <span>Examples</span>
-    </div>
-    <ExampleCard source="alert/examples.vue">
-      <AlertExamples :text="text" />
+    <div id="examples" class="doc-subtitle">Examples</div>
+    <ExampleCard source="/alert/examples">
+      <AlertExamples />
     </ExampleCard>
-    <div id="styles" class="doc-subtitle">
-      <span>Style Guide</span>
-    </div>
-    <StyleCard source="Alert/VuwiAlert.css" />
+
+    <!-- Theme -->
+    <div id="theme" class="doc-subtitle">Default Theme</div>
+    <div class="doc-detail">The default styles for this component.</div>
+    <StyleCard source="Alert.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

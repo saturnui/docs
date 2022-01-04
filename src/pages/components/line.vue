@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import LineBasic from './examples/line/basic.vue'
-import LineSlot from './examples/line/slot.vue'
-import LineSlot2 from './examples/line/slot2.vue'
+import LineBasic from './line/basic.vue'
+import LineSlot from './line/slot.vue'
+import LineSlot2 from './line/slot2.vue'
 
 const api = [
   {
@@ -36,20 +36,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Line</div>
     <div class="doc-desc">
@@ -87,6 +87,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="Line/VuwiLine.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

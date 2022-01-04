@@ -1,5 +1,5 @@
 <template>
-  <main class="fixed vuwi-main flex flex-col">
+  <main class="wi-main">
     <router-view />
   </main>
 </template>

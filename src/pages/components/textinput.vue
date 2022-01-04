@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import TextInputTextfield from './examples/textinput/textfield.vue'
-import TextInputStyle from './examples/textinput/style.vue'
-import TextInputTextarea from './examples/textinput/textarea.vue'
-import TextInputSlotsBusy from './examples/textinput/slots/busy.vue'
-import TextInputSlotsClearable from './examples/textinput/slots/clearable.vue'
-import TextInputSlotsPassword from './examples/textinput/slots/password.vue'
-import TextInputDisabled from './examples/textinput/disabled.vue'
-import TextInputMask from './examples/textinput/mask.vue'
-import TextInputRules from './examples/textinput/rules/required.vue'
-import TextInputEmail from './examples/textinput/rules/email.vue'
-import TextInputPassword from './examples/textinput/rules/password.vue'
-import TextInputError from './examples/textinput/error.vue'
+import TextInputTextfield from './textinput/textfield.vue'
+import TextInputStyle from './textinput/style.vue'
+import TextInputTextarea from './textinput/textarea.vue'
+import TextInputSlotsBusy from './textinput/slots/busy.vue'
+import TextInputSlotsClearable from './textinput/slots/clearable.vue'
+import TextInputSlotsPassword from './textinput/slots/password.vue'
+import TextInputDisabled from './textinput/disabled.vue'
+import TextInputMask from './textinput/mask.vue'
+import TextInputRules from './textinput/rules/required.vue'
+import TextInputEmail from './textinput/rules/email.vue'
+import TextInputPassword from './textinput/rules/password.vue'
+import TextInputError from './textinput/error.vue'
 
 const api = [
   {
@@ -23,7 +23,7 @@ const api = [
     name: 'autocomplete',
     type: 'boolean',
     defaultVal: 'off',
-    desc: 'Provides autocompletion rules for the input. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" class="vuwi-btn-link text-blue-500">official documentation</a> for details.',
+    desc: 'Provides autocompletion rules for the input. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" class="wi-btn-link text-blue-500">official documentation</a> for details.',
   },
   {
     name: 'disabled',
@@ -123,20 +123,20 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button class="xl:hidden vuwi-btn vuwi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
+    <button class="xl:hidden wi-btn wi-btn-icon doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content doc-content">
+  <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">TextInput</div>
     <div class="doc-desc">
@@ -263,6 +263,9 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput/VuwiTextInput.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 

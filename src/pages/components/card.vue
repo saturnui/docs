@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ButtonDefault from './examples/button/default.vue'
-import ButtonIcon from './examples/button/icon.vue'
-import ButtonOutline from './examples/button/outline.vue'
-import ButtonPill from './examples/button/pill.vue'
-import ButtonSolid from './examples/button/solid.vue'
-import ButtonMisc from './examples/button/misc.vue'
+import ButtonDefault from './button/default.vue'
+import ButtonIcon from './button/icon.vue'
+import ButtonOutline from './button/outline.vue'
+import ButtonPill from './button/pill.vue'
+import ButtonSolid from './button/solid.vue'
+import ButtonMisc from './button/misc.vue'
 
 const sidenavItems = [
   { title: 'Quick Reference', to: '/pages/form' },
@@ -35,23 +35,23 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VuwiOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 vuwi-card overflow-y-auto">
+    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" />
       </div>
-    </VuwiOverlay>
+    </VOverlay>
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
     <button
-      class="xl:hidden vuwi-btn vuwi-btn-icon hover:bg-primary hover:text-white"
+      class="xl:hidden wi-btn wi-btn-icon hover:bg-primary hover:text-white"
       @click="showDrawer = true"
     >
       <tabler-arrow-bar-to-left />
     </button>
   </teleport>
 
-  <div class="vuwi-content p-2 sm:p-8">
+  <div class="wi-content p-2 sm:p-8">
     <div class="space-y-4">
       <div class="doc-title">Button</div>
     </div>
@@ -59,6 +59,9 @@ onMounted(async () => {
     <ExampleCard source="button/default.vue">
       <ButtonDefault />
     </ExampleCard>
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
 
