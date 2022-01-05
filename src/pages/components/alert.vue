@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import AlertCss from './alert/css.vue'
 import AlertBasic from './alert/basic.vue'
+import AlertVariation from './alert/variation.vue'
 import AlertTransition from './alert/transition.vue'
-import AlertExamples from './alert/examples.vue'
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
   { title: 'CSS Only', anchor: '#css' },
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Variations', anchor: '#variations' },
   { title: 'Transition', anchor: '#transition' },
   { title: 'Examples', anchor: '#examples' },
   { title: 'Default Theme', anchor: '#theme' },
@@ -59,33 +60,40 @@ onMounted(async () => {
       Many parts of an alert such as border, icon, and color can also be customized to fit almost any situation.
     </div>
 
-    <!-- Basic Usage -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <ExampleCard source="/alert/basic">
-      <AlertBasic />
-    </ExampleCard>
-
     <!-- CSS Usage -->
-    <div id="basic" class="doc-subtitle">CSS Only</div>
+    <CssTitleBar id="css" title="CSS Only">
+      Tailwind Component - No JavaScript.
+    </CssTitleBar>
     <ExampleCard source="/alert/css">
       <AlertCss />
     </ExampleCard>
 
+    <!-- Basic Usage -->
+    <VueTitleBar id="basic" title="Basic Usage"></VueTitleBar>
+    <ExampleCard source="/alert/basic">
+      <AlertBasic />
+    </ExampleCard>
+
+    <!-- Variations -->
+    <VueTitleBar id="variations" title="Variations">
+      These examples demonstrate using icons, close button and different color styles available in Vuwi's theme.
+    </VueTitleBar>
+    <ExampleCard source="/alert/variation">
+      <AlertVariation />
+    </ExampleCard>
+
     <!-- Transition -->
-    <div id="transition" class="doc-subtitle">Transition</div>
+    <VueTitleBar id="transition" title="Transition">
+      This example demonstrates how to use a Vue transition to show / hide an alert.
+    </VueTitleBar>
     <ExampleCard source="/alert/transition" content-class="h-30">
       <AlertTransition />
     </ExampleCard>
 
-    <!-- Examples -->
-    <div id="examples" class="doc-subtitle">Examples</div>
-    <ExampleCard source="/alert/examples">
-      <AlertExamples />
-    </ExampleCard>
-
     <!-- Theme -->
-    <div id="theme" class="doc-subtitle">Default Theme</div>
-    <div class="doc-detail">The default styles for this component.</div>
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
     <StyleCard source="Alert.css" />
 
     <!-- Page Nav -->

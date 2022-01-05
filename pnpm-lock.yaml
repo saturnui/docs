@@ -5,6 +5,7 @@ specifiers:
   '@iconify-json/carbon': ^1.0.8
   '@iconify-json/clarity': ^1.0.1
   '@iconify-json/fa': ^1.0.1
+  '@iconify-json/file-icons': ^1.0.1
   '@iconify-json/logos': ^1.0.2
   '@iconify-json/mdi': ^1.0.1
   '@iconify-json/simple-icons': ^1.0.15
@@ -83,6 +84,7 @@ devDependencies:
   '@iconify-json/carbon': 1.0.8
   '@iconify-json/clarity': 1.0.1
   '@iconify-json/fa': 1.0.1
+  '@iconify-json/file-icons': 1.0.1
   '@iconify-json/logos': 1.0.2
   '@iconify-json/mdi': 1.0.12
   '@iconify-json/simple-icons': 1.0.15
@@ -1443,6 +1445,12 @@ packages:
 
   /@iconify-json/fa/1.0.1:
     resolution: {integrity: sha512-GKi6TqDX/kA4K3A4ULm7Jg2t01Sg1WQ/pRfkJOgbCvQ96Ib+2GNA50ntd6MSdhYhUddy/GPEIMvsVgWTO7vR0w==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
+  /@iconify-json/file-icons/1.0.1:
+    resolution: {integrity: sha512-YZGyyV24Qw/YkCMbVfplcVfjQUcDMHH1WPYVlY6uKG9szRHx7OPVxeqCPow7i/3+TzN1gGTPtkrHzeHi5GXf6w==}
     dependencies:
       '@iconify/types': 1.0.10
     dev: true

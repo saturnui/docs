@@ -40,7 +40,7 @@ for (let i = 0; i < appStore.componentPages.length; i++) {
     >
       <span class="font-bold">{{ nextPage.title }}</span>
       <span>
-        <tabler-arrow-right class="mt-1" />
+        <tabler-arrow-right class="mt-2" />
       </span>
     </router-link>
   </div>

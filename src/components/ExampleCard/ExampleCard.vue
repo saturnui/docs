@@ -22,7 +22,7 @@ const props = defineProps({
   iframe: {
     type: Boolean,
     default: false,
-  }
+  },
 })
 const exSource = `/components/examples${props.source}`
 const sourceBaseUrl = 'https://raw.githubusercontent.com/vuwijs/docs/main/src/pages/components'

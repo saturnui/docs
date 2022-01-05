@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import AvatarImage from './avatar/image.vue'
+import AvatarPhoto from './avatar/photo.vue'
 import AvatarName from './avatar/name.vue'
+import AvatarCss from './avatar/css.vue'
+import VueTitleBar from '~/components/ExampleTitleBar/VueTitleBar.vue'
 
-const api = [
+const props = [
   {
-    name: 'theme',
+    name: 'className',
     type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes',
+    defaultVal: 'wi-avatar',
+    desc: 'Default class used by component',
   },
   {
     name: 'photo',
@@ -24,10 +26,11 @@ const api = [
 ]
 
 const sidenavItems = [
+  { title: 'CSS Only', anchor: '#css' },
   { title: 'Name', anchor: '#name' },
   { title: 'Photo', anchor: '#photo' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -64,12 +67,27 @@ onMounted(async () => {
     <!-- Title -->
     <div class="doc-title">Avatar</div>
     <div class="doc-desc">
-      The VAvatar component is typically used to display user
+      The
+      <code>VAvatar</code> component is typically used to display user
       profile pictures. The default behavior is to display a picture
       or first initial.
     </div>
+
+    <!-- CSS Only -->
+    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
+    <ExampleCard
+      source="/avatar/css"
+      content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
+    >
+      <AvatarCss />
+    </ExampleCard>
+
     <!-- Name -->
-    <div id="name" class="doc-subtitle">Name</div>
+    <VueTitleBar id="name" title="Name">
+      Example show
+      <code>name</code> usage.
+    </VueTitleBar>
+
     <ExampleCard
       source="/avatar/name"
       content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
@@ -78,20 +96,25 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Photo -->
-    <div id="photo" class="doc-subtitle">Photo</div>
+    <VueTitleBar id="photo" title="Photo">
+      Example show
+      <code>photo</code> usage.
+    </VueTitleBar>
     <ExampleCard
       source="/avatar/image"
       content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
     >
-      <AvatarImage />
+      <AvatarPhoto />
     </ExampleCard>
 
     <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <VueTitleBar id="css" title="Properties" />
+    <ApiCard :api="props" class="w-full" />
 
     <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <CssTitleBar id="theme" class="doc-subtitle" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
     <StyleCard source="Avatar.css" />
 
     <!-- Page Nav -->
