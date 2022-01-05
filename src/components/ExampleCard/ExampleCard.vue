@@ -136,15 +136,15 @@ onBeforeMount(async () => {
       <!-- Template -->
       <div
         v-if="view === 'html'"
-        class="relative max-w-4xl p-4 pr-14 max-h-150 overflow-y-auto bg-gray-700 dark:bg-dark-800 text-purple-400 text-sm"
+        class="relative max-w-4xl p-4 pr-14 max-h-98 overflow-y-auto bg-gray-700 dark:bg-dark-800 text-purple-400 text-sm"
       >
         <pre><code v-html="decoratedHTML"></code></pre>
-        <div class="flex items-center gap-2 absolute top-2 right-4 text-light-900">
-          <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
-          <button class="wi-btn wi-btn-icon bg-white bg-opacity-20 hover:bg-primary-light">
-            <tabler-copy class="h-6 w-6" @click="copy(html)" />
-          </button>
-        </div>
+      </div>
+      <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
+        <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
+        <button class="wi-btn wi-btn-icon bg-white bg-opacity-20 hover:bg-primary-light">
+          <tabler-copy class="h-6 w-6" @click="copy(html)" />
+        </button>
       </div>
     </VCollapse>
     <VLine v-if="showCode" />

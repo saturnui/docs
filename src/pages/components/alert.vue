@@ -9,7 +9,6 @@ const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Variations', anchor: '#variations' },
   { title: 'Transition', anchor: '#transition' },
-  { title: 'Examples', anchor: '#examples' },
   { title: 'Default Theme', anchor: '#theme' },
 ]
 

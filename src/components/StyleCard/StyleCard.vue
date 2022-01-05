@@ -10,7 +10,7 @@ const props = defineProps({
 })
 // https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/Alert.css
 // https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/components/Alert.css
-const githubBaseUrl = 'https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/'
+const githubBaseUrl = 'https://raw.githubusercontent.com/vuwijs/vuwi/main/themes/base/components/'
 const source = `${githubBaseUrl}/${props.source}`
 const decoratedCSS = ref('')
 const css = ref('')
@@ -41,14 +41,16 @@ onBeforeMount(async () => {
       </a>
     </div>
     <VLine />
-    <div class="relative max-w-4xl max-h-100 overflow-y-auto p-4 bg-gray-700 dark:bg-dark-800 text-yellow-300 text-sm">
+    <div
+      class="relative max-w-4xl max-h-98 overflow-y-auto p-4 bg-gray-700 dark:bg-dark-800 text-yellow-300 text-sm"
+    >
       <pre><code v-html="decoratedCSS"></code></pre>
-      <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
-        <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
-        <button class="wi-btn wi-btn-icon">
-          <tabler-copy class="h-6 w-6" @click="copy(css)" />
-        </button>
-      </div>
+    </div>
+    <div class="flex items-center gap-2 absolute top-16 right-4 text-light-900">
+      <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
+      <button class="wi-btn wi-btn-icon">
+        <tabler-copy class="h-6 w-6" @click="copy(css)" />
+      </button>
     </div>
   </div>
 </template>

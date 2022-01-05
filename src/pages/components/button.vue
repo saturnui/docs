@@ -8,15 +8,14 @@ import ButtonSizes from './button/size.vue'
 import ButtonSolid from './button/solid.vue'
 
 const sidenavItems = [
-  { title: 'Quick Reference', to: '/pages/form' },
-  {
-    title: 'Basic Usage',
-    links: [{ title: 'Auto', to: '/examples/form' }, { title: 'Fixed', to: '/examples/protected' }],
-  },
-  {
-    title: 'Apply conditionally',
-    links: [{ title: 'Hover, focus, and other states', to: '/examples/form' }, { title: 'Breakouts and other media queries', to: '/examples/protected' }],
-  },
+  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Size', anchor: '#size' },
+  { title: 'Solid', anchor: '#solid' },
+  { title: 'Outline', anchor: '#outline' },
+  { title: 'Rounded', anchor: '#rounded' },
+  { title: 'Icon', anchor: '#icon' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -56,7 +55,9 @@ onMounted(async () => {
     <div class="space-y-4">
       <div class="doc-title">Button</div>
     </div>
-    <div class="doc-subtitle">Default</div>
+    <div class="doc-desc">
+      The <strong>VButton</strong> component only provides a base class. Most of the styling are CSS classes.
+    </div>
 
     <CssTitleBar id="css" title="CSS Only">
       Tailwind Component - No JavaScript.
@@ -65,7 +66,7 @@ onMounted(async () => {
       <ButtonCss />
     </ExampleCard>
 
-    <VueTitleBar id="default" title="Default">
+    <VueTitleBar id="basic" title="Basic Usage">
       Default component with no styling.
     </VueTitleBar>
     <ExampleCard source="/button/default" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
@@ -73,7 +74,7 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Sizes -->
-    <CssTitleBar id="sizes" title="Sizes">
+    <CssTitleBar id="size" title="Sizes">
       Available sizes provided by theme.
     </CssTitleBar>
     <ExampleCard source="/button/sizes" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
@@ -105,7 +106,7 @@ onMounted(async () => {
     </ExampleCard>
     
     <!-- Icon -->
-    <CssTitleBar id="rounded" title="Icon">
+    <CssTitleBar id="icon" title="Icon">
       Component showing icon with different styling.
     </CssTitleBar>
     <ExampleCard source="/button/icon" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
@@ -113,8 +114,9 @@ onMounted(async () => {
     </ExampleCard>
     
     <!-- Theme -->
-    <div id="theme" class="doc-subtitle">Default Theme</div>
-    <div class="doc-detail">The default styles for this component.</div>
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
     <StyleCard source="Button.css" />
 
     <!-- Page Nav -->
