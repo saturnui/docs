@@ -44,8 +44,8 @@ const { pause, resume, isActive } = useIntervalFn(() => {
           <button
             v-for="(slide, index) in slides"
             :key="slide"
-            class="bg-black w-5 h-2 rounded-full bg-opacity-50"
-            :class="{ 'bg-light-blue-300 bg-opacity-100': slideIndex === index }"
+            class="bg-black w-5 h-2 rounded-full bg-opacity-30"
+            :class="{ '!bg-white bg-opacity-100': slideIndex === index }"
             @click="slideIndex = index"
           ></button>
         </div>

@@ -166,7 +166,9 @@ onMounted(async () => {
     <ApiCard :api="props" class="w-full" />
 
     <!-- Default Theme -->
-    <div id="theme" class="doc-subtitle">Default Theme</div>
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
     <StyleCard source="Carousel.css" />
 
     <!-- Page Nav -->

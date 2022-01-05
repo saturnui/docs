@@ -4,16 +4,16 @@ const photo
 </script>
 
 <template>
-  <div class="wi-avatar wi-avatar-sm bg-purple-600 text-white">
+  <div class="wi-avatar bg-purple-600 text-white" size="sm">
     <div>A</div>
   </div>
   <div class="wi-avatar rounded-full bg-purple-600 text-white">
     <img :src="photo" />
   </div>
-  <div class="wi-avatar wi-avatar-lg overflow-hidden rounded-full bg-purple-600 text-white">
+  <div class="wi-avatar overflow-hidden rounded-full bg-purple-600 text-white" size="lg">
     <div>A</div>
   </div>
-  <div class="wi-avatar wi-avatar-xl overflow-hidden rounded-full bg-purple-600 text-white">
+  <div class="wi-avatar overflow-hidden rounded-full bg-purple-600 text-white" size="xl">
     <img :src="photo" />
   </div>
 </template>

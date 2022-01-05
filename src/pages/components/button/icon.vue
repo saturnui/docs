@@ -1,34 +1,34 @@
 <template>
-  <VButton class="wi-btn-sm wi-btn-icon wi-primary">
-    <tabler-box class="text-sm" />
+  <VButton icon size="sm" class="wi-primary">
+    <tabler-box class="w-1/2 h-1/2" />
   </VButton>
   
-  <VButton class="wi-btn-icon wi-primary">
+  <VButton icon class="wi-primary">
     <tabler-box />
   </VButton>
 
-  <VButton class="wi-btn-lg wi-btn-icon wi-primary">
+  <VButton icon size="lg" class="wi-primary">
     <tabler-box class="text-2xl" />
   </VButton>
 
-  <VButton class="wi-btn-xl wi-btn-icon">
+  <VButton icon size="xl">
     <tabler-box class="text-3xl" />
   </VButton>
 
-  <VButton class="wi-btn-xl wi-btn-icon border-2">
+  <VButton icon size="xl" class="border-2">
     <tabler-box class="text-3xl" />
   </VButton>
 
-  <VButton class="wi-btn-xl wi-btn-icon wi-highlight-strong">
+  <VButton icon size="xl" class="wi-highlight-strong">
     <tabler-box class="text-3xl" />
   </VButton>
 
-  <VButton class="flex-col wi-primary wi-btn-xl py-4 gap-1">
+  <VButton size="xl" class="flex-col wi-primary py-4 gap-1">
     <tabler-box class="text-3xl" />
     <span>Label</span>
   </VButton>
 
-  <VButton class="wi-btn-xl border border-primary rounded-full dark:text-white">
+  <VButton size="xl" class="border border-primary rounded-full dark:text-white">
     <tabler-box class="text-3xl mr-2" />
     <span>Label</span>
   </VButton>

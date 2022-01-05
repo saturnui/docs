@@ -1,7 +1,7 @@
 <template>
-  <VButton class="wi-btn-xs">Extra Small</VButton>
-  <VButton class="wi-btn-sm">Small</VButton>
+  <VButton size="xs">Extra Small</VButton>
+  <VButton size="sm">Small</VButton>
   <VButton>Normal</VButton>
-  <VButton class="wi-btn-lg">Large</VButton>
-  <VButton class="wi-btn-xl">Extra Large</VButton>
+  <VButton size="lg">Large</VButton>
+  <VButton size="xl">Extra Large</VButton>
 </template>

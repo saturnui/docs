@@ -1,7 +1,7 @@
 @layer components {
   .skyline {
     .wi {
-      &-code-input {
+      &-codeinput {
         @apply flex gap-2 items-center !border-none !bg-transparent;
         input {
           @apply w-11
@@ -14,7 +14,7 @@
         }
       }
 
-      &-code-input-break {
+      &-codeinput-separator {
         @apply font-bold text-lg text-center;
         &::after {
           content: '-';

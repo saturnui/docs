@@ -4,8 +4,8 @@ const photo
 </script>
 
 <template>
-  <VAvatar name="Alex Lifeson" :photo="photo" class="wi-avatar-sm rounded-full overflow-hidden" />
+  <VAvatar name="Alex Lifeson" :photo="photo" class="rounded-full overflow-hidden" size="sm" />
   <VAvatar name="Rob Taylor" :photo="photo" />
-  <VAvatar name="Bryan Adams" :photo="photo" class="wi-avatar-lg rounded-full overflow-hidden" />
-  <VAvatar name="Alex Lifeson" :photo="photo" class="wi-avatar-xl" />
+  <VAvatar name="Bryan Adams" :photo="photo" class="rounded-full overflow-hidden" size="lg" />
+  <VAvatar name="Alex Lifeson" :photo="photo" size="xl" />
 </template>

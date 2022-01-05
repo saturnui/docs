@@ -4,4 +4,5 @@
   <VButton class="wi-danger">Danger</VButton>
   <VButton class="wi-warning">Warning</VButton>
   <VButton class="wi-info">Info</VButton>
+  <VButton disabled>Disabled</VButton>
 </template>

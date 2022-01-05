@@ -21,21 +21,15 @@ const slides = [
     >Slide {{ index + 1 }}</div>
     <template #overlay="{ prevSlide, nextSlide }">
       <div class="absolute top-0 w-full h-full">
-        <button
-          class="absolute left-4 wi-ml wi-shade-strongest wi-btn wi-btn-icon"
-          @click="prevSlide(1)"
-        >
+        <VButton icon class="absolute left-4 wi-ml wi-shade-strongest" @click="prevSlide(1)">
           <tabler-chevron-left />
-        </button>
+        </VButton>
         <div
           class="absolute wi-bc wi-center wi-shade-strongest w-12 rounded-lg mb-2 h-8 text-xs font-bold"
         >{{ slideIndex + 1 }}</div>
-        <button
-          class="absolute wi-mr right-4 wi-shade-strongest wi-btn wi-btn-icon"
-          @click="nextSlide(2)"
-        >
+        <VButton icon class="absolute wi-mr right-4 wi-shade-strongest" @click="nextSlide(2)">
           <tabler-chevron-right />
-        </button>
+        </VButton>
       </div>
     </template>
   </VCarousel>

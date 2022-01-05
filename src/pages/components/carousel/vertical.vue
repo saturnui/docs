@@ -24,28 +24,22 @@ const slides = [
       <template #overlay="{ prevSlide, nextSlide }">
         <div class="absolute top-0 w-full h-full">
           <!-- Navigation Prev -->
-          <button
-            class="absolute left-4 wi-ml bg-dark-700 wi-btn wi-btn-icon text-white"
-            @click="prevSlide(1)"
-          >
+          <VButton icon class="absolute left-4 wi-ml bg-dark-700 text-white" @click="prevSlide(1)">
             <tabler-chevron-left />
-          </button>
+          </VButton>
 
           <!-- Navigation Next -->
-          <button
-            class="absolute wi-mr right-4 bg-dark-700 wi-btn wi-btn-icon text-white"
-            @click="nextSlide(1)"
-          >
+          <VButton icon class="absolute wi-mr right-4 bg-dark-700 text-white" @click="nextSlide(1)">
             <tabler-chevron-right />
-          </button>
+          </VButton>
 
           <!-- Navigation Pagination -->
           <div class="absolute bottom-3 wi-bc flex gap-2">
             <button
               v-for="(slide, index) in slides"
               :key="slide"
-              class="bg-black w-5 h-2 rounded-full bg-opacity-50"
-              :class="{ 'bg-light-blue-300 bg-opacity-100': slideIndex === index }"
+              class="bg-black w-5 h-2 rounded-full bg-opacity-30"
+              :class="{ '!bg-white bg-opacity-100': slideIndex === index }"
               @click="slideIndex = index"
             ></button>
           </div>

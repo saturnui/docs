@@ -20,16 +20,19 @@
           <div class="wi-col-3-1 gap-4">
             <router-link
               to="/getting-started"
-              class="wi-btn wi-primary wi-btn-lg rounded-full"
+              class="wi-btn wi-primary rounded-full"
+              size="lg"
             >Get Started</router-link>
             <router-link
               to="/introduction"
-              class="wi-btn wi-btn-lg border border-primary rounded-full"
+              class="wi-btn border border-primary rounded-full"
+              size="lg"
             >Why Vuwi?</router-link>
             <a
               href="https://github.com/vuwijs/vuwi"
               target="_blank"
-              class="wi-btn wi-btn-lg rounded-full bg-dark-600 bg-opacity-10 gap-2"
+              class="wi-btn rounded-full bg-dark-600 bg-opacity-10 gap-2"
+              size="lg"
             >
               <carbon-logo-github />
               <span>Github</span>

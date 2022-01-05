@@ -1,12 +1,31 @@
 <script setup lang="ts">
+import CodeCss from './codeinput/css.vue'
 import CodeBasic from './codeinput/basic.vue'
 
-const api = [
+const props = [
   {
-    name: 'theme',
+    name: 'className',
     type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    defaultVal: 'wi-codeinput',
+    desc: 'Default class used by component',
+  },
+  {
+    name: 'modelValue',
+    type: 'string',
+    defaultVal: '',
+    desc: 'Value of the code input',
+  },
+  {
+    name: 'pattern',
+    type: 'string',
+    defaultVal: 'XXX-XXX',
+    desc: 'The pattern which the code will display as input and separators.',
+  },
+  {
+    name: 'inputClass',
+    type: 'string',
+    defaultVal: '',
+    desc: 'The style of the input',
   },
 ]
 
@@ -50,28 +69,37 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Code Input</div>
     <div class="doc-desc">
-      The code input component is useful for items where a code is needed such as two-factor authentication,
-      forgot passwords, coupons, etc. The mask can be setup with any number of digits supporting both alpha and
+      The <code>VCodeInput</code> component is useful for items where an entry code is used such as two-factor authentication,
+      forgotten passwords, coupons, etc. The mask can be setup with any number of alpha and
       numeric values as well as seperators.
     </div>
 
-    <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
-    </div>
+    <!-- CSS -->
+    <CssTitleBar id="css" title="CSS Only">
+      Tailwind Component - No JavaScript.
+    </CssTitleBar>
 
-    <ExampleCard source="/codeinput/basic">
+    <ExampleCard source="/codeinput/css">
+      <CodeCss />
+    </ExampleCard>
+
+    <!-- Basic -->
+    <VueTitleBar id="css" title="Basic Usage">
+      Demonstrates the default behavior of the code input.
+    </VueTitleBar>
+    <ExampleCard source="/codeinput/basic" content-class="p-4 flex items-center gap-4">
       <CodeBasic />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Basic -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput.css" />
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
+    <StyleCard source="CodeInput.css" />
 
     <!-- Page Nav -->
     <PageNav />
