@@ -55,7 +55,7 @@ onMounted(async () => {
     <div class="doc-desc">
       The
       <strong>VAlert</strong> component is used to convey important information to the user through the
-      use of contextual types, icons, and colors. Use in conjunction with <router-link to="/styling/color" class="wi-btn-link text-primary">Colors</router-link> for 4 variations: success, info,
+      use of contextual types, icons, and colors. Use in conjunction with <router-link to="/styling/color" class="wi-link text-primary">Colors</router-link> for 4 variations: success, info,
       warning, and error. Default icons are assigned which help represent different actions each type portrays.
       Many parts of an alert such as border, icon, and color can also be customized to fit almost any situation.
     </div>

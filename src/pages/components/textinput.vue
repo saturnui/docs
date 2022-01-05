@@ -23,7 +23,7 @@ const api = [
     name: 'autocomplete',
     type: 'boolean',
     defaultVal: 'off',
-    desc: 'Provides autocompletion rules for the input. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" class="wi-btn-link text-blue-500">official documentation</a> for details.',
+    desc: 'Provides autocompletion rules for the input. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" class="wi-link">official documentation</a> for details.',
   },
   {
     name: 'disabled',

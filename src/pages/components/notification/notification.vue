@@ -53,7 +53,7 @@ const enableAbsolute = ref(false)
                   <span>Dismiss</span>
                 </button>
                 <button
-                  class="wi-btn wi-btn-sm rounded wi-btn-primary text-xs uppercase font-bold text-white"
+                  class="wi-btn wi-btn-sm rounded wi-primary text-xs uppercase font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Ok</span>
@@ -71,12 +71,12 @@ const enableAbsolute = ref(false)
       :class="{ 'bg-blue-400 bg-opacity-20 border-dash outline-blue-400': showRegion }"
     >
       <button
-        class="absolute top-2 left-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-btn-primary"
+        class="absolute top-2 left-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-primary"
       >
         <tabler-message class="text-2xl" />
       </button>
       <button
-        class="absolute bottom-2 right-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-btn-primary"
+        class="absolute bottom-2 right-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-primary"
       >
         <tabler-message class="text-2xl" />
       </button>
@@ -109,7 +109,7 @@ const enableAbsolute = ref(false)
                   <span>Dismiss</span>
                 </button>
                 <button
-                  class="wi-btn wi-btn-sm rounded wi-btn-primary text-xs uppercase font-bold text-white"
+                  class="wi-btn wi-btn-sm rounded wi-primary text-xs uppercase font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Ok</span>

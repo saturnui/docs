@@ -25,7 +25,7 @@ for (let i = 0; i < appStore.componentPages.length; i++) {
     <router-link
       v-if="prevPage.to"
       :to="prevPage.to"
-      class="wi-btn wi-highlight text-blue-500 dark:text-dark-100 wi-btn-lg wi-btn-link gap-2"
+      class="wi-btn wi-highlight dark:text-dark-100 wi-btn-lg wi-link gap-2"
     >
       <span>
         <tabler-arrow-left class="mt-2" />
@@ -36,7 +36,7 @@ for (let i = 0; i < appStore.componentPages.length; i++) {
     <router-link
       v-if="nextPage.to"
       :to="nextPage.to"
-      class="wi-btn wi-highlight text-blue-500 dark:text-dark-100 wi-btn-lg wi-btn-link gap-2"
+      class="wi-btn wi-highlight wi-btn-lg wi-link dark:text-dark-100 gap-2"
     >
       <span class="font-bold">{{ nextPage.title }}</span>
       <span>

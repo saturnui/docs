@@ -82,7 +82,7 @@ onMounted(async () => {
       <a
         href="https://popper.js.org/"
         target="_blank"
-        class="py-1 wi-btn-link text-blue-500"
+        class="py-1 wi-link"
       >@popperjs/core</a>.
     </div>
 

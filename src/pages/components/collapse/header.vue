@@ -18,7 +18,7 @@ const open = ref(false)
       <SkeletonListItem />
 
       <button
-        class="wi-btn wi-btn-outline wi-btn-scale-none cursor-pointer text-blue-500"
+        class="wi-btn border wi-border wi-highlight wi-btn-lg wi-btn-scale-none cursor-pointer"
         @click="open = false"
       >Close</button>
     </div>

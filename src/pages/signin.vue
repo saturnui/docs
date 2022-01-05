@@ -65,7 +65,7 @@ const passwordType = computed(() => {
         <button
           v-else
           type="submit"
-          class="wi-btn wi-btn-xl wi-btn-primary w-full mt-3"
+          class="wi-btn wi-btn-xl wi-primary w-full mt-3"
         >Signup</button>
       </div>
     </VuForm>

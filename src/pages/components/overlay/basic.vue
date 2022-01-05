@@ -134,7 +134,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
         :class="`box-${position}`"
       >
         <button
-          class="absolute bottom-2 right-2 wi-btn wi-btn-primary"
+          class="absolute bottom-2 right-2 wi-btn wi-primary"
           @click="show = false"
         >Close</button>
       </div>

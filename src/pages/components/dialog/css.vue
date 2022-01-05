@@ -19,7 +19,7 @@ const close = () => console.log('close')
     <!-- Actions -->
     <div class="wi-dialog-actions">
       <button class="wi-btn">Cancel</button>
-      <button class="wi-btn wi-btn-primary">OK</button>
+      <button class="wi-btn wi-primary">OK</button>
     </div>
   </div>
 </template>

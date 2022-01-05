@@ -17,7 +17,7 @@ const handleChange = async (val?: FileList) => {
   <div class="grid gap-2">
     <div class="flex gap-4 bg-dark-50 dark:bg-dark-700 p-3 rounded-lg">
       <VFileSelector @change="handleChange">
-        <button class="wi-btn wi-btn-primary">Select File</button>
+        <button class="wi-btn wi-primary">Select File</button>
       </VFileSelector>
       <div v-if="file" class="flex items-center gap-2 font-medium">
         <div class="px-3 py-1 border wi-border rounded-lg">{{ file.name }}</div>

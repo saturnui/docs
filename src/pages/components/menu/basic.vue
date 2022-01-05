@@ -15,7 +15,7 @@ const toggleMenu = () => {
       </template>
     </VGroup>-->
 
-    <button class="wi-btn wi-btn-primary" @click="toggleMenu">Open Menu</button>
+    <button class="wi-btn wi-primary" @click="toggleMenu">Open Menu</button>
     <transition name="slide-down">
       <div
         v-if="showMenu"

@@ -11,7 +11,7 @@ const photo
         <img :src="photo" width="32" height="32" />
         <span>This is a tooltip</span>
       </template>
-      <button class="wi-btn wi-btn-primary">Image and Text</button>
+      <button class="wi-btn wi-primary">Image and Text</button>
     </VTooltip>
 
     <!-- Custom Color -->
@@ -19,7 +19,7 @@ const photo
       <template #tooltip>
         <span>This is a tooltip</span>
       </template>
-      <button class="wi-btn wi-btn-primary">Custom color</button>
+      <button class="wi-btn wi-primary">Custom color</button>
     </VTooltip>
 
     <!-- Inverted Color -->
@@ -27,7 +27,7 @@ const photo
       <template #tooltip>
         <span>This is a tooltip</span>
       </template>
-      <button class="wi-btn wi-btn-primary">Inverted color</button>
+      <button class="wi-btn wi-primary">Inverted color</button>
     </VTooltip>
   </div>
 </template>

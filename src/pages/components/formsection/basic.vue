@@ -28,6 +28,6 @@ const enabled = ref(true)
   <VLine class="py-4" />
 
   <div class="flex justify-end">
-    <button class="wi-btn wi-btn-primary wi-btn-lg min-w-48">Submit</button>
+    <button class="wi-btn wi-primary wi-btn-lg min-w-48">Submit</button>
   </div>
 </template>

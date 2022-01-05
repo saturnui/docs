@@ -16,7 +16,7 @@ const close = () => console.log('close')
     <!-- Actions -->
     <template #actions>
       <button class="wi-btn">Cancel</button>
-      <button class="wi-btn wi-btn-primary">OK</button>
+      <button class="wi-btn wi-primary">OK</button>
     </template>
   </VDialog>
 </template>

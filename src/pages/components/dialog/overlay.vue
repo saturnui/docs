@@ -6,7 +6,7 @@ const show = ref(false)
   <!-- Vue -->
   <div class="relative w-full h-full">
     <div class="absolute wi-mc z-0">
-      <VButton class="wi-btn-primary" @click="show = true">Open Dialog</VButton>
+      <VButton class="wi-primary" @click="show = true">Open Dialog</VButton>
     </div>
     <VOverlay v-model="show" modal disable-scroll-target="parent" class="wi-overlay-absolute wi-overlay-shade">
       <VDialog
@@ -23,7 +23,7 @@ const show = ref(false)
         <!-- Actions -->
         <template #actions>
           <button class="wi-btn" @click="show = false">Cancel</button>
-          <button class="wi-btn wi-btn-primary" @click="show = false">OK</button>
+          <button class="wi-btn wi-primary" @click="show = false">OK</button>
         </template>
       </VDialog>
     </VOverlay>

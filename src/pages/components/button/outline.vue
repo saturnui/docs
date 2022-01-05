@@ -1,9 +1,7 @@
 <template>
-  <div class=" max-w-2xl flex flex-wrap items-center gap-4">
-    <VButton class="wi-btn-xs wi-btn-outline">Extra Small</VButton>
-    <VButton class="wi-btn-sm wi-btn-outline wi-btn-primary">Small</VButton>
-    <VButton class="wi-btn-outline">Normal</VButton>
-    <VButton class="wi-btn-lg wi-btn-outline wi-btn-primary">Large</VButton>
-    <VButton class="wi-btn-xl wi-btn-outline">Extra Large</VButton>
-  </div>
+  <VButton class="border">Border</VButton>
+  <VButton class="border wi-border">Border Alt</VButton>
+  <VButton class="border border-primary">Border Color</VButton>
+  <VButton class="border border-danger text-danger">Border Label</VButton>
+  <VButton class="border border-danger text-danger wi-btn-disabled" disabled>Border Disabled</VButton>
 </template>

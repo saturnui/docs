@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import ButtonCss from './button/css.vue'
 import ButtonDefault from './button/default.vue'
 import ButtonIcon from './button/icon.vue'
 import ButtonOutline from './button/outline.vue'
 import ButtonPill from './button/pill.vue'
+import ButtonSizes from './button/size.vue'
 import ButtonSolid from './button/solid.vue'
-import ButtonMisc from './button/misc.vue'
 
 const sidenavItems = [
   { title: 'Quick Reference', to: '/pages/form' },
@@ -56,35 +57,61 @@ onMounted(async () => {
       <div class="doc-title">Button</div>
     </div>
     <div class="doc-subtitle">Default</div>
-    <ExampleCard source="/button/default">
+
+    <CssTitleBar id="css" title="CSS Only">
+      Tailwind Component - No JavaScript.
+    </CssTitleBar>
+    <ExampleCard source="/button/css" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
+      <ButtonCss />
+    </ExampleCard>
+
+    <VueTitleBar id="default" title="Default">
+      Default component with no styling.
+    </VueTitleBar>
+    <ExampleCard source="/button/default" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonDefault />
     </ExampleCard>
+
+    <!-- Sizes -->
+    <CssTitleBar id="sizes" title="Sizes">
+      Available sizes provided by theme.
+    </CssTitleBar>
+    <ExampleCard source="/button/sizes" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
+      <ButtonSizes />
+    </ExampleCard>
     
-    <div class="doc-subtitle">Solid</div>
-    <ExampleCard source="/button/solid">
+    <!-- Solid Background -->
+    <CssTitleBar id="solid" title="Solid">
+      Component with background.
+    </CssTitleBar>
+    <ExampleCard source="/button/solid" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonSolid />
     </ExampleCard>
     
-    <div class="doc-subtitle">Outline</div>
-    <ExampleCard source="/button/outline">
+    <!-- Outline / Border -->
+    <CssTitleBar id="outline" title="Outline">
+      Component with borders in combination with different text color styles.
+    </CssTitleBar>
+    <ExampleCard source="/button/outline" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonOutline />
     </ExampleCard>
     
-    <div class="doc-subtitle">Pill</div>
-    <ExampleCard source="/button/pill">
+    <!-- Rounded / Pill -->
+    <CssTitleBar id="rounded" title="Rounded">
+      Component with different roundess styles.
+    </CssTitleBar>
+    <ExampleCard source="/button/pill" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonPill />
     </ExampleCard>
     
-    <div class="doc-subtitle">Icon</div>
-    <ExampleCard source="/button/icon">
+    <!-- Icon -->
+    <CssTitleBar id="rounded" title="Icon">
+      Component showing icon with different styling.
+    </CssTitleBar>
+    <ExampleCard source="/button/icon" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonIcon />
     </ExampleCard>
     
-    <div class="doc-subtitle">Misc</div>
-    <ExampleCard source="/button/misc">
-      <ButtonMisc />
-    </ExampleCard>
-
     <!-- Theme -->
     <div id="theme" class="doc-subtitle">Default Theme</div>
     <div class="doc-detail">The default styles for this component.</div>

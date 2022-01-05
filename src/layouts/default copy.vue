@@ -67,7 +67,7 @@
             class="
               wi-btn
               rounded
-              wi-btn-primary
+              wi-primary
               text-xs
               uppercase
               font-bold

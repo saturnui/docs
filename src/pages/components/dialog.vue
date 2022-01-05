@@ -80,7 +80,7 @@ onMounted(async () => {
     <div class="doc-title">Dialog</div>
     <div class="doc-desc">
       Dialog can be used in conjunction to
-      <router-link to="/components/overlay" class="text-primary wi-btn-link">Overlay</router-link> to display
+      <router-link to="/components/overlay" class="wi-link">Overlay</router-link> to display
       content in the form of a dialog
     </div>
 

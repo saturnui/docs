@@ -20,16 +20,16 @@
           <div class="wi-col-3-1 gap-4">
             <router-link
               to="/getting-started"
-              class="wi-btn wi-fill-primary wi-btn-lg wi-btn-pill"
+              class="wi-btn wi-primary wi-btn-lg rounded-full"
             >Get Started</router-link>
             <router-link
               to="/introduction"
-              class="wi-btn wi-btn-primary wi-btn-outline wi-btn-lg wi-btn-pill"
+              class="wi-btn wi-btn-lg border border-primary rounded-full"
             >Why Vuwi?</router-link>
             <a
               href="https://github.com/vuwijs/vuwi"
               target="_blank"
-              class="wi-btn wi-btn-lg wi-btn-pill bg-dark-600 bg-opacity-10 gap-2"
+              class="wi-btn wi-btn-lg rounded-full bg-dark-600 bg-opacity-10 gap-2"
             >
               <carbon-logo-github />
               <span>Github</span>
@@ -45,16 +45,16 @@
 
       <div>
         Supports using third-party Tailwind components such as
-        <a href="https://tailwindui.com/" class="text-primary wi-btn-link">Tailwind UI</a>,
+        <a href="https://tailwindui.com/" class="wi-link">Tailwind UI</a>,
         <a
           href="https://www.themes.dev/library/aircontrol-tailwindcss-admin-theme"
-          class="text-primary wi-btn-link"
+          class="wi-link"
         >Aircontrol</a> and others.
       </div>
 
       <router-link
         to="/getting-started"
-        class="wi-btn wi-btn-primary wi-btn-pill font-medium px-6 py-4 rounded-lg my-8"
+        class="wi-btn wi-primary rounded-full font-medium px-6 py-4 rounded-lg my-8"
       >Style components with CSS instead of JavaScript APIs</router-link>
       <div class="flex justify-center gap-4 w-full p-3">
         <div class="wi-col-3-1 gap-12 max-w-80 lg:max-w-max">
