@@ -50,7 +50,7 @@ defineProps({
         <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm">
           <code class="text-green-600 dark:text-green-300">{{ item.type }}</code>
         </td>
-        <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm">
+        <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm whitespace-nowrap">
           <code v-if="typeof item.defaultVal === 'string'" class="text-green-600 dark:text-green-300">'{{ item.defaultVal }}'</code>
           <code v-else-if="typeof item.defaultVal === 'boolean'" class="text-pink-700 dark:text-pink-400">{{ item.defaultVal }}</code>
           <code v-else-if="typeof item.defaultVal === 'number'" class="text-blue-600 dark:text-blue-400">{{ item.defaultVal }}</code>

@@ -101,7 +101,7 @@ onMounted(async () => {
       <code>photo</code> usage.
     </VueTitleBar>
     <ExampleCard
-      source="/avatar/image"
+      source="/avatar/photo"
       content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
     >
       <AvatarPhoto />
