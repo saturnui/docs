@@ -3,7 +3,7 @@ import CollapseHeadless from './collapse/headless.vue'
 import CollapseHeader from './collapse/header.vue'
 import CollapseGroup from './collapse/group.vue'
 
-const api = [
+const props = [
   {
     name: 'className',
     type: 'string',
@@ -30,12 +30,37 @@ const api = [
   },
 ]
 
+const slots = [
+  {
+    name: 'default',
+    desc: 'Slot contains collapsable content',
+    binds: [
+      {
+        name: 'open (default: false)',
+        desc: 'Property used to open and close content area',
+      },
+    ],
+  },
+
+  {
+    name: 'overlay',
+    desc: 'Slot used for items such as navigation, indicators, etc.',
+    binds: [
+      {
+        name: 'open (default: false)',
+        desc: 'Property used to open and close content area',
+      },
+    ],
+  },
+]
+
 const sidenavItems = [
   { title: 'Headless', anchor: '#headless' },
   { title: 'Header', anchor: '#header' },
   { title: 'Group', anchor: '#group' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -102,7 +127,11 @@ onMounted(async () => {
 
     <!-- Properties -->
     <VueTitleBar id="props" title="Properties"></VueTitleBar>
-    <ApiCard :api="api" class="w-full" />
+    <ApiCard :api="props" class="w-full" />
+
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Default Theme -->
     <CssTitleBar id="theme" title="Default Theme"></CssTitleBar>

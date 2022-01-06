@@ -18,9 +18,19 @@ const props = [
   },
 ]
 
+const slots = [
+  {
+    name: 'default',
+    desc: 'Slot contains Tailwind component used to visually represent this component.',
+  },
+]
+
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
+  { title: 'Variation', anchor: '#variation' },
+  { title: 'Multiple Files', anchor: '#multiple' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
 
@@ -98,6 +108,10 @@ onMounted(async () => {
     <!-- Properties -->
     <VueTitleBar id="props" title="Properties" />
     <ApiCard :api="props" class="w-full" />
+
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

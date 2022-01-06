@@ -36,12 +36,13 @@ const events = [
 ]
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
   { title: 'CSS Only', anchor: '#css' },
+  { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Overlay', anchor: '#overlay' },
   { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
   { title: 'Events', anchor: '#events' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)

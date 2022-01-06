@@ -1,19 +1,33 @@
 <script setup lang="ts">
+import FormSectionCss from './formsection/css.vue'
 import FormSectionBasic from './formsection/basic.vue'
 
-const api = [
+const props = [
   {
-    name: 'theme',
+    name: 'className',
     type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    defaultVal: 'wi-formsection',
+    desc: 'Default class used by component',
+  },
+  {
+    name: 'title',
+    type: 'string',
+    defaultVal: '',
+    desc: 'Form section title',
+  },
+  {
+    name: 'desc',
+    type: 'string',
+    defaultVal: '',
+    desc: 'Form section description',
   },
 ]
 
 const sidenavItems = [
+  { title: 'CSS Only', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -50,26 +64,28 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Form Section</div>
     <div class="doc-desc">
-      Description here...
+      An opinionated Tailwind component for laying out form content.
     </div>
+
+    <!-- Css Only -->
+    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
+    <ExampleCard source="formsection/css.vue">
+      <FormSectionCss />
+    </ExampleCard>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
-    </div>
-
+    <VueTitleBar id="basic" title="Basic Usage"></VueTitleBar>
     <ExampleCard source="formsection/basic.vue">
       <FormSectionBasic />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Default Theme"></CssTitleBar>
+    <StyleCard source="FormSection.css" />
 
     <!-- Page Nav -->
     <PageNav />

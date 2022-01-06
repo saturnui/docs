@@ -19,6 +19,8 @@ const sidenavItems = [
   { title: 'Auto Rotate', anchor: '#auto' },
   { title: 'Skip Nav', anchor: '#skip' },
   { title: 'Multiple items', anchor: '#multiple' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
   { title: 'Default Theme', anchor: '#theme' },
 ]
 
@@ -46,6 +48,47 @@ const props = [
     type: 'string',
     defaultVal: '',
     desc: 'Styles applied to the carousel\'s slider. To make smooth transition add <code>scroll-smooth</code>',
+  },
+]
+
+const slots = [
+  {
+    name: 'default',
+    desc: 'Slot contains carousel items',
+    binds: [
+      {
+        name: 'nextSlide(step = 1)',
+        desc: 'Moves index to previous item',
+      },
+
+      {
+        name: 'prevSlide(step = 1)',
+        desc: 'Moves index to next item',
+      },
+    ],
+  },
+
+  {
+    name: 'overlay',
+    desc: 'Slot used for items such as navigation, indicators, etc.',
+    binds: [
+      {
+        name: 'nextSlide(step = 1)',
+        desc: 'Moves index to previous item',
+      },
+
+      {
+        name: 'prevSlide(step = 1)',
+        desc: 'Moves index to next item',
+      },
+    ],
+  },
+]
+
+const events = [
+  {
+    name: 'update:modelValue',
+    desc: 'This event is bound to <code>v-model</code> and is not subscribed to directly.',
   },
 ]
 
@@ -82,12 +125,12 @@ onMounted(async () => {
   <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Carousel</div>
-    <div class="doc-desc">
-      The VCarousel component is used to display large numbers of visual content and navigate through them.
-    </div>
+    <div
+      class="doc-desc"
+    >The VCarousel component is used to display large numbers of visual content and navigate through them.</div>
 
     <CssTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript. The default behavior will allow you to use a mouse, 
+      Tailwind Component - No JavaScript. The default behavior will allow you to use a mouse,
       trackpad or mobile device to flick the slides. To control the navigation JavaScript is required.
     </CssTitleBar>
     <ExampleCard source="/carousel/css">
@@ -95,33 +138,35 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage">
-      This example demonstrates navigating items via external control.
-    </VueTitleBar>
+    <VueTitleBar
+      id="basic"
+      title="Basic Usage"
+    >This example demonstrates navigating items via external control.</VueTitleBar>
     <ExampleCard source="/carousel/basic">
       <CarouselBasic />
     </ExampleCard>
 
     <!-- Navigation -->
     <VueTitleBar id="nav" title="Navigation">
-      The carousel provides an API to navigate items using <code>prevSlide</code> and 
-      <code>nextSlide</code> methods or <code>v-model</code>.
+      The carousel provides an API to navigate items using
+      <code>prevSlide</code> and
+      <code>nextSlide</code> methods or
+      <code>v-model</code>.
     </VueTitleBar>
     <ExampleCard source="/carousel/navigation">
       <CarouselNav />
     </ExampleCard>
 
     <!-- Vertical -->
-    <VueTitleBar id="vertical" title="Vertical">
-      The carousel can be navigated vertically
-    </VueTitleBar>
+    <VueTitleBar id="vertical" title="Vertical">The carousel can be navigated vertically</VueTitleBar>
     <ExampleCard source="/carousel/vertical">
       <CarouselVertical />
     </ExampleCard>
 
     <!-- Tabs -->
     <VueTitleBar id="tabs" title="Tabs">
-      This example demonstrates using the <router-link to="/components/tab" class="wi-link">VTab</router-link> control
+      This example demonstrates using the
+      <router-link to="/components/tab" class="wi-link">VTab</router-link>control
       with VCarousel.
     </VueTitleBar>
     <ExampleCard source="/carousel/tabs">
@@ -129,16 +174,14 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Size -->
-    <VueTitleBar id="size" title="Size Variants">
-      Different sized items are supported.
-    </VueTitleBar>
+    <VueTitleBar id="size" title="Size Variants">Different sized items are supported.</VueTitleBar>
     <ExampleCard source="/carousel/sizes">
       <CarouselSize />
     </ExampleCard>
 
     <!-- Auto -->
     <VueTitleBar id="auto" title="Auto Rotate">
-      This example demonstrates rotating through the carousel items 
+      This example demonstrates rotating through the carousel items
       automatically. The rotation will pause when mouse is over carousel.
     </VueTitleBar>
     <ExampleCard source="/carousel/auto">
@@ -146,29 +189,37 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Skip -->
-    <VueTitleBar id="skip" title="Skip Items">
-      This example will move forward 2 slides on next and 1 slide on previous navigation.
-    </VueTitleBar>
+    <VueTitleBar
+      id="skip"
+      title="Skip Items"
+    >This example will move forward 2 slides on next and 1 slide on previous navigation.</VueTitleBar>
     <ExampleCard source="/carousel/auto">
       <CarouselSkip />
     </ExampleCard>
 
     <!-- Multiple -->
-    <VueTitleBar id="multiple" title="Multiple Items">
-      Multiple items can be viewed and rotated through.
-    </VueTitleBar>
+    <VueTitleBar
+      id="multiple"
+      title="Multiple Items"
+    >Multiple items can be viewed and rotated through.</VueTitleBar>
     <ExampleCard source="/carousel/multiple">
       <CarouselMultiple />
     </ExampleCard>
 
     <!-- Properties -->
-    <div id="api" class="doc-subtitle">Properties</div>
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
     <ApiCard :api="props" class="w-full" />
 
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
+
+    <!-- Events -->
+    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <NameDescCard :api="events" class="w-full" />
+
     <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
+    <CssTitleBar id="theme" title="Default Theme">The default styles for this component.</CssTitleBar>
     <StyleCard source="Carousel.css" />
 
     <!-- Page Nav -->

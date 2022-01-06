@@ -11,7 +11,7 @@
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
           <div class="text-5xl">Tailwind CSS Components</div>
-          <div class="text-3xl pl-2">supported by an unstyled Vue UI library</div>
+          <div class="text-3xl pl-2">supported by a headless Vue UI library</div>
           <div class="flex items-center justify-center gap-2">
             <simple-icons-windicss class="text-light-blue-400" />Fully supports WindiCSS
           </div>
@@ -46,15 +46,6 @@
         fully customizable applications is at your fingertips.
       </div>
 
-      <div>
-        Supports using third-party Tailwind components such as
-        <a href="https://tailwindui.com/" class="wi-link">Tailwind UI</a>,
-        <a
-          href="https://www.themes.dev/library/aircontrol-tailwindcss-admin-theme"
-          class="wi-link"
-        >Aircontrol</a> and others.
-      </div>
-
       <router-link
         to="/getting-started"
         class="wi-btn wi-dark bg-green-600 rounded-full font-medium px-6 py-4 rounded-lg my-8"
@@ -79,7 +70,7 @@
     <div class="flex-grow"></div>
     <div class="w-full text-center p-14 bg-dark-400 bg-opacity-10 text-sm mt-14">
       <div>Released under the MIT License</div>
-      <div>Copyright &copy; 2021-2022 Vuwi</div>
+      <div>Copyright &copy; 2021-2022 Rob Taylor</div>
     </div>
   </div>
   <ToggleDarkMode class="fixed wi-tr m-4" />
