@@ -112,12 +112,14 @@ declare module 'vue' {
     VTooltip: typeof import('./modules/vuwi/components/Tooltip/VTooltip.vue')['default']
     VueTitleBar: typeof import('./components/ExampleTitleBar/VueTitleBar.vue')['default']
     VuwiDialog: typeof import('./modules/vuwi/components/Dialog/VuwiDialog.vue')['default']
+    VWindow: typeof import('./modules/vuwi/components/Mock/VWindow.vue')['default']
     WiDatePickerCalendar: typeof import('~icons/wi/date-picker-calendar')['default']
     WiDatePickerHeader: typeof import('~icons/wi/date-picker-header')['default']
     WiDatePickerMonth: typeof import('~icons/wi/date-picker-month')['default']
     WiDatePickerWeek: typeof import('~icons/wi/date-picker-week')['default']
     WiDatePickerYear: typeof import('~icons/wi/date-picker-year')['default']
     WiForm: typeof import('~icons/wi/form')['default']
+    WindowBasic: typeof import('~icons/wi/ndow-basic')['default']
   }
 }
 

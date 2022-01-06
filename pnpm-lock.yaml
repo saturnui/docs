@@ -10,6 +10,7 @@ specifiers:
   '@iconify-json/mdi': ^1.0.1
   '@iconify-json/simple-icons': ^1.0.15
   '@iconify-json/tabler': ^1.0.2
+  '@iconify-json/wi': ^1.0.1
   '@intlify/vite-plugin-vue-i18n': ^3.0.0
   '@popperjs/core': ^2.10.2
   '@types/lodash': ^4.14.177
@@ -89,6 +90,7 @@ devDependencies:
   '@iconify-json/mdi': 1.0.12
   '@iconify-json/simple-icons': 1.0.15
   '@iconify-json/tabler': 1.0.2
+  '@iconify-json/wi': 1.0.1
   '@intlify/vite-plugin-vue-i18n': 3.0.0_vue-i18n@9.1.9
   '@types/lodash': 4.14.177
   '@types/markdown-it-link-attributes': 3.0.1
@@ -1475,6 +1477,12 @@ packages:
 
   /@iconify-json/tabler/1.0.2:
     resolution: {integrity: sha512-ZYIH6tjU4rbDrvbCfAMqzIJV091MyPr1KOV3TotoAkJ+Wi3LA1YK28WVJu+2g4EW94vX72yTUvYsJUiht/eu8g==}
+    dependencies:
+      '@iconify/types': 1.0.10
+    dev: true
+
+  /@iconify-json/wi/1.0.1:
+    resolution: {integrity: sha512-knQ35xlWa7bYZsaGI4Q2wBrrroJZpzq6QyGl8hY3RvyV1fhRmWd25Qj3oc24Jbca+4cKS3NpuYhMJcRjeLqajw==}
     dependencies:
       '@iconify/types': 1.0.10
     dev: true

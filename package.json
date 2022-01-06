@@ -42,6 +42,7 @@
     "@iconify-json/mdi": "^1.0.1",
     "@iconify-json/simple-icons": "^1.0.15",
     "@iconify-json/tabler": "^1.0.2",
+    "@iconify-json/wi": "^1.0.1",
     "@intlify/vite-plugin-vue-i18n": "^3.0.0",
     "@types/lodash": "^4.14.177",
     "@types/markdown-it-link-attributes": "^3.0.1",

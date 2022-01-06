@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import WindowBasic from './mock/basic.vue'
-import WindowVariations from './mock/variations.vue'
+import MockWindow from './mock/window.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
@@ -43,23 +42,17 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Title -->
-    <div class="doc-title">Window</div>
+    <div class="doc-title">Mocks</div>
+    <div class="doc-desc">CSS components for showing content in a mock device.</div>
 
-    <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <ExampleCard source="window/basic.vue">
-      <WindowBasic />
-    </ExampleCard>
-
-    <!-- Variations -->
-    <div id="variations" class="doc-subtitle">Variations</div>
-    <ExampleCard source="window/variations.vue">
-      <WindowVariations />
+    <CssTitleBar id="css" title="Window"></CssTitleBar>
+    <ExampleCard source="/mock/window/css" content-class="p-4 space-y-4">
+      <MockWindow />
     </ExampleCard>
 
     <!-- Style -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Window/VuwiWindow.css" />
+    <CssTitleBar id="theme" title="Window Default Theme">The default styles for this component.</CssTitleBar>
+    <StyleCard source="Mock.css" />
 
     <!-- Page Nav -->
     <PageNav />
