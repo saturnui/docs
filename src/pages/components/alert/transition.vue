@@ -10,9 +10,9 @@ const showAlert = ref(false)
     <transition name="alert">
       <VAlert v-if="showAlert" class="py-1 wi-danger z-10" role="alert">
         <span class="p-3 pl-5">{{ text }}</span>
-        <button class="wi-btn wi-btn-icon mr-2" @click="showAlert = false">
+        <VButton icon class="mr-2" @click="showAlert = false">
           <tabler-x class="text-xl" />
-        </button>
+        </VButton>
       </VAlert>
     </transition>
   </div>

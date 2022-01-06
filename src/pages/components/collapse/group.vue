@@ -10,8 +10,8 @@
       </div>
     </template>
     <div class="border-b border-r border-l wi-border wi-light-dark p-4">
-      <SkeletonListItem />
-      <SkeletonListItem />
+      <VSkeletonListItem />
+      <VSkeletonListItem />
     </div>
   </VCollapse>
 </template>

@@ -132,7 +132,7 @@ onMounted(async () => {
     <VueTitleBar id="size" title="Size Variants">
       Different sized items are supported.
     </VueTitleBar>
-    <ExampleCard source="/carousel/size">
+    <ExampleCard source="/carousel/sizes">
       <CarouselSize />
     </ExampleCard>
 

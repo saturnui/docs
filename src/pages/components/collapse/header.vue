@@ -14,8 +14,8 @@ const open = ref(false)
       </div>
     </template>
     <div class="flex flex-col gap-4 border wi-border wi-light-dark p-4 -mt-1">
-      <SkeletonListItem />
-      <SkeletonListItem />
+      <VSkeletonListItem />
+      <VSkeletonListItem />
 
       <button
         class="wi-btn border wi-border wi-highlight wi-btn-lg wi-btn-scale-none cursor-pointer"

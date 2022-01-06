@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import VSkeletonListItem from '~/modules/vuwi/components/Skeleton/VSkeletonListItem.vue'
 const show = ref(false)
 const position = ref('center')
 const open = (pos: string) => {
@@ -111,14 +112,9 @@ const customize = computed(() => custom.value ? 'custom' : '')
     </div>
   </div>
 
-  <div class="relative h-80 w-full doc-preview border-t wi-border overflow-hidden wi-text">
-    <div id="demo-content" class="absolute top-0 left-0 w-full h-80 overflow-y-auto">
-      <div v-for="i in 5" :key="i" class="p-4">
-        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.
-        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500,
-        cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una
-        galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-      </div>
+  <div class="relative h-80 w-full bg-dark-50 dark:bg-dark-600 border-t wi-border overflow-hidden wi-text">
+    <div id="demo-content" class="absolute top-0 left-0 w-full h-80 overflow-y-auto p-4 grid gap-4">
+      <VSkeletonListItem v-for="i in 5" :key="i" />
     </div>
     <VOverlay
       v-model="show"
@@ -133,19 +129,11 @@ const customize = computed(() => custom.value ? 'custom' : '')
         class="wi-mock-window wi-border w-80 h-40 filter drop-shadow-lg"
         :class="`box-${position}`"
       >
-        <button
-          class="absolute bottom-2 right-2 wi-btn wi-primary"
-          @click="show = false"
-        >Close</button>
+        <button class="absolute bottom-2 right-2 wi-btn wi-primary" @click="show = false">Close</button>
       </div>
 
       <template v-if="showSlot" #backdrop>
-        <button
-          class="absolute bottom-4 right-4 wi-btn wi-btn-icon border-5 border-white bg-purple-400 h-24 w-24 filter drop-shadow"
-          @click="show = false"
-        >
-          <assets-logo-vuwi class="h-18 w-18 filter drop-shadow-md -ml-2" />
-        </button>
+        <assets-logo-vuwi class="absolute wi-br m-3 h-16 w-24" />
       </template>
     </VOverlay>
   </div>

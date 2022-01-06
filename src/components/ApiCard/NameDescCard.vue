@@ -3,6 +3,7 @@
 interface ListItem {
   name: string
   desc: string
+  binds: ListItem[]
 }
 
 defineProps({
@@ -31,11 +32,29 @@ defineProps({
     </thead>
     <tbody>
       <tr v-for="(item, i) in api as ListItem[]" :key="i">
-        <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm">
+        <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm align-top">
           <code class="text-blue-600 dark:text-blue-400 font-semibold">{{ item.name }}</code>
         </td>
         <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm">
           <p class="whitespace-no-wrap" v-html="item.desc"></p>
+          <div v-if="item.binds" class="wi-highlight-strong mt-4">
+            <div class="wi-highlight-strong px-4 py-3">
+              The following bindings are available for
+              <code class="text-green-600 dark:text-green-400">#{{ item.name }}</code> slot
+            </div>
+            <div class="px-4 py-2">
+              <table class>
+                <tr v-for="(bind, n) in item.binds as ListItem[]" :key="n">
+                  <td class="py-2 wi-text text-sm">
+                    <code class="text-blue-600 dark:text-blue-400 font-semibold">{{ bind.name }}</code>
+                  </td>
+                  <td class="px-5 py-2 wi-text text-sm">
+                    <p class="whitespace-no-wrap" v-html="bind.desc"></p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </td>
       </tr>
     </tbody>

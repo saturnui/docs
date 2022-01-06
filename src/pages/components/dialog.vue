@@ -3,7 +3,7 @@ import DialogBasic from './dialog/basic.vue'
 import DialogCss from './dialog/css.vue'
 import DialogOverlay from './dialog/overlay.vue'
 
-const api = [
+const props = [
   {
     name: 'className',
     type: 'string',
@@ -33,7 +33,6 @@ const events = [
     name: 'close',
     desc: 'Fired when close button is clicked',
   },
-
 ]
 
 const sidenavItems = [
@@ -84,44 +83,46 @@ onMounted(async () => {
       content in the form of a dialog
     </div>
 
-    <!-- Basic Usage -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">Show using all the available slots</div>
-
-    <ExampleCard source="dialog/basic" content-class="p-4 flex justify-center bg-dark-100">
-      <DialogBasic />
-    </ExampleCard>
-
     <!-- CSS -->
-    <div id="css" class="doc-subtitle">CSS Only</div>
-    <div class="doc-detail">Only uses styles provided by Vuwi and Tailwind. No JavaScript.</div>
-
+    <VueTitleBar id="css" title="CSS Only">
+      Tailwind Component - No JavaScript.
+    </VueTitleBar>
     <ExampleCard source="dialog/css" content-class="p-4 flex justify-center bg-dark-100">
       <DialogCss />
     </ExampleCard>
 
-    <!-- Overlay -->
-    <div id="overlay" class="doc-subtitle">Overlay</div>
-    <div class="doc-detail">Show using dialog with overlay to create a modal window.</div>
+    <!-- Basic Usage -->
+    <VueTitleBar id="basic" title="Basic Usage">
+      Description here...
+    </VueTitleBar>
+    <ExampleCard source="dialog/basic" content-class="p-4 flex justify-center bg-dark-100">
+      <DialogBasic />
+    </ExampleCard>
 
-    <ExampleCard source="dialog/css" content-class="flex justify-center bg-dark-100 h-70">
+    <!-- Overlay -->
+    <VueTitleBar id="overlay" title="Overlay">
+      Show using dialog with <code>VOverlay</code> to create a modal window.
+    </VueTitleBar>
+    <ExampleCard source="dialog/overlay" content-class="flex justify-center bg-dark-100 h-70">
       <DialogOverlay />
     </ExampleCard>
 
     <!-- Properties -->
-    <div id="props" class="doc-subtitle">Properties</div>
-    <ApiCard :api="api" class="w-full" />
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <div id="slots" class="doc-subtitle">Slots</div>
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Events -->
-    <div id="events" class="doc-subtitle">Events</div>
+    <VueTitleBar id="events" title="Events"></VueTitleBar>
     <NameDescCard :api="events" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
     <StyleCard source="TextInput.css" />
 
     <!-- Page Nav -->

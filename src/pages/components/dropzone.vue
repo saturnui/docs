@@ -1,19 +1,28 @@
 <script setup lang="ts">
 import DropzoneBasic from './dropzone/basic.vue'
 
-const api = [
+const slots = [
   {
-    name: 'theme',
-    type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    name: 'default',
+    desc: 'This slot is for content',
+    binds: [
+      { name: 'active', desc: 'Indicator if the drop zone is active and can accept the drop.' },
+      { name: 'files', desc: 'A list of <code>File</code> objects in the drop zone.' },
+    ],
+  },
+]
+
+const events = [
+  {
+    name: 'change',
+    desc: 'Emitted when files are dropped into the drop area.',
   },
 ]
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Events', anchor: '#events' },
 ]
 
 const showDrawer = ref(false)
@@ -50,26 +59,26 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Dropzone</div>
     <div class="doc-desc">
-      Description here...
+      The <code>VDropzone</code> is a headless component that provides an area that accepts files. There is no default CSS for this component.
     </div>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
-    </div>
-
-    <ExampleCard source="textinput/basic.vue">
+    <VueTitleBar id="basic" title="Basic Usage">
+      The drop zone only retains the latest files that have been dropped. This example demonstrates how
+      to retain recently dropped files until they are cleared. The <router-link to="/components/image" class="wi-link">Image</router-link>
+      component is used to display the <code>File</code> objects.
+    </VueTitleBar>
+    <ExampleCard source="textinput/basic.vue" content-class="">
       <DropzoneBasic />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- Events -->
+    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <NameDescCard :api="events" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

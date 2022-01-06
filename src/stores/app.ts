@@ -37,6 +37,7 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Dropzone', to: '/components/dropzone' },
     { title: 'FileSelector', to: '/components/fileselector' },
     { title: 'FormSection', to: '/components/formsection' },
+    { title: 'Image', to: '/components/image' },
     { title: 'Line', to: '/components/line' },
     { title: 'Menu', to: '/components/menu' },
     { title: 'Mocks', to: '/components/mock' },

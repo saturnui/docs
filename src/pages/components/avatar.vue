@@ -112,7 +112,7 @@ onMounted(async () => {
     <ApiCard :api="props" class="w-full" />
 
     <!-- Style Guide -->
-    <CssTitleBar id="theme" class="doc-subtitle" title="Default Theme">
+    <CssTitleBar id="theme" title="Default Theme">
       The default styles for this component.
     </CssTitleBar>
     <StyleCard source="Avatar.css" />

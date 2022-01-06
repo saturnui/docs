@@ -77,7 +77,7 @@ onMounted(async () => {
     <CssTitleBar id="size" title="Sizes">
       Available sizes provided by theme.
     </CssTitleBar>
-    <ExampleCard source="/button/size" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
+    <ExampleCard source="/button/sizes" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonSizes />
     </ExampleCard>
     

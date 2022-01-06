@@ -10,10 +10,10 @@
     <div class="wi-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
-          <div class="text-5xl">Web UI Library</div>
-          <div class="text-3xl pl-2">Tailwind CSS components powered by Vue 3</div>
+          <div class="text-5xl">Tailwind CSS Components</div>
+          <div class="text-3xl pl-2">supported by an unstyled Vue UI library</div>
           <div class="flex items-center justify-center gap-2">
-            <simple-icons-windicss class="text-light-blue-400" />WindiCSS is also fully supported
+            <simple-icons-windicss class="text-light-blue-400" />Fully supports WindiCSS
           </div>
         </div>
         <div class="relative grid gap-4 w-full">
@@ -57,19 +57,19 @@
 
       <router-link
         to="/getting-started"
-        class="wi-btn wi-primary rounded-full font-medium px-6 py-4 rounded-lg my-8"
-      >Style components with CSS instead of JavaScript APIs</router-link>
+        class="wi-btn wi-dark bg-green-600 rounded-full font-medium px-6 py-4 rounded-lg my-8"
+      >Interchangeable CSS and Vue components</router-link>
       <div class="flex justify-center gap-4 w-full p-3">
         <div class="wi-col-3-1 gap-12 max-w-80 lg:max-w-max">
-          <div class="text-center space-y-4">
-            <div class="text-3xl text-primary-light font-light">Simple</div>
+          <div class="text-center space-y-4 wi-highlight p-8 rounded-xl">
+            <div class="text-3xl text-primary-light font-light">CSS First</div>
             <div>Style components with CSS instead of a bunch of properties defined by APIs</div>
           </div>
-          <div class="text-center space-y-4">
-            <div class="text-3xl text-primary-light font-light">Performant</div>
-            <div>CSS-driven components driven by the power of Vue when needed</div>
+          <div class="text-center space-y-4 wi-highlight p-8 rounded-xl">
+            <div class="text-3xl text-primary-light font-light">Headless UI</div>
+            <div>Use pre-built Vue 3 headless components to enhance Tailwind components</div>
           </div>
-          <div class="text-center space-y-4">
+          <div class="text-center space-y-4 wi-highlight p-8 rounded-xl">
             <div class="text-3xl text-primary-light font-light">Powerful</div>
             <div>Use tooling such as Vite, Vitesse and WindiCSS to build full applications</div>
           </div>

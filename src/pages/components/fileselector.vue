@@ -1,12 +1,20 @@
 <script setup lang="ts">
-import FileSelector from './file/fileselector.vue'
+import FileSelectorBasic from './fileselector/basic.vue'
+import FileSelectorVariation from './fileselector/variation.vue'
+import FileSelectorMultiple from './fileselector/multiple.vue'
 
-const api = [
+const props = [
   {
-    name: 'theme',
-    type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    name: 'multiple',
+    type: 'boolean',
+    defaultVal: false,
+    desc: 'Indicates selection can contain multiple files',
+  },
+  {
+    name: 'accepts',
+    type: 'arrat',
+    defaultVal: [],
+    desc: 'Indicates which file extensions are allowed for selection',
   },
 ]
 
@@ -48,29 +56,48 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">File</div>
+    <div class="doc-title">File Selector</div>
     <div class="doc-desc">
-      Description here...
+      The
+      <code>VFileSelector</code> component is a specialized input that
+      provides a headless UI for selecting one or more files. The
+      <router-link to="/components/image" class="wi-link">Image</router-link> component is used to display the
+      <code>File</code> objects.
     </div>
 
-    <!-- Basic -->
-    <div id="basic" class="doc-subtitle">File Selector</div>
-    <div class="doc-detail">
-      The file selector supports one or more files. It is completely customizable. In addition, you can
-      use the <span class="doc-emphasis">useImageToDataUrl</span> method to convert image files to a <span class="doc-emphasis">data url</span>.
-    </div>
-
-    <ExampleCard source="file/fileselector.vue">
-      <FileSelector />
+    <!-- Basic Usage -->
+    <VueTitleBar
+      id="basic"
+      title="Basic Usage"
+    >This example demonstrates using a button and label to show the file to be uploaded.</VueTitleBar>
+    <ExampleCard source="fileselector/basic.vue" content-class="flex p-4 gap-4">
+      <FileSelectorBasic />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Variation -->
+    <VueTitleBar
+      id="variation"
+      title="Variation"
+    >Demonstrates a more custom look for uploading an image.</VueTitleBar>
+    <ExampleCard
+      source="fileselector/variation.vue"
+      content-class="flex items-center justify-center p-4 gap-4"
+    >
+      <FileSelectorVariation />
+    </ExampleCard>
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- Multiple -->
+    <VueTitleBar
+      id="multiple"
+      title="Multiple Files"
+    >Demonstrates allowing multiple files to be selected.</VueTitleBar>
+    <ExampleCard source="fileselector/multiple.vue" content-class="p-4 grid gap-2">
+      <FileSelectorMultiple />
+    </ExampleCard>
+
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties" />
+    <ApiCard :api="props" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

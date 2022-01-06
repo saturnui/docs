@@ -5,10 +5,28 @@ import CollapseGroup from './collapse/group.vue'
 
 const api = [
   {
-    name: 'theme',
+    name: 'className',
     type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    defaultVal: 'wi-collapse',
+    desc: 'Default class used by component',
+  },
+  {
+    name: 'group',
+    type: 'string',
+    defaultVal: '',
+    desc: 'Groups collapses so they work in tandem only display one collapse at a time',
+  },
+  {
+    name: 'modelValue',
+    type: 'Boolean',
+    defaultVal: false,
+    desc: 'Opens and closes a collapse',
+  },
+  {
+    name: 'slide',
+    type: 'string',
+    defaultVal: 'down',
+    desc: 'Direction which content should be transition when opened',
   },
 ]
 
@@ -59,38 +77,36 @@ onMounted(async () => {
     </div>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">By default, collapse will only animate the content. Headers
+    <VueTitleBar id="headless" title="Headless">
+      By default, collapse will only animate the content. Headers
       are optional.
-    </div>
-
+    </VueTitleBar>
     <ExampleCard source="collapse/headless">
       <CollapseHeadless />
     </ExampleCard>
 
     <!-- Header -->
-    <div id="basic" class="doc-subtitle">Header</div>
-    <div class="doc-detail">Details here...</div>
-
+    <VueTitleBar id="header" title="Header">Adds a header to open and close the content.</VueTitleBar>
     <ExampleCard source="collapse/header">
       <CollapseHeader />
     </ExampleCard>
 
     <!-- Group -->
-    <div id="basic" class="doc-subtitle">Group</div>
-    <div class="doc-detail">Details here...</div>
-
+    <VueTitleBar id="group" title="Group">
+      Only allow a single collapse to display by using the
+      <code>group</code> property.
+    </VueTitleBar>
     <ExampleCard source="collapse/group">
       <CollapseGroup />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
     <ApiCard :api="api" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput.css" />
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Default Theme"></CssTitleBar>
+    <StyleCard source="Collapse.css" />
 
     <!-- Page Nav -->
     <PageNav />

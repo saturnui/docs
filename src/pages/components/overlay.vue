@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import OverlayBasic from './overlay/basic.vue'
+import VueTitleBar from '~/components/ExampleTitleBar/VueTitleBar.vue'
 
-const api = [
+const props = [
   {
     name: 'theme',
     type: 'string',
@@ -42,8 +43,8 @@ const api = [
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -80,28 +81,30 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Overlay</div>
     <div class="doc-desc">
-      The overlay component is used to provide emphasis on a particular element 
+      The <code>VOverlay</code> component is used to provide emphasis on a particular element 
       or parts of it. It signals to the user of a state change within the application 
       and can be used for creating loaders, dialogs and more.
     </div>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
+    <VueTitleBar id="basic" title="Basic Usage">
       The example below shows different features available in the overlay.
-    </div>
-
+    </VueTitleBar>
     <ExampleCard source="overlay/basic.vue" class="doc-padding-none" content-class="">
       <OverlayBasic />
     </ExampleCard>
 
     <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <VueTitleBar id="props" title="Properties">
+      The example below shows different features available in the overlay.
+    </VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
     <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Overlay/VuwiOverlay.css" />
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
+    <StyleCard source="Overlay.css" />
 
     <!-- Page Nav -->
     <PageNav />

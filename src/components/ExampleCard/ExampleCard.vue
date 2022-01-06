@@ -99,26 +99,26 @@ onBeforeMount(async () => {
             <span>View Source</span>
           </div>
         </template>
-        <button class="wi-btn wi-btn-icon" @click="showCode = !showCode">
+        <VButton icon @click="showCode = !showCode">
           <tabler-code />
-        </button>
+        </VButton>
       </VTooltip>
     </div>
     <VLine />
     <VCollapse v-model="showCode" slide="up">
       <div v-if="html && js" class="px-2 py-2 flex item-center gap-2 wi-highlight">
-        <button
+        <VButton
           v-if="html"
-          class="wi-btn wi-btn-sm"
+          size="sm"
           :class="tabClass(view === 'html')"
           @click="view = 'html'"
-        >HTML</button>
-        <button
+        >HTML</VButton>
+        <VButton
           v-if="js"
-          class="wi-btn wi-btn-sm"
+          size="sm"
           :class="tabClass(view === 'js')"
           @click="view = 'js'"
-        >Script</button>
+        >Script</VButton>
       </div>
       <!-- Script -->
       <div
@@ -128,9 +128,9 @@ onBeforeMount(async () => {
         <pre><code v-html="decoratedScript"></code></pre>
         <div class="flex items-center gap-2 absolute top-2 right-4 text-light-900">
           <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
-          <button class="wi-btn wi-btn-icon bg-white bg-opacity-20 hover:bg-primary-light">
+          <VButton icon class="bg-white bg-opacity-20 hover:bg-primary-light">
             <tabler-copy class="h-6 w-6" @click="copy(js)" />
-          </button>
+          </VButton>
         </div>
       </div>
       <!-- Template -->
@@ -142,9 +142,9 @@ onBeforeMount(async () => {
       </div>
       <div class="flex items-center gap-2 absolute top-4 right-4 text-light-900">
         <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
-        <button class="wi-btn wi-btn-icon bg-white bg-opacity-20 hover:bg-primary-light">
+        <VButton icon class="bg-white bg-opacity-20 hover:bg-primary-light">
           <tabler-copy class="h-6 w-6" @click="copy(html)" />
-        </button>
+        </VButton>
       </div>
     </VCollapse>
     <VLine v-if="showCode" />

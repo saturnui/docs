@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import SkeletonListItem from './skeleton/listitem.vue'
-import SkeletonDecorated from './skeleton/decorated.vue'
-
 const api = [
   {
     name: 'theme',
@@ -12,8 +9,7 @@ const api = [
 ]
 
 const sidenavItems = [
-  { title: 'List Item', anchor: '#listitem' },
-  { title: 'Decorated', anchor: '#decorated' },
+  { title: 'Basic Usage', anchor: '#basic' },
   { title: 'API', anchor: '#api' },
   { title: 'Style Guide', anchor: '#styles' },
 ]
@@ -50,28 +46,21 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Skeletons</div>
-    <div class="doc-desc">Skeletons can be used as boilerplate designs when creating mockups or while data is being loaded onto the screen.</div>
+    <div class="doc-title">Image</div>
+    <div class="doc-desc">
+      This <code>VImage</code> component is a headless UI component that can display <code>File</code> images of types <code>image/jpeg</code>, <code>image/png</code>, 
+      <code>image/gif</code> and <code>image/svg+xml</code>. This component can be used in combination
+      with the <router-link to="/components/fileselector" class="wi-link">File Selector</router-link> or 
+      <router-link to="/components/dropzone" class="wi-link">Drop Zone</router-link> components.
+    </div>
 
-    <!-- List Item -->
-    <div id="listitem" class="doc-subtitle">List Item</div>
-    <div
-      class="doc-detail"
-    >Use as a multiline list item</div>
+    <!-- Basic -->
+    <div id="basic" class="doc-subtitle">Basic Usage</div>
+    <div class="doc-detail">
+      Details here...
+    </div>
 
-    <ExampleCard source="skeleton/listitem">
-      <VSkeletonListItem />
-    </ExampleCard>
-
-    <!-- Decorated -->
-    <div id="decorated" class="doc-subtitle">Decorated</div>
-    <div
-      class="doc-detail"
-    >This demonstrates how to add a border, shadow and pulse to any Skeleton component</div>
-
-    <ExampleCard source="skeleton/decorated">
-      <VSkeletonDecorated />
-    </ExampleCard>
+    <ExampleCard source="textinput/basic" height="h-100" />
 
     <!-- API -->
     <div id="api" class="doc-subtitle">API</div>
