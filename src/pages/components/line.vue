@@ -1,21 +1,14 @@
 <script setup lang="ts">
 import ComponentCss from './line/css.vue'
 import ComponentBasic from './line/basic.vue'
-import ComponentLabel from './line/label.vue'
-import ComponentButton from './line/button.vue'
+import ComponentVariants from './line/variants.vue'
 
 const props = [
   {
     name: 'className',
     type: 'string',
-    defaultVal: 'wi-component',
+    defaultVal: 'wi-line',
     desc: 'Default class used by component',
-  },
-  {
-    name: 'modelValue',
-    type: 'number',
-    defaultVal: 0,
-    desc: 'Current index of the selected component item',
   },
 ]
 
@@ -28,7 +21,7 @@ const slots = [
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'Variants', anchor: '#variants' },
+  { title: 'Using Slots', anchor: '#variants' },
   { title: 'Slot', anchor: '#slot' },
   { title: 'Default Theme', anchor: '#theme' },
 ]
@@ -77,7 +70,7 @@ onMounted(async () => {
 
     <!-- Basic -->
     <VueTitleBar id="basic" title="Basic Usage" />
-    <ExampleCard source="line/basic.vue" content-class="px-4 py-6">
+    <ExampleCard source="line/basic" content-class="px-4 py-6">
       <ComponentBasic />
     </ExampleCard>
 
@@ -88,12 +81,8 @@ onMounted(async () => {
       <code>button</code>.
     </VueTitleBar>
 
-    <ExampleCard source="line/label.vue" title="Slot with label" content-class="px-4 py-6">
-      <ComponentLabel />
-    </ExampleCard>
-
-    <ExampleCard source="line/button.vue" title="Slot with component" content-class="px-4 py-6">
-      <ComponentButton />
+    <ExampleCard source="line/label" content-class="grid gap-6 px-4 py-6 gap-4">
+      <ComponentVariants />
     </ExampleCard>
 
     <!-- Properties -->
