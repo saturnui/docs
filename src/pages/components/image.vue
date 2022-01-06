@@ -1,13 +1,33 @@
 <script setup lang="ts">
-const api = [
+import ImageBasic from './image/basic.vue'
+
+const props = [
   {
-    name: 'theme',
-    type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    name: 'width',
+    type: 'string | number',
+    defaultVal: 48,
+    desc: 'Used when a <code>File</code> is the src to convert image max width size',
+  },
+  {
+    name: 'height',
+    type: 'string | number',
+    defaultVal: 48,
+    desc: 'Used when a <code>File</code> is the src to convert image max width size',
+  },
+  {
+    name: 'src',
+    type: 'File | string',
+    defaultVal: 48,
+    desc: 'Source can be a string with the same support as an <code>img</code> tag or a <code>File</code> is passed in, it will be converted to a data url.',
   },
 ]
 
+const events = [
+  {
+    name: 'change',
+    desc: 'Returns a url or data url when the source changes.',
+  },
+]
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'API', anchor: '#api' },
@@ -55,19 +75,19 @@ onMounted(async () => {
     </div>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
-    </div>
+    <VueTitleBar id="basic" title="Basic Usage">
+      This example uses the image component to show a selected file.
+    </VueTitleBar>
+    <ExampleCard source="textinput/basic" content-class="p-4 flex flex-col items-center gap-4">
+      <ImageBasic />
+    </ExampleCard>
 
-    <ExampleCard source="textinput/basic" height="h-100" />
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
-
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput.css" />
+    <!-- Events -->
+    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <NameDescCard :api="events" class="w-full" />
   </div>
 </template>

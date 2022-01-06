@@ -69,13 +69,13 @@ onMounted(async () => {
 
     <!-- Css Only -->
     <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
-    <ExampleCard source="formsection/css.vue">
+    <ExampleCard source="formsection/css">
       <FormSectionCss />
     </ExampleCard>
 
     <!-- Basic -->
     <VueTitleBar id="basic" title="Basic Usage"></VueTitleBar>
-    <ExampleCard source="formsection/basic.vue">
+    <ExampleCard source="formsection/basic">
       <FormSectionBasic />
     </ExampleCard>
 

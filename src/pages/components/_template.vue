@@ -1,17 +1,53 @@
 <script setup lang="ts">
-const api = [
+import ComponentCss from './carousel/css.vue'
+import ComponentBasic from './carousel/basic.vue'
+
+const sidenavItems = [
+  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Basic Usage', anchor: '#basic' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Default Theme', anchor: '#theme' },
+]
+
+const props = [
   {
-    name: 'theme',
+    name: 'className',
     type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    defaultVal: 'wi-component',
+    desc: 'Default class used by component',
+  },
+  {
+    name: 'modelValue',
+    type: 'number',
+    defaultVal: 0,
+    desc: 'Current index of the selected component item',
   },
 ]
 
-const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+const slots = [
+  {
+    name: 'default',
+    desc: 'Slot contains component items',
+    binds: [
+      {
+        name: 'nextSlide(step = 1)',
+        desc: 'Moves index to previous item',
+      },
+
+      {
+        name: 'prevSlide(step = 1)',
+        desc: 'Moves index to next item',
+      },
+    ],
+  },
+]
+
+const events = [
+  {
+    name: 'update:modelValue',
+    desc: 'This event is bound to <code>v-model</code> and is not subscribed to directly.',
+  },
 ]
 
 const showDrawer = ref(false)
@@ -46,25 +82,40 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Title here...</div>
-    <div class="doc-desc">
-      Description here...
-    </div>
+    <div class="doc-title">Component</div>
+    <div class="doc-desc">Description here...</div>
+
+    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
+    <ExampleCard source="/component/css">
+      <ComponentCss />
+    </ExampleCard>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
-    </div>
+    <VueTitleBar
+      id="basic"
+      title="Basic Usage"
+    >This example demonstrates navigating items via external control.</VueTitleBar>
+    <ExampleCard source="/component/basic">
+      <ComponentBasic />
+    </ExampleCard>
 
-    <ExampleCard source="textinput/basic" height="h-100" />
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput.css" />
+    <!-- Events -->
+    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <NameDescCard :api="events" class="w-full" />
+
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Default Theme">The default styles for this component.</CssTitleBar>
+    <StyleCard source="Component.css" />
+
+    <!-- Page Nav -->
+    <PageNav />
   </div>
 </template>
