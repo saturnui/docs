@@ -37,12 +37,9 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#appbar-actions">
-    <button
-      class="xl:hidden wi-btn wi-btn-icon hover:bg-primary hover:text-white"
-      @click="showDrawer = true"
-    >
+    <VButton icon class="xl:hidden doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
-    </button>
+    </VButton>
   </teleport>
 
   <div class="wi-content p-2 sm:p-8">

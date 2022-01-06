@@ -17,10 +17,12 @@ const open = ref(false)
       <VSkeletonListItem />
       <VSkeletonListItem />
 
-      <button
-        class="wi-btn border wi-border wi-highlight wi-btn-lg wi-btn-scale-none cursor-pointer"
+      <VButton
+        icon="lg"
+        scale="none"
+        class="border wi-border wi-highlight cursor-pointer"
         @click="open = false"
-      >Close</button>
+      >Close</VButton>
     </div>
   </VCollapse>
 </template>

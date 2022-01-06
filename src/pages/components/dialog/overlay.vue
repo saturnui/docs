@@ -22,8 +22,8 @@ const show = ref(false)
         <div class="p-4 border-t wi-border">This is an example of a modal dialog.</div>
         <!-- Actions -->
         <template #actions>
-          <button class="wi-btn" @click="show = false">Cancel</button>
-          <button class="wi-btn wi-primary" @click="show = false">OK</button>
+          <VButton @click="show = false">Cancel</VButton>
+          <VButton class="wi-primary" @click="show = false">OK</VButton>
         </template>
       </VDialog>
     </VOverlay>

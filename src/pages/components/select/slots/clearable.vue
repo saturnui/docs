@@ -19,9 +19,9 @@ const items = [
       <tabler-mood-neutral class="text-xl opacity-30 w-10 min-w-10 -ml-2 text-left" />
     </template>
     <template #append>
-      <button v-if="selectedItem" class="wi-btn wi-btn-icon" @click="selectedItem = ''">
+      <VButton v-if="selectedItem" icon @click="selectedItem = ''">
         <tabler-x />
-      </button>
+      </VButton>
     </template>
   </VSelect>
 </template>

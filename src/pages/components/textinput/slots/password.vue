@@ -18,10 +18,10 @@ const fieldType = computed(() => {
       <tabler-lock class="text-xl opacity-30" />
     </template>
     <template #append>
-      <button class="wi-btn wi-btn-icon" @click="showPassword = !showPassword">
+      <VButton icon @click="showPassword = !showPassword">
         <tabler-eye v-if="showPassword" />
         <tabler-eye-off v-else />
-      </button>
+      </VButton>
     </template>
   </VTextInput>
 </template>

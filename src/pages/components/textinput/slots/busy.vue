@@ -31,9 +31,9 @@ watch(text, (val: string) => {
         <span class="sr-only">Busy...</span>
       </div>
       <tabler-check v-else-if="valid" class="text-green-500 mr-1" />
-      <button v-if="text" class="wi-btn wi-btn-icon" @click="text = ''">
+      <VButton v-if="text" icon @click="text = ''">
         <tabler-x />
-      </button>
+      </VButton>
     </template>
   </VTextInput>
 </template>

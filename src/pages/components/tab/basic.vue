@@ -68,7 +68,7 @@ const items = [
         class="wi-tab-container-pill text-sm"
         @click="selectedIndex = index"
       >
-        <button class="wi-btn" :class="{'bg-purple-600 text-white': selectedIndex === index}">{{ item.label }}</button>
+        <VButton :class="{'bg-purple-600 text-white': selectedIndex === index}">{{ item.label }}</VButton>
         <!-- <div class="wi-tab">
           <span class="font-medium text-sm">{{ item.label }}</span>
         </div> -->

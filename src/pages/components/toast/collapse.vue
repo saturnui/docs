@@ -28,14 +28,16 @@ const showRegion = ref(false)
   </div>
 
   <!-- Preview -->
-  <div class="relative doc-preview h-60 flex flex-col text-white rounded-b wi-highlight overflow-hidden">
+  <div
+    class="relative doc-preview h-60 flex flex-col text-white rounded-b wi-highlight overflow-hidden"
+  >
     <div :class="{ 'absolute top-0 w-full z-10': enableAbsolute }">
       <VCollapse v-model="showToast" class="pointer-events-none" slide="down">
         <div class="flex items-center justify-between bg-black pointer-events-auto">
           <div class="py-3 px-4">Hello, world!</div>
-          <button v-if="showClose" class="wi-btn wi-btn-icon mr-2" @click="showToast = false">
+          <VButton v-if="showClose" icon class="mr-2" @click="showToast = false">
             <tabler-x />
-          </button>
+          </VButton>
         </div>
       </VCollapse>
     </div>
@@ -45,25 +47,21 @@ const showRegion = ref(false)
       class="relative flex-grow my-1"
       :class="{ 'bg-blue-400 bg-opacity-20 border-dash outline-blue-400': showRegion }"
     >
-      <button
-        class="absolute top-2 left-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-primary"
-      >
+      <VButton icon size="xl" class="absolute top-2 left-2 filter drop-shadow-lg wi-primary">
         <tabler-message class="text-2xl" />
-      </button>
-      <button
-        class="absolute bottom-2 right-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-primary"
-      >
+      </VButton>
+      <VButton icon size="xl" class="absolute bottom-2 right-2 filter drop-shadow-lg wi-primary">
         <tabler-message class="text-2xl" />
-      </button>
+      </VButton>
     </div>
 
     <div :class="{ 'absolute bottom-0 w-full z-10': enableAbsolute }">
       <VCollapse v-model="showToast" class="pointer-events-none" slide="up">
         <div class="flex items-center justify-between bg-black pointer-events-auto">
           <div class="py-3 px-4">Hello, world!</div>
-          <button v-if="showClose" class="wi-btn wi-btn-icon mr-2" @click="showToast = false">
+          <VButton v-if="showClose" icon class="mr-2" @click="showToast = false">
             <tabler-x />
-          </button>
+          </VButton>
         </div>
       </VCollapse>
     </div>

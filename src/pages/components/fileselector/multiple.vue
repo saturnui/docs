@@ -14,7 +14,7 @@ const handleChange = async (files?: FileList) => {
 <template>
   <div class="flex justify-between gap-2 p-2 wi-highlight-strong rounded">
     <VFileSelector multiple @change="handleChange">
-      <button class="wi-btn wi-primary">Select Files...</button>
+      <VButton class="wi-primary">Select Files...</VButton>
     </VFileSelector>
     <VButton class="wi-shade border border-primary text-primary dark:text-white" @click="selectedFiles = []">Clear</VButton>
   </div>

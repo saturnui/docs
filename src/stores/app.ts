@@ -41,7 +41,6 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Line', to: '/components/line' },
     { title: 'Menu', to: '/components/menu' },
     { title: 'Mocks', to: '/components/mock' },
-    { title: 'Notification', to: '/components/notification' },
     { title: 'Overlay', to: '/components/overlay' },
     { title: 'Pagination', to: '/components/pagination' },
     { title: 'Progress Bar', to: '/components/progressbar' },
@@ -53,6 +52,7 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Switch', to: '/components/switch' },
     { title: 'Tab', to: '/components/tab' },
     { title: 'TextInput', to: '/components/textinput' },
+    { title: 'Toast', to: '/components/toast' },
     { title: 'Tooltip', to: '/components/tooltip' },
   ]
 

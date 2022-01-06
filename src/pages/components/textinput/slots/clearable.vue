@@ -12,9 +12,9 @@ const text = ref('')
       <tabler-user class="text-xl opacity-30" />
     </template>
     <template #append>
-      <button v-if="text" class="wi-btn wi-btn-icon" @click="text = ''">
+      <VButton v-if="text" icon @click="text = ''">
         <tabler-x />
-      </button>
+      </VButton>
     </template>
   </VTextInput>
 </template>

@@ -18,9 +18,9 @@ const text = ref('')
       </template>
 
       <template #append>
-        <button v-if="text" class="wi-btn w-12 min-w-12 h-12 min-h-12 wi-btn-icon bg-purple-400" @click="text = ''">
+        <VButton v-if="text" icon class="w-12 min-w-12 h-12 min-h-12 bg-purple-400" @click="text = ''">
           <tabler-x class="text-purple-600 text-4xl" />
-        </button>
+        </VButton>
       </template>
     </VTextInput>
   </div>

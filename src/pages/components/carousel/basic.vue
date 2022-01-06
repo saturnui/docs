@@ -21,7 +21,7 @@ const slides = [
     </div>
   </VCarousel>
   <div class="pt-4 flex justify-center gap-2">
-    <button class="wi-btn border" @click="slideIndex--">Prev</button>
-    <button class="wi-btn border" @click="slideIndex++">Next</button>
+    <VButton class="border" @click="slideIndex--">Prev</VButton>
+    <VButton class="border" @click="slideIndex++">Next</VButton>
   </div>
 </template>

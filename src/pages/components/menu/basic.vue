@@ -7,14 +7,6 @@ const toggleMenu = () => {
 
 <template>
   <div class="relative inline-block h-20">
-    <!-- <VGroup v-model="selectedIndex">
-      <template #="{ activeEl, setActive }">
-        <button class="wi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 1</button>
-        <button class="wi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 2</button>
-        <button class="wi-btn" :class="{ 'active': activeEl }" @click="setActive($event)">Button 3</button>
-      </template>
-    </VGroup>-->
-
     <button class="wi-btn wi-primary" @click="toggleMenu">Open Menu</button>
     <transition name="slide-down">
       <div

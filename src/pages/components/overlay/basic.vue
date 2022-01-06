@@ -73,41 +73,41 @@ const customize = computed(() => custom.value ? 'custom' : '')
         <template #tooltip>
           <span class="max-w-50 text-center">Center</span>
         </template>
-        <button class="wi-btn" @click="open('center')">
+        <VButton @click="open('center')">
           <tabler-layout-distribute-horizontal />
-        </button>
+        </VButton>
       </VTooltip>
       <VTooltip>
         <template #tooltip>
           <span class="max-w-50 text-center">Top</span>
         </template>
-        <button class="wi-btn" @click="open('top')">
+        <VButton @click="open('top')">
           <tabler-layout-align-top />
-        </button>
+        </VButton>
       </VTooltip>
       <VTooltip>
         <template #tooltip>
           <span class="max-w-50 text-center">Left</span>
         </template>
-        <button class="wi-btn" @click="open('left')">
+        <VButton @click="open('left')">
           <tabler-layout-align-left />
-        </button>
+        </VButton>
       </VTooltip>
       <VTooltip>
         <template #tooltip>
           <span class="max-w-50 text-center">Right</span>
         </template>
-        <button class="wi-btn" @click="open('right')">
+        <VButton @click="open('right')">
           <tabler-layout-align-right />
-        </button>
+        </VButton>
       </VTooltip>
       <VTooltip>
         <template #tooltip>
           <span class="max-w-50 text-center">Bottom</span>
         </template>
-        <button class="wi-btn" @click="open('bottom')">
+        <VButton @click="open('bottom')">
           <tabler-layout-align-bottom />
-        </button>
+        </VButton>
       </VTooltip>
     </div>
   </div>
@@ -129,7 +129,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
         class="wi-mock-window wi-border w-80 h-40 filter drop-shadow-lg"
         :class="`box-${position}`"
       >
-        <button class="absolute bottom-2 right-2 wi-btn wi-primary" @click="show = false">Close</button>
+        <VButton class="absolute bottom-2 right-2 wi-primary" @click="show = false">Close</VButton>
       </div>
 
       <template v-if="showSlot" #backdrop>

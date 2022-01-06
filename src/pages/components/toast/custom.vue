@@ -46,18 +46,20 @@ const enableAbsolute = ref(false)
               <span class="text-xs">1 of 3</span>
               <div class="flex-grow"></div>
               <div class="flex gap-4">
-                <button
-                  class="wi-btn wi-btn-sm rounded uppercase text-xs font-bold text-white"
+                <VButton
+                  size="sm"
+                  class="rounded uppercase text-xs font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Dismiss</span>
-                </button>
-                <button
-                  class="wi-btn wi-btn-sm rounded wi-primary text-xs uppercase font-bold text-white"
+                </VButton>
+                <VButton
+                  size="sm"
+                  class="rounded wi-primary text-xs uppercase font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Ok</span>
-                </button>
+                </VButton>
               </div>
             </div>
           </div>
@@ -70,16 +72,12 @@ const enableAbsolute = ref(false)
       class="relative flex-grow my-1"
       :class="{ 'bg-blue-400 bg-opacity-20 border-dash outline-blue-400': showRegion }"
     >
-      <button
-        class="absolute top-2 left-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-primary"
-      >
+      <VButton icon size="xl" class="absolute top-2 left-2 filter drop-shadow-lg wi-primary">
         <tabler-message class="text-2xl" />
-      </button>
-      <button
-        class="absolute bottom-2 right-2 wi-btn wi-btn-icon wi-btn-xl filter drop-shadow-lg wi-primary"
-      >
+      </VButton>
+      <VButton icon size="xl" class="absolute bottom-2 right-2 filter drop-shadow-lg wi-primary">
         <tabler-message class="text-2xl" />
-      </button>
+      </VButton>
     </div>
 
     <div :class="{ 'absolute bottom-0 w-full z-10': enableAbsolute }">
@@ -102,18 +100,20 @@ const enableAbsolute = ref(false)
               <span class="text-xs">1 of 3</span>
               <div class="flex-grow"></div>
               <div class="flex gap-4">
-                <button
-                  class="wi-btn wi-btn-sm rounded uppercase text-xs font-bold text-white"
+                <VButton
+                  size="sm"
+                  class="rounded uppercase text-xs font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Dismiss</span>
-                </button>
-                <button
-                  class="wi-btn wi-btn-sm rounded wi-primary text-xs uppercase font-bold text-white"
+                </VButton>
+                <VButton
+                  size="sm"
+                  class="rounded wi-primary text-xs uppercase font-bold text-white"
                   @click="showToast = false"
                 >
                   <span>Ok</span>
-                </button>
+                </VButton>
               </div>
             </div>
           </div>

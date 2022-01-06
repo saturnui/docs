@@ -13,7 +13,7 @@ const handleImageChange = (val: string) => {
 
 <template>
   <VFileSelector :accepts="['jpg', 'jpeg', 'png', 'gif', 'svg']" @change="handleChange">
-    <button class="wi-btn wi-primary">Select Image File</button>
+    <VButton size="lg" class="wi-primary">Select Image File</VButton>
   </VFileSelector>
 
   <div v-if="file" class="wi-shade-stronger p-4 rounded-3xl">

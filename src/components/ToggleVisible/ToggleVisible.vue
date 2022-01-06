@@ -11,8 +11,8 @@ export default defineComponent({
 </script>
 
 <template>
-  <button type="button" class="wi-btn wi-btn-icon text-dark-400 dark:text-dark-400" @click="$emit('update:modelValue', !modelValue)">
+  <VButton icon class="text-dark-400 dark:text-dark-400" @click="$emit('update:modelValue', !modelValue)">
     <tabler-eye-off v-if="modelValue" />
     <tabler-eye v-else />
-  </button>
+  </VButton>
 </template>

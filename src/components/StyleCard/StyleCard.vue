@@ -36,7 +36,7 @@ onBeforeMount(async () => {
   <div class="wi-light-dark border wi-border wi-text relative">
     <div class="flex items-center px-4 py-2">
       <div class="flex-grow"></div>
-      <a :href="source" target="_blank" class="wi-btn wi-btn-icon">
+      <a :href="source" target="_blank" class="wi-btn" icon>
         <carbon-logo-github />
       </a>
     </div>
@@ -48,9 +48,9 @@ onBeforeMount(async () => {
     </div>
     <div class="flex items-center gap-2 absolute top-16 right-4 text-light-900">
       <span v-if="copied" class="px-2 py-1 bg-purple-600 font-bold rounded">Copied!!</span>
-      <button class="wi-btn wi-btn-icon">
+      <VButton icon>
         <tabler-copy class="h-6 w-6" @click="copy(css)" />
-      </button>
+      </VButton>
     </div>
   </div>
 </template>

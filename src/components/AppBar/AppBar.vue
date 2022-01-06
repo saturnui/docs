@@ -54,9 +54,9 @@ const signout = async () => {
 <template>
   <div class="app-appbar">
     <div class="flex w-full max-w-8xl items-center gap-4 px-0">
-      <button class="lg:hidden wi-btn wi-btn-icon" @click="showDrawer = !showDrawer">
+      <VButton icon class="lg:hidden" @click="showDrawer = !showDrawer">
         <tabler-menu-2 />
-      </button>
+      </VButton>
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-6 cursor-pointer" @click="router.push('/')">
         <assets-logo-vuwi class="w-20 h-12" />
@@ -66,8 +66,8 @@ const signout = async () => {
       <div id="appbar-actions"></div>
       <ToggleDarkMode />
       <div v-if="user" class="hidden lg:block relative top-0 cursor-pointer">
-        <button
-          class="wi-btn wi-btn-icon bg-white bg-opacity-10 hover:bg-white hover:bg-opacity-10"
+        <VButton
+          class="bg-white bg-opacity-10 hover:bg-white hover:bg-opacity-10"
           @click="openMenu"
         >
           <VAvatar
@@ -76,7 +76,7 @@ const signout = async () => {
             :photo="photoUrl"
             class="wi-avatar-sm bg-primary text-white rounded-full overflow-hidden"
           />
-        </button>
+        </VButton>
         <transition name="slide-down">
           <div
             v-if="showMenu"
