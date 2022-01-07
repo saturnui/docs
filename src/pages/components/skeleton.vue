@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import SkeletonCss from './skeleton/css.vue'
 import SkeletonListItem from './skeleton/listitem.vue'
 import SkeletonDecorated from './skeleton/decorated.vue'
 
@@ -14,8 +15,7 @@ const api = [
 const sidenavItems = [
   { title: 'List Item', anchor: '#listitem' },
   { title: 'Decorated', anchor: '#decorated' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
 ]
 
 const showDrawer = ref(false)
@@ -51,16 +51,25 @@ onMounted(async () => {
   <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Skeletons</div>
-    <div class="doc-desc">Skeletons can be used as boilerplate designs when creating mockups or while data is being loaded onto the screen.</div>
-
-    <!-- List Item -->
-    <div id="listitem" class="doc-subtitle">List Item</div>
     <div
-      class="doc-detail"
-    >Use as a multiline list item</div>
+      class="doc-desc"
+    >Skeletons can be used as boilerplate designs when creating mockups or while data is being loaded onto the screen.</div>
 
+    <CssTitleBar id="css" title="Tailwind Component">
+      The means to create your own skelton components is provided by Tailwind CSS. You can learn more here 
+      <a href="https://tailwindcss.com/docs/animation#pulse" class="wi-link">https://tailwindcss.com/docs/animation#pulse</a>.
+    </CssTitleBar>
+    <ExampleCard source="/component/css">
+      <SkeletonCss />
+    </ExampleCard>
+
+    <VueTitleBar id="css" title="Vue Component"></VueTitleBar>
+    <!-- List Item -->
+    <VueSection id="listitem" title="List Item">
+      Use as a multiline list item
+    </VueSection>
     <ExampleCard source="skeleton/listitem">
-      <VSkeletonListItem />
+      <SkeletonListItem />
     </ExampleCard>
 
     <!-- Decorated -->
@@ -70,7 +79,7 @@ onMounted(async () => {
     >This demonstrates how to add a border, shadow and pulse to any Skeleton component</div>
 
     <ExampleCard source="skeleton/decorated">
-      <VSkeletonDecorated />
+      <SkeletonDecorated />
     </ExampleCard>
 
     <!-- API -->
@@ -80,5 +89,7 @@ onMounted(async () => {
     <!-- Style Guide -->
     <div id="styles" class="doc-subtitle">Style Guide</div>
     <StyleCard source="TextInput.css" />
+
+    <PageNav />
   </div>
 </template>
