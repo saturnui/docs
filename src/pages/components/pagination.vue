@@ -29,6 +29,21 @@ const props = [
   },
 ]
 
+const slots = [
+  {
+    name: 'prev-icon',
+    desc: 'The icon used to indicate navigation to the previous page',
+  },
+  {
+    name: 'more-icon',
+    desc: 'The icon used to indicate more content that cannot be displayed. The default provides a page when on that page plus an active indicator.',
+  },
+  {
+    name: 'next-icon',
+    desc: 'The icon used to indicate navigation to the next page',
+  },
+]
+
 const sidenavItems = [
   { title: 'CSS Only', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
@@ -81,13 +96,13 @@ onMounted(async () => {
     <CssTitleBar id="css" title="CSS Only">
       Tailwind Component - No JavaScript.
     </CssTitleBar>
-    <ExampleCard source="pagination/css">
+    <ExampleCard source="pagination/css" content-class="p-4 flex justify-center">
       <PaginationCss />
     </ExampleCard>
 
     <!-- Basic -->
     <VueTitleBar id="basic" title="Basic Usage">
-      This show the default behavior of the component with different lengths set.
+      Demonstrates the default behavior of the component with different visible lengths.
     </VueTitleBar>
     <ExampleCard source="pagination/basic" content-class="p-4 grid gap-6">
       <PaginationBasic />
@@ -96,6 +111,10 @@ onMounted(async () => {
     <!-- Properties -->
     <VueTitleBar id="props" title="Properties"></VueTitleBar>
     <ApiCard :api="props" class="w-full" />
+
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Default Theme -->
     <CssTitleBar id="theme" title="Default Theme">

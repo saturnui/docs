@@ -5,5 +5,6 @@
   <button icon size="lg" class="wi-btn wi-primary">
     <tabler-box class="w-1/2 h-1/2" />
   </button>
-  <button class="wi-btn wi-success">Success</button>
+  <button class="wi-btn wi-success wi-xl">Success</button>
+  <button class="wi-link px-3">Link</button>
 </template>

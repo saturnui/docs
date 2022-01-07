@@ -7,6 +7,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  title: {
+    type: String,
+    default: '',
+  },
 })
 // https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/Alert.css
 // https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/components/Alert.css
@@ -35,6 +39,7 @@ onBeforeMount(async () => {
 <template>
   <div class="wi-light-dark border wi-border wi-text relative">
     <div class="flex items-center px-4 py-2">
+      {{ title }}
       <div class="flex-grow"></div>
       <a :href="source" target="_blank" class="wi-btn" icon>
         <carbon-logo-github />

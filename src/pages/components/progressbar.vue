@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ProgressBarCss from './progress/bar/css.vue'
 import ProgressBarBasic from './progress/bar/basic.vue'
 
 const percent = ref(35)
@@ -15,7 +16,13 @@ watch(animate, (v: boolean) => {
   }
 })
 
-const api = [
+const props = [
+  {
+    name: 'className',
+    type: 'string',
+    defaultVal: 'wi-progress-bar',
+    desc: 'Default class used by component',
+  },
   {
     name: 'percent',
     type: 'number',
@@ -24,10 +31,19 @@ const api = [
   },
 ]
 
+const slots = [
+  {
+    name: 'default',
+    desc: 'Slot contains component items',
+  },
+]
+
 const sidenavItems = [
+  { title: 'CSS Only', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -63,18 +79,29 @@ onMounted(async () => {
   <div class="wi-content doc-content">
     <!-- Header -->
     <div class="doc-title">Progress Bar</div>
-    <div class="doc-desc">Displays progression in a bar view</div>
+    <div class="doc-desc">
+      The
+      <code>VProgressBar</code> displays progression in a bar view
+    </div>
+
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="/progress/bar/css" theme="ProgressBar.css">
+      <ProgressBarCss />
+    </ExampleCard>
+    
+    <!-- Default Theme -->
+    <!-- <CssTitleBar id="theme" title="Default Theme">The default styles for this component.</CssTitleBar> -->
+    <!-- <StyleCard source="ProgressBar.css" title="Default Theme" class="-mt-1" /> -->
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div
-      class="doc-detail"
-    >These examples demonstrate only a few different ways to style the progress circle</div>
-
-    <ExampleCard source="progress/bar/basic.vue" content-class="">
+    <VueTitleBar
+      id="basic"
+      title="Basic Usage"
+    >These examples demonstrate only a few different ways to style the progress circle</VueTitleBar>
+    <ExampleCard source="progress/bar/basic" content-class="">
       <div class="p-2 wi-highlight">
         <VSwitch v-model="animate" class="wi-switch-sm">
-          <span class="pl-2">Animate</span>
+          <span class="pl-2">Show progress</span>
         </VSwitch>
       </div>
       <div class="p-4">
@@ -82,13 +109,13 @@ onMounted(async () => {
       </div>
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Progress/VuwiProgressBar.css" />
+    <!-- Slots -->
+    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

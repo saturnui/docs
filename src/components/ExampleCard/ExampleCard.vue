@@ -11,6 +11,10 @@ const props = defineProps({
     type: String,
     default: '',
   },
+  theme: {
+    type: String,
+    default: '',
+  },
   height: {
     type: String,
     default: 'h-100',
@@ -40,6 +44,7 @@ const rawSource = `${sourceBaseUrl}/${props.source}.vue`
 //     mode.value = 'dark'
 // }
 const showCode = ref(false)
+const showStyle = ref(false)
 const decoratedHTML = ref('')
 const decoratedScript = ref('')
 const html = ref('')
@@ -63,14 +68,11 @@ onBeforeMount(async () => {
     decoratedScript.value = hljs.highlight(js.value, { language: 'typescript' }).value
   }
 })
-
-
-
 </script>
 
 <template>
   <div class="wi-light-dark border wi-border wi-text relative">
-    <div class="flex items-center px-4 py-2">
+    <div class="flex items-center px-4 py-2 gap-2">
       <div class="pl-1 font-medium">{{ title }}</div>
       <div class="flex-grow"></div>
       <!-- <VTooltip placement="bottom">
@@ -85,23 +87,27 @@ onBeforeMount(async () => {
       </VTooltip>-->
       <VTooltip placement="bottom">
         <template #tooltip>
-          <div class="px-3 py-2 text-sm">
-            <span>Github Source</span>
-          </div>
-        </template>
-        <a :href="rawSource" target="_blank" class="wi-btn wi-btn-icon">
-          <carbon-logo-github />
-        </a>
-      </VTooltip>
-      <VTooltip placement="bottom">
-        <template #tooltip>
-          <div class="px-3 py-2 text-sm">
-            <span>View Source</span>
-          </div>
+          <span>View Source</span>
         </template>
         <VButton icon @click="showCode = !showCode">
           <tabler-code />
         </VButton>
+      </VTooltip>
+      <VTooltip v-if="theme" placement="bottom">
+        <template #tooltip>
+          <span>View Default Theme</span>
+        </template>
+        <VButton size="sm" @click="showStyle = !showStyle">
+          <file-icons-tailwind class="text-lg" />
+        </VButton>
+      </VTooltip>
+      <VTooltip placement="bottom">
+        <template #tooltip>
+          <span>Github Source</span>
+        </template>
+        <a :href="rawSource" target="_blank" class="wi-btn wi-btn-icon">
+          <carbon-logo-github />
+        </a>
       </VTooltip>
     </div>
     <VLine />
@@ -153,6 +159,7 @@ onBeforeMount(async () => {
       <slot v-else />
     </div>
   </div>
+  <StyleCard v-if="showStyle" title="Default Theme" :source="theme" class="-mt-1" />
 </template>
 
 <style>

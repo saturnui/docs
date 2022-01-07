@@ -1,6 +1,7 @@
 {
   "name": "vuwi",
-  "description": "Vuwi - Vuw 3 + Vitesse + Tailwind + Custom Components",
+  "version": "0.0.1",
+  "description": "Vuwi - Tailwind + Vue 3 components",
   "private": true,
   "scripts": {
     "build": "vite-ssg build",

@@ -11,10 +11,10 @@
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
           <div class="text-5xl">Tailwind CSS Components</div>
-          <div class="text-3xl pl-2">supported by a headless Vue UI library</div>
-          <div class="flex items-center justify-center gap-2">
+          <div class="text-3xl pl-2">supported by a Headless Vue UI library</div>
+          <!-- <div class="flex items-center justify-center gap-2">
             <simple-icons-windicss class="text-light-blue-400" />Fully supports WindiCSS
-          </div>
+          </div> -->
         </div>
         <div class="relative grid gap-4 w-full">
           <div class="wi-col-3-1 gap-4">
@@ -47,9 +47,9 @@
       </div>
 
       <router-link
-        to="/getting-started"
-        class="wi-btn wi-dark bg-green-600 rounded-full font-medium px-6 py-4 rounded-lg my-8"
-      >Interchangeable CSS and Vue components</router-link>
+        to="/components/alert"
+        class="wi-btn wi-dark bg-green-600 rounded-full font-medium px-6 py-4 rounded-lg my-8 font-bold"
+      >See component documentation</router-link>
       <div class="flex justify-center gap-4 w-full p-3">
         <div class="wi-col-3-1 gap-12 max-w-80 lg:max-w-max">
           <div class="text-center space-y-4 wi-highlight p-8 rounded-xl">
@@ -58,7 +58,7 @@
           </div>
           <div class="text-center space-y-4 wi-highlight p-8 rounded-xl">
             <div class="text-3xl text-primary-light font-light">Headless UI</div>
-            <div>Use pre-built Vue 3 headless components to enhance Tailwind components</div>
+            <div>Use pre-built Vue 3 headless components to drive Tailwind components</div>
           </div>
           <div class="text-center space-y-4 wi-highlight p-8 rounded-xl">
             <div class="text-3xl text-primary-light font-light">Powerful</div>
