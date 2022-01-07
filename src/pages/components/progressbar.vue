@@ -39,7 +39,7 @@ const slots = [
 ]
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
@@ -88,16 +88,14 @@ onMounted(async () => {
     <ExampleCard source="/progress/bar/css" theme="ProgressBar.css">
       <ProgressBarCss />
     </ExampleCard>
-    
-    <!-- Default Theme -->
-    <!-- <CssTitleBar id="theme" title="Default Theme">The default styles for this component.</CssTitleBar> -->
-    <!-- <StyleCard source="ProgressBar.css" title="Default Theme" class="-mt-1" /> -->
+
+    <VueTitleBar title="Vue Component"></VueTitleBar>
 
     <!-- Basic -->
-    <VueTitleBar
+    <VueSection
       id="basic"
       title="Basic Usage"
-    >These examples demonstrate only a few different ways to style the progress circle</VueTitleBar>
+    >These examples demonstrate only a few different ways to style the progress circle</VueSection>
     <ExampleCard source="progress/bar/basic" content-class="">
       <div class="p-2 wi-highlight">
         <VSwitch v-model="animate" class="wi-switch-sm">
@@ -110,11 +108,11 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->

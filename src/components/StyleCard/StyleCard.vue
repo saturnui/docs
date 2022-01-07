@@ -38,8 +38,8 @@ onBeforeMount(async () => {
 
 <template>
   <div class="wi-light-dark border wi-border wi-text relative">
-    <div class="flex items-center px-4 py-2">
-      {{ title }}
+    <div class="flex items-center pr-4 pl-2 py-2">
+      <div class="px-3 py-1 rounded bg-light-blue-500 text-white text-sm font-medium" size="sm">CSS</div>
       <div class="flex-grow"></div>
       <a :href="source" target="_blank" class="wi-btn" icon>
         <carbon-logo-github />

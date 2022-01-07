@@ -25,7 +25,7 @@ const slots = useSlots()
         </div>
       </div>
     </div>
-    <div class="ml-2 font-medium">{{ title }}</div>
+    <div class="ml-2 text-2xl">{{ title }}</div>
   </div>
   <div :class="{ 'doc-detail': slots.default }">
     <slot></slot>

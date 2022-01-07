@@ -12,11 +12,8 @@ const slots = useSlots()
 </script>
 
 <template>
-  <div :id="id" class="doc-subtitle">
-    <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-green-600">
-      <file-icons:vue class="text-white h-5 h-5" />
-    </div>
-    <span class="ml-2 text-2xl">{{ title }}</span>
+  <div :id="id" class="flex items-center gap-2 text-xl px-2 pt-4 pb-4">
+    <span class="font-medium">{{ title }}</span>
   </div>
   <div :class="{ 'doc-detail': slots.default }">
     <slot></slot>
