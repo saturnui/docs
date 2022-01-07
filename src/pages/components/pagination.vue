@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import PaginationCss from './pagination/css.vue'
 import PaginationBasic from './pagination/basic.vue'
 
-const api = [
+const props = [
   {
     name: 'theme',
     type: 'string',
@@ -29,9 +30,11 @@ const api = [
 ]
 
 const sidenavItems = [
+  { title: 'CSS Only', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
+  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -71,26 +74,34 @@ onMounted(async () => {
       The pagination component is used to separate long sets of data so that it 
       is easier for a user to consume information. Depending on the length provided, 
       the pagination component will automatically scale. To maintain the current 
-      page, simply supply a v-model attribute.
+      page, simply supply a <code>v-model</code> attribute.
     </div>
+
+    <!-- Css -->
+    <CssTitleBar id="css" title="CSS Only">
+      Tailwind Component - No JavaScript.
+    </CssTitleBar>
+    <ExampleCard source="pagination/css">
+      <PaginationCss />
+    </ExampleCard>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
+    <VueTitleBar id="basic" title="Basic Usage">
       This show the default behavior of the component with different lengths set.
-    </div>
-
-    <ExampleCard source="pagination/basic.vue">
+    </VueTitleBar>
+    <ExampleCard source="pagination/basic" content-class="p-4 grid gap-6">
       <PaginationBasic />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Properties -->
+    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <ApiCard :api="props" class="w-full" />
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Default Theme">
+      The default styles for this component.
+    </CssTitleBar>
+    <StyleCard source="Pagination.css" />
 
     <!-- Page Nav -->
     <PageNav />
