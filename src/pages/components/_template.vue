@@ -3,7 +3,7 @@ import ComponentCss from './carousel/css.vue'
 import ComponentBasic from './carousel/basic.vue'
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
@@ -85,30 +85,30 @@ onMounted(async () => {
     <div class="doc-title">Component</div>
     <div class="doc-desc">Description here...</div>
 
-    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
     <ExampleCard source="/component/css">
       <ComponentCss />
     </ExampleCard>
 
     <!-- Basic -->
-    <VueTitleBar
+    <VueSection
       id="basic"
       title="Basic Usage"
-    >This example demonstrates navigating items via external control.</VueTitleBar>
+    >This example demonstrates navigating items via external control.</VueSection>
     <ExampleCard source="/component/basic">
       <ComponentBasic />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Events -->
-    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <VueSection id="events" title="Events"></VueSection>
     <NameDescCard :api="events" class="w-full" />
 
     <!-- Default Theme -->

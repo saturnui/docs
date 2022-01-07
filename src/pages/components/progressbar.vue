@@ -43,7 +43,6 @@ const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)

@@ -45,11 +45,10 @@ const slots = [
 ]
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -93,34 +92,28 @@ onMounted(async () => {
     </div>
 
     <!-- Css -->
-    <CssTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript.
-    </CssTitleBar>
-    <ExampleCard source="pagination/css" content-class="p-4 flex justify-center">
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="pagination/css" content-class="p-4 flex justify-center" theme="Pagination.css">
       <PaginationCss />
     </ExampleCard>
+    
+    <VueTitleBar title="Vue Component"></VueTitleBar>
 
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage">
+    <VueSection id="basic" title="Basic Usage">
       Demonstrates the default behavior of the component with different visible lengths.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="pagination/basic" content-class="p-4 grid gap-6">
       <PaginationBasic />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
-
-    <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="Pagination.css" />
 
     <!-- Page Nav -->
     <PageNav />

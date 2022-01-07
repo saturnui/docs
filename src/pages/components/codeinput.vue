@@ -75,31 +75,24 @@ onMounted(async () => {
     </div>
 
     <!-- CSS -->
-    <CssTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript.
-    </CssTitleBar>
-
-    <ExampleCard source="/codeinput/css">
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="/codeinput/css" theme="CodeInput.css">
       <CodeCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="css" title="Basic Usage">
+    <VueSection id="css" title="Basic Usage">
       Demonstrates the default behavior of the code input.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="/codeinput/basic" content-class="p-4 flex items-center gap-4">
       <CodeBasic />
     </ExampleCard>
 
     <!-- Basic -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
-
-    <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="CodeInput.css" />
 
     <!-- Page Nav -->
     <PageNav />

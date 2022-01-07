@@ -45,7 +45,7 @@ onMounted(async () => {
     <div class="doc-title">Spinner</div>
     <div class="doc-desc">
       Vuwi provides classes that can spin using CSS animate. In addition there is a very light-weight class that
-      will show a css only spinner for simple usage. If you need a more complex spinner, then you can combine
+      will show a Tailwind Component spinner for simple usage. If you need a more complex spinner, then you can combine
       Vuwi spin classes with the
       <router-link to="/components/progresscircle" class="doc-link">VuwiProgressCircle</router-link>component.
     </div>
@@ -54,7 +54,7 @@ onMounted(async () => {
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <div
       class="doc-detail"
-    >The following demonstrates how to use the CSS only version of the spinner to change its appearance.</div>
+    >The following demonstrates how to use the Tailwind Component version of the spinner to change its appearance.</div>
 
     <ExampleCard source="spinner/basic">
       <SpinnerBasic />

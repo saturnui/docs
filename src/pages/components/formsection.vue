@@ -24,10 +24,9 @@ const props = [
 ]
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Properties', anchor: '#props' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -67,25 +66,23 @@ onMounted(async () => {
       An opinionated Tailwind component for laying out form content.
     </div>
 
-    <!-- Css Only -->
-    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
-    <ExampleCard source="formsection/css">
+    <!-- Tailwind Component -->
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="formsection/css" theme="FormSection.css">
       <FormSectionCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage"></VueTitleBar>
+    <VueSection id="basic" title="Basic Usage"></VueSection>
     <ExampleCard source="formsection/basic">
       <FormSectionBasic />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
-
-    <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme"></CssTitleBar>
-    <StyleCard source="FormSection.css" />
 
     <!-- Page Nav -->
     <PageNav />

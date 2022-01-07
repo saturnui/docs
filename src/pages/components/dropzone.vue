@@ -59,25 +59,28 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Dropzone</div>
     <div class="doc-desc">
-      The <code>VDropzone</code> is a headless component that provides an area that accepts files. There is no default CSS for this component.
+      The <code>VDropzone</code> is a headless component that provides an area that accepts files. 
+      No Tailwind component is provided as this can be completely customized.
     </div>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage">
+    <VueSection id="basic" title="Basic Usage">
       The drop zone only retains the latest files that have been dropped. This example demonstrates how
       to retain recently dropped files until they are cleared. The <router-link to="/components/image" class="wi-link">Image</router-link>
       component is used to display the <code>File</code> objects.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="textinput/basic.vue" content-class="">
       <DropzoneBasic />
     </ExampleCard>
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Events -->
-    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <VueSection id="events" title="Events"></VueSection>
     <NameDescCard :api="events" class="w-full" />
 
     <!-- Page Nav -->

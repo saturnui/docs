@@ -49,23 +49,23 @@ onMounted(async () => {
     </div>
 
     <!-- Toast -->
-    <VueTitleBar id="toast" title="Using Collapse">
+    <VueSection id="toast" title="Using Collapse">
       This example shows how to create a toast using the <code>VCollapse</code> component. This allows
       items such as a FAB button to remain in view when a toast is displayed.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="notification/toast" content-class="">
       <ToastCollapse />
     </ExampleCard>
 
     <!-- Notification -->
-    <VueTitleBar id="custom" title="Custom">
+    <VueSection id="custom" title="Custom">
       An example of a notification that supports pagination and uses
       <a
         href="#"
         class="doc-link"
       >useMessenger</a> and a
       custom component that supports pagination.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="notification/notification" content-class="">
       <NotificationExample />
     </ExampleCard>

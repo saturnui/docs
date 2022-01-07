@@ -8,14 +8,13 @@ import ButtonSizes from './button/size.vue'
 import ButtonSolid from './button/solid.vue'
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Size', anchor: '#size' },
   { title: 'Solid', anchor: '#solid' },
   { title: 'Outline', anchor: '#outline' },
   { title: 'Rounded', anchor: '#rounded' },
   { title: 'Icon', anchor: '#icon' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -56,65 +55,59 @@ onMounted(async () => {
       The <strong>VButton</strong> component only provides a base class. Most of the styling are CSS classes.
     </div>
 
-    <CssTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript.
-    </CssTitleBar>
-    <ExampleCard source="/button/css" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="/button/css" content-class="p-4 flex flex-wrap justify-center items-center gap-4" theme="Button.css">
       <ButtonCss />
     </ExampleCard>
 
-    <VueTitleBar id="basic" title="Basic Usage">
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
+    <VueSection id="basic" title="Basic Usage">
       Default component with no styling.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="/button/default" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonDefault />
     </ExampleCard>
 
     <!-- Sizes -->
-    <CssTitleBar id="size" title="Sizes">
+    <VueSection id="size" title="Sizes">
       Available sizes provided by theme.
-    </CssTitleBar>
+    </VueSection>
     <ExampleCard source="/button/sizes" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonSizes />
     </ExampleCard>
     
     <!-- Solid Background -->
-    <CssTitleBar id="solid" title="Solid">
+    <VueSection id="solid" title="Solid">
       Component with background.
-    </CssTitleBar>
+    </VueSection>
     <ExampleCard source="/button/solid" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonSolid />
     </ExampleCard>
     
     <!-- Outline / Border -->
-    <CssTitleBar id="outline" title="Outline">
+    <VueSection id="outline" title="Outline">
       Component with borders in combination with different text color styles.
-    </CssTitleBar>
+    </VueSection>
     <ExampleCard source="/button/outline" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonOutline />
     </ExampleCard>
     
     <!-- Rounded / Pill -->
-    <CssTitleBar id="rounded" title="Rounded">
+    <VueSection id="rounded" title="Rounded">
       Component with different roundess styles.
-    </CssTitleBar>
+    </VueSection>
     <ExampleCard source="/button/pill" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonPill />
     </ExampleCard>
     
     <!-- Icon -->
-    <CssTitleBar id="icon" title="Icon">
+    <VueSection id="icon" title="Icon">
       Component showing icon with different styling.
-    </CssTitleBar>
+    </VueSection>
     <ExampleCard source="/button/icon" content-class="p-4 flex flex-wrap justify-center items-center gap-4">
       <ButtonIcon />
     </ExampleCard>
-    
-    <!-- Theme -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="Button.css" />
 
     <!-- Page Nav -->
     <PageNav />

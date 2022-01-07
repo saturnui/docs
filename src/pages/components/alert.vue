@@ -5,11 +5,10 @@ import AlertVariation from './alert/variation.vue'
 import AlertTransition from './alert/transition.vue'
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Variations', anchor: '#variations' },
   { title: 'Transition', anchor: '#transition' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -51,46 +50,43 @@ onMounted(async () => {
     <div class="doc-desc">
       The
       <strong>VAlert</strong> component is used to convey important information to the user through the
-      use of contextual types, icons, and colors. Use in conjunction with <router-link to="/styling/color" class="wi-link text-primary">Colors</router-link> for 4 variations: success, info,
+      use of contextual types, icons, and colors. Use in conjunction with
+      <router-link to="/styling/color" class="wi-link text-primary">Colors</router-link>for 4 variations: success, info,
       warning, and error. Default icons are assigned which help represent different actions each type portrays.
       Many parts of an alert such as border, icon, and color can also be customized to fit almost any situation.
     </div>
 
     <!-- CSS Usage -->
-    <CssTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript.
-    </CssTitleBar>
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
     <ExampleCard source="/alert/css">
       <AlertCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic Usage -->
-    <VueTitleBar id="basic" title="Basic Usage"></VueTitleBar>
+    <VueSection id="basic" title="Basic Usage"></VueSection>
     <ExampleCard source="/alert/basic">
       <AlertBasic />
     </ExampleCard>
 
     <!-- Variations -->
-    <VueTitleBar id="variations" title="Variations">
-      These examples demonstrate using icons, close button and different color styles available in Vuwi's theme.
-    </VueTitleBar>
+    <VueSection
+      id="variations"
+      title="Variations"
+    >These examples demonstrate using icons, close button and different color styles available in Vuwi's theme.</VueSection>
     <ExampleCard source="/alert/variation">
       <AlertVariation />
     </ExampleCard>
 
     <!-- Transition -->
-    <VueTitleBar id="transition" title="Transition">
-      This example demonstrates how to use a Vue transition to show / hide an alert.
-    </VueTitleBar>
+    <VueSection
+      id="transition"
+      title="Transition"
+    >This example demonstrates how to use a Vue transition to show / hide an alert.</VueSection>
     <ExampleCard source="/alert/transition" content-class="h-30">
       <AlertTransition />
     </ExampleCard>
-
-    <!-- Theme -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="Alert.css" />
 
     <!-- Page Nav -->
     <PageNav />
