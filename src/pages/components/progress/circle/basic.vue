@@ -24,7 +24,7 @@ defineProps({
       color="border-red-500"
       :width="12"
     >
-      <div class="wi-text text-3xl">{{ percent }}</div>
+      <div class="absolute wi-mc wi-text text-3xl">{{ percent }}</div>
     </VProgressCircle>
 
     <VProgressCircle
@@ -34,7 +34,7 @@ defineProps({
       :width="6"
     >
       <div
-        class="flex items-center justify-center rounded-full w-10 h-10 font-bold bg-gray-800 text-white"
+        class="absolute wi-mc flex items-center justify-center rounded-full w-10 h-10 font-bold bg-gray-800 text-white"
       >
         <tabler-box class="text-2xl" />
       </div>

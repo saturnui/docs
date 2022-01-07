@@ -17,7 +17,7 @@ watch(animate, (v: boolean) => {
   }
 })
 
-const api = [
+const props = [
   {
     name: 'theme',
     type: 'string',
@@ -53,8 +53,8 @@ const api = [
 const sidenavItems = [
   { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Customized', anchor: '#custom' },
+  { title: 'Properties', anchor: '#props' },
 ]
 
 const showDrawer = ref(false)
@@ -118,7 +118,7 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Variants -->
-    <div id="basic" class="doc-subtitle">Variants</div>
+    <div id="custom" class="doc-subtitle">Customized</div>
     <div
       class="doc-detail"
     >Demonstrates different sizes and widths.</div>
@@ -135,8 +135,8 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <div id="props" class="doc-subtitle">Properties</div>
+    <ApiCard :api="props" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />
