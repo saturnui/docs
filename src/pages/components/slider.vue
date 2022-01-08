@@ -37,9 +37,11 @@ const props = [
 ]
 
 const sidenavItems = [
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Custom', anchor: '#custom' },
+  { title: 'Range', anchor: '#range' },
+  { title: 'Properties', anchor: '#props' },
 ]
 
 const showDrawer = ref(false)
@@ -81,6 +83,9 @@ onMounted(async () => {
       It is used for gathering numerical user data.
     </div>
 
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard theme="Slider.css" />
+
     <VueTitleBar title="Vue Component"></VueTitleBar>
 
     <!-- Basic -->
@@ -107,13 +112,9 @@ onMounted(async () => {
       <SliderRange />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">Properties</div>
+    <!-- Properties -->
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
-
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Slider.css" />
 
     <!-- Page Nav -->
     <PageNav />

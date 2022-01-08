@@ -4,10 +4,10 @@ import SpinnerVariants from './spinner/variants.vue'
 import SpinnerProgressCircle from './spinner/progresscircle.vue'
 
 const sidenavItems = [
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'ProgressCircle', anchor: '#progresscircle' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Customizations', anchor: '#custom' },
+  { title: 'Progress Circle', anchor: '#progresscircle' },
 ]
 
 const showDrawer = ref(false)
@@ -47,42 +47,41 @@ onMounted(async () => {
       Vuwi provides classes that can spin using CSS animate. In addition there is a very light-weight class that
       will show a Tailwind Component spinner for simple usage. If you need a more complex spinner, then you can combine
       Vuwi spin classes with the
-      <router-link to="/components/progresscircle" class="doc-link">VuwiProgressCircle</router-link>component.
+      <router-link to="/components/progresscircle" class="wi-link">VProgressCircle</router-link> component.
     </div>
 
-    <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div
-      class="doc-detail"
-    >The following demonstrates how to use the Tailwind Component version of the spinner to change its appearance.</div>
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="/component/css" theme="Spinner.css">
+      <!-- <ComponentCss /> -->
+      TODO: Tailwind
+    </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
+    <!-- Basic -->
+    <VueSection id="basic" title="Basic Usage">
+      The following demonstrates the default spinner.
+    </VueSection>
     <ExampleCard source="spinner/basic">
       <SpinnerBasic />
     </ExampleCard>
 
-    <!-- Variants -->
-    <div id="variants" class="doc-subtitle">Variants</div>
-    <div
-      class="doc-detail"
-    >Here are some examples of style changes you can make to change the appearance</div>
-
+    <!-- Customization -->
+    <VueSection id="custom" title="Customizations">
+      Here are some examples of style changes you can make to change the appearance.
+    </VueSection>
     <ExampleCard source="spinner/variants">
       <SpinnerVariants />
     </ExampleCard>
 
-    <div id="progresscircle" class="doc-subtitle">ProgressCircle</div>
-    <div class="doc-detail">
-      You can also use the
-      <router-link to="/components/progresscircle" class="doc-link">VuwiProgressCircle</router-link> in conjunction with the spinner animations to achieve custom effects.
-    </div>
-
+    <!-- Progress Circle -->
+    <VueSection id="progresscircle" title="Progress Circle">
+      These examples use the <router-link to="/components/progresscircle" class="wi-link">VProgressCircle</router-link> 
+      in conjunction with the <code>animate-spin</code> to provide some unique animations.
+    </VueSection>
     <ExampleCard source="spinner/progresscircle">
       <SpinnerProgressCircle />
     </ExampleCard>
-
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Spinner/VuwiSpinner.css" />
 
     <!-- Page Nav -->
     <PageNav />
