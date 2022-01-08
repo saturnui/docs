@@ -90,6 +90,8 @@ onMounted(async () => {
       <ComponentCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
     <VueSection
       id="basic"
