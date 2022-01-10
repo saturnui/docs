@@ -10,6 +10,22 @@ const sidenavItems = [
   { title: 'Progress Circle', anchor: '#progresscircle' },
 ]
 
+const props = [
+  {
+    name: 'className',
+    type: 'string',
+    defaultVal: 'wi-spinner',
+    desc: 'Default class used by component',
+  },
+]
+
+const slots = [
+  {
+    name: 'default',
+    desc: 'Slot contains component such as icon, text, etc.',
+  },
+]
+
 const showDrawer = ref(false)
 const handleSwipeEnd = (data: { direction: string }) => {
   if (data.direction === 'RIGHT') showDrawer.value = false
@@ -47,7 +63,7 @@ onMounted(async () => {
       Vuwi provides classes that can spin using CSS animate. In addition there is a very light-weight class that
       will show a Tailwind Component spinner for simple usage. If you need a more complex spinner, then you can combine
       Vuwi spin classes with the
-      <router-link to="/components/progresscircle" class="wi-link">VProgressCircle</router-link> component.
+      <router-link to="/components/progresscircle" class="wi-link">VProgressCircle</router-link>component.
     </div>
 
     <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
@@ -59,29 +75,37 @@ onMounted(async () => {
     <VueTitleBar title="Vue Component"></VueTitleBar>
 
     <!-- Basic -->
-    <VueSection id="basic" title="Basic Usage">
-      The following demonstrates the default spinner.
-    </VueSection>
+    <VueSection id="basic" title="Basic Usage">The following demonstrates the default spinner.</VueSection>
     <ExampleCard source="spinner/basic">
       <SpinnerBasic />
     </ExampleCard>
 
     <!-- Customization -->
-    <VueSection id="custom" title="Customizations">
-      Here are some examples of style changes you can make to change the appearance.
-    </VueSection>
+    <VueSection
+      id="custom"
+      title="Customizations"
+    >Here are some examples of style changes you can make to change the appearance.</VueSection>
     <ExampleCard source="spinner/variants">
       <SpinnerVariants />
     </ExampleCard>
 
     <!-- Progress Circle -->
     <VueSection id="progresscircle" title="Progress Circle">
-      These examples use the <router-link to="/components/progresscircle" class="wi-link">VProgressCircle</router-link> 
-      in conjunction with the <code>animate-spin</code> to provide some unique animations.
+      These examples use the
+      <router-link to="/components/progresscircle" class="wi-link">VProgressCircle</router-link>in conjunction with the
+      <code>animate-spin</code> to provide some unique animations.
     </VueSection>
     <ExampleCard source="spinner/progresscircle">
       <SpinnerProgressCircle />
     </ExampleCard>
+
+    <!-- Properties -->
+    <VueSection id="props" title="Properties"></VueSection>
+    <ApiCard :api="props" class="w-full" />
+
+    <!-- Slots -->
+    <VueSection id="slots" title="Slots"></VueSection>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

@@ -18,10 +18,6 @@ const sidenavItems = [
 ]
 
 const showDrawer = ref(false)
-const handleSwipeEnd = (data: { direction: string }) => {
-  if (data.direction === 'RIGHT') showDrawer.value = false
-}
-
 const mounted = ref(false)
 onMounted(async () => {
   mounted.value = true
@@ -34,7 +30,7 @@ onMounted(async () => {
   </teleport>
 
   <teleport v-if="mounted" to="#sidemenu">
-    <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
+    <VOverlay v-model="showDrawer" position="right">
       <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" />
       </div>

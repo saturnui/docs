@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const text = 'I\'m an alert that informs you of stuff.'
 const showAlert = ref(false)
 
 </script>
@@ -9,7 +8,7 @@ const showAlert = ref(false)
     <VButton class="absolute wi-mc wi-primary" @click="showAlert = true">Show Alert</VButton>
     <transition name="alert">
       <VAlert v-if="showAlert" class="py-1 wi-danger z-10" role="alert">
-        <span class="p-3 pl-5">{{ text }}</span>
+        <span class="p-3 pl-5">I'm an alert that informs you of stuff.</span>
         <VButton icon class="mr-2" @click="showAlert = false">
           <tabler-x class="text-xl" />
         </VButton>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ToastCollapse from './notification/collapse.vue'
-import NotificationExample from './notification/notification.vue'
+import ToastCollapse from './toast/collapse.vue'
+import NotificationExample from './toast/custom.vue'
 
 const sidenavItems = [
   { title: 'Toast', anchor: '#toast' },

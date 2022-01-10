@@ -12,7 +12,7 @@ const slots = useSlots()
 </script>
 
 <template>
-  <div :id="id" class="doc-subtitle">
+  <div :id="id" class="flex items-center gap-2 px-2 pt-8 mb-10">
     <div class="relative rounded-lg overflow-hidden">
       <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-light-blue-800">
         <file-icons:windi class="text-white h-4 h-4 mt-3 ml-4" />

@@ -36,12 +36,32 @@ const props = [
   },
 ]
 
+const slots = [
+  {
+    name: 'track',
+    desc: 'Slot background layer',
+  },
+  {
+    name: 'highlight',
+    desc: 'Slot indicates the selected range',
+  },
+  {
+    name: 'thumb-left',
+    desc: 'Slot represents the left thumb when a range is displayed',
+  },
+  {
+    name: 'thumb-right',
+    desc: 'Slot represents the right thumb of the slider',
+  },
+]
+
 const sidenavItems = [
   { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Custom', anchor: '#custom' },
   { title: 'Range', anchor: '#range' },
   { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
 ]
 
 const showDrawer = ref(false)
@@ -115,6 +135,10 @@ onMounted(async () => {
     <!-- Properties -->
     <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
+
+    <!-- Slots -->
+    <VueSection id="slots" title="Slots"></VueSection>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

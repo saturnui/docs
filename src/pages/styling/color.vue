@@ -39,7 +39,6 @@ onMounted(async () => {
       <tabler-arrow-bar-to-left />
     </VButton>
   </teleport>
-  </teleport>
 
   <div class="wi-content p-2 sm:p-8">
     <div class="doc-title">
