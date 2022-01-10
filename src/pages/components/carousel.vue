@@ -167,7 +167,7 @@ onMounted(async () => {
     <!-- Tabs -->
     <VueSection id="tabs" title="Tabs">
       This example demonstrates using the
-      <router-link to="/components/tab" class="wi-link">VTab</router-link>control
+      <router-link to="/components/tab" class="wi-link">VTab</router-link> control
       with VCarousel.
     </VueSection>
     <ExampleCard source="/carousel/tabs">

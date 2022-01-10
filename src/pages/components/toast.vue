@@ -53,7 +53,7 @@ onMounted(async () => {
       This example shows how to create a toast using the <code>VCollapse</code> component. This allows
       items such as a FAB button to remain in view when a toast is displayed.
     </VueSection>
-    <ExampleCard source="notification/toast" content-class="">
+    <ExampleCard source="toast/collapse" content-class="">
       <ToastCollapse />
     </ExampleCard>
 
@@ -66,7 +66,7 @@ onMounted(async () => {
       >useMessenger</a> and a
       custom component that supports pagination.
     </VueSection>
-    <ExampleCard source="notification/notification" content-class="">
+    <ExampleCard source="toast/custom" content-class="">
       <NotificationExample />
     </ExampleCard>
 

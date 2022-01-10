@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TextInputBasic from './menu/basic.vue'
+import MenuBasic from './menu/basic.vue'
 
 const api = [
   {
@@ -59,8 +59,8 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="textinput/basic.vue">
-      <TextInputBasic />
+    <ExampleCard source="menu/basic">
+      <MenuBasic />
     </ExampleCard>
 
     <!-- API -->

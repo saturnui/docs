@@ -82,8 +82,7 @@ onMounted(async () => {
       <code>label</code> or
       <code>button</code>.
     </VueSection>
-
-    <ExampleCard source="line/label" content-class="grid gap-6 px-4 py-6 gap-4">
+    <ExampleCard source="line/variants" content-class="grid gap-6 px-4 py-6 gap-4">
       <ComponentVariants />
     </ExampleCard>
 

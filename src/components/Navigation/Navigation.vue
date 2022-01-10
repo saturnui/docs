@@ -3,7 +3,7 @@ import IconNotebook from '~icons/tabler/notebook'
 import IconBox from '~icons/tabler/box'
 import IconComposable from '~icons/tabler/math-function'
 import IconStyle from '~icons/tabler/palette'
-import { isDark, toggleDark, useSdk } from '~/composables'
+import { isDark, toggleDark } from '~/composables'
 
 import { useAppStore } from '~/stores/app'
 const appStore = useAppStore()
@@ -29,7 +29,6 @@ const emit = defineEmits(['close'])
 // const { t } = useI18n()
 const router = useRouter()
 const showMenu = ref(false)
-const sdk = useSdk()
 
 const navTo = (path: string) => {
   router.push(path)
@@ -39,12 +38,6 @@ const navTo = (path: string) => {
 
 const toggleDarkMode = () => {
   toggleDark()
-  emit('close')
-}
-
-const signout = async () => {
-  await sdk.signout()
-  router.push('signin')
   emit('close')
 }
 
@@ -61,19 +54,11 @@ const menuItems: MenuItem[] = [
       { title: 'Getting Started', to: '/getting-started' },
     ],
   },
-  // {
-  //   collapsible: true,
-  //   title: 'Getting Started',
-  //   icon: IconFiles,
-  //   image: '',
-  //   links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
-  // },
   {
     collapsible: false,
     title: 'Styling',
     icon: IconStyle,
     image: '',
-    // image: '/icons/components.png',
     links: appStore.stylingPages,
   },
   {
@@ -81,23 +66,8 @@ const menuItems: MenuItem[] = [
     title: 'Components',
     icon: IconBox,
     image: '',
-    // image: '/icons/components.png',
     links: appStore.componentPages,
   },
-  {
-    collapsible: false,
-    title: 'Composables',
-    icon: IconComposable,
-    image: '',
-    links: [{ title: 'Dark Mode', to: '/examples/protected' }, { title: 'SDK', to: '/examples/protected' }, { title: 'Validators', to: '/examples/protected' }],
-  },
-  // {
-  //   collapsible: true,
-  //   title: 'Examples',
-  //   icon: IconExample,
-  //   image: '',
-  //   links: [{ title: 'Form', to: '/examples/form' }, { title: 'Protected', to: '/examples/protected' }],
-  // },
 ]
 </script>
 
@@ -166,26 +136,10 @@ const menuItems: MenuItem[] = [
         class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
         role="menuitem"
         tabindex="-1"
-        @click="navTo('profile')"
-      >
-        <tabler-user />
-      </div>
-      <div
-        class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
-        role="menuitem"
-        tabindex="-1"
         @click="toggleDarkMode"
       >
         <carbon-moon v-if="isDark" />
         <carbon-sun v-else />
-      </div>
-      <div
-        class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
-        role="menuitem"
-        tabindex="-1"
-        @click="signout"
-      >
-        <tabler-logout />
       </div>
     </div>
   </div>

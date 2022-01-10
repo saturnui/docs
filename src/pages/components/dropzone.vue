@@ -71,7 +71,7 @@ onMounted(async () => {
       to retain recently dropped files until they are cleared. The <router-link to="/components/image" class="wi-link">Image</router-link>
       component is used to display the <code>File</code> objects.
     </VueSection>
-    <ExampleCard source="textinput/basic.vue" content-class="">
+    <ExampleCard source="dropzone/basic" content-class="">
       <DropzoneBasic />
     </ExampleCard>
 

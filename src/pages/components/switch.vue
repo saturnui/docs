@@ -59,7 +59,7 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="switch/basic.vue">
+    <ExampleCard source="switch/basic">
       <SwitchBasic />
     </ExampleCard>
 

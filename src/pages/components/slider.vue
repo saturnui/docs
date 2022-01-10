@@ -104,7 +104,9 @@ onMounted(async () => {
     </div>
 
     <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
-    <ExampleCard theme="Slider.css" />
+    <ExampleCard theme="Slider.css">
+      TODO: Tailwind only example
+    </ExampleCard>
 
     <VueTitleBar title="Vue Component"></VueTitleBar>
 

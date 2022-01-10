@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
-import { useSdk } from '~/composables/sdk'
 import { useUserStore } from '~/stores/user'
 import { isDark, toggleDark } from '~/composables'
 
 const userStore = useUserStore()
 const router = useRouter()
-const sdk = useSdk()
 const showDrawer = ref(false)
 const showMenu = ref(false)
 const menu = ref()
@@ -38,17 +36,6 @@ const openMenu = () => {
     })
   })
 }
-
-const signout = async () => {
-  await sdk.signout()
-  router.push('signin')
-}
-
-// onBeforeMount(async () => {
-// const { data } = await sdk.me()
-// userStore.setUser(data)
-// if (!data) router.push('signin')
-// })
 </script>
 
 <template>
@@ -107,15 +94,6 @@ const signout = async () => {
               <carbon-sun v-else />
               <span v-if="isDark" class="whitespace-nowrap pr-2">Appearance: Dark</span>
               <span v-else class="whitespace-nowrap pr-2">Appearance: Light</span>
-            </div>
-            <div
-              class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
-              role="menuitem"
-              tabindex="-1"
-              @click="signout"
-            >
-              <tabler-logout />
-              <span>Sign out</span>
             </div>
           </div>
         </transition>
