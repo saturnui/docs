@@ -36,13 +36,12 @@ const events = [
 ]
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Overlay', anchor: '#overlay' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
   { title: 'Events', anchor: '#events' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -85,46 +84,40 @@ onMounted(async () => {
     </div>
 
     <!-- CSS -->
-    <VueTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript.
-    </VueTitleBar>
-    <ExampleCard source="dialog/css" content-class="p-4 flex justify-center bg-dark-100">
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="dialog/css" content-class="p-4 flex justify-center bg-dark-100" theme="TextInput.css">
       <DialogCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic Usage -->
-    <VueTitleBar id="basic" title="Basic Usage">
-      Description here...
-    </VueTitleBar>
+    <VueSection id="basic" title="Basic Usage">
+      TODO: Description here...
+    </VueSection>
     <ExampleCard source="dialog/basic" content-class="p-4 flex justify-center bg-dark-100">
       <DialogBasic />
     </ExampleCard>
 
     <!-- Overlay -->
-    <VueTitleBar id="overlay" title="Overlay">
+    <VueSection id="overlay" title="Overlay">
       Show using dialog with <code>VOverlay</code> to create a modal window.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="dialog/overlay" content-class="flex justify-center bg-dark-100 h-70">
       <DialogOverlay />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Events -->
-    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <VueSection id="events" title="Events"></VueSection>
     <NameDescCard :api="events" class="w-full" />
-
-    <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="TextInput.css" />
 
     <!-- Page Nav -->
     <PageNav />

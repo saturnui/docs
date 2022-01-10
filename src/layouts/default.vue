@@ -1,29 +1,3 @@
-<script lang="ts" setup>
-// import { storeToRefs } from 'pinia'
-// import { useSdk } from '~/composables/sdk'
-// import { useUserStore } from '~/stores/user'
-// const userStore = useUserStore()
-// const { user } = storeToRefs(userStore)
-// const router = useRouter()
-// const sdk = useSdk()
-
-// onBeforeMount(async () => {
-//   const { data } = await sdk.me()
-//   userStore.setUser(data)
-//   if (!data)
-//     router.push('signin')
-// })
-
-// const user = {}
-// const showDrawer = ref(false)
-const showToast = ref(false)
-
-const { onAddMessage } = useMessenger()
-onAddMessage(() => {
-  showToast.value = true
-})
-</script>
-
 <template>
   <img
     src="/vuwi-background.png"
@@ -47,6 +21,5 @@ onAddMessage(() => {
       </div>
       <div id="sidemenu" class="absolute z-10"></div>
     </div>
-    <!-- <Banner /> -->
   </div>
 </template>

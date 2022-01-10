@@ -2,9 +2,7 @@
 import MockWindow from './mock/window.vue'
 
 const sidenavItems = [
-  { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'Variations', anchor: '#variations' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Window', anchor: '#window' },
 ]
 
 const showDrawer = ref(false)
@@ -40,16 +38,14 @@ onMounted(async () => {
   <div class="wi-content doc-content">
     <!-- Title -->
     <div class="doc-title">Mocks</div>
-    <div class="doc-desc">CSS components for showing content in a mock device.</div>
+    <div class="doc-desc">Tailwind components for showing content in a mock device.</div>
 
-    <CssTitleBar id="css" title="Window"></CssTitleBar>
-    <ExampleCard source="/mock/window/css" content-class="p-4 space-y-4">
+    <CssTitleBar id="css" title="Tailwind Components"></CssTitleBar>
+
+    <VueSection id="window" title="Window"></VueSection>
+    <ExampleCard source="/mock/window/css" content-class="p-4 space-y-4" theme="Mock.css">
       <MockWindow />
     </ExampleCard>
-
-    <!-- Style -->
-    <CssTitleBar id="theme" title="Window Default Theme">The default styles for this component.</CssTitleBar>
-    <StyleCard source="Mock.css" />
 
     <!-- Page Nav -->
     <PageNav />

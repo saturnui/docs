@@ -60,7 +60,6 @@ const sidenavItems = [
   { title: 'Group', anchor: '#group' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -101,41 +100,46 @@ onMounted(async () => {
       allowing one item in the group to be visible.
     </div>
 
+    <!-- Default Theme -->
+    <CssTitleBar id="theme" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard theme="Collapse.css">
+      <!-- <CollapseHeadless /> -->
+      TODO: Tailwind Component Example
+    </ExampleCard>
+
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="headless" title="Headless">
+    <VueSection id="headless" title="Headless">
       By default, collapse will only animate the content. Headers
       are optional.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="collapse/headless">
       <CollapseHeadless />
     </ExampleCard>
 
     <!-- Header -->
-    <VueTitleBar id="header" title="Header">Adds a header to open and close the content.</VueTitleBar>
+    <VueSection id="header" title="Header">Adds a header to open and close the content.</VueSection>
     <ExampleCard source="collapse/header">
       <CollapseHeader />
     </ExampleCard>
 
     <!-- Group -->
-    <VueTitleBar id="group" title="Group">
+    <VueSection id="group" title="Group">
       Only allow a single collapse to display by using the
       <code>group</code> property.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="collapse/group">
       <CollapseGroup />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
-
-    <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme"></CssTitleBar>
-    <StyleCard source="Collapse.css" />
 
     <!-- Page Nav -->
     <PageNav />

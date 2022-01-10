@@ -75,20 +75,22 @@ onMounted(async () => {
       <code>File</code> objects.
     </div>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic Usage -->
-    <VueTitleBar
+    <VueSection
       id="basic"
       title="Basic Usage"
-    >This example demonstrates using a button and label to show the file to be uploaded.</VueTitleBar>
+    >This example demonstrates using a button and label to show the file to be uploaded.</VueSection>
     <ExampleCard source="fileselector/basic.vue" content-class="flex p-4 gap-4">
       <FileSelectorBasic />
     </ExampleCard>
 
     <!-- Variation -->
-    <VueTitleBar
+    <VueSection
       id="variation"
       title="Variation"
-    >Demonstrates a more custom look for uploading an image.</VueTitleBar>
+    >Demonstrates a more custom look for uploading an image.</VueSection>
     <ExampleCard
       source="fileselector/variation.vue"
       content-class="flex items-center justify-center p-4 gap-4"
@@ -97,20 +99,20 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Multiple -->
-    <VueTitleBar
+    <VueSection
       id="multiple"
       title="Multiple Files"
-    >Demonstrates allowing multiple files to be selected.</VueTitleBar>
+    >Demonstrates allowing multiple files to be selected.</VueSection>
     <ExampleCard source="fileselector/multiple.vue" content-class="p-4 grid gap-2">
       <FileSelectorMultiple />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties" />
+    <VueSection id="props" title="Properties" />
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->

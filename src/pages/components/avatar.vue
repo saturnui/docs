@@ -2,7 +2,7 @@
 import AvatarPhoto from './avatar/photo.vue'
 import AvatarName from './avatar/name.vue'
 import AvatarCss from './avatar/css.vue'
-import VueTitleBar from '~/components/ExampleTitleBar/VueTitleBar.vue'
+import VueSection from '~/components/ExampleTitleBar/VueSection.vue'
 
 const props = [
   {
@@ -26,11 +26,10 @@ const props = [
 ]
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Name', anchor: '#name' },
   { title: 'Photo', anchor: '#photo' },
   { title: 'Properties', anchor: '#props' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -73,20 +72,23 @@ onMounted(async () => {
       or first initial.
     </div>
 
-    <!-- CSS Only -->
-    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
+    <!-- Tailwind Component -->
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
     <ExampleCard
       source="/avatar/css"
       content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
+      theme="Avatar.css"
     >
       <AvatarCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Name -->
-    <VueTitleBar id="name" title="Name">
+    <VueSection id="name" title="Name">
       Example show
       <code>name</code> usage.
-    </VueTitleBar>
+    </VueSection>
 
     <ExampleCard
       source="/avatar/name"
@@ -96,10 +98,10 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Photo -->
-    <VueTitleBar id="photo" title="Photo">
+    <VueSection id="photo" title="Photo">
       Example show
       <code>photo</code> usage.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard
       source="/avatar/photo"
       content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
@@ -108,14 +110,8 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- API -->
-    <VueTitleBar id="css" title="Properties" />
+    <VueSection id="css" title="Properties" />
     <ApiCard :api="props" class="w-full" />
-
-    <!-- Style Guide -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="Avatar.css" />
 
     <!-- Page Nav -->
     <PageNav />

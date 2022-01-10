@@ -11,6 +11,7 @@ const items = [
 <template>
   <VSelect
     v-model="selectedItem"
+    name="mood"
     :options="items"
     class="border wi-border min-w-60"
   />

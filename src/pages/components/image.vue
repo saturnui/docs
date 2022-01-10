@@ -74,20 +74,22 @@ onMounted(async () => {
       <router-link to="/components/dropzone" class="wi-link">Drop Zone</router-link> components.
     </div>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage">
+    <VueSection id="basic" title="Basic Usage">
       This example uses the image component to show a selected file.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="textinput/basic" content-class="p-4 flex flex-col items-center gap-4">
       <ImageBasic />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Events -->
-    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <VueSection id="events" title="Events"></VueSection>
     <NameDescCard :api="events" class="w-full" />
   </div>
 </template>

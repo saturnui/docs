@@ -63,41 +63,37 @@ onMounted(async () => {
       class="doc-desc"
     >Line provides a line break. It also supports an optional slot for inserting a label or another component.</div>
 
-    <CssTitleBar id="css" title="CSS Only">Tailwind Component - No JavaScript.</CssTitleBar>
-    <ExampleCard source="/line/css" content-class="px-4 py-6">
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="/line/css" content-class="px-4 py-6" theme="Line.css">
       <ComponentCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage" />
+    <VueSection id="basic" title="Basic Usage" />
     <ExampleCard source="line/basic" content-class="px-4 py-6">
       <ComponentBasic />
     </ExampleCard>
 
     <!-- Slot -->
-    <VueTitleBar id="variants" title="Variants">
+    <VueSection id="variants" title="Variants">
       With the slot you can insert any element such as a
       <code>label</code> or
       <code>button</code>.
-    </VueTitleBar>
+    </VueSection>
 
     <ExampleCard source="line/label" content-class="grid gap-6 px-4 py-6 gap-4">
       <ComponentVariants />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
-
-    <!-- Style Guide -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="Line.css" />
 
     <!-- Page Nav -->
     <PageNav />

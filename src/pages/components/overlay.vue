@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import OverlayBasic from './overlay/basic.vue'
-import VueTitleBar from '~/components/ExampleTitleBar/VueTitleBar.vue'
+import VueSection from '~/components/ExampleTitleBar/VueSection.vue'
 
 const props = [
   {
@@ -44,7 +44,6 @@ const props = [
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Properties', anchor: '#props' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const showDrawer = ref(false)
@@ -86,25 +85,28 @@ onMounted(async () => {
       and can be used for creating loaders, dialogs and more.
     </div>
 
+    <!-- Style Guide -->
+    <CssTitleBar id="theme" title="Tailwind Component">
+    </CssTitleBar>
+    <ExampleCard theme="Overlay.css">
+      TODO: Examples
+    </ExampleCard>
+
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar id="basic" title="Basic Usage">
+    <VueSection id="basic" title="Basic Usage">
       The example below shows different features available in the overlay.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="overlay/basic.vue" class="doc-padding-none" content-class="">
       <OverlayBasic />
     </ExampleCard>
 
     <!-- API -->
-    <VueTitleBar id="props" title="Properties">
+    <VueSection id="props" title="Properties">
       The example below shows different features available in the overlay.
-    </VueTitleBar>
+    </VueSection>
     <ApiCard :api="props" class="w-full" />
-
-    <!-- Style Guide -->
-    <CssTitleBar id="theme" title="Default Theme">
-      The default styles for this component.
-    </CssTitleBar>
-    <StyleCard source="Overlay.css" />
 
     <!-- Page Nav -->
     <PageNav />

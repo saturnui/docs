@@ -1,19 +1,67 @@
 <script setup lang="ts">
 import SliderBasic from './slider/basic.vue'
+import SliderCustom from './slider/custom.vue'
+import SliderRange from './slider/range.vue'
 
-const api = [
+const props = [
   {
-    name: 'theme',
+    name: 'className',
     type: 'string',
-    defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    defaultVal: 'wi-slider',
+    desc: 'Default class used by component',
+  },
+  {
+    name: 'modelValue',
+    type: 'number | string | number[]',
+    defaultVal: 100,
+    desc: 'Current value of the slider',
+  },
+  {
+    name: 'min',
+    type: 'number | string',
+    defaultVal: 0,
+    desc: 'Minimum allowed value',
+  },
+  {
+    name: 'max',
+    type: 'number | string',
+    defaultVal: 100,
+    desc: 'Maximum allowed value',
+  },
+  {
+    name: 'step',
+    type: 'number | string',
+    defaultVal: 1,
+    desc: 'Sets the tick interval',
+  },
+]
+
+const slots = [
+  {
+    name: 'track',
+    desc: 'Slot background layer',
+  },
+  {
+    name: 'highlight',
+    desc: 'Slot indicates the selected range',
+  },
+  {
+    name: 'thumb-left',
+    desc: 'Slot represents the left thumb when a range is displayed',
+  },
+  {
+    name: 'thumb-right',
+    desc: 'Slot represents the right thumb of the slider',
   },
 ]
 
 const sidenavItems = [
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Custom', anchor: '#custom' },
+  { title: 'Range', anchor: '#range' },
+  { title: 'Properties', anchor: '#props' },
+  { title: 'Slots', anchor: '#slots' },
 ]
 
 const showDrawer = ref(false)
@@ -50,26 +98,47 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Slider</div>
     <div class="doc-desc">
-      Description here...
+      The
+      <code>VSlider</code> component is a better visualization of the number input.
+      It is used for gathering numerical user data.
     </div>
+
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard theme="Slider.css" />
+
+    <VueTitleBar title="Vue Component"></VueTitleBar>
 
     <!-- Basic -->
-    <div id="basic" class="doc-subtitle">Basic Usage</div>
-    <div class="doc-detail">
-      Details here...
-    </div>
-
-    <ExampleCard source="slider/basic.vue">
+    <VueSection id="basic" title="Basic Usage">Single value with a range betwen 0 - 100.</VueSection>
+    <ExampleCard source="slider/basic" content-class="p-4 flex items-center gap-4">
       <SliderBasic />
     </ExampleCard>
 
-    <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
+    <!-- Custom -->
+    <VueSection
+      id="custom"
+      title="Custom"
+    >This example demonstrates navigating items via external control.</VueSection>
+    <ExampleCard source="slider/custom">
+      <SliderCustom />
+    </ExampleCard>
 
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- Range -->
+    <VueSection
+      id="range"
+      title="Range"
+    >This example demonstrates navigating items via external control.</VueSection>
+    <ExampleCard source="slider/range" content-class="p-4 flex items-center gap-4">
+      <SliderRange />
+    </ExampleCard>
+
+    <!-- Properties -->
+    <VueSection id="props" title="Properties"></VueSection>
+    <ApiCard :api="props" class="w-full" />
+
+    <!-- Slots -->
+    <VueSection id="slots" title="Slots"></VueSection>
+    <NameDescCard :api="slots" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

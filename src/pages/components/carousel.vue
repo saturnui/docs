@@ -10,7 +10,7 @@ import CarouselSkip from './carousel/skip.vue'
 import CarouselMultiple from './carousel/multiple.vue'
 
 const sidenavItems = [
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
   { title: 'Navigation', anchor: '#nav' },
   { title: 'Vertical', anchor: '#vertical' },
@@ -21,7 +21,6 @@ const sidenavItems = [
   { title: 'Multiple items', anchor: '#multiple' },
   { title: 'Properties', anchor: '#props' },
   { title: 'Slots', anchor: '#slots' },
-  { title: 'Default Theme', anchor: '#theme' },
 ]
 
 const props = [
@@ -129,98 +128,96 @@ onMounted(async () => {
       class="doc-desc"
     >The VCarousel component is used to display large numbers of visual content and navigate through them.</div>
 
-    <CssTitleBar id="css" title="CSS Only">
-      Tailwind Component - No JavaScript. The default behavior will allow you to use a mouse,
+    <CssTitleBar id="css" title="Tailwind Component">
+      The default behavior will allow you to use a mouse,
       trackpad or mobile device to flick the slides. To control the navigation JavaScript is required.
     </CssTitleBar>
-    <ExampleCard source="/carousel/css">
+    <ExampleCard source="/carousel/css" theme="Carousel.css">
       <CarouselCss />
     </ExampleCard>
 
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
-    <VueTitleBar
+    <VueSection
       id="basic"
       title="Basic Usage"
-    >This example demonstrates navigating items via external control.</VueTitleBar>
+    >This example demonstrates navigating items via external control.</VueSection>
     <ExampleCard source="/carousel/basic">
       <CarouselBasic />
     </ExampleCard>
 
     <!-- Navigation -->
-    <VueTitleBar id="nav" title="Navigation">
+    <VueSection id="nav" title="Navigation">
       The carousel provides an API to navigate items using
       <code>prevSlide</code> and
       <code>nextSlide</code> methods or
       <code>v-model</code>.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="/carousel/navigation">
       <CarouselNav />
     </ExampleCard>
 
     <!-- Vertical -->
-    <VueTitleBar id="vertical" title="Vertical">The carousel can be navigated vertically</VueTitleBar>
+    <VueSection id="vertical" title="Vertical">The carousel can be navigated vertically</VueSection>
     <ExampleCard source="/carousel/vertical">
       <CarouselVertical />
     </ExampleCard>
 
     <!-- Tabs -->
-    <VueTitleBar id="tabs" title="Tabs">
+    <VueSection id="tabs" title="Tabs">
       This example demonstrates using the
       <router-link to="/components/tab" class="wi-link">VTab</router-link>control
       with VCarousel.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="/carousel/tabs">
       <CarouselTabs />
     </ExampleCard>
 
     <!-- Size -->
-    <VueTitleBar id="size" title="Size Variants">Different sized items are supported.</VueTitleBar>
+    <VueSection id="size" title="Size Variants">Different sized items are supported.</VueSection>
     <ExampleCard source="/carousel/sizes">
       <CarouselSize />
     </ExampleCard>
 
     <!-- Auto -->
-    <VueTitleBar id="auto" title="Auto Rotate">
+    <VueSection id="auto" title="Auto Rotate">
       This example demonstrates rotating through the carousel items
       automatically. The rotation will pause when mouse is over carousel.
-    </VueTitleBar>
+    </VueSection>
     <ExampleCard source="/carousel/auto">
       <CarouselAuto />
     </ExampleCard>
 
     <!-- Skip -->
-    <VueTitleBar
+    <VueSection
       id="skip"
       title="Skip Items"
-    >This example will move forward 2 slides on next and 1 slide on previous navigation.</VueTitleBar>
+    >This example will move forward 2 slides on next and 1 slide on previous navigation.</VueSection>
     <ExampleCard source="/carousel/auto">
       <CarouselSkip />
     </ExampleCard>
 
     <!-- Multiple -->
-    <VueTitleBar
+    <VueSection
       id="multiple"
       title="Multiple Items"
-    >Multiple items can be viewed and rotated through.</VueTitleBar>
+    >Multiple items can be viewed and rotated through.</VueSection>
     <ExampleCard source="/carousel/multiple">
       <CarouselMultiple />
     </ExampleCard>
 
     <!-- Properties -->
-    <VueTitleBar id="props" title="Properties"></VueTitleBar>
+    <VueSection id="props" title="Properties"></VueSection>
     <ApiCard :api="props" class="w-full" />
 
     <!-- Slots -->
-    <VueTitleBar id="slots" title="Slots"></VueTitleBar>
+    <VueSection id="slots" title="Slots"></VueSection>
     <NameDescCard :api="slots" class="w-full" />
 
     <!-- Events -->
-    <VueTitleBar id="events" title="Events"></VueTitleBar>
+    <VueSection id="events" title="Events"></VueSection>
     <NameDescCard :api="events" class="w-full" />
-
-    <!-- Default Theme -->
-    <CssTitleBar id="theme" title="Default Theme">The default styles for this component.</CssTitleBar>
-    <StyleCard source="Carousel.css" />
 
     <!-- Page Nav -->
     <PageNav />

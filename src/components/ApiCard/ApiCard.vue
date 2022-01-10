@@ -33,6 +33,11 @@ defineProps({
         <th
           class="px-5 py-3 border-b-2 wi-border wi-highlight-strong wi-text text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
         >
+          <span>Req</span>
+        </th>
+        <th
+          class="px-5 py-3 border-b-2 wi-border wi-highlight-strong wi-text text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+        >
           <span>Default</span>
         </th>
         <th
@@ -49,6 +54,9 @@ defineProps({
         </td>
         <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm">
           <code class="text-green-600 dark:text-green-300">{{ item.type }}</code>
+        </td>
+        <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm text-center">
+          <tabler-check v-if="item.required" class="text-green-500" />
         </td>
         <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm whitespace-nowrap">
           <code v-if="typeof item.defaultVal === 'string'" class="text-green-600 dark:text-green-300">'{{ item.defaultVal }}'</code>

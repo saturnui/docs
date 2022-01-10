@@ -18,6 +18,6 @@ setInterval(() => {
 
 <template>
   <div class="flex justify-center">
-    <VSpinner />
+    <VSpinner class="animate-spin" />
   </div>
 </template>

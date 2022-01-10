@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ProgressCircleCss from './progress/circle/css.vue'
 import ProgressCircleBasic from './progress/circle/basic.vue'
 import ProgressCircleVariants from './progress/circle/variants.vue'
 
@@ -16,7 +17,7 @@ watch(animate, (v: boolean) => {
   }
 })
 
-const api = [
+const props = [
   {
     name: 'theme',
     type: 'string',
@@ -50,9 +51,10 @@ const api = [
 ]
 
 const sidenavItems = [
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'API', anchor: '#api' },
-  { title: 'Style Guide', anchor: '#styles' },
+  { title: 'Customized', anchor: '#custom' },
+  { title: 'Properties', anchor: '#props' },
 ]
 
 const showDrawer = ref(false)
@@ -90,13 +92,21 @@ onMounted(async () => {
     <div class="doc-title">Progress Circle</div>
     <div class="doc-desc">Displays progression in a circular view</div>
 
+    <!-- CSS Usage -->
+    <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
+    <ExampleCard source="/progress/circle/css" theme="ProgressCircle.css" content-class="p-4 flex flex-wrap gap-8 items-center justify-center">
+      <ProgressCircleCss />
+    </ExampleCard>
+
+    <VueTitleBar title="Vue Component"></VueTitleBar>
+
     <!-- Basic -->
     <div id="basic" class="doc-subtitle">Basic Usage</div>
     <div
       class="doc-detail"
     >These examples demonstrate only a few different ways to style the progress circle.</div>
 
-    <ExampleCard source="progress/circle/basic.vue" content-class="">
+    <ExampleCard source="progress/circle/basic" content-class="">
       <div class="p-2 wi-highlight">
         <VSwitch v-model="animate" class="wi-switch-sm">
           <span class="pl-2">Animate</span>
@@ -108,12 +118,12 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Variants -->
-    <div id="basic" class="doc-subtitle">Variants</div>
+    <div id="custom" class="doc-subtitle">Customized</div>
     <div
       class="doc-detail"
     >Demonstrates different sizes and widths.</div>
 
-    <ExampleCard source="progress/circle/basic.vue" content-class="">
+    <ExampleCard source="progress/circle/variants" content-class="">
       <div class="p-2 wi-highlight">
         <VSwitch v-model="animate" class="wi-switch-sm">
           <span class="pl-2">Animate</span>
@@ -125,12 +135,8 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- API -->
-    <div id="api" class="doc-subtitle">API</div>
-    <ApiCard :api="api" class="w-full" />
-
-    <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="Progress/VuwiProgressCircle.css" />
+    <div id="props" class="doc-subtitle">Properties</div>
+    <ApiCard :api="props" class="w-full" />
 
     <!-- Page Nav -->
     <PageNav />

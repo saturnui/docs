@@ -85,14 +85,6 @@ onBeforeMount(async () => {
           <mdi-invert-colors />
         </button>
       </VTooltip>-->
-      <VTooltip placement="bottom">
-        <template #tooltip>
-          <span>View Source</span>
-        </template>
-        <VButton icon @click="showCode = !showCode">
-          <tabler-code />
-        </VButton>
-      </VTooltip>
       <VTooltip v-if="theme" placement="bottom">
         <template #tooltip>
           <span>View Default Theme</span>
@@ -101,7 +93,15 @@ onBeforeMount(async () => {
           <file-icons-tailwind class="text-lg" />
         </VButton>
       </VTooltip>
-      <VTooltip placement="bottom">
+      <VTooltip v-if="source" placement="bottom">
+        <template #tooltip>
+          <span>View Source</span>
+        </template>
+        <VButton icon @click="showCode = !showCode">
+          <tabler-code />
+        </VButton>
+      </VTooltip>
+      <VTooltip v-if="source" placement="bottom">
         <template #tooltip>
           <span>Github Source</span>
         </template>
@@ -119,12 +119,7 @@ onBeforeMount(async () => {
           :class="tabClass(view === 'html')"
           @click="view = 'html'"
         >HTML</VButton>
-        <VButton
-          v-if="js"
-          size="sm"
-          :class="tabClass(view === 'js')"
-          @click="view = 'js'"
-        >Script</VButton>
+        <VButton v-if="js" size="sm" :class="tabClass(view === 'js')" @click="view = 'js'">Script</VButton>
       </div>
       <!-- Script -->
       <div

@@ -4,7 +4,7 @@ import ColorText from './color/text.vue'
 
 const sidenavItems = [
   { title: 'Basic Usage', anchor: '#basic' },
-  { title: 'CSS Only', anchor: '#css' },
+  { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Transition', anchor: '#transition' },
   { title: 'Examples', anchor: '#examples' },
   { title: 'Default Theme', anchor: '#theme' },
@@ -38,7 +38,6 @@ onMounted(async () => {
     <VButton icon class="xl:hidden doc-sidenav-btn" @click="showDrawer = true">
       <tabler-arrow-bar-to-left />
     </VButton>
-  </teleport>
   </teleport>
 
   <div class="wi-content p-2 sm:p-8">
