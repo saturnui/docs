@@ -80,7 +80,7 @@ onMounted(async () => {
     <VueSection id="basic" title="Basic Usage">
       This example uses the image component to show a selected file.
     </VueSection>
-    <ExampleCard source="textinput/basic" content-class="p-4 flex flex-col items-center gap-4">
+    <ExampleCard source="image/basic" content-class="p-4 flex flex-col items-center gap-4">
       <ImageBasic />
     </ExampleCard>
 

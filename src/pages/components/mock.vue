@@ -43,7 +43,7 @@ onMounted(async () => {
     <CssTitleBar id="css" title="Tailwind Components"></CssTitleBar>
 
     <VueSection id="window" title="Window"></VueSection>
-    <ExampleCard source="/mock/window/css" content-class="p-4 space-y-4" theme="Mock.css">
+    <ExampleCard source="/mock/window" content-class="p-4 space-y-4" theme="Mock.css">
       <MockWindow />
     </ExampleCard>
 

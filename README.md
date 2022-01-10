@@ -25,4 +25,4 @@ Official Vuwi Documentation
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/vuwijs/starter).
+[Create a repo from this template on GitHub](https://github.com/vuwijs/template).

@@ -82,7 +82,7 @@ onMounted(async () => {
       id="basic"
       title="Basic Usage"
     >This example demonstrates using a button and label to show the file to be uploaded.</VueSection>
-    <ExampleCard source="fileselector/basic.vue" content-class="flex p-4 gap-4">
+    <ExampleCard source="fileselector/basic" content-class="flex p-4 gap-4">
       <FileSelectorBasic />
     </ExampleCard>
 
@@ -92,7 +92,7 @@ onMounted(async () => {
       title="Variation"
     >Demonstrates a more custom look for uploading an image.</VueSection>
     <ExampleCard
-      source="fileselector/variation.vue"
+      source="fileselector/variation"
       content-class="flex items-center justify-center p-4 gap-4"
     >
       <FileSelectorVariation />
@@ -103,7 +103,7 @@ onMounted(async () => {
       id="multiple"
       title="Multiple Files"
     >Demonstrates allowing multiple files to be selected.</VueSection>
-    <ExampleCard source="fileselector/multiple.vue" content-class="p-4 grid gap-2">
+    <ExampleCard source="fileselector/multiple" content-class="p-4 grid gap-2">
       <FileSelectorMultiple />
     </ExampleCard>
 

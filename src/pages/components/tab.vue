@@ -48,7 +48,7 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Tabs</div>
+    <div class="doc-title">Tabs (WIP)</div>
     <div class="doc-desc">
       Description here...
     </div>
@@ -59,7 +59,7 @@ onMounted(async () => {
       Details here...
     </div>
 
-    <ExampleCard source="tab/basic.vue">
+    <ExampleCard source="tab/basic">
       <TabBasic />
     </ExampleCard>
 

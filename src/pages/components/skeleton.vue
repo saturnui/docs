@@ -59,7 +59,7 @@ onMounted(async () => {
       The means to create your own skelton components is provided by Tailwind CSS. You can learn more here 
       <a href="https://tailwindcss.com/docs/animation#pulse" class="wi-link">https://tailwindcss.com/docs/animation#pulse</a>.
     </CssTitleBar>
-    <ExampleCard source="/component/css">
+    <ExampleCard source="/skeleton/css">
       <SkeletonCss />
     </ExampleCard>
 

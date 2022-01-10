@@ -156,7 +156,7 @@ onMounted(async () => {
     </div>
 
     <!-- Textfield -->
-    <ExampleCard source="textinput/basic.vue">
+    <ExampleCard source="textinput/textfield">
       <TextInputTextfield />
     </ExampleCard>
 
@@ -166,7 +166,7 @@ onMounted(async () => {
       Multiline changes the behavior to a
       <span class="text-purple-500 font-bold">textarea</span>.
     </div>
-    <ExampleCard source="textinput/multiline/basic.vue">
+    <ExampleCard source="textinput/textarea">
       <TextInputTextarea />
     </ExampleCard>
 
@@ -176,7 +176,7 @@ onMounted(async () => {
       By default, textinput doesn't have any styling applied allowing you to determine the appearance. Helper
       classes are provided to easily give it a traditional appearance.
     </div>
-    <ExampleCard source="textinput/style.vue">
+    <ExampleCard source="textinput/style">
       <TextInputStyle />
     </ExampleCard>
 
@@ -191,22 +191,22 @@ onMounted(async () => {
     </div>
 
     <div class="grid gap-4">
-      <ExampleCard title="Clearable example with icon" source="textinput/slots/clearable.vue">
+      <ExampleCard title="Clearable example with icon" source="textinput/slots/clearable">
         <TextInputSlotsClearable />
       </ExampleCard>
 
-      <ExampleCard title="Toggle show password with icon" source="textinput/slots/password.vue">
+      <ExampleCard title="Toggle show password with icon" source="textinput/slots/password">
         <TextInputSlotsPassword />
       </ExampleCard>
 
-      <ExampleCard title="Busy indicator with check" source="textinput/slots/busy.vue">
+      <ExampleCard title="Busy indicator with check" source="textinput/slots/busy">
         <TextInputSlotsBusy />
       </ExampleCard>
     </div>
 
     <div id="disabled" class="doc-subtitle">Disabled</div>
     <div class="doc-detail">Indicates text input is disabled</div>
-    <ExampleCard source="textinput/disabled.vue">
+    <ExampleCard source="textinput/disabled">
       <TextInputDisabled />
     </ExampleCard>
 
@@ -220,7 +220,7 @@ onMounted(async () => {
         class="doc-link"
       >maska</a>.
     </div>
-    <ExampleCard source="textinput/mask.vue">
+    <ExampleCard source="textinput/mask">
       <TextInputMask />
     </ExampleCard>
 
@@ -231,15 +231,15 @@ onMounted(async () => {
     >Rules require the user input to meet certain requirements in order to be valid. Rules are implemented using <a href="https://vee-validate.logaretm.com/v4/" target="_blank" class="doc-link">vee-validate</a>.</div>
 
     <div class="grid gap-4">
-      <ExampleCard source="textinput/rules/required.vue" title="Required example">
+      <ExampleCard source="textinput/rules/required" title="Required example">
         <TextInputRules />
       </ExampleCard>
 
-      <ExampleCard source="textinput/rules/email.vue" title="Email example">
+      <ExampleCard source="textinput/rules/email" title="Email example">
         <TextInputEmail />
       </ExampleCard>
 
-      <ExampleCard source="textinput/rules/password.vue" title="Password example using custom validator">
+      <ExampleCard source="textinput/rules/password" title="Password example using custom validator">
         <TextInputPassword />
       </ExampleCard>
     </div>
@@ -252,7 +252,7 @@ onMounted(async () => {
         class="text-purple-600"
       >error</span> property
     </div>
-    <ExampleCard source="textinput/error.vue">
+    <ExampleCard source="textinput/error">
       <TextInputError />
     </ExampleCard>
 

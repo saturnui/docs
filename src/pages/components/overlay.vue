@@ -98,7 +98,7 @@ onMounted(async () => {
     <VueSection id="basic" title="Basic Usage">
       The example below shows different features available in the overlay.
     </VueSection>
-    <ExampleCard source="overlay/basic.vue" class="doc-padding-none" content-class="">
+    <ExampleCard source="overlay/basic" class="doc-padding-none" content-class="">
       <OverlayBasic />
     </ExampleCard>
 
