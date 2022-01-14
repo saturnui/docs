@@ -45,6 +45,7 @@ export const useAppStore = defineStore('app', () => {
     { title: 'Pagination', to: '/components/pagination' },
     { title: 'Progress Bar', to: '/components/progressbar' },
     { title: 'Progress Circle', to: '/components/progresscircle' },
+    { title: 'Resizer', to: '/components/resizer' },
     { title: 'Select', to: '/components/select' },
     { title: 'Skeleton', to: '/components/skeleton' },
     { title: 'Slider', to: '/components/slider' },
