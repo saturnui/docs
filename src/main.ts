@@ -21,9 +21,16 @@ const routes = setupLayouts(generatedRoutes)
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(App, { routes }, (ctx) => {
   // install all modules under `modules/`
-  Object.values(import.meta.globEager('./modules/*.ts')).map((i) =>
+  Object.values(import.meta.globEager('./modules/*.ts')).map(i =>
     i.install?.(ctx),
   )
+
+  // ctx.router.addRoute({
+  //   path: '/hi', component: () => import('~/views/HelloWorld.vue'), beforeEnter: (to, from, next) => {
+  //     console.log('hi guard')
+  //     next()
+  //   }
+  // })
 
   // https://next.router.vuejs.org/guide/advanced/scroll-behavior.html#scroll-behavior
   ctx.router.options.scrollBehavior = () => {
