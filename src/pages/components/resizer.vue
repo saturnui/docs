@@ -94,7 +94,7 @@ onMounted(async () => {
       <span class="font-mono">min-w-50</span> and
       <span class="font-mono">max-w-full</span> as portrayed in this example.
     </VueSection>
-    <ExampleCard source="/resizer/width" content-class="p-0">
+    <ExampleCard source="/resizers/width" content-class="p-0">
       <ResizerWidth />
     </ExampleCard>
 
@@ -106,7 +106,7 @@ onMounted(async () => {
       <span class="font-mono">min-h-30</span> and
       <span class="font-mono">max-h-full</span> as portrayed in this example.
     </VueSection>
-    <ExampleCard source="/resizer/height" content-class="p-0">
+    <ExampleCard source="/resizers/height" content-class="p-0">
       <ResizerHeight />
     </ExampleCard>
 
@@ -114,7 +114,7 @@ onMounted(async () => {
       id="freeform"
       title="Freeform"
     >This example demonstrates resizing the target's height and width.</VueSection>
-    <ExampleCard source="/resizer/freeform" content-class="p-0">
+    <ExampleCard source="/resizers/freeform" content-class="p-0">
       <ResizerFreeform />
     </ExampleCard>
 
@@ -122,7 +122,7 @@ onMounted(async () => {
       id="iframe"
       title="Iframe"
     >This example demonstrates resizing an iframe.</VueSection>
-    <ExampleCard source="/resizer/iframe" content-class="p-0">
+    <ExampleCard source="/resizers/iframe" content-class="p-0">
       <ResizerIframe />
     </ExampleCard>
 
