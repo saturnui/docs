@@ -6,7 +6,7 @@ import VueSection from '~/components/ExampleTitleBar/VueSection.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-avatar',
     desc: 'Default class used by component',

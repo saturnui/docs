@@ -5,7 +5,7 @@ import DialogOverlay from './dialog/overlay.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-dialog',
     desc: 'Default class used by component',

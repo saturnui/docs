@@ -12,7 +12,7 @@ const slides = [
 <template>
   <VTab>
     <div
-      v-for="(item, index) in slides"
+      v-for="(_, index) in slides"
       :key="index"
       class="wi-tab-container-border wi-border"
       :class="{ 'wi-tab-border-active': slideIndex === index }"
@@ -25,13 +25,13 @@ const slides = [
     <div class="wi-tab-border-spacer wi-border"></div>
   </VTab>
   <VCarousel v-model="slideIndex" class="mt-1">
-    <div
+    <VCarouselItem
       v-for="(slide, index) in slides"
       :key="index"
-      class="flex items-center justify-center w-full h-50 text-4xl text-white wi-carousel-item"
+      class="flex items-center justify-center w-full h-50 text-4xl text-white"
       :class="slide"
     >
       <div>Slide {{ index + 1 }}</div>
-    </div>
+    </VCarouselItem>
   </VCarousel>
 </template>

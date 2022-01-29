@@ -5,7 +5,7 @@ import CollapseGroup from './collapse/group.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-collapse',
     desc: 'Default class used by component',

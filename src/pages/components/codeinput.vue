@@ -4,7 +4,7 @@ import CodeBasic from './codeinput/basic.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-codeinput',
     desc: 'Default class used by component',

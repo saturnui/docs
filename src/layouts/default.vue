@@ -9,15 +9,15 @@
     />
     <div class="pt-13 flex justify-center">
       <div class="flex w-full max-w-8xl wi-text">
-        <VDrawer class="app-has-appbar text-sm wi-drawer-autohide fixed pr-4 top-0 h-screen">
+        <VDrawer autohide="lg" class="app-has-appbar text-sm fixed pr-4 top-0 h-screen">
           <Navigation class="py-8" />
         </VDrawer>
         <div class="wi-drawer-left w-full">
           <router-view />
         </div>
-        <div class="w-80 wi-drawer-autohide-xl relative h-full">
+        <VDrawer autohide="xl" class="w-80 relative h-full">
           <div id="sidenav" class="fixed"></div>
-        </div>
+        </VDrawer>
       </div>
       <div id="sidemenu" class="absolute z-10"></div>
     </div>

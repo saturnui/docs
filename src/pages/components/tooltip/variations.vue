@@ -15,19 +15,17 @@ const photo
     </VTooltip>
 
     <!-- Custom Color -->
-    <VTooltip placement="top" tooltip-class="wi-center gap-2 px-3 py-2 text-sm bg-purple-500 bg-opacity-90 text-white font-semibold rounded-lg">
+    <VTooltip class="custom-tooltip" placement="top">
       <template #tooltip>
         <span>This is a tooltip</span>
       </template>
       <VButton class="wi-primary">Custom color</VButton>
     </VTooltip>
-
-    <!-- Inverted Color -->
-    <VTooltip placement="top" tooltip-class="wi-center gap-2 px-3 py-2 text-sm wi-dark-light bg-opacity-90 dark:bg-opacity-90 font-semibold rounded-lg">
-      <template #tooltip>
-        <span>This is a tooltip</span>
-      </template>
-      <VButton class="wi-primary">Inverted color</VButton>
-    </VTooltip>
   </div>
 </template>
+
+<style>
+.custom-tooltip div[name="tooltip"] {
+  @apply bg-purple-500;
+}
+</style>

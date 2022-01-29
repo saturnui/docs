@@ -5,7 +5,7 @@ import SliderRange from './slider/range.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-slider',
     desc: 'Default class used by component',

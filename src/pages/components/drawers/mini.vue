@@ -5,7 +5,7 @@ const showDrawer = ref(false)
 <template>
   <div class="relative flex w-full h-screen">
     <!-- hidden sm:block -->
-    <VDrawer v-model="showDrawer" class="wi-highlight min-w-16 max-w-16 sm:min-w-75 sm:max-w-75">
+    <VDrawer v-model="showDrawer" responsive="sm" class="wi-highlight">
       <div class="hidden sm:block m-2 space-y-2">
         <VButton
           v-for="i in 8"

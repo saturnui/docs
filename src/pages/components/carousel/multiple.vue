@@ -14,15 +14,15 @@ const slides = [
 <template>
   <VCarousel v-model="slideIndex" slider-class="scroll-smooth">
     <!-- Carousel Items -->
-    <div
+    <VCarouselItem
       v-for="(slide, index) in slides"
       :key="index"
-      class="w-1/3 h-50 text-4xl text-white wi-carousel-item"
+      class="w-1/3 h-50 text-4xl text-white"
     >
       <div class="m-2 wi-center w-full h-full" :class="slide">
         <div>Slide {{ index + 1 }}</div>
       </div>
-    </div>
+    </VCarouselItem>
     <template #overlay="{ prevSlide, nextSlide }">
       <div class="absolute top-0 w-full h-full">
         <!-- Navigation Prev -->

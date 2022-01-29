@@ -25,7 +25,7 @@ const sidenavItems = [
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-carousel',
     desc: 'Default class used by component',

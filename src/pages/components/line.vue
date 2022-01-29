@@ -5,7 +5,7 @@ import ComponentVariants from './line/variants.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-line',
     desc: 'Default class used by component',

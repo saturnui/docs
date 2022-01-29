@@ -17,7 +17,7 @@ const showDrawer = ref(false)
         <div class="w-full p-4 overflow-y-auto">
           <VSkeletonListItem v-for="i in 8" :key="i" />
         </div>
-        <VDrawer v-model="showDrawer" class="wi-highlight hidden sm:block">
+        <VDrawer v-model="showDrawer" autohide="sm" class="wi-highlight">
           <div class="hidden sm:block m-2 space-y-2">
             <VButton
               v-for="i in 8"
@@ -39,8 +39,8 @@ const showDrawer = ref(false)
       </div>
     </div>
     <VOverlay v-model="showDrawer" class="z-10" position="right">
-      <div class="h-full flex flex-col bg-dark-700 border-l wi-border py-4 overflow-y-auto">
-        <VDrawer v-model="showDrawer">
+      <VDrawer class="h-full bg-dark-700 border-l wi-border py-4">
+        <div>
           <div class="space-y-2">
             <div
               v-for="i in 8"
@@ -52,8 +52,8 @@ const showDrawer = ref(false)
               Menu Item #{{ i }}
             </div>
           </div>
-        </VDrawer>
-      </div>
+        </div>
+      </VDrawer>
     </VOverlay>
   </div>
 </template>

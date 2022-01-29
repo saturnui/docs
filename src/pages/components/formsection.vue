@@ -4,7 +4,7 @@ import FormSectionBasic from './formsection/basic.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-formsection',
     desc: 'Default class used by component',
