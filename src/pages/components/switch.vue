@@ -68,8 +68,8 @@ onMounted(async () => {
     <ApiCard :api="api" class="w-full" />
 
     <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="TextInput/VuwiTextInput.css" /> -->
 
     <!-- Page Nav -->
     <PageNav />
