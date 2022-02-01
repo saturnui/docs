@@ -18,7 +18,7 @@ watch(animate, (v: boolean) => {
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-progress-bar',
     desc: 'Default class used by component',

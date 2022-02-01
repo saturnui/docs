@@ -13,14 +13,14 @@ const slides = [
   <div class="border wi-border p-4">
     <VCarousel v-model="slideIndex" vertical slider-class="h-50 scroll-smooth">
       <!-- Carousel Items -->
-      <div
+      <VCarouselItem
         v-for="(slide, index) in slides"
         :key="index"
-        class="flex items-center justify-center w-full h-50 text-4xl text-white wi-carousel-item"
+        class="flex items-center justify-center w-full h-50 text-4xl text-white"
         :class="slide"
       >
         <div>Slide {{ index + 1 }}</div>
-      </div>
+      </VCarouselItem>
       <template #overlay="{ prevSlide, nextSlide }">
         <div class="absolute top-0 w-full h-full">
           <!-- Navigation Prev -->

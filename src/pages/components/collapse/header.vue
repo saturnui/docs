@@ -13,7 +13,7 @@ const open = ref(false)
         />
       </div>
     </template>
-    <div class="flex flex-col gap-4 border wi-border wi-light-dark p-4 -mt-1">
+    <div class="flex flex-col gap-4 border wi-border border-top-0 wi-light-dark p-4">
       <VSkeletonListItem />
       <VSkeletonListItem />
 

@@ -8,7 +8,7 @@ import SelectError from './select/error.vue'
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-select',
     desc: 'Default class used by component',

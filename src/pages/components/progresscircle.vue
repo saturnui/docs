@@ -19,10 +19,10 @@ watch(animate, (v: boolean) => {
 
 const props = [
   {
-    name: 'theme',
+    name: 'component',
     type: 'string',
     defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    desc: 'Default class used by component',
   },
   {
     name: 'size',

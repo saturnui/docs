@@ -82,7 +82,7 @@ onMounted(async () => {
       id="basic"
       title="Basic Usage"
     >This example demonstrates using a button and label to show the file to be uploaded.</VueSection>
-    <ExampleCard source="fileselector/basic" content-class="flex p-4 gap-4">
+    <ExampleCard source="fileselector/basic">
       <FileSelectorBasic />
     </ExampleCard>
 

@@ -11,14 +11,14 @@ const slides = [
 
 <template>
   <VCarousel ref="carousel" v-model="slideIndex" slider-class="h-50 scroll-smooth">
-    <div
+    <VCarouselItem
       v-for="(slide, index) in slides"
       :key="index"
-      class="flex items-center justify-center w-full text-4xl text-white wi-carousel-item"
+      class="flex items-center justify-center w-full text-4xl text-white"
       :class="slide"
     >
       <div>Slide {{ index + 1 }}</div>
-    </div>
+    </VCarouselItem>
   </VCarousel>
   <div class="pt-4 flex justify-center gap-2">
     <VButton class="border" @click="slideIndex--">Prev</VButton>

@@ -56,7 +56,7 @@ defineProps({
           <code class="text-green-600 dark:text-green-300">{{ item.type }}</code>
         </td>
         <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm text-center">
-          <tabler-check v-if="item.required" class="text-green-500" />
+          <VCheckIcon v-if="item.required" class="text-green-500" />
         </td>
         <td class="px-5 py-5 border-b wi-border wi-light-dark wi-text text-sm whitespace-nowrap">
           <code v-if="typeof item.defaultVal === 'string'" class="text-green-600 dark:text-green-300">'{{ item.defaultVal }}'</code>

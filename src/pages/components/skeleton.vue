@@ -5,10 +5,10 @@ import SkeletonDecorated from './skeleton/decorated.vue'
 
 const api = [
   {
-    name: 'theme',
+    name: 'component',
     type: 'string',
     defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    desc: 'Default class used by component',
   },
 ]
 

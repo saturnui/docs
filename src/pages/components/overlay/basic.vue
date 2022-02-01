@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import VSkeletonListItem from '~/modules/vuwi/components/Skeleton/VSkeletonListItem.vue'
 const show = ref(false)
 const position = ref('center')
 const open = (pos: string) => {

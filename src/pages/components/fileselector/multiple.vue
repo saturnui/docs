@@ -12,11 +12,11 @@ const handleChange = async (files?: FileList) => {
 </script>
 
 <template>
-  <div class="flex justify-between gap-2 p-2 wi-highlight-strong rounded">
+  <div class="flex justify-between gap-2">
     <VFileSelector multiple @change="handleChange">
       <VButton class="wi-primary">Select Files...</VButton>
     </VFileSelector>
-    <VButton class="wi-shade border border-primary text-primary dark:text-white" @click="selectedFiles = []">Clear</VButton>
+    <VButton class="border wi-border" @click="selectedFiles = []">Clear</VButton>
   </div>
   <div v-for="file in selectedFiles" :key="file.name">
     <div class="flex items-center gap-2 font-medium gap-2">

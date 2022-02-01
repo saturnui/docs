@@ -3,10 +3,10 @@ import TabBasic from './tab/basic.vue'
 
 const api = [
   {
-    name: 'theme',
+    name: 'component',
     type: 'string',
     defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    desc: 'Default class used by component',
   },
 ]
 
@@ -68,8 +68,8 @@ onMounted(async () => {
     <ApiCard :api="api" class="w-full" />
 
     <!-- Style Guide -->
-    <div id="styles" class="doc-subtitle">Style Guide</div>
-    <StyleCard source="TextInput/VuwiTextInput.css" />
+    <!-- <div id="styles" class="doc-subtitle">Style Guide</div>
+    <StyleCard source="TextInput/VuwiTextInput.css" /> -->
 
     <!-- Page Nav -->
     <PageNav />

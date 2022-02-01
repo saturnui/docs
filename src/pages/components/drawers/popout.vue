@@ -14,7 +14,7 @@ const showDrawer = ref(false)
         <div class="font-bold">Logo</div>
       </div>
       <div class="relative flex w-full h-full pt-14">
-        <VDrawer v-model="showDrawer" class="wi-highlight hidden sm:block">
+        <VDrawer v-model="showDrawer" autohide="sm" class="wi-highlight">
           <div class="hidden sm:block m-2 space-y-2">
             <VButton
               v-for="i in 8"

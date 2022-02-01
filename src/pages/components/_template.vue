@@ -12,7 +12,7 @@ const sidenavItems = [
 
 const props = [
   {
-    name: 'className',
+    name: 'component',
     type: 'string',
     defaultVal: 'wi-component',
     desc: 'Default class used by component',
