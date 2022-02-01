@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import MenuBasic from './menu/basic.vue'
+import MenuBasic from './dropdown/basic.vue'
 
 const api = [
   {
-    name: 'theme',
+    name: 'component',
     type: 'string',
     defaultVal: 'vuwi',
-    desc: 'Used as the prefix for all Vuwi CSS classes.',
+    desc: 'Default class used by component',
   },
 ]
 
@@ -48,7 +48,7 @@ onMounted(async () => {
 
   <div class="wi-content doc-content">
     <!-- Header -->
-    <div class="doc-title">Menu</div>
+    <div class="doc-title">Dropdown (Menu)</div>
     <div class="doc-desc">
       Description here...
     </div>

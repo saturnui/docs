@@ -10,8 +10,8 @@
     <div class="wi-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
-          <div class="text-5xl">Design-Driven CSS Components</div>
-          <div class="text-3xl pl-2">supported by a Headless UI library</div>
+          <div class="text-5xl">Headless Vue UI</div>
+          <div class="text-3xl pl-2">Tailwind CSS components</div>
           <!-- <div class="flex items-center justify-center gap-2">
             <simple-icons-windicss class="text-light-blue-400" />Fully supports WindiCSS
           </div> -->
@@ -44,7 +44,7 @@
       <div class="text-xl font-light max-w-xl text-center text-dark-700 dark:text-dark-300">
         <!-- Vuwi is set of beautifully handcrafted Tailwind CSS and Vue 3 components. Everything you need to create
         fully customizable applications is at your fingertips. -->
-        Vuwi is a set of CSS and JS components that can be created to support the look and feel of your design.
+        Effortlessly build high-performance & high-quality Vue 3 user interfaces with 100% customizable designs <br /> using Tailwind & Windi CSS.
       </div>
 
       <router-link
@@ -75,7 +75,7 @@
     </div>
   </div>
   <ToggleDarkMode class="fixed wi-tr m-4" />
-  <Banner class="top-8 right-8" />
+  <!-- <Banner class="top-8 right-8" /> -->
 </template>
 
 <style>
