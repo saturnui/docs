@@ -4,16 +4,33 @@ const photo
 </script>
 
 <template>
-  <div class="wi-avatar wi-online bg-purple-600 text-white" size="sm">
-    <div>A</div>
+  <div class="flex items-center gap-4">
+    <div class="wi-avatar" size="sm">
+      <div class="rounded-full bg-purple-600 text-white overflow-hidden">A</div>
+    </div>
+    <div class="wi-avatar">
+      <img :src="photo" class="rounded bg-purple-600 text-white overflow-hidden" />
+    </div>
+    <div class="wi-avatar text-white" size="lg">
+      <div class="bg-purple-600 rounded-full overflow-hidden">A</div>
+    </div>
+    <div class="wi-avatar" size="xl">
+      <img :src="photo" class="rounded-lg overflow-hidden" />
+    </div>
   </div>
-  <div class="wi-avatar wi-online rounded-full bg-purple-600 text-white">
-    <img :src="photo" />
-  </div>
-  <div class="wi-avatar wi-online overflow-hidden rounded-full bg-purple-600 text-white" size="lg">
-    <div>A</div>
-  </div>
-  <div class="wi-avatar wi-online" size="xl">
-    <img :src="photo" class="rounded-full overflow-hidden" />
+
+  <div class="flex items-center gap-4">
+    <div class="wi-avatar" size="sm" status="info">
+      <div class="rounded bg-purple-600 text-white overflow-hidden">A</div>
+    </div>
+    <div class="wi-avatar" status="warning">
+      <img :src="photo" class="rounded-full bg-purple-600 text-white overflow-hidden" />
+    </div>
+    <div class="wi-avatar text-white" size="lg" status="danger">
+      <div class="bg-purple-600 rounded-md overflow-hidden">A</div>
+    </div>
+    <div class="wi-avatar" size="xl" status>
+      <img :src="photo" class="rounded-full overflow-hidden" />
+    </div>
   </div>
 </template>

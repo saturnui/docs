@@ -5,13 +5,14 @@
   />
   <div class="flex flex-col h-screen items-center gap-4 overflow-y-auto">
     <div>
-      <assets-logo-vuwi class="h-60 w-60 mt-30" />
+      <assets-logo-vuwi class="h-40 w-40 mt-30 fill-gray-600 dark:fill-cyan-400" />
     </div>
     <div class="wi-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
-          <div class="text-5xl">Headless Vue UI</div>
-          <div class="text-3xl pl-2">Tailwind CSS components</div>
+          <div class="text-5xl">Saturn UI</div>
+          <!-- <div class="text-5xl">Headless Vue UI</div> -->
+          <div class="text-3xl pl-2">Vue 3 + Tailwind CSS Components</div>
           <!-- <div class="flex items-center justify-center gap-2">
             <simple-icons-windicss class="text-light-blue-400" />Fully supports WindiCSS
           </div> -->
@@ -27,7 +28,7 @@
               to="/introduction"
               class="wi-btn border border-primary rounded-full"
               size="lg"
-            >Why Vuwi?</router-link>
+            >Why Saturn?</router-link>
             <a
               href="https://github.com/vuwijs/vuwi"
               target="_blank"

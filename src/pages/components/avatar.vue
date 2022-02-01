@@ -76,7 +76,7 @@ onMounted(async () => {
     <CssTitleBar id="css" title="Tailwind Component"></CssTitleBar>
     <ExampleCard
       source="/avatar/css"
-      content-class="p-4 flex flex-wrap gap-4 items-center justify-center"
+      content-class="p-4 flex flex-col gap-4 items-center justify-center"
       theme="Avatar.css"
     >
       <AvatarCss />

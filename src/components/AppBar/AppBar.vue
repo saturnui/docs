@@ -45,9 +45,10 @@ const openMenu = () => {
         <tabler-menu-2 />
       </VButton>
       <!-- Logo -->
-      <div class="flex items-center gap-5 lg:pl-6 cursor-pointer" @click="router.push('/')">
-        <assets-logo-vuwi class="w-20 h-12" />
-        <span class="font-mono">0.0.1</span>
+      <div class="flex items-center gap-2 lg:pl-6 cursor-pointer" @click="router.push('/')">
+        <assets-logo-vuwi class="w-8 h-8 fill-gray-600 dark:fill-cyan-400" />
+        <div class="font-bold text-2xl text-gray-600 dark:text-cyan-400">saturn</div>
+        <div class="mt-1.5 ml-4 font-mono">0.0.1</div>
         <!-- <div class="px-3 py-1 bg-purple-600 text-white rounded-full font-medium text-sm">Pre-Alpha</div> -->
       </div>
       <div class="flex-grow"></div>
