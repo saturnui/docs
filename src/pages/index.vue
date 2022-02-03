@@ -10,7 +10,7 @@
     <div class="wi-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
-          <div class="text-5xl">Saturn UI</div>
+          <div class="text-5xl">Saturn</div>
           <!-- <div class="text-5xl">Headless Vue UI</div> -->
           <div class="text-3xl pl-2">Vue 3 + Tailwind CSS Components</div>
           <!-- <div class="flex items-center justify-center gap-2">
