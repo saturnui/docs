@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "vuwijs",
+      "target": "saturnui",
       "public": "dist",
       "ignore": [
         "firebase.json",
