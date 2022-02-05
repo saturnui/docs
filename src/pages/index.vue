@@ -5,7 +5,7 @@
   />
   <div class="flex flex-col h-screen items-center gap-4 overflow-y-auto">
     <div>
-      <assets-logo-vuwi class="h-40 w-40 mt-30 fill-gray-600 dark:fill-cyan-400" />
+      <assets-logo-saturn class="h-40 w-40 mt-30 fill-gray-600 dark:fill-cyan-400" />
     </div>
     <div class="sa-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">

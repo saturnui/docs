@@ -2,7 +2,7 @@
   <section class="px-4 py-32 mx-auto">
     <div class="w-full mx-auto lg:w-3/4 space-y-8">
       <router-link to="/" class="flex items-center">
-        <assets-logo-vuwi class="w-28 h-14" />
+        <assets-logo-saturn class="w-28 h-14" />
       </router-link>
       <p class="mt-5 mb-3 text-2xl font-light md:text-4xl">
         <span>Page not found (404)</span>

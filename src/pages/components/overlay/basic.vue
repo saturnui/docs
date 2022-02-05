@@ -132,7 +132,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
       </div>
 
       <template v-if="showSlot" #backdrop>
-        <assets-logo-vuwi class="absolute sa-br m-3 h-16 w-24" />
+        <assets-logo-saturn class="absolute sa-br m-3 h-16 w-24" />
       </template>
     </VOverlay>
   </div>
