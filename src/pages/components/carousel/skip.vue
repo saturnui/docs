@@ -21,13 +21,13 @@ const slides = [
     >Slide {{ index + 1 }}</VCarouselItem>
     <template #overlay="{ prevSlide, nextSlide }">
       <div class="absolute top-0 w-full h-full">
-        <VButton icon class="absolute left-4 wi-ml wi-shade-strongest" @click="prevSlide(1)">
+        <VButton icon class="absolute left-4 sa-ml sa-shade-strongest" @click="prevSlide(1)">
           <tabler-chevron-left />
         </VButton>
         <div
-          class="absolute wi-bc wi-center wi-shade-strongest w-12 rounded-lg mb-2 h-8 text-xs font-bold"
+          class="absolute sa-bc sa-center sa-shade-strongest w-12 rounded-lg mb-2 h-8 text-xs font-bold"
         >{{ slideIndex + 1 }}</div>
-        <VButton icon class="absolute wi-mr right-4 wi-shade-strongest" @click="nextSlide(2)">
+        <VButton icon class="absolute sa-mr right-4 sa-shade-strongest" @click="nextSlide(2)">
           <tabler-chevron-right />
         </VButton>
       </div>

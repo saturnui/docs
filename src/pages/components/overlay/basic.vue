@@ -14,12 +14,12 @@ const customize = computed(() => custom.value ? 'custom' : '')
 </script>
 
 <template>
-  <div class="flex justify-center p-3 px-4 gap-4 border-b wi-border">
+  <div class="flex justify-center p-3 px-4 gap-4 border-b sa-border">
     <VTooltip>
       <template #tooltip>
         <span class="max-w-50 text-center">Cannot click outside content to close overlay</span>
       </template>
-      <VSwitch v-model="modal" class="wi-switch-sm">
+      <VSwitch v-model="modal" class="sa-switch-sm">
         <template #left>
           <span class="mr-2 text-sm font-medium">Modal</span>
         </template>
@@ -29,7 +29,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
       <template #tooltip>
         <span class="max-w-50 text-center">Prevents user interaction with underlying content</span>
       </template>
-      <VSwitch v-model="blocking" class="wi-switch-sm">
+      <VSwitch v-model="blocking" class="sa-switch-sm">
         <template #left>
           <span class="mr-2 text-sm font-medium">Blocking</span>
         </template>
@@ -39,7 +39,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
       <template #tooltip>
         <span class="max-w-50 text-center">Optional slot to insert stuff into background layer</span>
       </template>
-      <VSwitch v-model="showSlot" class="wi-switch-sm">
+      <VSwitch v-model="showSlot" class="sa-switch-sm">
         <template #left>
           <span class="mr-2 text-sm font-medium">Slot</span>
         </template>
@@ -49,7 +49,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
       <template #tooltip>
         <span class="max-w-50 text-center">Enable parent scrolling when overlay is active</span>
       </template>
-      <VSwitch v-model="enableScrolling" class="wi-switch-sm">
+      <VSwitch v-model="enableScrolling" class="sa-switch-sm">
         <template #left>
           <span class="mr-2 text-sm font-medium">Scrolling</span>
         </template>
@@ -59,7 +59,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
       <template #tooltip>
         <span class="max-w-50 text-center">Custom will modify the background</span>
       </template>
-      <VSwitch v-model="custom" class="wi-switch-sm">
+      <VSwitch v-model="custom" class="sa-switch-sm">
         <template #left>
           <span class="mr-2 text-sm font-medium">Custom</span>
         </template>
@@ -67,7 +67,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
     </VTooltip>
   </div>
   <div class="flex justify-center items-center gap-4 p-2 px-4">
-    <div class="wi-btn-group">
+    <div class="sa-btn-group">
       <VTooltip>
         <template #tooltip>
           <span class="max-w-50 text-center">Center</span>
@@ -111,7 +111,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
     </div>
   </div>
 
-  <div class="relative h-80 w-full bg-dark-50 dark:bg-dark-600 border-t wi-border overflow-hidden wi-text">
+  <div class="relative h-80 w-full bg-dark-50 dark:bg-dark-600 border-t sa-border overflow-hidden sa-text">
     <div id="demo-content" class="absolute top-0 left-0 w-full h-80 overflow-y-auto p-4 grid gap-4">
       <VSkeletonListItem v-for="i in 5" :key="i" />
     </div>
@@ -122,17 +122,17 @@ const customize = computed(() => custom.value ? 'custom' : '')
       :modal="modal"
       :blocking="blocking"
       :disable-scroll-target="enableScrolling ? '' : '#demo-content'"
-      class="wi-overlay-absolute wi-overlay-shade"
+      class="sa-overlay-absolute sa-overlay-shade"
     >
       <div
-        class="wi-mock-window wi-border w-80 h-40 filter drop-shadow-lg"
+        class="sa-mock-window sa-border w-80 h-40 filter drop-shadow-lg"
         :class="`box-${position}`"
       >
-        <VButton class="absolute bottom-2 right-2 wi-primary" @click="show = false">Close</VButton>
+        <VButton class="absolute bottom-2 right-2 sa-primary" @click="show = false">Close</VButton>
       </div>
 
       <template v-if="showSlot" #backdrop>
-        <assets-logo-vuwi class="absolute wi-br m-3 h-16 w-24" />
+        <assets-logo-saturn class="absolute sa-br m-3 h-16 w-24" />
       </template>
     </VOverlay>
   </div>
@@ -159,7 +159,7 @@ const customize = computed(() => custom.value ? 'custom' : '')
   @apply w-full rounded-none border-t;
 }
 
-[name="custom"] .wi-overlay {
+[name="custom"] .sa-overlay {
   @apply bg-blue-500 bg-opacity-60;
 }
 </style>

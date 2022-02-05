@@ -12,7 +12,7 @@ watch(range, (v: number[]) => {
 </script>
 
 <template>
-  <VTextInput v-model="val1" type="number" min="-100" :max="val2" class="border wi-border w-24" />
+  <VTextInput v-model="val1" type="number" min="-100" :max="val2" class="border sa-border w-24" />
   <VSlider v-model="range" :min="-100" :max="100" />
-  <VTextInput v-model="val2" type="number" :min="val1" max="100" class="border wi-border w-24" />
+  <VTextInput v-model="val2" type="number" :min="val1" max="100" class="border sa-border w-24" />
 </template>

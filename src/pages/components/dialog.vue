@@ -7,7 +7,7 @@ const props = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'wi-dialog',
+    defaultVal: 'sa-dialog',
     desc: 'Default class used by component',
   },
 ]
@@ -62,7 +62,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -74,12 +74,12 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Dialog</div>
     <div class="doc-desc">
       Dialog can be used in conjunction to
-      <router-link to="/components/overlay" class="wi-link">Overlay</router-link> to display
+      <router-link to="/components/overlay" class="sa-link">Overlay</router-link> to display
       content in the form of a dialog
     </div>
 

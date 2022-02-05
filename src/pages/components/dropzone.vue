@@ -43,7 +43,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -55,7 +55,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Dropzone</div>
     <div class="doc-desc">
@@ -68,7 +68,7 @@ onMounted(async () => {
     <!-- Basic -->
     <VueSection id="basic" title="Basic Usage">
       The drop zone only retains the latest files that have been dropped. This example demonstrates how
-      to retain recently dropped files until they are cleared. The <router-link to="/components/image" class="wi-link">Image</router-link>
+      to retain recently dropped files until they are cleared. The <router-link to="/components/image" class="sa-link">Image</router-link>
       component is used to display the <code>File</code> objects.
     </VueSection>
     <ExampleCard source="dropzone/basic" content-class="">

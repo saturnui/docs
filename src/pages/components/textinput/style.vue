@@ -6,7 +6,7 @@ const text = ref('')
   <div class="grid gap-4">
     <VTextInput placeholder="No style" />
     <VTextInput placeholder="Background style" class="bg-dark-900 bg-opacity-3 dark:bg-opacity-20" />
-    <VTextInput placeholder="Background and border style" class="dark:bg-dark-900 dark:bg-opacity-20 border wi-border" />
+    <VTextInput placeholder="Background and border style" class="dark:bg-dark-900 dark:bg-opacity-20 border sa-border" />
     <VTextInput
       v-model="text"
       label="Fully customized"

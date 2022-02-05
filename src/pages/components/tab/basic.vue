@@ -13,63 +13,63 @@ const items = [
 <template>
   <div class="grid gap-12 mb-20">
     <!-- Tabs with underline -->
-    <div class="wi-tab-container">
+    <div class="sa-tab-container">
       <div
         v-for="(item, index) in items"
         :key="item.label"
-        class="wi-tab-container-border wi-border"
-        :class="{ 'wi-tab-border-active': selectedIndex === index }"
+        class="sa-tab-container-border sa-border"
+        :class="{ 'sa-tab-border-active': selectedIndex === index }"
         @click="selectedIndex = index"
       >
-        <div class="wi-tab">
+        <div class="sa-tab">
           <span class="font-medium text-sm">{{ item.label }}</span>
         </div>
       </div>
-      <div class="wi-tab-border-spacer wi-border"></div>
+      <div class="sa-tab-border-spacer sa-border"></div>
     </div>
 
     <!-- Tabs with underline and icons -->
-    <div class="wi-tab-container">
+    <div class="sa-tab-container">
       <div
         v-for="(item, index) in items"
         :key="item.label"
-        class="wi-tab-container-border wi-border"
-        :class="{ 'wi-tab-border-active': selectedIndex === index }"
+        class="sa-tab-container-border sa-border"
+        :class="{ 'sa-tab-border-active': selectedIndex === index }"
         @click="selectedIndex = index"
       >
-        <div class="wi-tab">
+        <div class="sa-tab">
           <Component :is="item.icon" />
           <span class="font-medium text-sm">{{ item.label }}</span>
         </div>
       </div>
-      <div class="wi-tab-border-spacer wi-border"></div>
+      <div class="sa-tab-border-spacer sa-border"></div>
     </div>
 
     <!-- Tabs with full width -->
-    <div class="wi-tab-container">
+    <div class="sa-tab-container">
       <div
         v-for="(item, index) in items"
         :key="item.label"
-        class="wi-tab-container-border wi-border wi-tab-container-w-full"
-        :class="{ 'wi-tab-border-active': selectedIndex === index }"
+        class="sa-tab-container-border sa-border sa-tab-container-w-full"
+        :class="{ 'sa-tab-border-active': selectedIndex === index }"
         @click="selectedIndex = index"
       >
-        <div class="wi-tab">
+        <div class="sa-tab">
           <span class="font-medium text-sm">{{ item.label }}</span>
         </div>
       </div>
     </div>
 
     <!-- Tabs in pills -->
-    <div class="wi-tab-container">
+    <div class="sa-tab-container">
       <div
         v-for="(item, index) in items"
         :key="item.label"
-        class="wi-tab-container-pill text-sm"
+        class="sa-tab-container-pill text-sm"
         @click="selectedIndex = index"
       >
         <VButton :class="{'bg-purple-600 text-white': selectedIndex === index}">{{ item.label }}</VButton>
-        <!-- <div class="wi-tab">
+        <!-- <div class="sa-tab">
           <span class="font-medium text-sm">{{ item.label }}</span>
         </div> -->
       </div>
@@ -77,12 +77,12 @@ const items = [
 
     <!-- Test -->
     <div class="flex justify-center">
-      <div class="wi-tab-container wi-tab-container-bar wi-border">
+      <div class="sa-tab-container sa-tab-container-bar sa-border">
         <div
           v-for="(item, index) in items"
           :key="item.label"
-          class="wi-tab-container-bar-tab"
-          :class="{ 'wi-tab-border-active': selectedIndex === index }"
+          class="sa-tab-container-bar-tab"
+          :class="{ 'sa-tab-border-active': selectedIndex === index }"
           @click="selectedIndex = index"
         >
           <div class="px-8 py-3 font-medium text-sm">{{ item.label }}</div>
@@ -90,20 +90,20 @@ const items = [
       </div>
     </div>
 
-    <div class="wi-tab-container">
+    <div class="sa-tab-container">
       <div
         v-for="(item, index) in items"
         :key="item.label"
-        class="wi-tab-container-border wi-border"
-        :class="{ 'wi-tab-border-active': selectedIndex === index }"
+        class="sa-tab-container-border sa-border"
+        :class="{ 'sa-tab-border-active': selectedIndex === index }"
         @click="selectedIndex = index"
       >
-        <div class="wi-tab gap-4">
+        <div class="sa-tab gap-4">
           <span class="font-medium text-sm">{{ item.label }}</span>
           <div class="bg-dark-100 dark:bg-dark-900 px-2 py-1 rounded-full text-xs font-bold">123</div>
         </div>
       </div>
-      <div class="wi-tab-border-spacer wi-border"></div>
+      <div class="sa-tab-border-spacer sa-border"></div>
     </div>
   </div>
 </template>

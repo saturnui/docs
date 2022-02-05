@@ -10,11 +10,11 @@ const options = [
 <template>
   <VDropdown v-model="show">
     <template #activator="{ toggle }">
-      <button class="wi-btn border wi-border" :class="{ 'wi-primary': show }" @click="toggle">Menu</button>
+      <button class="sa-btn border sa-border" :class="{ 'sa-primary': show }" @click="toggle">Menu</button>
     </template>
     <div
       ref="menu"
-      class="grid origin-top-right absolute right-0 rounded-md shadow-lg mt-2 wi-light-dark"
+      class="grid origin-top-right absolute right-0 rounded-md shadow-lg mt-2 sa-light-dark"
       role="menu"
     >
       <div

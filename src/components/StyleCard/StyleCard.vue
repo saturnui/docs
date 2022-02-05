@@ -12,9 +12,9 @@ const props = defineProps({
     default: '',
   },
 })
-// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/Alert.css
-// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/components/Alert.css
-const githubBaseUrl = 'https://raw.githubusercontent.com/vuwijs/vuwi/main/themes/base/components/'
+// https://raw.githubusercontent.com/saturnui/saturn/feature/theming/themes/base/components/Alert.css
+// https://raw.githubusercontent.com/saturnui/saturn/feature/theming/themes/base/components/components/Alert.css
+const githubBaseUrl = 'https://raw.githubusercontent.com/saturnui/saturn/main/themes/base/components/'
 const source = `${githubBaseUrl}/${props.source}`
 const decoratedCSS = ref('')
 const css = ref('')
@@ -26,9 +26,9 @@ onBeforeMount(async () => {
     const text = await result.text()
     // Grab contents and remove indent
     css.value = text
-      .replace(/^[^\0]*[^\0]wi {?([^\0]*?)}\n}/g, '$1')
+      .replace(/^[^\0]*[^\0]sa {?([^\0]*?)}\n}/g, '$1')
       .replace(/(\n) {3} /g, '$1')
-      .replaceAll('&-', '.wi-')
+      .replaceAll('&-', '.sa-')
       // .replaceAll('@apply ', '')
       .trim()
     decoratedCSS.value = hljs.highlight(css.value, { language: 'css' }).value
@@ -37,11 +37,11 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <div class="wi-light-dark border wi-border wi-text relative">
+  <div class="sa-light-dark border sa-border sa-text relative">
     <div class="flex items-center pr-4 pl-2 py-2">
       <div class="px-3 py-1 rounded bg-light-blue-500 text-white text-sm font-medium" size="sm">CSS</div>
       <div class="flex-grow"></div>
-      <a :href="source" target="_blank" class="wi-btn" icon>
+      <a :href="source" target="_blank" class="sa-btn" icon>
         <carbon-logo-github />
       </a>
     </div>

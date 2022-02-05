@@ -12,9 +12,9 @@ watch(val, (newVal, oldVal) => {
 
 <template>
   <div class="grid gap-6">
-    <VSlider v-model="val" :min="10" :max="250" step="10" class-name="wi-slider-xl">
+    <VSlider v-model="val" :min="10" :max="250" step="10" class-name="sa-slider-xl">
       <template #highlight>
-        <div class="h-full wi-stripe wi-animate-right wi-progress bg-yellow-500 rounded-full"></div>
+        <div class="h-full sa-stripe sa-animate-right sa-progress bg-yellow-500 rounded-full"></div>
       </template>
 
       <template #thumb-right>

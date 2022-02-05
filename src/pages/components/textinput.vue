@@ -16,14 +16,14 @@ const api = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'vuwi',
+    defaultVal: 'sa-textinput',
     desc: 'Default class used by component',
   },
   {
     name: 'autocomplete',
     type: 'boolean',
     defaultVal: 'off',
-    desc: 'Provides autocompletion rules for the input. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" class="wi-link">official documentation</a> for details.',
+    desc: 'Provides autocompletion rules for the input. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete" target="_blank" class="sa-link">official documentation</a> for details.',
   },
   {
     name: 'disabled',
@@ -124,7 +124,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -136,7 +136,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">TextInput</div>
     <div class="doc-desc">

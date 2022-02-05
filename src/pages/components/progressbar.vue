@@ -20,7 +20,7 @@ const props = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'wi-progress-bar',
+    defaultVal: 'sa-progress-bar',
     desc: 'Default class used by component',
   },
   {
@@ -63,7 +63,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -75,7 +75,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Progress Bar</div>
     <div class="doc-desc">
@@ -96,8 +96,8 @@ onMounted(async () => {
       title="Basic Usage"
     >These examples demonstrate only a few different ways to style the progress circle</VueSection>
     <ExampleCard source="progress/bar/basic" content-class="">
-      <div class="p-2 wi-highlight">
-        <VSwitch v-model="animate" class="wi-switch-sm">
+      <div class="p-2 sa-highlight">
+        <VSwitch v-model="animate" class="sa-switch-sm">
           <span class="pl-2">Show progress</span>
         </VSwitch>
       </div>

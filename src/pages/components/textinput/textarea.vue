@@ -3,5 +3,5 @@ const text = ref('')
 </script>
 
 <template>
-  <VTextInput v-model="text" placeholder="Your bio" multiline class="border wi-border h-30" />
+  <VTextInput v-model="text" placeholder="Your bio" multiline class="border sa-border h-30" />
 </template>

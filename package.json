@@ -1,7 +1,7 @@
 {
-  "name": "vuwi",
+  "name": "@saturnui/docs",
   "version": "0.0.1",
-  "description": "Vuwi - Tailwind + Vue 3 components",
+  "description": "Saturn UI - Headless Vue 3 Components + Tailwind CSS Components",
   "private": true,
   "scripts": {
     "build": "vite-ssg build",
@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "preview-https": "serve dist",
     "typecheck": "vue-tsc --noEmit",
-    "deploy": "firebase deploy -P default --only hosting:vuwijs"
+    "deploy": "firebase deploy -P default --only hosting:saturnui"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",

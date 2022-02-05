@@ -27,7 +27,7 @@ const props = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'wi-carousel',
+    defaultVal: 'sa-carousel',
     desc: 'Default class used by component',
   },
   {
@@ -109,7 +109,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -121,7 +121,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Carousel</div>
     <div
@@ -167,7 +167,7 @@ onMounted(async () => {
     <!-- Tabs -->
     <VueSection id="tabs" title="Tabs">
       This example demonstrates using the
-      <router-link to="/components/tab" class="wi-link">VTab</router-link> control
+      <router-link to="/components/tab" class="sa-link">VTab</router-link> control
       with VCarousel.
     </VueSection>
     <ExampleCard source="/carousel/tabs">

@@ -29,7 +29,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -41,7 +41,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content p-2 sm:p-8">
+  <div class="sa-content p-2 sm:p-8">
     <div class="doc-title">
       <div id="alert" class="text-4xl">
         <span>Alert</span>
@@ -51,7 +51,7 @@ onMounted(async () => {
       The
       <strong>VAlert</strong> component is used to convey important information to the user through the
       use of contextual types, icons, and colors. Use in conjunction with
-      <router-link to="/styling/color" class="wi-link text-primary">Colors</router-link>for 4 variations: success, info,
+      <router-link to="/styling/color" class="sa-link mr-1">Colors</router-link>for 4 variations: success, info,
       warning, and error. Default icons are assigned which help represent different actions each type portrays.
       Many parts of an alert such as border, icon, and color can also be customized to fit almost any situation.
     </div>

@@ -17,7 +17,7 @@ watch(text, (val: string) => {
   <VTextInput
     v-model="text"
     placeholder="Your name"
-    class="border wi-border h-14"
+    class="border sa-border h-14"
   >
     <template #prepend>
       <tabler-user class="text-xl opacity-30" />
@@ -25,7 +25,7 @@ watch(text, (val: string) => {
     <template #append>
       <div
         v-if="busy"
-        class="wi-spinner w-6 h-6 min-w-6 min-h-6 border-3 border-primary border-r-transparent dark:border-gray-500 dark:border-r-transparent"
+        class="sa-spinner w-6 h-6 min-w-6 min-h-6 border-3 border-primary border-r-transparent dark:border-gray-500 dark:border-r-transparent"
         role="status"
       >
         <span class="sr-only">Busy...</span>

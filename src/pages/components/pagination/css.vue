@@ -1,5 +1,5 @@
 <template>
-  <nav class="wi-pagination" role="navigation">
+  <nav class="sa-pagination" role="navigation">
     <button left>
       <tabler-chevron-left />
     </button>

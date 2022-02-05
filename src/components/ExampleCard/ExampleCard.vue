@@ -29,7 +29,7 @@ const props = defineProps({
   },
 })
 const exSource = `/components/examples${props.source}`
-const sourceBaseUrl = 'https://raw.githubusercontent.com/vuwijs/docs/main/src/pages/components'
+const sourceBaseUrl = 'https://raw.githubusercontent.com/saturnui/docs/main/src/pages/components'
 const rawSource = `${sourceBaseUrl}/${props.source}.vue`
 
 // const mode = ref('')
@@ -53,7 +53,7 @@ const view = ref('html')
 const { copy, copied } = useClipboard({ source: rawSource })
 const tabClass = (isActive: boolean) => {
   if (isActive) return 'bg-purple-600 text-white'
-  return 'wi-highlight-stronger'
+  return 'sa-highlight-stronger'
 }
 
 onBeforeMount(async () => {
@@ -71,7 +71,7 @@ onBeforeMount(async () => {
 </script>
 
 <template>
-  <div class="wi-light-dark border wi-border wi-text relative">
+  <div class="sa-light-dark border sa-border sa-text relative">
     <div class="flex items-center px-4 py-2 gap-2">
       <div class="pl-1 font-medium">{{ title }}</div>
       <div class="flex-grow"></div>
@@ -81,7 +81,7 @@ onBeforeMount(async () => {
             <span>Toggle Dark</span>
           </div>
         </template>
-        <button class="wi-btn wi-btn-icon" @click="toggleMode">
+        <button class="sa-btn sa-btn-icon" @click="toggleMode">
           <mdi-invert-colors />
         </button>
       </VTooltip>-->
@@ -105,14 +105,14 @@ onBeforeMount(async () => {
         <template #tooltip>
           <span>Github Source</span>
         </template>
-        <a :href="rawSource" target="_blank" class="wi-btn wi-btn-icon">
+        <a :href="rawSource" target="_blank" class="sa-btn sa-btn-icon">
           <carbon-logo-github />
         </a>
       </VTooltip>
     </div>
     <VLine />
     <VCollapse v-model="showCode" slide="up">
-      <div v-if="html && js" class="px-2 py-2 flex item-center gap-2 wi-highlight">
+      <div v-if="html && js" class="px-2 py-2 flex item-center gap-2 sa-highlight">
         <VButton
           v-if="html"
           size="sm"

@@ -1,8 +1,8 @@
 <template>
-  <VButton class="wi-primary">Primary</VButton>
-  <VButton class="wi-success">Success</VButton>
-  <VButton class="wi-danger">Danger</VButton>
-  <VButton class="wi-warning">Warning</VButton>
-  <VButton class="wi-info">Info</VButton>
+  <VButton class="sa-primary">Primary</VButton>
+  <VButton class="sa-success">Success</VButton>
+  <VButton class="sa-danger">Danger</VButton>
+  <VButton class="sa-warning">Warning</VButton>
+  <VButton class="sa-info">Info</VButton>
   <VButton disabled>Disabled</VButton>
 </template>

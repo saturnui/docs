@@ -14,7 +14,7 @@ defineRule('required', required)
       name="Your name"
       label="Your name"
       placeholder="Name"
-      class="border wi-border wi-text-input-error"
+      class="border sa-border sa-text-input-error"
       rules="required"
     />
   </div>

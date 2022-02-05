@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useImageToDataUrl } from '~/vuwi/vue/src'
+import { useImageToDataUrl } from '~/saturn/vue/src'
 
 const file = ref<File | null>()
 const dataUrl = ref('')
@@ -21,12 +21,12 @@ const handleChange = async (val?: FileList) => {
 
 <template>
   <VFileSelector v-if="!file" @change="handleChange">
-    <VButton class="wi-primary">Select file...</VButton>
+    <VButton class="sa-primary">Select file...</VButton>
   </VFileSelector>
   <div v-else class="flex items-center justify-between">
     <div class="flex items-center gap-2 font-medium">{{ file.name }}</div>
     <div>
-      <VButton class="border wi-border" @click="clear">Clear</VButton>
+      <VButton class="border sa-border" @click="clear">Clear</VButton>
     </div>
   </div>
 </template>

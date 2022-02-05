@@ -32,7 +32,7 @@ const passwordType = computed(() => {
 </script>
 
 <template>
-  <div class="wi-content wi-light-dark hover:wi-hover border wi-border shadow rounded-b-lg -mt-1 p-4 max-w-xl">
+  <div class="sa-content sa-light-dark hover:sa-hover border sa-border shadow rounded-b-lg -mt-1 p-4 max-w-xl">
     <div class="pl-2 pb-5 text-2xl">
       <span>Create an account</span>
     </div>
@@ -41,7 +41,7 @@ const passwordType = computed(() => {
         v-model="email"
         name="email"
         label="Email"
-        class="border wi-border wi-shade"
+        class="border sa-border sa-shade"
       />
       <VTextfield
         v-model="password"
@@ -49,7 +49,7 @@ const passwordType = computed(() => {
         label="Password"
         :type="passwordType"
         placeholder="••••••••"
-        class="border wi-border wi-shade"
+        class="border sa-border sa-shade"
       >
         <ToggleVisible v-model="showPassword" />
       </VTextfield>
@@ -65,7 +65,7 @@ const passwordType = computed(() => {
         <button
           v-else
           type="submit"
-          class="wi-btn wi-btn-xl wi-primary w-full mt-3"
+          class="sa-btn sa-btn-xl sa-primary w-full mt-3"
         >Signup</button>
       </div>
     </VuForm>

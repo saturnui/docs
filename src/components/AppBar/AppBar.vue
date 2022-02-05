@@ -46,8 +46,8 @@ const openMenu = () => {
       </VButton>
       <!-- Logo -->
       <div class="flex items-center gap-2 lg:pl-6 cursor-pointer" @click="router.push('/')">
-        <assets-logo-vuwi class="w-8 h-8 fill-gray-600 dark:fill-cyan-400" />
-        <div class="font-bold text-2xl text-gray-600 dark:text-cyan-400">saturn</div>
+        <assets-logo-saturn class="w-8 h-8 fill-gray-600 dark:fill-teal-400" />
+        <div class="font-bold text-2xl text-gray-600 dark:text-teal-400">saturn</div>
         <div class="mt-1.5 ml-4 font-mono">0.0.1</div>
         <!-- <div class="px-3 py-1 bg-purple-600 text-white rounded-full font-medium text-sm">Pre-Alpha</div> -->
       </div>
@@ -63,21 +63,21 @@ const openMenu = () => {
             v-if="user"
             :name="displayName"
             :photo="photoUrl"
-            class="wi-avatar-sm bg-primary text-white rounded-full overflow-hidden"
+            class="sa-avatar-sm bg-primary text-white rounded-full overflow-hidden"
           />
         </VButton>
         <transition name="slide-down">
           <div
             v-if="showMenu"
             ref="menu"
-            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 wi-light-dark ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="grid origin-top-right absolute right-0 mt-2 rounded-md shadow-lg py-1 sa-light-dark ring-1 ring-black ring-opacity-5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1"
           >
             <div
-              class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
+              class="flex items-center gap-3 px-4 py-2 text-sm sa-hover"
               role="menuitem"
               tabindex="-1"
               @click="navTo('profile')"
@@ -86,7 +86,7 @@ const openMenu = () => {
               <span>Your Profile</span>
             </div>
             <div
-              class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
+              class="flex items-center gap-3 px-4 py-2 text-sm sa-hover"
               role="menuitem"
               tabindex="-1"
               @click="toggleDarkMode"
@@ -101,7 +101,7 @@ const openMenu = () => {
       </div>
     </div>
     <VOverlay v-model="showDrawer" class="z-0" position="left" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark border-r wi-border overflow-y-auto pt-4">
+      <div class="h-full flex flex-col w-80 sa-light-dark border-r sa-border overflow-y-auto pt-4">
         <Navigation @close="showDrawer = false" />
       </div>
     </VOverlay>

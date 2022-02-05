@@ -31,7 +31,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -43,7 +43,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Layout</div>
     <div class="doc-desc">
@@ -66,31 +66,31 @@ onMounted(async () => {
       A set of classes for managing common column and row layouts.
     </div>
 
-    <ExampleCard source="layout/col-3-2-1.vue" class="doc-padding-none" title=".wi-col-3-2-1">
+    <ExampleCard source="layout/col-3-2-1.vue" class="doc-padding-none" title=".sa-col-3-2-1">
       <LayoutCols321 />
     </ExampleCard>
 
-    <ExampleCard source="layout/col-3-1.vue" class="doc-padding-none" title=".wi-col-3-1">
+    <ExampleCard source="layout/col-3-1.vue" class="doc-padding-none" title=".sa-col-3-1">
       <LayoutCols31 />
     </ExampleCard>
 
-    <ExampleCard source="layout/col-3.vue" class="doc-padding-none" title=".wi-col-3">
+    <ExampleCard source="layout/col-3.vue" class="doc-padding-none" title=".sa-col-3">
       <LayoutCols3 />
     </ExampleCard>
 
-    <ExampleCard source="layout/col-2-1.vue" class="doc-padding-none" title=".wi-col-2-1">
+    <ExampleCard source="layout/col-2-1.vue" class="doc-padding-none" title=".sa-col-2-1">
       <LayoutCols21 />
     </ExampleCard>
 
-    <ExampleCard source="layout/col-2.vue" class="doc-padding-none" title=".wi-col-2">
+    <ExampleCard source="layout/col-2.vue" class="doc-padding-none" title=".sa-col-2">
       <LayoutCols2 />
     </ExampleCard>
 
-    <ExampleCard source="layout/col-1.vue" class="doc-padding-none" title=".wi-col-1">
+    <ExampleCard source="layout/col-1.vue" class="doc-padding-none" title=".sa-col-1">
       <LayoutCols1 />
     </ExampleCard>
 
-    <ExampleCard source="layout/row.vue" class="doc-padding-none" title=".wi-row">
+    <ExampleCard source="layout/row.vue" class="doc-padding-none" title=".sa-row">
       <LayoutRow />
     </ExampleCard>
 

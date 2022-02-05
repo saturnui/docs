@@ -1,12 +1,12 @@
 <template>
-  <div class="wi-mock-window border wi-border">
-    <div class="p-4 border-t wi-border">
+  <div class="sa-mock-window border sa-border">
+    <div class="p-4 border-t sa-border">
       <span>Hello, world!</span>
     </div>
   </div>
 
   <div
-    class="wi-mock-window bg-dark-400 dark:bg-dark-600 border wi-border text-light-100 dark:text-light-100 filter drop-shadow-md"
+    class="sa-mock-window bg-dark-400 dark:bg-dark-600 border sa-border text-light-100 dark:text-light-100 filter drop-shadow-md"
   >
     <VButton icon class="absolute top-2 right-2">
       <tabler-x />

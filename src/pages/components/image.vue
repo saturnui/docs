@@ -52,7 +52,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -64,14 +64,14 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Image</div>
     <div class="doc-desc">
       This <code>VImage</code> component is a headless UI component that can display <code>File</code> images of types <code>image/jpeg</code>, <code>image/png</code>, 
       <code>image/gif</code> and <code>image/svg+xml</code>. This component can be used in combination
-      with the <router-link to="/components/fileselector" class="wi-link">File Selector</router-link> or 
-      <router-link to="/components/dropzone" class="wi-link">Drop Zone</router-link> components.
+      with the <router-link to="/components/fileselector" class="sa-link">File Selector</router-link> or 
+      <router-link to="/components/dropzone" class="sa-link">Drop Zone</router-link> components.
     </div>
 
     <VueTitleBar title="Vue Component"></VueTitleBar>

@@ -4,7 +4,7 @@
 
 // they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vuwi.js',
+  title: 'Saturn',
   meta: [{ name: 'description', content: 'Vuwi - Vue 3 + Tailwind' }],
 })
 </script>

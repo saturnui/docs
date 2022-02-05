@@ -6,7 +6,7 @@ const props = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'wi-codeinput',
+    defaultVal: 'sa-codeinput',
     desc: 'Default class used by component',
   },
   {
@@ -53,7 +53,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -65,7 +65,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Code Input</div>
     <div class="doc-desc">

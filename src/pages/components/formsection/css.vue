@@ -1,12 +1,12 @@
 <template>
-  <div class="wi-formsection">
+  <div class="sa-formsection">
     <div class="md:col-span-1">
       <div class="p-4 sm:px-0">
-        <div class="wi-formsection-title">
-          <span class="wi-formsection-title">Profile</span>
+        <div class="sa-formsection-title">
+          <span class="sa-formsection-title">Profile</span>
         </div>
-        <div class="wi-formsection-desc">
-          <span class="wi-formsection-desc">Public profile available for all to see.</span>
+        <div class="sa-formsection-desc">
+          <span class="sa-formsection-desc">Public profile available for all to see.</span>
         </div>
       </div>
     </div>
@@ -14,9 +14,9 @@
       <div class="grid grid-cols-3 gap-4">
         <div class="col-span-6 sm:col-span-4">
           <div class="space-y-4">
-            <div class="wi-textinput border wi-border">
+            <div class="sa-textinput border sa-border">
               <div class="flex flex-col h-full w-full">
-                <label for="name" class="wi-textinput-label">Name</label>
+                <label for="name" class="sa-textinput-label">Name</label>
                 <input
                   name="name"
                   type="text"
@@ -25,9 +25,9 @@
                 />
               </div>
             </div>
-            <div class="wi-textinput border wi-border">
+            <div class="sa-textinput border sa-border">
               <div class="flex flex-col h-full w-full">
-                <label for="email" class="wi-textinput-label">Email</label>
+                <label for="email" class="sa-textinput-label">Email</label>
                 <input
                   name="email"
                   type="text"

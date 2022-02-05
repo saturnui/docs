@@ -1,5 +1,5 @@
 <template>
-  <div class="wi-line">
+  <div class="sa-line">
     <div name="line"></div>
     <slot></slot>
     <div name="line"></div>

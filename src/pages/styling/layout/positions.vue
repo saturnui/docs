@@ -1,17 +1,17 @@
 <template>
-  <div class="grid gap-4 p-4 doc-preview wi-highlight">
+  <div class="grid gap-4 p-4 doc-preview sa-highlight">
     <div class="relative w-full h-40 text-white">
-      <div class="pos-label wi-tl">.wi-tl</div>
-      <div class="pos-label wi-tc">.wi-tc</div>
-      <div class="pos-label wi-tr">.wi-tr</div>
+      <div class="pos-label sa-tl">.sa-tl</div>
+      <div class="pos-label sa-tc">.sa-tc</div>
+      <div class="pos-label sa-tr">.sa-tr</div>
 
-      <div class="pos-label wi-ml">.wi-ml</div>
-      <div class="pos-label wi-mc">.wi-mc</div>
-      <div class="pos-label wi-mr">.wi-mr</div>
+      <div class="pos-label sa-ml">.sa-ml</div>
+      <div class="pos-label sa-mc">.sa-mc</div>
+      <div class="pos-label sa-mr">.sa-mr</div>
 
-      <div class="pos-label wi-bl">.wi-bl</div>
-      <div class="pos-label wi-bc">.wi-bc</div>
-      <div class="pos-label wi-br">.wi-br</div>
+      <div class="pos-label sa-bl">.sa-bl</div>
+      <div class="pos-label sa-bc">.sa-bc</div>
+      <div class="pos-label sa-br">.sa-br</div>
     </div>
   </div>
 </template>

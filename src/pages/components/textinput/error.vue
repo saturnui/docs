@@ -18,14 +18,14 @@ nextTick(() => {
       name="Your name"
       label="Your name"
       placeholder="Name"
-      class="border wi-border wi-text-input-error"
+      class="border sa-border sa-text-input-error"
       rules="required"
     />
     <VTextInput
       v-model="text"
       label="First name"
       error="Manually inserted error"
-      class="border wi-border"
+      class="border sa-border"
     ></VTextInput>
   </div>
 </template>

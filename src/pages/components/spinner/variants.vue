@@ -23,15 +23,15 @@ setInterval(() => {
     />
 
     <VSpinner
-      class="wi-fastest w-10 h-10 min-w-10 min-h-10 border-3 border-blue-500 border-r-transparent border-l-transparent"
+      class="sa-fastest w-10 h-10 min-w-10 min-h-10 border-3 border-blue-500 border-r-transparent border-l-transparent"
     />
 
     <VSpinner
-      class="wi-fast w-16 h-16 min-w-10 min-h-10 border-16 border-purple-500 border-r-purple-800 border-l-purple-800"
+      class="sa-fast w-16 h-16 min-w-10 min-h-10 border-16 border-purple-500 border-r-purple-800 border-l-purple-800"
     />
 
     <VSpinner
-      class="wi-slowest w-20 h-20 min-w-8 min-h-8 border-10 border-r-yellow-400 border-l-green-400 border-t-blue-400 border-b-red-400"
+      class="sa-slowest w-20 h-20 min-w-8 min-h-8 border-10 border-r-yellow-400 border-l-green-400 border-t-blue-400 border-b-red-400"
       role="status"
     >
       <span class="sr-only">Loading...</span>

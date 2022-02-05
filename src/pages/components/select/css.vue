@@ -1,5 +1,5 @@
 <template>
-  <div class="wi-select border wi-border">
+  <div class="sa-select border sa-border">
     <select>
       <option value>Select your mood</option>
       <option value="happy">Happy</option>

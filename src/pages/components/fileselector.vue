@@ -52,7 +52,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -64,14 +64,14 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">File Selector</div>
     <div class="doc-desc">
       The
       <code>VFileSelector</code> component is a specialized input that
       provides a headless UI for selecting one or more files. The
-      <router-link to="/components/image" class="wi-link">Image</router-link> component is used to display the
+      <router-link to="/components/image" class="sa-link">Image</router-link> component is used to display the
       <code>File</code> objects.
     </div>
 
