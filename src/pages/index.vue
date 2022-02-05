@@ -5,14 +5,14 @@
   />
   <div class="flex flex-col h-screen items-center gap-4 overflow-y-auto">
     <div>
-      <assets-logo-saturn class="h-40 w-40 mt-30 fill-gray-600 dark:fill-cyan-400" />
+      <assets-logo-saturn class="h-40 w-40 mt-30 fill-gray-600 dark:fill-teal-400" />
     </div>
     <div class="sa-content flex flex-col items-center px-10 gap-8">
       <div class="grid gap-12">
         <div class="font-light space-y-2 text-center">
-          <div class="text-5xl">Saturn</div>
+          <div class="text-5xl">Saturn UI</div>
           <!-- <div class="text-5xl">Headless Vue UI</div> -->
-          <div class="text-3xl pl-2">Vue 3 + Tailwind CSS Components</div>
+          <div class="text-3xl pl-2">Vue 3 + Tailwind CSS</div>
           <!-- <div class="flex items-center justify-center gap-2">
             <simple-icons-windicss class="text-light-blue-400" />Fully supports WindiCSS
           </div> -->
@@ -21,18 +21,18 @@
           <div class="sa-col-3-1 gap-4">
             <router-link
               to="/getting-started"
-              class="sa-btn sa-primary rounded-full"
+              class="sa-btn bg-primary-light text-white dark:bg-teal-600 rounded-full"
               size="lg"
             >Get Started</router-link>
             <router-link
               to="/introduction"
-              class="sa-btn border border-primary rounded-full"
+              class="sa-btn border-2 border-primary-light hover:bg-blue-50 dark:border-teal-600 dark:hover:bg-teal-900 rounded-full"
               size="lg"
             >Why Saturn?</router-link>
             <a
               href="https://github.com/saturnui/vue"
               target="_blank"
-              class="sa-btn rounded-full bg-dark-600 bg-opacity-10 gap-2"
+              class="sa-btn rounded-full bg-dark-600 bg-opacity-10 hover:bg-opacity-20 gap-2"
               size="lg"
             >
               <carbon-logo-github />
@@ -50,20 +50,20 @@
 
       <router-link
         to="/components/alert"
-        class="sa-btn sa-dark bg-green-600 rounded-full font-medium px-6 py-4 rounded-lg my-8 font-bold"
+        class="sa-btn text-white bg-primary-light dark:bg-teal-600 rounded-full font-medium px-6 py-4 rounded-lg my-8 font-bold"
       >See component documentation</router-link>
       <div class="flex justify-center gap-4 w-full p-3">
         <div class="sa-col-3-1 gap-12 max-w-80 lg:max-w-max">
           <div class="text-center space-y-4 sa-highlight p-8 rounded-xl">
-            <div class="text-3xl text-primary-light font-light">CSS First</div>
+            <div class="text-3xl text-primary-light dark:text-teal-400 font-light">CSS First</div>
             <div>Style components with CSS instead of a bunch of properties defined by APIs</div>
           </div>
           <div class="text-center space-y-4 sa-highlight p-8 rounded-xl">
-            <div class="text-3xl text-primary-light font-light">Headless UI</div>
+            <div class="text-3xl text-primary-light dark:text-teal-400 font-light">Headless UI</div>
             <div>Use pre-built Vue 3 headless components to drive Tailwind components</div>
           </div>
           <div class="text-center space-y-4 sa-highlight p-8 rounded-xl">
-            <div class="text-3xl text-primary-light font-light">Powerful</div>
+            <div class="text-3xl text-primary-light dark:text-teal-400 font-light">Powerful</div>
             <div>Use tooling such as Vite, Vitesse and WindiCSS to build full applications</div>
           </div>
         </div>
@@ -76,7 +76,6 @@
     </div>
   </div>
   <ToggleDarkMode class="fixed sa-tr m-4" />
-  <!-- <Banner class="top-8 right-8" /> -->
 </template>
 
 <style>

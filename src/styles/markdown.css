@@ -32,6 +32,7 @@ html:not(.dark) .prose {
 }
 
 html.dark .prose {
+  color: #eeeeee;
   --prism-foreground: #d4cfbf;
   --prism-background: #151515;
   --prism-comment: #758575;
@@ -55,4 +56,28 @@ html.dark .prose {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-light;
+}
+
+.dark .prose h1, .dark .prose h2, .dark .prose h3  {
+  @apply text-teal-300;
+}
+
+.dark .prose h4 {
+  @apply text-teal-400;
+}
+
+.prose blockquote {
+  @apply text-lg ml-2;
+}
+
+html.dark .prose blockquote {
+  @apply text-teal-400;
+}
+
+.dark .prose blockquote {
+  @apply border-teal-800;
 }

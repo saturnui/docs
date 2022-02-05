@@ -17,3 +17,13 @@ This is the getting started page
 ...
 </body>
 ```
+
+```css
+mark {
+	outline: .4em solid red;
+	outline-offset: .4em;
+	margin: .4em 0;
+	background-color: transparent;
+	display: inline-block;
+}
+```

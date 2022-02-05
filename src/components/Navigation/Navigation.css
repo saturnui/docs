@@ -9,6 +9,6 @@
     @apply flex items-center pl-5 py-1.4 ml-5 cursor-pointer text-gray-600 dark:text-gray-400 hover:bg-dark-50 dark:hover:bg-white dark:hover:bg-opacity-4 gap-2 rounded-r-lg border-l;
   }
   .nav-sublink.router-link-exact-active {
-    @apply text-light-blue-500 border-l-light-blue-500 font-medium;
+    @apply text-light-blue-500 border-l-light-blue-500 dark:text-teal-400 dark:border-l-teal-400 font-medium;
   }
 }
