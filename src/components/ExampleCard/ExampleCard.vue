@@ -29,7 +29,7 @@ const props = defineProps({
   },
 })
 const exSource = `/components/examples${props.source}`
-const sourceBaseUrl = 'https://raw.githubusercontent.com/vuwijs/docs/main/src/pages/components'
+const sourceBaseUrl = 'https://raw.githubusercontent.com/saturnui/docs/main/src/pages/components'
 const rawSource = `${sourceBaseUrl}/${props.source}.vue`
 
 // const mode = ref('')

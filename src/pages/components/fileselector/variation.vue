@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useImageToDataUrl } from '~/vuwi/vue/src'
+import { useImageToDataUrl } from '~/saturn/vue/src'
 
 const file = ref<File>()
 const dataUrl = ref('')

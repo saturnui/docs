@@ -12,9 +12,9 @@ const props = defineProps({
     default: '',
   },
 })
-// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/Alert.css
-// https://raw.githubusercontent.com/vuwijs/vuwi/feature/theming/themes/base/components/components/Alert.css
-const githubBaseUrl = 'https://raw.githubusercontent.com/vuwijs/vuwi/main/themes/base/components/'
+// https://raw.githubusercontent.com/saturnui/saturn/feature/theming/themes/base/components/Alert.css
+// https://raw.githubusercontent.com/saturnui/saturn/feature/theming/themes/base/components/components/Alert.css
+const githubBaseUrl = 'https://raw.githubusercontent.com/saturnui/saturn/main/themes/base/components/'
 const source = `${githubBaseUrl}/${props.source}`
 const decoratedCSS = ref('')
 const css = ref('')

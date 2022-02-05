@@ -5,7 +5,7 @@ const api = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'vuwi',
+    defaultVal: 'saturn',
     desc: 'Default class used by component',
   },
 ]

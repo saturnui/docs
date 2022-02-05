@@ -1,6 +1,6 @@
 <template>
   <img
-    src="/vuwi-background.png"
+    src="/background.png"
     class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none pointer-events-none"
   />
   <div class="sa-main">

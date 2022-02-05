@@ -1,6 +1,6 @@
 <template>
   <img
-    src="/vuwi-background.png"
+    src="/background.png"
     class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none pointer-events-none"
   />
   <div class="flex flex-col h-screen items-center gap-4 overflow-y-auto">
@@ -30,7 +30,7 @@
               size="lg"
             >Why Saturn?</router-link>
             <a
-              href="https://github.com/vuwijs/vuwi"
+              href="https://github.com/saturnui/vue"
               target="_blank"
               class="sa-btn rounded-full bg-dark-600 bg-opacity-10 gap-2"
               size="lg"

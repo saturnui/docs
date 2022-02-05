@@ -1,6 +1,6 @@
-[submodule "src/vuwi/vue"]
-	path = src/vuwi/vue
-	url = https://github.com/vuwijs/vue.git
-[submodule "src/vuwi/theme"]
-	path = src/vuwi/theme
-	url = https://github.com/vuwijs/theme.git
+[submodule "src/saturn/vue"]
+	path = src/saturn/vue
+	url = https://github.com/saturnui/vue.git
+[submodule "src/saturn/theme"]
+	path = src/saturn/theme
+	url = https://github.com/saturnui/theme.git

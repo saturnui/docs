@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "vuwijs"
+    "default": "saturnui"
   },
   "targets": {
-    "vuwijs": {
+    "saturnui": {
       "hosting": {
-        "vuwijs": [
-          "vuwijs"
+        "saturnui": [
+          "saturnui"
         ]
       }
     }

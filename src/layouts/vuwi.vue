@@ -1,5 +1,5 @@
 <template>
-  <img src="/vuwi-background.png" class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none">
+  <img src="/background.png" class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none">
   <AppBar
     class="fixed top-0 bg-white/90 dark:bg-dark-900/90 sa-text border-b dark:border-dark-800"
   />

@@ -30,7 +30,7 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
       // template: {
       //   compilerOptions: {
-      //     isCustomElement: (tag: string) => tag.startsWith('vuwi-'),
+      //     isCustomElement: (tag: string) => tag.startsWith('sa-'),
       //   },
       // },
     }),
@@ -56,7 +56,7 @@ export default defineConfig({
         '@vueuse/head',
         '@vueuse/core',
         {
-          '~/vuwi/vue/src/composables': [
+          '~/saturn/vue/src/composables': [
             'isDark',
             'toggleDark',
             'useMessenger',
@@ -71,7 +71,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      dirs: ['./src/components', './src/vuwi/vue/src/components'],
+      dirs: ['./src/components', './src/saturn/vue/src/components'],
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
 
