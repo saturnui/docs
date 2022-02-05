@@ -22,7 +22,7 @@ nextTick(() => {
     v-model="selectedItem"
     :options="items"
     name="mood"
-    class="border wi-border min-w-60"
+    class="border sa-border min-w-60"
     label="Mood"
     rules="required"
   />

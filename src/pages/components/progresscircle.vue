@@ -21,7 +21,7 @@ const props = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'vuwi',
+    defaultVal: 'sa-progress-circle',
     desc: 'Default class used by component',
   },
   {
@@ -75,7 +75,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -87,7 +87,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Progress Circle</div>
     <div class="doc-desc">Displays progression in a circular view</div>
@@ -107,8 +107,8 @@ onMounted(async () => {
     >These examples demonstrate only a few different ways to style the progress circle.</div>
 
     <ExampleCard source="progress/circle/basic" content-class="">
-      <div class="p-2 wi-highlight">
-        <VSwitch v-model="animate" class="wi-switch-sm">
+      <div class="p-2 sa-highlight">
+        <VSwitch v-model="animate" class="sa-switch-sm">
           <span class="pl-2">Animate</span>
         </VSwitch>
       </div>
@@ -124,8 +124,8 @@ onMounted(async () => {
     >Demonstrates different sizes and widths.</div>
 
     <ExampleCard source="progress/circle/variants" content-class="">
-      <div class="p-2 wi-highlight">
-        <VSwitch v-model="animate" class="wi-switch-sm">
+      <div class="p-2 sa-highlight">
+        <VSwitch v-model="animate" class="sa-switch-sm">
           <span class="pl-2">Animate</span>
         </VSwitch>
       </div>

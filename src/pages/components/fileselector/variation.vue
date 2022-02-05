@@ -17,11 +17,11 @@ const handleChange = async (val?: FileList) => {
 
 <template>
   <div
-    class="relative wi-center w-48 h-48 wi-highlight-strongest rounded-full border-6 wi-border cursor-pointer"
+    class="relative sa-center w-48 h-48 sa-highlight-strongest rounded-full border-6 sa-border cursor-pointer"
   >
     <VFileSelector
       :accepts="['jpg', 'jpeg', 'gif', 'png', 'svg']"
-      class="wi-center w-full h-full rounded-full overflow-hidden"
+      class="sa-center w-full h-full rounded-full overflow-hidden"
       @change="handleChange"
     >
       <img v-if="dataUrl" :src="dataUrl" />
@@ -30,7 +30,7 @@ const handleChange = async (val?: FileList) => {
     <VButton
       icon
       size="lg"
-      class="absolute wi-br m-1 border-4 wi-border bg-dark-200 dark:bg-dark-700 pointer-events-none"
+      class="absolute sa-br m-1 border-4 sa-border bg-dark-200 dark:bg-dark-700 pointer-events-none"
     >
       <tabler-pencil class="text-xl opacity-20" />
     </VButton>

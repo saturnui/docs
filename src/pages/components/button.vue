@@ -31,7 +31,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" />
       </div>
     </VOverlay>
@@ -43,7 +43,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content p-2 sm:p-8">
+  <div class="sa-content p-2 sm:p-8">
     <div class="space-y-4">
       <div class="doc-title">Button</div>
     </div>

@@ -9,8 +9,8 @@ const enabled = ref(true)
 <template>
   <VFormSection title="Profile" desc="Public profile available for all to see.">
     <div class="space-y-4">
-      <VTextInput v-model="name" label="Name" required class="border wi-border" />
-      <VTextInput v-model="email" label="Email" class="border wi-border" />
+      <VTextInput v-model="name" label="Name" required class="border sa-border" />
+      <VTextInput v-model="email" label="Email" class="border sa-border" />
     </div>
   </VFormSection>
 
@@ -18,7 +18,7 @@ const enabled = ref(true)
 
   <VFormSection title="Security" desc="Keeps your account secure">
     <div class="space-y-4">
-      <VTextInput v-model="password" label="Password" type="password" class="border wi-border" />
+      <VTextInput v-model="password" label="Password" type="password" class="border sa-border" />
       <VSwitch v-model="enabled">
         <span class="pl-2">Two-factor authentication</span>
       </VSwitch>
@@ -28,6 +28,6 @@ const enabled = ref(true)
   <VLine class="py-4" />
 
   <div class="flex justify-end">
-    <VButton size="lg" class="wi-primary min-w-48">Submit</VButton>
+    <VButton size="lg" class="sa-primary min-w-48">Submit</VButton>
   </div>
 </template>

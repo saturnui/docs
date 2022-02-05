@@ -32,12 +32,12 @@ const clearFiles = () => {
           >
             <VImage :src="file" width="200" height="200" class="rounded max-h-46 max-w-46" />
           </div>
-          <div class="wi-center wi-dark rounded-lg mt-2 px-3 py-2">
+          <div class="sa-center sa-dark rounded-lg mt-2 px-3 py-2">
             <div class="truncate text-sm font-bold max-w-40">{{ file.name }}</div>
           </div>
           <VButton
             icon
-            class="absolute -top-2 -right-2 rounded-full wi-dark"
+            class="absolute -top-2 -right-2 rounded-full sa-dark"
             @click="removeFile(file)"
           >
             <tabler-x />
@@ -52,12 +52,12 @@ const clearFiles = () => {
         <div class="p-2 font-bold text-2xl opacity-30 pointer-events-none select-none">Drop Files</div>
       </div>
       <div
-        class="flex items-center gap-2 px-3 py-2 wi-text bg-dark-50 dark:bg-gray-900 font-medium"
+        class="flex items-center gap-2 px-3 py-2 sa-text bg-dark-50 dark:bg-gray-900 font-medium"
       >
         <span>Total files:</span>
         <span>{{ pendingFiles.length || 0 }}</span>
         <div class="flex-grow"></div>
-        <VButton class="wi-primary" @click="clearFiles">Clear</VButton>
+        <VButton class="sa-primary" @click="clearFiles">Clear</VButton>
       </div>
     </template>
   </VDropzone>

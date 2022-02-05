@@ -11,7 +11,7 @@ const sidenavItems = [
 //   {
 //     name: 'component',
 //     type: 'string',
-//     defaultVal: 'wi-component',
+//     defaultVal: 'sa-component',
 //     desc: 'Default class used by component',
 //   },
 //   {
@@ -65,7 +65,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -77,7 +77,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Drawer</div>
     <div class="doc-desc">
@@ -101,7 +101,7 @@ onMounted(async () => {
     >This example demonstrates navigating items via external control.</VueSection>
     <ExampleCard source="/drawers/static" content-class="flex flex-col p-0 gap-8">
       <!-- <ComponentBasic /> -->
-      <div class="w-full h-80 wi-highlight">
+      <div class="w-full h-80 sa-highlight">
         <VResizer class="h-full min-w-1/2 max-w-full">
           <iframe src="/components/drawers/static" frameborder="0" width="100%" height="100%"></iframe>
         </VResizer>
@@ -114,7 +114,7 @@ onMounted(async () => {
       title="Mini"
     >This example demonstrates minifying a drawer when the width is reduced</VueSection>
     <ExampleCard source="/drawers/mini" content-class="flex flex-col p-0 gap-8">
-      <div class="w-full h-80 wi-highlight">
+      <div class="w-full h-80 sa-highlight">
         <VResizer class="h-full min-w-1/2 max-w-full">
           <iframe src="/components/drawers/mini" frameborder="0" width="100%" height="100%"></iframe>
         </VResizer>
@@ -127,7 +127,7 @@ onMounted(async () => {
       title="Popout"
     >This example demonstrates hiding main navigation and showing drawer in a "popout" view.</VueSection>
     <ExampleCard source="/drawers/popout" content-class="flex flex-col p-0 gap-8">
-      <div class="w-full h-80 wi-highlight">
+      <div class="w-full h-80 sa-highlight">
         <VResizer class="h-full min-w-1/2 max-w-full">
           <iframe src="/components/drawers/popout" frameborder="0" width="100%" height="100%"></iframe>
         </VResizer>
@@ -140,7 +140,7 @@ onMounted(async () => {
       title="Right Sidenav"
     >This example demonstrates hiding main navigation and showing drawer in a "popout" view.</VueSection>
     <ExampleCard source="/drawers/right" content-class="flex flex-col p-0 gap-8">
-      <div class="w-full h-80 wi-highlight">
+      <div class="w-full h-80 sa-highlight">
         <VResizer class="h-full min-w-1/2 max-w-full">
           <iframe src="/components/drawers/right" frameborder="0" width="100%" height="100%"></iframe>
         </VResizer>
@@ -153,7 +153,7 @@ onMounted(async () => {
       title="Multiple Navigation"
     >This example demonstrates a drawer containing both a mini variant as well as a regular menu. Both scroll indendently of each other.</VueSection>
     <ExampleCard source="/drawers/multiple" content-class="flex flex-col p-0 gap-8">
-      <div class="w-full h-80 wi-highlight">
+      <div class="w-full h-80 sa-highlight">
         <VResizer class="h-full min-w-1/2 max-w-full">
           <iframe src="/components/drawers/multiple" frameborder="0" width="100%" height="100%"></iframe>
         </VResizer>

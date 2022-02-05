@@ -1,7 +1,7 @@
 <template>
-  <div class="wi-content sm:p-4">
+  <div class="sa-content sm:p-4">
     <div>Date Picker Examples:</div>
-    <div class="wi-light-dark p-2 my-2 rounded-md">
+    <div class="sa-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Single Date
       </div>
@@ -13,7 +13,7 @@
         {{ singleDateValue }}
       </div>
     </div>
-    <div class="wi-light-dark p-2 my-2 rounded-md">
+    <div class="sa-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Date Range
       </div>
@@ -24,7 +24,7 @@
         {{ rangeDateValue }}
       </div>
     </div>
-    <div class="wi-light-dark p-2 my-2 rounded-md">
+    <div class="sa-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Custom Date Formatter
       </div>
@@ -42,7 +42,7 @@
         {{ customDateValue }}
       </div>
     </div>
-    <div class="wi-light-dark p-2 my-2 rounded-md">
+    <div class="sa-light-dark p-2 my-2 rounded-md">
       <div class="m-1">
         Disable Dates
       </div>

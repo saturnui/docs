@@ -7,7 +7,7 @@ const text = ref('')
     <VTextInput
       v-model="text"
       placeholder="Name"
-      class="border wi-border"
+      class="border sa-border"
       disabled
     />
   </div>

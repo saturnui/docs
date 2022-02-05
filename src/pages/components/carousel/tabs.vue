@@ -14,15 +14,15 @@ const slides = [
     <div
       v-for="(_, index) in slides"
       :key="index"
-      class="wi-tab-container-border wi-border"
-      :class="{ 'wi-tab-border-active': slideIndex === index }"
+      class="sa-tab-container-border sa-border"
+      :class="{ 'sa-tab-border-active': slideIndex === index }"
       @click="slideIndex = index"
     >
-      <div class="wi-tab">
+      <div class="sa-tab">
         <span class="font-medium text-sm">Slide {{ index + 1 }}</span>
       </div>
     </div>
-    <div class="wi-tab-border-spacer wi-border"></div>
+    <div class="sa-tab-border-spacer sa-border"></div>
   </VTab>
   <VCarousel v-model="slideIndex" class="mt-1">
     <VCarouselItem

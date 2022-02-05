@@ -44,7 +44,7 @@ const navTo = (item: SidenavItem) => {
 
 <template>
   <div class="sidenav">
-    <div class="sidenav-title wi-text">
+    <div class="sidenav-title sa-text">
       <span>On this page</span>
     </div>
 

@@ -46,7 +46,7 @@ export default defineComponent({
         <div class="text-xl">
           <span>{{ title }}</span>
         </div>
-        <div class="wi-text text-sm flex-grow">
+        <div class="sa-text text-sm flex-grow">
           <span>{{ desc }}</span>
         </div>
       </div>

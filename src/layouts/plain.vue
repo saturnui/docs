@@ -1,5 +1,5 @@
 <template>
-  <main class="wi-main">
+  <main class="sa-main">
     <router-view />
   </main>
 </template>

@@ -32,7 +32,7 @@ const text = ref('')
       name="Password"
       label="Password"
       placeholder="Type here..."
-      class="border wi-border wi-text-input-error"
+      class="border sa-border sa-text-input-error"
       rules="required|password"
     />
   </div>

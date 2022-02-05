@@ -3,7 +3,7 @@
     <!-- Right -->
     <VTooltip placement="right" :show="true">
       <template #tooltip>This is a tooltip</template>
-      <VButton class="wi-primary">Always show tooltip</VButton>
+      <VButton class="sa-primary">Always show tooltip</VButton>
     </VTooltip>
   </div>
 </template>

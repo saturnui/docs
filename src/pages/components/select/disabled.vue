@@ -14,7 +14,7 @@ const items = [
     :options="items"
     name="mood"
     label="Hello"
-    class="border wi-border min-w-60"
+    class="border sa-border min-w-60"
     disabled
   />
 </template>

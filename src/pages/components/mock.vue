@@ -23,7 +23,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -35,7 +35,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
   
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Title -->
     <div class="doc-title">Mocks</div>
     <div class="doc-desc">Tailwind components for showing content in a mock device.</div>

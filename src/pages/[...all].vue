@@ -9,7 +9,7 @@
       </p>
       <p class="mb-3 text-base font-medium">
         The page you're looking for may have moved or no longer exists. Head back to our
-        <router-link to="/" class="wi-link">homepage</router-link>, or take a look at one of the sections below.
+        <router-link to="/" class="sa-link">homepage</router-link>, or take a look at one of the sections below.
       </p>
     </div>
   </section>

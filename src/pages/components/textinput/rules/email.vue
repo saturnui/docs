@@ -15,7 +15,7 @@ defineRule('email', email)
       name="Email"
       label="Username"
       placeholder="Your email address..."
-      class="border wi-border wi-text-input-error"
+      class="border sa-border sa-text-input-error"
       rules="required|email"
     />
   </div>

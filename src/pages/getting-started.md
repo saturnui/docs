@@ -7,14 +7,13 @@ This is the getting started page
 ## Themes
 
 ```css
-.skyline .wi-btn
+.skyline .sa-btn
 ```
 
 ```html
 <body class="skyline">
 ...
-  <VButton root-class="custom-btn" />
-  <VButton wi="custom-btn" />
+  <VButton component="custom-btn" />
 ...
 </body>
 ```

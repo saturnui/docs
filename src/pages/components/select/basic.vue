@@ -13,6 +13,6 @@ const items = [
     v-model="selectedItem"
     name="mood"
     :options="items"
-    class="border wi-border min-w-60"
+    class="border sa-border min-w-60"
   />
 </template>

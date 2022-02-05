@@ -4,5 +4,5 @@ const val = ref(6)
 
 <template>
   <VSlider v-model="val" />
-  <VTextInput v-model="val" type="number" min="0" max="100" class="border wi-border w-20" />
+  <VTextInput v-model="val" type="number" min="0" max="100" class="border sa-border w-20" />
 </template>

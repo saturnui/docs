@@ -9,13 +9,13 @@ const text = ref('')
       v-model="dob"
       label="Date of Birth"
       placeholder="DD/MM/YYYY"
-      class="border wi-border wi-text-input-error"
+      class="border sa-border sa-text-input-error"
       mask="##/##/####"
     />
     <VTextInput
       v-model="text"
       label="7 digit code using letters and numbers"
-      class="border wi-border"
+      class="border sa-border"
       mask="XXX-X-XXX"
     ></VTextInput>
   </div>

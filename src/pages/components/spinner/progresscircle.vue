@@ -21,8 +21,8 @@ setInterval(() => {
     
     <!-- Variation #1 example -->
     <div class="relative w-12 h-12">
-      <div class="rounded-full border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 wi-border" />
-      <div class="absolute top-0 left-0 animate-spin wi-slow">
+      <div class="rounded-full border-gray-200 w-16 h-16 min-w-14 min-h-14 border-12 sa-border" />
+      <div class="absolute top-0 left-0 animate-spin sa-slow">
         <div class="absolute top-0 left-0">
           <VProgressCircle
             :percent="35"
@@ -35,7 +35,7 @@ setInterval(() => {
         <VProgressCircle
           :percent="20"
           color="border-blue-500"
-          class="wi-slow"
+          class="sa-slow"
           :width="10"
           :size="4"
         />
@@ -46,7 +46,7 @@ setInterval(() => {
     <VProgressCircle
       :percent="percent"
       color="border-red-500"
-      class="animate-spin wi-faster"
+      class="animate-spin sa-faster"
       :width="8"
       :size="4"
       :style="style"

@@ -5,7 +5,7 @@ const val = ref(false)
 <template>
   <div class="flex items-center gap-8">
     <!-- Small -->
-    <VSwitch v-model="val" class="wi-switch-sm">
+    <VSwitch v-model="val" class="sa-switch-sm">
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />
@@ -21,7 +21,7 @@ const val = ref(false)
     </VSwitch>
 
     <!-- Large -->
-    <VSwitch v-model="val" class="wi-switch-lg">
+    <VSwitch v-model="val" class="sa-switch-lg">
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />
@@ -29,7 +29,7 @@ const val = ref(false)
     </VSwitch>
 
     <!-- Disabled -->
-    <VSwitch v-model="val" class="wi-switch-lg" disabled>
+    <VSwitch v-model="val" class="sa-switch-lg" disabled>
       <carbon-moon class="ml-1" />
       <template #left>
         <carbon-sun class="mr-1" />

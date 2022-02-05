@@ -12,7 +12,7 @@ const fieldType = computed(() => {
     :type="fieldType"
     label="Password"
     placeholder="*****"
-    class="border wi-border h-14"
+    class="border sa-border h-14"
   >
     <template #prepend>
       <tabler-lock class="text-xl opacity-30" />

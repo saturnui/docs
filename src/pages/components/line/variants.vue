@@ -4,6 +4,6 @@
   </VLine>
 
   <VLine>
-    <VButton size="sm" class="border wi-border mx-2">Submit</VButton>
+    <VButton size="sm" class="border sa-border mx-2">Submit</VButton>
   </VLine>
 </template>

@@ -6,7 +6,7 @@ const text = ref('')
   <VTextInput
     v-model="text"
     placeholder="Your name"
-    class="border wi-border h-14"
+    class="border sa-border h-14"
   >
     <template #prepend>
       <tabler-user class="text-xl opacity-30" />

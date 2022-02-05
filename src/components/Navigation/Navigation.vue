@@ -97,7 +97,7 @@ const menuItems: MenuItem[] = [
             v-for="(link, n) in item.links"
             :key="n"
             :to="link.to"
-            class="nav-sublink wi-border"
+            class="nav-sublink sa-border"
           >{{ link.title }}</router-link>
         </div>
       </VCollapse>
@@ -121,7 +121,7 @@ const menuItems: MenuItem[] = [
             v-for="(link, n) in item.links"
             :key="n"
             :to="link.to"
-            class="nav-sublink wi-border"
+            class="nav-sublink sa-border"
           >
             <span>{{ link.title }}</span>
           </router-link>
@@ -133,7 +133,7 @@ const menuItems: MenuItem[] = [
     <VLine class="lg:hidden" />
     <div class="flex items-center px-3 py-2 lg:hidden">
       <div
-        class="flex items-center gap-3 px-4 py-2 text-sm wi-hover"
+        class="flex items-center gap-3 px-4 py-2 text-sm sa-hover"
         role="menuitem"
         tabindex="-1"
         @click="toggleDarkMode"

@@ -40,7 +40,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
     <template #overlay>
       <div class="absolute top-0 w-full h-full pointer-events-none">
         <!-- Navigation Pagination -->
-        <div class="absolute bottom-3 wi-bc flex gap-2 pointer-events-auto">
+        <div class="absolute bottom-3 sa-bc flex gap-2 pointer-events-auto">
           <button
             v-for="(slide, index) in slides"
             :key="slide"
@@ -51,7 +51,7 @@ const { pause, resume, isActive } = useIntervalFn(() => {
         </div>
       </div>
       <div
-        class="absolute top-2 right-2 rounded-lg wi-center wi-shade-strongest w-8 h-8 text-xs font-bold"
+        class="absolute top-2 right-2 rounded-lg sa-center sa-shade-strongest w-8 h-8 text-xs font-bold"
       >
         <tabler-player-play v-if="isActive" />
         <tabler-player-pause v-else />

@@ -7,7 +7,7 @@ const api = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'vuwi',
+    defaultVal: 'sa-skeleton',
     desc: 'Default class used by component',
   },
 ]
@@ -36,7 +36,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -48,7 +48,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Skeletons</div>
     <div
@@ -57,7 +57,7 @@ onMounted(async () => {
 
     <CssTitleBar id="css" title="Tailwind Component">
       The means to create your own skelton components is provided by Tailwind CSS. You can learn more here 
-      <a href="https://tailwindcss.com/docs/animation#pulse" class="wi-link">https://tailwindcss.com/docs/animation#pulse</a>.
+      <a href="https://tailwindcss.com/docs/animation#pulse" class="sa-link">https://tailwindcss.com/docs/animation#pulse</a>.
     </CssTitleBar>
     <ExampleCard source="/skeleton/css">
       <SkeletonCss />

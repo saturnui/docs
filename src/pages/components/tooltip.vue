@@ -7,7 +7,7 @@ const api = [
   {
     name: 'component',
     type: 'string',
-    defaultVal: 'vuwi',
+    defaultVal: 'sa-tooltip',
     desc: 'Used as the prefix for all Vuwi CSS classes',
   },
   {
@@ -62,7 +62,7 @@ onMounted(async () => {
 
   <teleport v-if="mounted" to="#sidemenu">
     <VOverlay v-model="showDrawer" position="right" @swipe:end="handleSwipeEnd">
-      <div class="h-full flex flex-col w-80 wi-light-dark overflow-y-auto">
+      <div class="h-full flex flex-col w-80 sa-light-dark overflow-y-auto">
         <Sidenav :data="sidenavItems" @click:link="showDrawer = false" />
       </div>
     </VOverlay>
@@ -74,7 +74,7 @@ onMounted(async () => {
     </VButton>
   </teleport>
 
-  <div class="wi-content doc-content">
+  <div class="sa-content doc-content">
     <!-- Header -->
     <div class="doc-title">Tooltip</div>
     <div class="doc-desc">
@@ -82,7 +82,7 @@ onMounted(async () => {
       <a
         href="https://popper.js.org/"
         target="_blank"
-        class="py-1 wi-link"
+        class="py-1 sa-link"
       >@popperjs/core</a>.
     </div>
 
