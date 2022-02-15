@@ -1,9 +1,9 @@
 <p align='center'>
-  <img src='https://raw.githubusercontent.com/saturnui/docs/main/src/assets/logo-saturn.svg' alt='Vuwi - Vue + Tailwind + Vitesse' width='120'/>
+  <img src='https://raw.githubusercontent.com/saturnui/docs/main/src/assets/logo-saturn.svg' alt='Saturn UI - Vue 3 + Tailwind CSS' width='120'/>
 </p>
 
 <p align='center'>
-Official Vuwi Documentation
+Official Saturn UI Documentation
 </p>
 
 <br>

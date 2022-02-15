@@ -27,7 +27,7 @@ defineProps({
       <div class="bg-green-500 h-10"></div>
     </VProgressBar>
 
-    <div>Vuwi provides a striped style</div>
+    <div>Saturn provides a striped style</div>
 
     <VProgressBar :percent="percent" class="sa-bg rounded-full overflow-hidden">
       <div class="bg-green-500 sa-progress-stripe h-10"></div>
@@ -39,7 +39,7 @@ defineProps({
       <div data-animate class="bg-green-500 sa-stripe sa-animate-right h-10"></div>
     </VProgressBar>
 
-    <div>Controlling the speed can be adjusted with using the Vuwi classes</div>
+    <div>Controlling the speed can be adjusted with using the Saturn classes</div>
     <VProgressBar :percent="percent" class="sa-bg rounded-full overflow-hidden">
       <div class="bg-green-500 sa-stripe sa-animate-right sa-slow h-10"></div>
     </VProgressBar>

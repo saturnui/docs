@@ -47,7 +47,7 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Layout</div>
     <div class="doc-desc">
-      Vuwi provides some classes for common layout configurations.
+      Saturn provides some classes for common layout configurations.
     </div>
 
     <!-- Positioning -->

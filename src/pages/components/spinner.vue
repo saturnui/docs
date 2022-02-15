@@ -60,9 +60,9 @@ onMounted(async () => {
     <!-- Header -->
     <div class="doc-title">Spinner</div>
     <div class="doc-desc">
-      Vuwi provides classes that can spin using CSS animate. In addition there is a very light-weight class that
+      Saturn provides classes that can spin using CSS animate. In addition there is a very light-weight class that
       will show a Tailwind Component spinner for simple usage. If you need a more complex spinner, then you can combine
-      Vuwi spin classes with the
+      Saturn spin classes with the
       <router-link to="/components/progresscircle" class="sa-link">VProgressCircle</router-link>component.
     </div>
 

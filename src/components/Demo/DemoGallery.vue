@@ -1,0 +1,63 @@
+<script setup lang="ts">
+const slideIndex = ref(0)
+const urls = [
+  'https://media.istockphoto.com/vectors/vector-illustration-on-the-topic-of-outer-space-interstellar-travels-vector-id1152991300?k=20&m=1152991300&s=612x612&w=0&h=N9FS1VEHOvPAtvUAe-YIAbopvIKAl7yNcX1UkSnWxmc=',
+  'https://graphiccloud.net/wp-content/uploads/2021/07/Free-Galaxy-Space-Illustration.jpg',
+  'https://cdn.dribbble.com/users/15687/screenshots/11110219/media/94ca8f4cf8ebf867e6cdebc5d8966750.png?compress=1&resize=400x300&vertical=top',
+  'https://mir-s3-cdn-cf.behance.net/project_modules/fs/c6578b84636997.5d63b6ac9ea2c.jpg',
+  'https://img.freepik.com/free-vector/earth-view-night-from-alien-planet-neon-space_33099-1876.jpg?size=626&ext=jpg',
+]
+</script>
+
+<template>
+  <VCarousel v-model="slideIndex" slider-class="scroll-smooth" class="rounded-lg overflow-hidden">
+    <!-- Carousel Items -->
+    <VCarouselItem
+      v-for="(url, index) in urls"
+      :key="index"
+      class="flex justify-center items-center w-full h-full"
+    >
+      <img :src="url" class="w-full h-90 object-cover" />
+    </VCarouselItem>
+    <template #overlay="{ prevSlide, nextSlide }">
+      <div class="absolute top-0 w-full h-full">
+        <!-- Navigation Prev -->
+        <VButton icon class="absolute left-4 sa-ml bg-dark-700 text-white" @click="prevSlide(1)">
+          <tabler-chevron-left />
+        </VButton>
+
+        <!-- Navigation Next -->
+        <VButton icon class="absolute sa-mr right-4 bg-dark-700 text-white" @click="nextSlide(1)">
+          <tabler-chevron-right />
+        </VButton>
+
+        <div class="absolute sa-br mb-4 mr-4">
+          <VTooltip show="focus" component="demo-tooltip">
+            <template #tooltip>
+              <div class="w-70 space-y-3">
+                <DemoTooltip
+                  title="Carousel Component"
+                  link="/components/carousel"
+                >Use the carousel for displaying images and content on tabs.</DemoTooltip>
+              </div>
+            </template>
+            <VButton icon class="bg-dark-800">
+              <tabler-info-circle class="text-teal-400 w-8 h-8" />
+            </VButton>
+          </VTooltip>
+        </div>
+
+        <!-- Navigation Pagination -->
+        <div class="absolute bottom-3 sa-bc flex gap-2">
+          <button
+            v-for="(url, index) in urls"
+            :key="url"
+            class="bg-black w-5 h-2 rounded-full bg-opacity-80"
+            :class="{ '!bg-teal-300 bg-opacity-100': slideIndex === index }"
+            @click="slideIndex = index"
+          ></button>
+        </div>
+      </div>
+    </template>
+  </VCarousel>
+</template>

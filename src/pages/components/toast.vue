@@ -44,7 +44,7 @@ onMounted(async () => {
     <div class="doc-desc space-y-4">
       <p>
         Toasts allow users to receive feedback in a realtime without obstructing the application.
-        There are a few ways to handle toasts in a Vuwi application with existing components.
+        There are a few ways to handle toasts in a Saturn application with existing components.
       </p>
     </div>
 

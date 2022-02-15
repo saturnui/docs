@@ -8,7 +8,7 @@ const api = [
     name: 'component',
     type: 'string',
     defaultVal: 'sa-tooltip',
-    desc: 'Used as the prefix for all Vuwi CSS classes',
+    desc: 'Used as the prefix for all Saturn CSS classes',
   },
   {
     name: 'placement',

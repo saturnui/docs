@@ -12,7 +12,7 @@ const props = [
     desc: 'Default class used by component',
   },
   {
-    name: 'photo',
+    name: 'image',
     type: 'string',
     defaultVal: '',
     desc: 'Url to image to be used for avatar',
@@ -21,14 +21,14 @@ const props = [
     name: 'name',
     type: 'string',
     defaultVal: '',
-    desc: 'Name to be used to display an initial if photo is not provided.',
+    desc: 'Name to be used to display an initial if image is not provided.',
   },
 ]
 
 const sidenavItems = [
   { title: 'Tailwind Component', anchor: '#css' },
   { title: 'Name', anchor: '#name' },
-  { title: 'Photo', anchor: '#photo' },
+  { title: 'Image', anchor: '#image' },
   { title: 'Properties', anchor: '#props' },
 ]
 
@@ -98,9 +98,9 @@ onMounted(async () => {
     </ExampleCard>
 
     <!-- Photo -->
-    <VueSection id="photo" title="Photo">
+    <VueSection id="image" title="Photo">
       Example show
-      <code>photo</code> usage.
+      <code>image</code> usage.
     </VueSection>
     <ExampleCard
       source="/avatar/photo"

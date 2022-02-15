@@ -74,7 +74,7 @@ onMounted(async () => {
     <VueSection
       id="variations"
       title="Variations"
-    >These examples demonstrate using icons, close button and different color styles available in Vuwi's theme.</VueSection>
+    >These examples demonstrate using icons, close button and different color styles available in Saturn's theme.</VueSection>
     <ExampleCard source="/alert/variation">
       <AlertVariation />
     </ExampleCard>

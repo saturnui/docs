@@ -28,7 +28,7 @@ const scrollToTargetAdjusted = (selector: string, offset = 52) => {
     const elementPosition = element.getBoundingClientRect().top
     const offsetPosition = elementPosition + window.pageYOffset - offset
 
-    window.scrollTo({
+    document.body.scrollTo({
       top: offsetPosition,
       behavior: 'smooth',
     })
