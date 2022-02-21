@@ -8,12 +8,12 @@ const tabs = [
 
 const badges = reactive([
   // { label: 'Home', url: '/demo/badge_8.png' },
-  { enabled: true, label: 'Comm', url: '/demo/badge_1.png' },
-  { enabled: false, label: 'Defense', url: '/demo/badge_2.png' },
-  { enabled: true, label: 'Exploration', url: '/demo/badge_7.png' },
-  { enabled: false, label: 'Navigation', url: '/demo/badge_5.png' },
-  { enabled: true, label: 'Robotics', url: '/demo/badge_9.png' },
-  { enabled: false, label: 'Crew', url: '/demo/badge_6.png' },
+  { enabled: true, label: 'Comm', url: '/demo/badge_1_white.png' },
+  { enabled: false, label: 'Defense', url: '/demo/badge_2_white.png' },
+  { enabled: true, label: 'Exploration', url: '/demo/badge_7_white.png' },
+  { enabled: false, label: 'Navigation', url: '/demo/badge_5_white.png' },
+  { enabled: true, label: 'Robotics', url: '/demo/badge_9_white.png' },
+  { enabled: false, label: 'Crew', url: '/demo/badge_6_white.png' },
   // { enabled: false, label: 'Visitor Logs', url: '/demo/badge_10.png' },
   // { enabled: false, label: 'Travel Logs', url: '/demo/badge_11.png' },
 ])
@@ -21,7 +21,7 @@ const badges = reactive([
 
 <template>
   <div>
-    <VTooltip show="focus" component="demo-tooltip" target=".tab" class="relative flex-grow">
+    <VTooltip show="focus" component="demo-tooltip" placement="top" target=".tab" class="relative flex-grow">
       <template #tooltip>
         <div class="w-70 space-y-3">
           <DemoTooltip
@@ -37,7 +37,7 @@ const badges = reactive([
           v-for="(item, index) in tabs"
           :key="item.label"
           class="tab px-6 py-2 border-2 border-b-0 border-transparent rounded-t-lg duration-300 whitespace-nowrap z-1"
-          :class="{ '!border-teal-400 bg-dark-100 dark:bg-dark-700 text-white font-bold': selectedTabIndex === index }"
+          :class="{ '!border-white blueprint-bg text-white font-bold': selectedTabIndex === index }"
           tabindex="0"
           @click="selectedTabIndex = index"
         >{{ item.label }}</div>
@@ -45,7 +45,7 @@ const badges = reactive([
       </div>
     </VTooltip>
     <div
-      class="demo-card border-2 border-teal-400 bg-dark-100 dark:bg-dark-700"
+      class="blueprint-card border-2 border-white"
       :class="{ 'rounded-tl-none': selectedTabIndex === 0 }"
       style="margin-top: -2px;"
     >
@@ -69,7 +69,7 @@ const badges = reactive([
         slider-class="scroll-smooth"
         class="rounded-lg overflow-hidden"
       >
-        <VCarouselItem class="tab-item flex justify-center items-center w-full h-full" tabindex="0">
+        <VCarouselItem v-for="i in 3" :key="i" class="tab-item flex justify-center items-center w-full h-full" tabindex="0">
           <div class="grid gap-6 pt-4">
             <div class="flex flex-wrap gap-4 justify-center">
               <VTooltip
@@ -92,13 +92,13 @@ const badges = reactive([
                 <div
                   tabindex="0"
                   class="badge relative p-1 sa-mask-6 opacity-50"
-                  :class="{ 'bg-green-500 opacity-100': badge.enabled }"
+                  :class="{ 'bg-white opacity-100': badge.enabled }"
                 >
                   <img :src="badge.url" class="w-18 h-18 filter drop-shadow-md" />
                 </div>
               </VTooltip>
             </div>
-            <div class="grid grid-cols-3 gap-4 text-sm sa-shade rounded-lg p-6">
+            <div class="grid grid-cols-3 gap-4 text-sm border-2 border-white rounded-lg p-6">
               <VTooltip
                 v-for="badge in badges"
                 :key="badge.label"
@@ -116,18 +116,18 @@ const badges = reactive([
                     >Use the switch for boolean-like properties.</DemoTooltip>
                   </div>
                 </template>
-                <VSwitch v-model="badge.enabled" class="sa-switch-sm">
+                <VSwitch v-model="badge.enabled" component="blueprint-switch" class="sa-switch-sm">
                   <div class="ml-3">{{ badge.label }}</div>
                 </VSwitch>
               </VTooltip>
             </div>
             <div class="flex justify-center">
-              <VButton size="lg" class="sa-primary w-full">Apply Settings</VButton>
+              <VButton size="lg" class="bg-white text-blue-500 w-full">Apply Settings</VButton>
             </div>
           </div>
         </VCarouselItem>
-        <VCarouselItem class="flex justify-center items-center w-full h-full">Hello, world 2</VCarouselItem>
-        <VCarouselItem class="flex justify-center items-center w-full h-full">Hello, world 3</VCarouselItem>
+        <!-- <VCarouselItem class="flex justify-center items-center w-full h-full">Hello, world 2</VCarouselItem>
+        <VCarouselItem class="flex justify-center items-center w-full h-full">Hello, world 3</VCarouselItem> -->
       </VCarousel>
       <!-- </VTooltip> -->
     </div>

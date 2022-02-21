@@ -35,8 +35,7 @@ onMounted(() => {
       <div class="flex items-center gap-0 lg:pl-6 cursor-pointer" @click="router.push('/')">
         <assets-logo-saturn class="w-8 h-8 fill-gray-600 dark:fill-teal-400" />
         <!-- <div class="font-bold text-2xl text-gray-600 dark:text-teal-400">saturn</div> -->
-        <assets-type-saturn alt="Saturn UI" class="h-6 w-20 fill-gray-600 dark:fill-teal-400" />
-        <div class="mt-1.5 ml-4 font-mono">0.0.1</div>
+        <assets-type-saturn alt="Saturn UI" class="hidden sm:block h-6 w-20 fill-gray-600 dark:fill-teal-400" />
         <!-- <div class="px-3 py-1 bg-purple-600 text-white rounded-full font-medium text-sm">Pre-Alpha</div> -->
       </div>
       <div class="flex-grow"></div>

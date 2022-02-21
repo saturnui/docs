@@ -59,8 +59,8 @@ const openToast = () => {
 </script>
 
 <template>
-  <div id="demo" class="blueprint border-t-2">
-    <div class="flex items-center p-2 px-4 filter border-2 border-white text-white rounded-xl z-1">
+  <div id="demo" class="demo sa-border">
+    <div class="flex items-center p-2 px-4 filter drop-shadow-md sa-light-dark rounded-xl z-1">
       <div class="w-full flex items-center gap-4">
         <VButton icon class="demo-outline" @click="showLeftDrawer = true">
           <tabler-menu2 />
@@ -74,7 +74,7 @@ const openToast = () => {
           <VTooltip
             show="focus"
             target="input"
-            component="blueprint-tooltip"
+            component="demo-tooltip"
             class="flex-grow sm:max-w-60"
           >
             <template #tooltip>
@@ -85,11 +85,7 @@ const openToast = () => {
                 >Use TextInput for single line and multiline entries.</DemoTooltip>
               </div>
             </template>
-            <VTextInput
-              component="blueprint-textinput"
-              placeholder="Search"
-              class="rounded-full pl-6"
-            >
+            <VTextInput placeholder="Search" class="sa-highlight rounded-full pl-6">
               <template #prepend>
                 <tabler-search class="mr-2" />
               </template>
@@ -103,12 +99,12 @@ const openToast = () => {
 
           <VDropdown v-model="showProfileMenu" class="demo-outline">
             <template #activator="{ toggle }">
-              <div class="bg-white w-8 h-8 p-0.5 sa-mask-8 cursor-pointer" @click="toggle">
+              <div class="bg-purple-600 w-8 h-8 p-0.5 sa-mask-8 cursor-pointer" @click="toggle">
                 <VAvatar
                   tabindex="0"
                   name="Saturn"
-                  image="/demo/bean_profile_white.png"
-                  class="sa-mask-8 text-5xl blueprint-bg"
+                  image="/demo/profile.png"
+                  class="sa-mask-8 text-5xl bg-dark-700"
                 />
                 <!-- <img src="/demo/profile.png" class="sa-mask-5" /> -->
               </div>
@@ -131,16 +127,16 @@ const openToast = () => {
       <div class="col-span-4 md:col-span-3">
         <DemoGallery class="h-full rounded-lg" />
       </div>
-      <DemoProgress class="blueprint-card p-0 col-span-full md:col-span-1" />
+      <DemoProgress class="demo-card p-0 col-span-full md:col-span-1" />
       <VResizer
         component="demo-resizer"
-        class="col-span-full max-w-full border-2 rounded"
+        class="col-span-full max-w-full bg-dark-800 rounded"
         resize="width"
       >
-        <div>
+        <div class="bg-dark-50 dark:bg-transparent rounded-lg">
           <div class="flex flex-wrap py-4 gap-8 items-center justify-center">
             <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -149,20 +145,19 @@ const openToast = () => {
                     >Use Progress Circle to display data in a circular view</DemoTooltip>
                   </div>
                 </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentA"
-                    class="blueprint-bg"
-                    color="border-white bg-white"
-                    :width="1"
-                  />
-                </div>
+                <VProgressCircle
+                  :percent="percentA"
+                  tabindex="0"
+                  color="border-yellow-500 bg-yellow-400"
+                  class="sa-highlight"
+                  :width="1"
+                />
               </VTooltip>
               <div class="text-center font-semibold pb-2 pt-1">Food</div>
             </div>
 
             <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -171,20 +166,19 @@ const openToast = () => {
                     >Use Progress Circle to display data in a circular view</DemoTooltip>
                   </div>
                 </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentD"
-                    class="blueprint-bg"
-                    color="border-blue-500 bg-white"
-                    :width="5"
-                  />
-                </div>
+                <VProgressCircle
+                  :percent="percentD"
+                  tabindex="0"
+                  class="bg-purple-500"
+                  color="border-purple-500 bg-purple-800"
+                  :width="5"
+                />
               </VTooltip>
               <div class="text-center font-semibold pb-2 pt-1">Water</div>
             </div>
 
             <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -193,26 +187,25 @@ const openToast = () => {
                     >Use Progress Circle to display data in a circular view</DemoTooltip>
                   </div>
                 </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentC"
-                    class=" blueprint-bg"
-                    color="border-white bg-white"
-                    :width="6"
+                <VProgressCircle
+                  :percent="percentC"
+                  tabindex="0"
+                  class="bg-gray-700"
+                  color="border-teal-600 bg-teal-400"
+                  :width="6"
+                >
+                  <div
+                    class="absolute sa-mc flex items-center justify-center rounded-full w-10 h-10 font-bold bg-gray-800 text-white"
                   >
-                    <div
-                      class="absolute sa-mc flex items-center justify-center rounded-full w-10 h-10 font-bold blueprint-bg text-white"
-                    >
-                      <tabler-box class="text-2xl" />
-                    </div>
-                  </VProgressCircle>
-                </div>
+                    <tabler-box class="text-2xl" />
+                  </div>
+                </VProgressCircle>
               </VTooltip>
               <div class="text-center font-semibold pb-2 pt-1">Supplies</div>
             </div>
 
             <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -221,16 +214,15 @@ const openToast = () => {
                     >Use Progress Circle to display data in a circular view</DemoTooltip>
                   </div>
                 </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentB"
-                    class="blueprint-bg"
-                    color="border-white"
-                    :width="12"
-                  >
-                    <div class="absolute sa-mc sa-text text-xl font-bold">{{ percentB }}</div>
-                  </VProgressCircle>
-                </div>
+                <VProgressCircle
+                  :percent="percentB"
+                  tabindex="0"
+                  class="sa-highlight"
+                  color="border-pink-500"
+                  :width="12"
+                >
+                  <div class="absolute sa-mc sa-text text-xl font-bold">{{ percentB }}</div>
+                </VProgressCircle>
               </VTooltip>
               <div class="text-center font-semibold pb-2 pt-1">Energy</div>
             </div>
@@ -238,19 +230,19 @@ const openToast = () => {
         </div>
         <template #handle="{ startDrag }">
           <div class="resizer-handle" @mousedown="startDrag">
-            <VTooltip placement="left" component="blueprint-tooltip" show="focus">
+            <VTooltip placement="left" component="demo-tooltip" show="focus">
               <template #tooltip>
                 <DemoTooltip
                   title="Resizer Component"
                   link="/components/resizer"
                 >Use the resizer to adjust a content's width, height or both.</DemoTooltip>
               </template>
-              <div tabindex="0" class="w-2 h-10 bg-white rounded-full"></div>
+              <div tabindex="0" class="w-2 h-10 bg-gray-300 dark:bg-teal-400 rounded-full"></div>
             </VTooltip>
           </div>
         </template>
       </VResizer>
-      <DemoProfile class="blueprint-card col-span-full md:col-span-2" />
+      <DemoProfile class="demo-card col-span-full md:col-span-2" />
       <DemoTabs class="col-span-full md:col-span-2" />
       <!-- <DemoSettings class="demo-cardcol-span-full md:col-span-2" />
       <DemoProduct class="demo-card p-0 col-span-full md:col-span-2" />-->
@@ -258,34 +250,32 @@ const openToast = () => {
 
     <!-- Left Drawer -->
     <VOverlay v-model="showLeftDrawer" class="sa-overlay-absolute z-10" position="left">
-      <div class="h-full max-w-75 flex flex-col bg-blue-600 overflow-y-auto filter border-r-2">
-        <div class="grid p-4 gap-3 text-white border-b-2">
+      <div class="h-full max-w-75 flex flex-col bg-dark-700 overflow-y-auto filter drop-shadow-xl">
+        <div class="grid p-4 gap-3 text-white bg-purple-900">
           <div class="text-lg font-bold">Drawer Component</div>
           <span class="text-sm">Use the drawer can be used for menus and secondary content.</span>
           <VButton
             size="sm"
-            class="p-5 rounded bg-white text-blue-500 text-xs uppercase font-bold"
+            class="p-5 rounded bg-pink-500 text-xs uppercase font-bold text-white"
             @click="showToast = false"
           >
             <span>See component</span>
           </VButton>
         </div>
-        <div class="flex gap-3 items-center px-4 max-h-14 min-h-14 font-bold text-white border-b">
-          <div class="w-8 h-8 border-2 bg-white bg-opacity-20 rounded-full" />
-          <!-- <div class="bg-white rounded-full h-2 text-transparent">Space Federation</div> -->
-          <div class>Space Federation</div>
+        <div class="flex gap-3 items-center px-4 max-h-14 min-h-14 font-bold text-white sa-dark">
+          <img src="/demo/logo.png" width="24" height="24" />
+          <div>Space Federation</div>
         </div>
         <VDrawer v-model="showLeftDrawer">
           <div class="space-y-2">
             <div
               v-for="item in menuItems"
               :key="item.label"
-              class="text-white p-2 px-6 flex items-center justify-start w-full gap-3 hover:bg-blue-500 cursor-pointer"
+              class="text-white p-2 px-6 flex items-center justify-start w-full gap-3 hover:bg-dark-500 cursor-pointer"
               @click="showLeftDrawer = false"
             >
-              <div class="w-8 h-8 border-2 bg-white bg-opacity-20 rounded-full" />
-              <!-- <div class="bg-white rounded-full h-2 text-transparent">{{ item.label }}</div> -->
-              <div class>{{ item.label }}</div>
+              <img :src="item.badge" width="32" height="32" />
+              <div>{{ item.label }}</div>
             </div>
           </div>
         </VDrawer>
@@ -298,7 +288,7 @@ const openToast = () => {
         <VButton
           icon
           size="xl"
-          class="filter drop-shadow-lg bg-blue-600 border-2 text-white"
+          class="filter drop-shadow-lg bg-teal-600 text-white"
           @click="showDialog = true"
         >
           <tabler-message class="text-2xl" />
@@ -307,15 +297,11 @@ const openToast = () => {
 
       <VCollapse id="toast" v-model="showToast" class="pointer-events-none" slide="up">
         <div class="flex justify-end p-2 pointer-events-auto">
-          <div class="p-3 bg-blue-600 border-2 border-white text-gray-200 w-85 rounded-lg">
+          <div class="p-3 bg-purple-900 text-gray-200 w-85 rounded-lg">
             <div class="flex items-center justify-between">
               <div class="flex justify-center items-center gap-4 px-2">
-                <div>
-                  <div class="bg-white relative p-1 sa-mask-6 w-12 h-12">
-                    <img src="/demo/badge_4_white.png" width="40" height="40" />
-                  </div>
-                </div>
-                <div class="h-18 border-r"></div>
+                <img src="/demo/badge_4.png" width="48" height="48" />
+                <div class="h-18 border-r border-purple-400"></div>
                 <div class="grid gap-2">
                   <div class="text-lg font-bold">Toast Component</div>
                   <div class="text-sm">Use toasts to notify users of events and important messages</div>
@@ -335,7 +321,7 @@ const openToast = () => {
                 </VButton>
                 <VButton
                   size="sm"
-                  class="rounded bg-white text-blue-600 text-xs uppercase font-bold"
+                  class="rounded bg-pink-600 text-xs uppercase font-bold text-white"
                   @click="navTo('/components/resizer')"
                 >
                   <span>See component</span>
@@ -348,26 +334,24 @@ const openToast = () => {
     </div>
 
     <!-- Vue -->
-    <VOverlay v-model="showDialog" disable-scroll-target="parent" class="sa-overlay-fixed z-50">
-      <VDialog
-        class="border-4 bg-blue-600 rounded-2xl max-w-xl text-white"
-        @close="showDialog = false"
-      >
+    <VOverlay
+      v-model="showDialog"
+      disable-scroll-target="parent"
+      class="sa-overlay-fixed sa-overlay-shade z-50"
+    >
+      <VDialog class="bg-purple-700 max-w-xl text-white shadow-lg" @close="showDialog = false">
         <!-- Title -->
         <template #title>
-          <!-- <img src="/demo/badge_4_white.png" width="48" height="48" /> -->
-          <div class="bg-white relative p-1 sa-mask-6 w-12 h-12">
-            <img src="/demo/badge_4_white.png" width="40" height="40" />
-          </div>
+          <img src="/demo/badge_4.png" width="48" height="48" />
           <div class="ml-2 text-xl font-semibold">Dialog Component</div>
         </template>
         <!-- Content -->
-        <div class="p-6 border-t border-white">Use dialogs for forms, alerts and messaging.</div>
+        <div class="p-6 border-t sa-border">Use dialogs for forms, alerts and messaging.</div>
         <!-- Actions -->
         <template #actions>
           <VButton @click="showDialog = false">Cancel</VButton>
           <VButton
-            class="bg-white text-blue-500 text-sm font-bold uppercase"
+            class="bg-pink-600 text-sm font-bold uppercase"
             @click="navTo('/components/dialog')"
           >See component</VButton>
         </template>

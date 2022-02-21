@@ -1,6 +1,6 @@
 @layer components {
   .demo {
-    @apply relative w-full max-h-screen min-h-100 p-2 flex flex-col gap-0 bg-white border overflow-hidden dark:bg-opacity-5;
+    @apply relative w-full p-2 flex flex-col gap-0 bg-white border overflow-hidden dark:bg-opacity-5;
 
     &-shade {
       @apply bg-gray-400 bg-opacity-10;
@@ -42,7 +42,8 @@
 
       div[name='tooltip'] {
         @apply absolute flex items-center gap-2 px-3 py-2
-        text-sm bg-purple-800 text-white 
+        text-sm bg-blue-600 text-white 
+        border-2 border-white
         font-semibold rounded-lg;
         z-index: 999999;
       }
@@ -85,3 +86,90 @@
     }
   }
 }
+
+@layer components {
+  .blueprint {
+    @apply relative w-full p-2 flex flex-col gap-0 overflow-hidden;
+
+    &-card {
+      @apply relative p-4 border-2 rounded-2xl;
+    }
+
+    &-resizer {
+      @apply relative;
+
+      .resizer-handle {
+        @apply absolute flex items-center justify-center;
+      }
+    }
+
+    &-resizer.width {
+      @apply pr-5;
+
+      .resizer-handle {
+        @apply top-0 right-0 w-5 h-full;
+        cursor: ew-resize;
+      }
+    }
+
+    &-outline:hover {
+      outline: 4px solid rgba(236, 72, 153, 1);
+      outline-offset: 0px;
+    }
+
+    &-tooltip {
+      display: inline-block;
+
+      &:hover {
+        outline: 2px solid rgba(236, 72, 153, 1);
+        outline-offset: 8px;
+      }
+
+      div[name='tooltip'] {
+        @apply absolute flex items-center gap-2 px-3 py-2
+        text-sm bg-blue-600 text-white border 
+        font-semibold rounded-lg;
+        z-index: 999999;
+      }
+
+      div[name='arrow'],
+      div[name='arrow']::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: inherit;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+      }
+
+      div[name='arrow'] {
+        visibility: hidden;
+      }
+
+      div[name='arrow']::before {
+        visibility: visible;
+        content: '';
+        transform: rotate(45deg);
+      }
+
+      div[data-popper-placement^='top'] > div[name='arrow'] {
+        bottom: -5px;
+      }
+
+      div[data-popper-placement^='bottom'] > div[name='arrow'] {
+        top: -5px;
+      }
+
+      div[data-popper-placement^='left'] > div[name='arrow'] {
+        right: -5px;
+        /* right: 0; */
+      }
+
+      div[data-popper-placement^='right'] > div[name='arrow'] {
+        left: -5px;
+        /* left: -8px; */
+      }
+    }
+  }
+}
+

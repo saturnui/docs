@@ -8,14 +8,18 @@ onMounted(() => {
 </script>
 
 <template>
+  <DemoStars />
+  <img
+    src="/background.png"
+    class="fixed top-0 -right-120 filter blur-xl opacity-60 dark:opacity-40 select-none pointer-events-none"
+  />
   <AppBar class="fixed top-0 sa-text" />
-  <div id="scrollTarget" class="flex flex-col h-screen items-center gap-4 overflow-y-auto blueprint-bg text-white">
+  <div id="scrollTarget" class="flex flex-col h-screen items-center gap-4 overflow-y-auto blueprint-bg">
     <div>
-      <assets-logo-saturn-sketch class="h-40 w-40 mt-30 fill-white" />
+      <assets-logo-saturn class="h-40 w-40 mt-30 fill-gray-600 dark:fill-teal-400" />
     </div>
-    <div id="sketchy" class="flex flex-col items-center gap-8 px-4">
-      <!-- <assets-type-saturn alt="Saturn" class="mt-2 h-20 w-80 fill-white" /> -->
-      <div class="text-7xl">Saturn UI</div>
+    <div class="flex flex-col items-center gap-8 px-4">
+      <assets-type-saturn alt="Saturn" class="mt-2 h-20 w-80 fill-gray-600 dark:fill-teal-400" />
       <div class="grid gap-12 w-full">
         <div class="relative max-w-5xl mx-auto pt-20">
           <!-- <h1
@@ -26,16 +30,16 @@ onMounted(() => {
           >
             Build custom applications using headless
             <span
-              class="text-light-blue-400 dark:text-teal-400"
+              class="text-sky-500 dark:text-teal-400"
             >Vue 3</span> and
-            <span class="text-light-blue-400 dark:text-teal-400">Tailwind CSS</span> components.
+            <span class="text-sky-500 dark:text-teal-400">Tailwind CSS</span> components.
           </h1>
           <p class="mt-6 text-2xl text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
             Fully customizable components that are
             <span
-              class="font-bold text-light-blue-400 dark:text-sky-400"
-            >CSS driven</span> and
-            <span class="font-bold text-light-blue-400 dark:text-sky-400">developer friendly</span>.
+              class="font-bold text-sky-500 dark:text-sky-400"
+            >design driven</span> and
+            <span class="font-bold text-sky-500 dark:text-sky-400">developer</span> friendly.
           </p>
         </div>
       </div>
@@ -50,8 +54,8 @@ onMounted(() => {
           <template #tooltip>
             <div class="whitespace-nowrap">Look for the outlines to discover components.</div>
           </template>
-          <div class="border-2 border-transparent rounded-full">
-            <tabler-info-circle class="text-2xl text-white" />
+          <div class="border-2 border-pink-500 rounded-full">
+            <tabler-info-circle class="text-2xl text-dark-500" />
           </div>
         </VTooltip>
       </div>
@@ -110,11 +114,6 @@ onMounted(() => {
 </template>
 
 <style>
-
-#sketchy {
-  font-family: 'Permanent Marker', cursive;
-}
-
 pre code.hljs {
   color: rgba(255, 255, 255, 0.78) !important;
 }

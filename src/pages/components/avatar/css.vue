@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const image
-  = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+  = '/demo/profile.png'
 </script>
 
 <template>
@@ -8,7 +8,7 @@ const image
     <div class="sa-avatar" size="sm">
       <div class="rounded-full bg-purple-600 text-white overflow-hidden">A</div>
     </div>
-    <div class="sa-avatar">
+    <div class="sa-avatar sa-md">
       <img :src="image" class="rounded bg-purple-600 text-white overflow-hidden" />
     </div>
     <div class="sa-avatar text-white" size="lg">
@@ -20,10 +20,10 @@ const image
   </div>
 
   <div class="flex items-center gap-4">
-    <div class="sa-avatar" size="sm" status="info">
+    <div class="sa-avatar sa-sm" status="info">
       <div class="rounded bg-purple-600 text-white overflow-hidden">A</div>
     </div>
-    <div class="sa-avatar" status="warning">
+    <div class="sa-avatar sa-md" status="warning">
       <img :src="image" class="rounded-full bg-purple-600 text-white overflow-hidden" />
     </div>
     <div class="sa-avatar text-white" size="lg" status="danger">

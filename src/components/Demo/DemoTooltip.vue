@@ -27,7 +27,7 @@ const navTo = () => {
     </div>
     <div class="flex justify-end">
       <VButton
-        class="sa-btn bg-pink-600 text-white font-bold text-sm transform uppercase"
+        class="sa-btn bg-white text-blue-500 font-bold text-sm transform uppercase"
         @click="navTo"
       >{{ action }}</VButton>
     </div>

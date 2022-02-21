@@ -5,11 +5,11 @@
 </template>
 
 <style>
-html {
+/* html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   overflow: hidden;
-}
+} */
 
 #stars {
   width: 1px;
@@ -196,7 +196,7 @@ html {
 }
 #stars:after {
   content: " ";
-  position: absolute;
+  position: fixed;
   top: 2000px;
   width: 1px;
   height: 1px;
@@ -439,7 +439,7 @@ html {
 }
 #stars2:after {
   content: " ";
-  position: absolute;
+  position: fixed;
   top: 2000px;
   width: 2px;
   height: 2px;
@@ -531,7 +531,7 @@ html {
 }
 #stars3:after {
   content: " ";
-  position: absolute;
+  position: fixed;
   top: 2000px;
   width: 3px;
   height: 3px;

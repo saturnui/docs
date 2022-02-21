@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col gap-4 pb-6">
-    <img src="/demo/spaceship.jpg" class="h-40 w-full object-cover rounded-t-xl overflow-hidden" />
+    <img src="/demo/spaceship_white.png" class="h-40 w-full object-cover rounded-t-xl border-b-2 overflow-hidden" />
     <div class="grid gap-4 px-6">
-      <VTooltip show="focus" component="demo-tooltip">
+      <VTooltip show="focus" placement="top" component="demo-tooltip">
         <template #tooltip>
           <div class="w-70 space-y-3">
             <DemoTooltip
@@ -11,8 +11,8 @@
             >Use the line component to separate sections with an optional slot for labels, icons, etc.</DemoTooltip>
           </div>
         </template>
-        <VLine tabindex="0">
-          <div class="px-3 font-bold text-sm">Status</div>
+        <VLine tabindex="0" component="blueprint-line">
+          <div class="py-2 px-3 font-bold text-sm">Cygnus X-1</div>
         </VLine>
       </VTooltip>
       <div class="flex items-center gap-4 text-xs">
@@ -29,9 +29,9 @@
           <VProgressBar
             :percent="35"
             tabindex="0"
-            class="flex-grow bg-dark-700 rounded-full overflow-hidden"
+            class="flex-grow border-2 rounded-full overflow-hidden"
           >
-            <div class="bg-green-500 h-2 rounded-full"></div>
+            <div class="bg-white h-2 rounded-full"></div>
           </VProgressBar>
         </VTooltip>
       </div>
@@ -47,8 +47,8 @@
               >Use the progress bar to measure progress in a horizontal view.</DemoTooltip>
             </div>
           </template>
-          <VProgressBar :percent="15" tabindex="0" class="flex-grow bg-dark-700 rounded-full overflow-hidden">
-            <div class="bg-light-blue-500 h-2 rounded-full"></div>
+          <VProgressBar :percent="15" tabindex="0" class="flex-grow border-2 rounded-full overflow-hidden">
+            <div class="bg-white h-2 rounded-full"></div>
           </VProgressBar>
         </VTooltip>
       </div>
@@ -64,8 +64,8 @@
               >Use the progress bar to measure progress in a horizontal view.</DemoTooltip>
             </div>
           </template>
-          <VProgressBar :percent="85" tabindex="0" class="flex-grow bg-dark-700 rounded-full overflow-hidden">
-            <div class="bg-yellow-500 h-2 rounded-full"></div>
+          <VProgressBar :percent="85" tabindex="0" class="flex-grow border-2 rounded-full overflow-hidden">
+            <div class="bg-white h-2 rounded-full"></div>
           </VProgressBar>
         </VTooltip>
       </div>
@@ -81,8 +81,8 @@
               >Use the progress bar to measure progress in a horizontal view.</DemoTooltip>
             </div>
           </template>
-          <VProgressBar :percent="65" tabindex="0" class="flex-grow bg-dark-700 rounded-full overflow-hidden">
-            <div class="bg-pink-500 h-2 rounded-full"></div>
+          <VProgressBar :percent="65" tabindex="0" class="flex-grow border-2 rounded-full overflow-hidden">
+            <div class="bg-white h-2 rounded-full"></div>
           </VProgressBar>
         </VTooltip>
       </div>
