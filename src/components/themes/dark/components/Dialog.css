@@ -1,0 +1,21 @@
+@layer components {
+  .dark {
+    .sa {
+      &-dialog {
+        @apply rounded w-full;
+
+        [name='titlebar'] {
+          @apply flex items-center p-2 pl-4 gap-2;
+        }
+
+        [name='close-icon'] {
+          @apply h-6 w-6;
+        }
+
+        [name='actions'] {
+          @apply flex items-center justify-end p-2 gap-2;
+        }
+      }
+    }
+  }
+}

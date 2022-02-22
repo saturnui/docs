@@ -2,6 +2,8 @@
 import 'highlight.js/styles/github-dark.css'
 import hljs from 'highlight.js'
 
+const theme = ref('dark')
+
 onMounted(() => {
   hljs.highlightAll()
 })
@@ -9,13 +11,29 @@ onMounted(() => {
 
 <template>
   <AppBar class="fixed top-0 sa-text" />
-  <div id="scrollTarget" class="flex flex-col h-screen items-center gap-4 overflow-y-auto blueprint-bg text-white">
-    <div>
-      <assets-logo-saturn-sketch class="h-40 w-40 mt-30 fill-white" />
+  <div
+    id="scrollTarget"
+    class="flex flex-col h-screen items-center gap-4 overflow-y-auto sa-bg"
+    :class="theme"
+  >
+    <!-- <DemoStars /> -->
+    <div class="dark-space">
+      <div class="dark-space-stars1"></div>
+      <div class="dark-space-stars2"></div>
+      <div class="dark-space-stars3"></div>
     </div>
-    <div id="sketchy" class="flex flex-col items-center gap-8 px-4">
-      <!-- <assets-type-saturn alt="Saturn" class="mt-2 h-20 w-80 fill-white" /> -->
-      <div class="text-7xl">Saturn UI</div>
+    <div>
+      <assets-logo-saturn class="hidden dark-show h-44 w-44 mt-30 fill-teal-400" />
+      <assets-logo-saturn-sketch class="hidden blueprint-show h-40 w-40 mt-30 fill-white" />
+    </div>
+    <div class="flex flex-col items-center gap-8 px-4">
+      <assets-type-saturn alt="Saturn" class="hidden dark-show mt-2 h-20 w-80 fill-teal-400" />
+      <div class="hidden blueprint-show text-7xl">Saturn UI</div>
+      <div class="flex gap-8">
+        <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'blueprint'">Blueprint</div>
+        <!-- <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'light'">L</div> -->
+        <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'dark'">Space</div>
+      </div>
       <div class="grid gap-12 w-full">
         <div class="relative max-w-5xl mx-auto pt-20">
           <!-- <h1
@@ -41,8 +59,8 @@ onMounted(() => {
       </div>
 
       <!-- <div class="blueprint-mock-window mt-14 bg-dark-100 dark:bg-dark-800 border sa-border w-full"> -->
-      <div class="blueprint-mock-window mt-14 w-full">
-        <Demo class="max-w-5xl" />
+      <div class="sa-mock-window mt-14 w-full">
+        <Demo class="p-2 max-w-5xl" :theme="theme" />
         <div class="absolute sa-tl mt-3 text-center w-full font-semibold flex justify-center">
           <div>Demo</div>
         </div>
@@ -56,7 +74,7 @@ onMounted(() => {
         </VTooltip>
       </div>
 
-      <div class="hidden flex flex-col p-6 pb-0 rounded-lg bg-dark-800 gap-4">
+      <!-- <div class="hidden flex flex-col p-6 pb-0 rounded-lg bg-dark-800 gap-4">
         <div class="w-full text-2xl font-bold">CSS driven components</div>
         <div>Style components with CSS instead of a bunch of properties defined by APIs.</div>
         <div class="flex flex-wrap justify-center p-6 gap-6 bg-white bg-opacity-5 rounded-lg z-1">
@@ -81,9 +99,9 @@ onMounted(() => {
 8  &lt;VButton class="text-primary sa-link px-3">Link&lt;/VButton></code></pre>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="hidden flex justify-center gap-4 w-full p-3">
+      <!-- <div class="hidden flex justify-center gap-4 w-full p-3">
         <div class="sa-col-3-1 gap-12 max-w-80 lg:max-w-max">
           <div class="text-center space-y-4 sa-highlight p-8 rounded-xl">
             <div class="text-3xl text-primary-light dark:text-teal-400 font-light">CSS First</div>
@@ -98,7 +116,7 @@ onMounted(() => {
             <div>Use tooling such as Vite, Vitesse and WindiCSS to build full applications</div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="flex-grow"></div>
@@ -110,9 +128,16 @@ onMounted(() => {
 </template>
 
 <style>
+.blueprint .blueprint-show {
+  display: block;
+}
 
-#sketchy {
-  font-family: 'Permanent Marker', cursive;
+.dark .dark-show {
+  display: block;
+}
+
+.light .light-show {
+  display: block;
 }
 
 pre code.hljs {

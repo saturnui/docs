@@ -1,0 +1,9 @@
+@layer components {
+  .blueprint {
+    .sa {
+      &-card {
+        @apply relative border-3 border-white rounded-2xl;
+      }
+    }
+  }
+}

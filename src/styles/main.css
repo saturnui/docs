@@ -15,7 +15,7 @@ body {
   @apply overflow-y-auto;
 }
 
-html.dark {
+html.light {
   /* background: #121212; */
   @apply bg-dark-900;
 }

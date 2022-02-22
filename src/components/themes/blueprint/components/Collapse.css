@@ -1,20 +1,22 @@
 @layer components {
-  .sa {
-    &-collapse {
-      .down {
-        @apply absolute bottom-0 w-full;
-      }
+  .blueprint {
+    .sa {
+      &-collapse {
+        .down {
+          @apply absolute bottom-0 w-full;
+        }
 
-      &-enter-active,
-      &-leave-active {
-        will-change: height;
-        transition: height 300ms ease;
-        overflow: hidden;
-      }
-  
-      &-enter-from,
-      &-leave-to {
-        height: 0 !important;
+        &-enter-active,
+        &-leave-active {
+          will-change: height;
+          transition: height 300ms ease;
+          overflow: hidden;
+        }
+
+        &-enter-from,
+        &-leave-to {
+          height: 0 !important;
+        }
       }
     }
   }

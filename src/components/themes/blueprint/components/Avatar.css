@@ -1,13 +1,14 @@
 @layer components {
-  .sa {
-    &-avatar {
-      @apply relative w-full h-full;
+  .blueprint {
+    .sa {
+      &-avatar {
+        @apply relative w-full h-full;
 
-      > * {
-        @apply w-full h-full flex justify-center items-center;
-      }
+        > * {
+          @apply w-full h-full flex justify-center items-center;
+        }
 
-      /* &.sa-sm,
+        /* &.sa-sm,
       &[size='sm'] {
         @apply w-8 h-8 min-w-8 min-h-8 max-w-8 max-h-8 text-sm font-bold;
 
@@ -67,6 +68,7 @@
       &[status='warning']:before {
         @apply !bg-yellow-500;
       } */
+      }
     }
   }
 }

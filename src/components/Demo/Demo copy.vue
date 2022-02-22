@@ -136,7 +136,7 @@ const openToast = () => {
         <div class="bg-dark-50 dark:bg-transparent rounded-lg">
           <div class="flex flex-wrap py-4 gap-8 items-center justify-center">
             <div>
-              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -157,7 +157,7 @@ const openToast = () => {
             </div>
 
             <div>
-              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -178,7 +178,7 @@ const openToast = () => {
             </div>
 
             <div>
-              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -205,7 +205,7 @@ const openToast = () => {
             </div>
 
             <div>
-              <VTooltip show="focus" component="demo-tooltip" class="flex-grow sm:max-w-60">
+              <VTooltip show="focus" class="flex-grow sm:max-w-60">
                 <template #tooltip>
                   <div class="w-70 space-y-3">
                     <DemoTooltip
@@ -230,7 +230,7 @@ const openToast = () => {
         </div>
         <template #handle="{ startDrag }">
           <div class="resizer-handle" @mousedown="startDrag">
-            <VTooltip placement="left" component="demo-tooltip" show="focus">
+            <VTooltip placement="left" show="focus">
               <template #tooltip>
                 <DemoTooltip
                   title="Resizer Component"

@@ -1,9 +1,11 @@
 @layer components {
   .blueprint {
-    &-line {
-      @apply flex items-center justify-center;
-      > div[name='line'] {
-        @apply border-t flex-grow border-white;
+    .sa {
+      &-line {
+        @apply flex items-center justify-center;
+        > div[name='line'] {
+          @apply border-t-2 flex-grow border-white;
+        }
       }
     }
   }

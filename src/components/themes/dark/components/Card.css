@@ -1,0 +1,9 @@
+@layer components {
+  .dark {
+    .sa {
+      &-card {
+        @apply relative rounded-xl bg-white bg-opacity-3;
+      }
+    }
+  }
+}

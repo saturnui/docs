@@ -1,0 +1,9 @@
+@layer components {
+  .dark {
+    .sa {
+      &-row {
+        @apply flex items-center;
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
 @layer components {
-  .sa {
-    &-alert {
-      @apply flex items-center gap-2 rounded mb-2;
+  .blueprint {
+    .sa {
+      &-alert {
+        @apply flex items-center gap-2 rounded mb-2;
+      }
     }
   }
 }

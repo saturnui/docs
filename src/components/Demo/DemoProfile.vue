@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="sa-card p-4">
     <img
       src="/demo/profile_bg_white.png"
       class="absolute sa-tl h-65 w-full object-cover rounded-t-xl overflow-hidden opacity-80 border-b-2 border-white"
@@ -7,7 +7,7 @@
     <div class="relative flex flex-col items-center gap-4 z-1">
       <div class="flex justify-center">
         <div class="relative w-24 h-24">
-          <VTooltip show="focus" component="demo-tooltip" class="absolute top-2 right-2 z-10">
+          <VTooltip show="focus" class="absolute top-2 right-2 z-10">
             <template #tooltip>
               <div class="w-70 space-y-3">
                 <DemoTooltip
@@ -17,7 +17,7 @@
                 >Saturn provides default colors to provide consistency across the application.</DemoTooltip>
               </div>
             </template>
-            <div tabindex="0" class="blueprint-bg rounded-full w-6 h-6 border-3 border-white"></div>
+            <div tabindex="0" class="sa-bg rounded-full w-6 h-6 border-3 border-white"></div>
           </VTooltip>
           <VTooltip show="focus" target="#profile" component="demo-tooltip">
             <template #tooltip>

@@ -1,28 +1,12 @@
 <script setup lang="ts">
+import DemoMenu from './DemoMenu.vue'
+defineProps({
+  theme: String,
+})
 const showDialog = ref(false)
-const showProfileMenu = ref(false)
-// const profileMenuOptions = [
-//   { label: 'Your Profile' },
-//   { label: 'Dark Mode' },
-//   { label: 'Sign out' },
-// ]
-const menuItems = [
-  { label: 'Home', badge: '/demo/badge_8.png' },
-  { label: 'Communication', badge: '/demo/badge_1.png' },
-  { label: 'Defense', badge: '/demo/badge_2.png' },
-  { label: 'Exploration', badge: '/demo/badge_7.png' },
-  { label: 'Navigation', badge: '/demo/badge_5.png' },
-  { label: 'Robotics', badge: '/demo/badge_9.png' },
-  { label: 'Space Crew', badge: '/demo/badge_6.png' },
-  { label: 'Visitor Logs', badge: '/demo/badge_10.png' },
-  { label: 'Travel Logs', badge: '/demo/badge_11.png' },
-]
+
 const showToast = ref(false)
-const showLeftDrawer = ref(false)
-const percentA = ref(40)
-const percentB = ref(35)
-const percentC = ref(55)
-const percentD = ref(65)
+const showDrawer = ref(false)
 
 const navTo = (url: string) => {
   window.parent.location.href = url
@@ -48,7 +32,7 @@ const openToast = () => {
   if (scrollTarget && demoTarget && toastTarget) {
     const demoOffset = getElementOffset(demoTarget)
     const toastOffset = getElementOffset(toastTarget)
-    console.log(toastOffset.top, demoOffset.top, toastOffset.top - demoOffset.top)
+    // console.log(toastOffset.top, demoOffset.top, toastOffset.top - demoOffset.top)
     scrollTarget.scrollTo({
       top: toastOffset.top - demoOffset.top,
       left: 0,
@@ -59,238 +43,22 @@ const openToast = () => {
 </script>
 
 <template>
-  <div id="demo" class="blueprint border-t-2">
-    <div class="flex items-center p-2 px-4 filter border-2 border-white text-white rounded-xl z-1">
-      <div class="w-full flex items-center gap-4">
-        <VButton icon class="demo-outline" @click="showLeftDrawer = true">
-          <tabler-menu2 />
-        </VButton>
-
-        <div class="hidden sm:flex gap-3 font-bold">
-          <div>Space Federation</div>
-        </div>
-        <div class="flex flex-grow items-center gap-2">
-          <div class="hidden sm:block flex-grow"></div>
-          <VTooltip
-            show="focus"
-            target="input"
-            component="blueprint-tooltip"
-            class="flex-grow sm:max-w-60"
-          >
-            <template #tooltip>
-              <div class="w-70 space-y-3">
-                <DemoTooltip
-                  title="TextInput Component"
-                  link="/components/button"
-                >Use TextInput for single line and multiline entries.</DemoTooltip>
-              </div>
-            </template>
-            <VTextInput
-              component="blueprint-textinput"
-              placeholder="Search"
-              class="rounded-full pl-6"
-            >
-              <template #prepend>
-                <tabler-search class="mr-2" />
-              </template>
-            </VTextInput>
-          </VTooltip>
-
-          <!-- <VTooltip class="delay-100 duration-2000"> -->
-          <VButton icon class="demo-outline" @click="openToast">
-            <tabler-bell />
-          </VButton>
-
-          <VDropdown v-model="showProfileMenu" class="demo-outline">
-            <template #activator="{ toggle }">
-              <div class="bg-white w-8 h-8 p-0.5 sa-mask-8 cursor-pointer" @click="toggle">
-                <VAvatar
-                  tabindex="0"
-                  name="Saturn"
-                  image="/demo/bean_profile_white.png"
-                  class="sa-mask-8 text-5xl blueprint-bg"
-                />
-                <!-- <img src="/demo/profile.png" class="sa-mask-5" /> -->
-              </div>
-            </template>
-            <div
-              ref="menu"
-              class="p-3 origin-top-right absolute right-0 rounded-md shadow-lg mt-2 bg-purple-800"
-              role="menu"
-            >
-              <DemoTooltip
-                title="Dropdown Component"
-                link="/components/dropdown"
-              >Use dropdown component for menus and selectors.</DemoTooltip>
-            </div>
-          </VDropdown>
-        </div>
-      </div>
-    </div>
+  <div id="demo" class="border-t-2 sa-border">
+    <DemoAppBar :theme="theme" @toast:open="openToast" @drawer:open="showDrawer = true" />
     <div class="py-3 flex-grow grid grid-cols-4 gap-4">
       <div class="col-span-4 md:col-span-3">
-        <DemoGallery class="h-full rounded-lg" />
+        <DemoGallery class="h-full rounded-lg" :theme="theme" />
       </div>
-      <DemoProgress class="blueprint-card p-0 col-span-full md:col-span-1" />
-      <VResizer
-        component="demo-resizer"
-        class="col-span-full max-w-full border-2 rounded"
-        resize="width"
-      >
-        <div>
-          <div class="flex flex-wrap py-4 gap-8 items-center justify-center">
-            <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
-                <template #tooltip>
-                  <div class="w-70 space-y-3">
-                    <DemoTooltip
-                      title="Progress Circle Component"
-                      link="/components/progresscircle"
-                    >Use Progress Circle to display data in a circular view</DemoTooltip>
-                  </div>
-                </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentA"
-                    class="blueprint-bg"
-                    color="border-white bg-white"
-                    :width="1"
-                  />
-                </div>
-              </VTooltip>
-              <div class="text-center font-semibold pb-2 pt-1">Food</div>
-            </div>
-
-            <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
-                <template #tooltip>
-                  <div class="w-70 space-y-3">
-                    <DemoTooltip
-                      title="Progress Circle Component"
-                      link="/components/progresscircle"
-                    >Use Progress Circle to display data in a circular view</DemoTooltip>
-                  </div>
-                </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentD"
-                    class="blueprint-bg"
-                    color="border-blue-500 bg-white"
-                    :width="5"
-                  />
-                </div>
-              </VTooltip>
-              <div class="text-center font-semibold pb-2 pt-1">Water</div>
-            </div>
-
-            <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
-                <template #tooltip>
-                  <div class="w-70 space-y-3">
-                    <DemoTooltip
-                      title="Progress Circle Component"
-                      link="/components/progresscircle"
-                    >Use Progress Circle to display data in a circular view</DemoTooltip>
-                  </div>
-                </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentC"
-                    class=" blueprint-bg"
-                    color="border-white bg-white"
-                    :width="6"
-                  >
-                    <div
-                      class="absolute sa-mc flex items-center justify-center rounded-full w-10 h-10 font-bold blueprint-bg text-white"
-                    >
-                      <tabler-box class="text-2xl" />
-                    </div>
-                  </VProgressCircle>
-                </div>
-              </VTooltip>
-              <div class="text-center font-semibold pb-2 pt-1">Supplies</div>
-            </div>
-
-            <div>
-              <VTooltip show="focus" component="blueprint-tooltip" class="flex-grow sm:max-w-60">
-                <template #tooltip>
-                  <div class="w-70 space-y-3">
-                    <DemoTooltip
-                      title="Progress Circle Component"
-                      link="/components/progresscircle"
-                    >Use Progress Circle to display data in a circular view</DemoTooltip>
-                  </div>
-                </template>
-                <div class="border-4 rounded-full border-white" tabindex="0">
-                  <VProgressCircle
-                    :percent="percentB"
-                    class="blueprint-bg"
-                    color="border-white"
-                    :width="12"
-                  >
-                    <div class="absolute sa-mc sa-text text-xl font-bold">{{ percentB }}</div>
-                  </VProgressCircle>
-                </div>
-              </VTooltip>
-              <div class="text-center font-semibold pb-2 pt-1">Energy</div>
-            </div>
-          </div>
-        </div>
-        <template #handle="{ startDrag }">
-          <div class="resizer-handle" @mousedown="startDrag">
-            <VTooltip placement="left" component="blueprint-tooltip" show="focus">
-              <template #tooltip>
-                <DemoTooltip
-                  title="Resizer Component"
-                  link="/components/resizer"
-                >Use the resizer to adjust a content's width, height or both.</DemoTooltip>
-              </template>
-              <div tabindex="0" class="w-2 h-10 bg-white rounded-full"></div>
-            </VTooltip>
-          </div>
-        </template>
-      </VResizer>
-      <DemoProfile class="blueprint-card col-span-full md:col-span-2" />
+      <DemoProgress class="sa-card col-span-full md:col-span-1" :theme="theme" />
+      <DemoPieCharts :theme="theme" />
+      <DemoProfile class="col-span-full md:col-span-2" />
       <DemoTabs class="col-span-full md:col-span-2" />
       <!-- <DemoSettings class="demo-cardcol-span-full md:col-span-2" />
       <DemoProduct class="demo-card p-0 col-span-full md:col-span-2" />-->
     </div>
 
     <!-- Left Drawer -->
-    <VOverlay v-model="showLeftDrawer" class="sa-overlay-absolute z-10" position="left">
-      <div class="h-full max-w-75 flex flex-col bg-blue-600 overflow-y-auto filter border-r-2">
-        <div class="grid p-4 gap-3 text-white border-b-2">
-          <div class="text-lg font-bold">Drawer Component</div>
-          <span class="text-sm">Use the drawer can be used for menus and secondary content.</span>
-          <VButton
-            size="sm"
-            class="p-5 rounded bg-white text-blue-500 text-xs uppercase font-bold"
-            @click="showToast = false"
-          >
-            <span>See component</span>
-          </VButton>
-        </div>
-        <div class="flex gap-3 items-center px-4 max-h-14 min-h-14 font-bold text-white border-b">
-          <div class="w-8 h-8 border-2 bg-white bg-opacity-20 rounded-full" />
-          <!-- <div class="bg-white rounded-full h-2 text-transparent">Space Federation</div> -->
-          <div class>Space Federation</div>
-        </div>
-        <VDrawer v-model="showLeftDrawer">
-          <div class="space-y-2">
-            <div
-              v-for="item in menuItems"
-              :key="item.label"
-              class="text-white p-2 px-6 flex items-center justify-start w-full gap-3 hover:bg-blue-500 cursor-pointer"
-              @click="showLeftDrawer = false"
-            >
-              <div class="w-8 h-8 border-2 bg-white bg-opacity-20 rounded-full" />
-              <!-- <div class="bg-white rounded-full h-2 text-transparent">{{ item.label }}</div> -->
-              <div class>{{ item.label }}</div>
-            </div>
-          </div>
-        </VDrawer>
-      </div>
-    </VOverlay>
+    <DemoMenu v-model="showDrawer" :theme="theme" />
 
     <!-- FAB / Toast -->
     <div class="absolute sa-br m-2">
@@ -349,10 +117,7 @@ const openToast = () => {
 
     <!-- Vue -->
     <VOverlay v-model="showDialog" disable-scroll-target="parent" class="sa-overlay-fixed z-50">
-      <VDialog
-        class="border-4 bg-blue-600 rounded-2xl max-w-xl text-white"
-        @close="showDialog = false"
-      >
+      <VDialog class="max-w-xl sa-card sa-bg-primary rounded-4xl" @close="showDialog = false">
         <!-- Title -->
         <template #title>
           <!-- <img src="/demo/badge_4_white.png" width="48" height="48" /> -->
@@ -375,3 +140,13 @@ const openToast = () => {
     </VOverlay>
   </div>
 </template>
+
+<style>
+.dark .profile-border {
+  @apply bg-purple-500;
+}
+
+.blueprint .profile-border {
+  @apply bg-white;
+}
+</style>

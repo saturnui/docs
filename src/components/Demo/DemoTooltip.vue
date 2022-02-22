@@ -20,7 +20,7 @@ const navTo = () => {
 </script>
 
 <template>
-  <div class="p-1 w-70 space-y-3 text-white pointer-events-auto">
+  <div class="w-70 space-y-3 text-white pointer-events-auto ">
     <div class="text-lg font-extrabold">{{ title }}</div>
     <div class="font-sm pb-4">
       <slot />

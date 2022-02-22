@@ -1,0 +1,9 @@
+@layer components {
+  .dark {
+    .sa {
+      &-progress-bar > div {
+        transition: width 100ms ease-in;
+      }
+    }
+  }
+}

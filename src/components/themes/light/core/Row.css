@@ -1,0 +1,9 @@
+@layer components {
+  .light {
+    .sa {
+      &-row {
+        @apply flex items-center;
+      }
+    }
+  }
+}
