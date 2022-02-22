@@ -1,0 +1,14 @@
+@layer components {
+  .mono {
+    .sa {
+      &-mock-window {
+        @apply relative rounded pt-5 overflow-hidden overflow-y-auto border-2 border-white;
+        &:before {
+          content: '';
+          box-shadow: 1.4em 0 #fff, 2.8em 0 #fff, 4.2em 0 #fff;
+          @apply block w-3 h-3 rounded-full mb-4;
+        }
+      }
+    }
+  }
+}

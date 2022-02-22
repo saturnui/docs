@@ -146,7 +146,7 @@ const openToast = () => {
   @apply bg-purple-500;
 }
 
-.blueprint .profile-border {
+.mono .profile-border {
   @apply bg-white;
 }
 </style>

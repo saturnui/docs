@@ -1,0 +1,12 @@
+@layer components {
+  .mono {
+    .sa {
+      &-progress-bar {
+        @apply border-2 border-white rounded-full;
+      }
+      &-progress-bar > div {
+        transition: width 100ms ease-in;
+      }
+    }
+  }
+}

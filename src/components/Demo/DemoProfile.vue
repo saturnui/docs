@@ -17,7 +17,7 @@
                 >Saturn provides default colors to provide consistency across the application.</DemoTooltip>
               </div>
             </template>
-            <div tabindex="0" class="sa-bg rounded-full w-6 h-6 border-3 border-white"></div>
+            <div tabindex="0" class="bg-demo rounded-full w-6 h-6 border-3 border-white"></div>
           </VTooltip>
           <VTooltip show="focus" target="#profile" component="demo-tooltip">
             <template #tooltip>

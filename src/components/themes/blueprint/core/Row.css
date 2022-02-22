@@ -1,9 +1,0 @@
-@layer components {
-  .blueprint {
-    .sa {
-      &-row {
-        @apply flex items-center;
-      }
-    }
-  }
-}

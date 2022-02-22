@@ -37,7 +37,7 @@ const badges = reactive([
           v-for="(item, index) in tabs"
           :key="item.label"
           class="tab px-6 py-2 border-3 border-b-0 border-transparent rounded-t-lg duration-300 whitespace-nowrap z-1"
-          :class="{ '!border-white sa-bg text-white font-bold': selectedTabIndex === index }"
+          :class="{ '!border-white bg-demo text-white font-bold': selectedTabIndex === index }"
           tabindex="0"
           @click="selectedTabIndex = index"
         >{{ item.label }}</div>

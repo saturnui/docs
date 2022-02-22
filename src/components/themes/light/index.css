@@ -1,8 +1,1 @@
 @import './components/Mock.css';
-
-.light {
-  .sa-bg,
-  &.sa-bg {
-    @apply bg-white text-dark-800;
-  }
-}

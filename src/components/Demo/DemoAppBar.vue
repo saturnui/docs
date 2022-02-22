@@ -8,7 +8,7 @@ defineEmits(['drawer:open', 'toast:open'])
 const showProfileMenu = ref(false)
 
 const profileUrl = computed(() => {
-  if (props.theme === 'blueprint') return '/demo/bean_profile_white.png'
+  if (props.theme === 'mono') return '/demo/bean_profile_white.png'
   return '/demo/profile.png'
 })
 </script>

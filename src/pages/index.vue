@@ -13,15 +13,16 @@ onMounted(() => {
   <AppBar class="fixed top-0 sa-text" />
   <div
     id="scrollTarget"
-    class="flex flex-col h-screen items-center gap-4 overflow-y-auto sa-bg"
+    class="flex flex-col h-screen items-center gap-4 overflow-y-auto bg-demo"
     :class="theme"
   >
-    <!-- <DemoStars /> -->
+    <!-- Deep Space Background -->
     <div class="dark-space">
       <div class="dark-space-stars1"></div>
       <div class="dark-space-stars2"></div>
       <div class="dark-space-stars3"></div>
     </div>
+
     <div>
       <assets-logo-saturn class="hidden dark-show h-44 w-44 mt-30 fill-teal-400" />
       <assets-logo-saturn-sketch class="hidden blueprint-show h-40 w-40 mt-30 fill-white" />
@@ -30,7 +31,7 @@ onMounted(() => {
       <assets-type-saturn alt="Saturn" class="hidden dark-show mt-2 h-20 w-80 fill-teal-400" />
       <div class="hidden blueprint-show text-7xl">Saturn UI</div>
       <div class="flex gap-8">
-        <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'blueprint'">Blueprint</div>
+        <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'mono'">Blueprint</div>
         <!-- <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'light'">L</div> -->
         <div class="cursor-pointer bg-red-500 p-2 px-6 rounded-full" @click="theme = 'dark'">Space</div>
       </div>
@@ -58,7 +59,6 @@ onMounted(() => {
         </div>
       </div>
 
-      <!-- <div class="blueprint-mock-window mt-14 bg-dark-100 dark:bg-dark-800 border sa-border w-full"> -->
       <div class="sa-mock-window mt-14 w-full">
         <Demo class="p-2 max-w-5xl" :theme="theme" />
         <div class="absolute sa-tl mt-3 text-center w-full font-semibold flex justify-center">
@@ -126,88 +126,6 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<style>
-.blueprint .blueprint-show {
-  display: block;
-}
-
-.dark .dark-show {
-  display: block;
-}
-
-.light .light-show {
-  display: block;
-}
-
-pre code.hljs {
-  color: rgba(255, 255, 255, 0.78) !important;
-}
-
-.hljs {
-  font-size: 15px !important;
-  padding: 10px !important;
-}
-
-.logo-enter-active {
-  transition: transform 5s ease-out;
-}
-
-.logo-leave-active {
-  transition: transform 5s ease-in;
-}
-
-/* .logo-enter-from {
-  transform: translateY(-40px);
-} */
-.logo-leave-to {
-  transform: translateY(40px);
-}
-
-.hljs-tag {
-  color: #ffffff50;
-}
-
-.hljs-ln {
-  position: relative;
-  padding-left: 3em !important;
-}
-
-.hljs-ln .ln-bg {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 2.2em;
-  height: 100%;
-  border-right: 1px solid #555;
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.hljs-ln .ln-num {
-  position: relative;
-  display: inline-block;
-  height: 1em;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.hljs-ln .ln-num::before {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  margin-right: 1em;
-  color: #777;
-  font-style: normal;
-  font-weight: normal;
-  content: attr(data-num);
-}
-</style>
 
 <route lang="yaml">
 meta:

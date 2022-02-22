@@ -4,7 +4,7 @@ const props = defineProps({
 })
 
 const url = computed(() => {
-  if (props.theme === 'blueprint')
+  if (props.theme === 'mono')
     return '/demo/spaceship_white.png'
 
   return '/demo/spaceship.jpg'
@@ -112,7 +112,7 @@ const url = computed(() => {
 </template>
 
 <style>
-.blueprint .demo-progress img {
+.mono .demo-progress img {
   @apply border-b-2 border-white;
 }
 </style>

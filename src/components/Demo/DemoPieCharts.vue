@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   theme: String,
 })
 const percentA = ref(40)
@@ -30,7 +30,7 @@ const percentD = ref(65)
             <div class="food-progress-circle" tabindex="0">
               <VProgressCircle
                 :percent="percentA"
-                class="blueprint-bg"
+                class="bg-demo"
                 color="color"
                 :width="1"
               />
@@ -53,7 +53,7 @@ const percentD = ref(65)
             <div class="water-progress-circle" tabindex="0">
               <VProgressCircle
                 :percent="percentD"
-                class="blueprint-bg"
+                class="bg-demo"
                 color="color"
                 :width="5"
               />
@@ -76,12 +76,12 @@ const percentD = ref(65)
             <div class="supplies-progress-circle" tabindex="0">
               <VProgressCircle
                 :percent="percentC"
-                class="blueprint-bg"
+                class="bg-demo"
                 color="color"
                 :width="6"
               >
                 <div
-                  class="absolute sa-mc flex items-center justify-center rounded-full w-10 h-10 max-h-10 font-bold sa-bg text-white"
+                  class="absolute sa-mc flex items-center justify-center rounded-full w-10 h-10 max-h-10 font-bold bg-demo"
                 >
                   <tabler-box class="text-2xl" />
                 </div>
@@ -105,7 +105,7 @@ const percentD = ref(65)
             <div class="energy-progress-circle" tabindex="0">
               <VProgressCircle
                 :percent="percentB"
-                class="blueprint-bg"
+                class="bg-demo"
                 color="color"
                 :width="12"
               >
@@ -135,11 +135,11 @@ const percentD = ref(65)
 
 <style>
 /* food */
-.blueprint .food-progress-circle {
+.mono .food-progress-circle {
   @apply border-4 rounded-full border-white;
 }
 
-.blueprint .food-progress-circle .color {
+.mono .food-progress-circle .color {
   @apply border-white bg-white;
 }
 
@@ -152,11 +152,11 @@ const percentD = ref(65)
 }
 
 /* water */
-.blueprint .water-progress-circle {
+.mono .water-progress-circle {
   @apply border-4 rounded-full border-white;
 }
 
-.blueprint .water-progress-circle .color {
+.mono .water-progress-circle .color {
   @apply border-blue-500 bg-white;
 }
 
@@ -169,11 +169,11 @@ const percentD = ref(65)
 }
 
 /* supplies */
-.blueprint .supplies-progress-circle {
+.mono .supplies-progress-circle {
   @apply border-4 rounded-full border-white;
 }
 
-.blueprint .supplies-progress-circle .color {
+.mono .supplies-progress-circle .color {
   @apply border-blue-500 bg-white;
 }
 
@@ -186,11 +186,11 @@ const percentD = ref(65)
 }
 
 /* energy */
-.blueprint .energy-progress-circle {
+.mono .energy-progress-circle {
   @apply border-4 rounded-full border-white;
 }
 
-.blueprint .energy-progress-circle .color {
+.mono .energy-progress-circle .color {
   @apply border-white;
 }
 
@@ -203,7 +203,7 @@ const percentD = ref(65)
 }
 
 /* resizer */
-.blueprint .grip {
+.mono .grip {
   @apply bg-white;
 }
 

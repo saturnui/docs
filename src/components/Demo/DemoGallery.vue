@@ -5,7 +5,7 @@ const props = defineProps({
 const slideIndex = ref(0)
 
 const urls = computed(() => {
-  if (props.theme === 'blueprint') {
+  if (props.theme === 'mono') {
     return [
       '/demo/alien-planet-drawing.jpg',
       '/demo/alien-planet-drawing.jpg',
@@ -90,15 +90,15 @@ const urls = computed(() => {
   @apply bg-dark-800 text-white text-xl;
 }
 
-.blueprint .gallery-page-btn {
+.mono .gallery-page-btn {
   @apply bg-white w-5 h-2 rounded-full bg-opacity-30;
 }
 
-.blueprint .gallery-page-btn.active {
+.mono .gallery-page-btn.active {
   @apply !bg-white bg-opacity-100;
 }
 
-.blueprint .gallery-nav-btn {
+.mono .gallery-nav-btn {
   @apply border-3 text-white;
 }
 </style>
