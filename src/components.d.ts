@@ -75,6 +75,8 @@ declare module 'vue' {
     TablerSearch: typeof import('~icons/tabler/search')['default']
     TablerUser: typeof import('~icons/tabler/user')['default']
     TablerX: typeof import('~icons/tabler/x')['default']
+    ThemeCard: typeof import('./components/ThemeCard/ThemeCard.vue')['default']
+    ThemeColor: typeof import('./components/ThemeColor/ThemeColor.vue')['default']
     ToggleDarkMode: typeof import('./components/ToggleDarkMode/ToggleDarkMode.vue')['default']
     ToggleVisible: typeof import('./components/ToggleVisible/ToggleVisible.vue')['default']
     VAlert: typeof import('./saturn/vue/src/components/Alert/VAlert.vue')['default']

@@ -103,7 +103,7 @@ const url = computed(() => {
             tabindex="0"
             class="flex-grow overflow-hidden sa-highlight-strongest"
           >
-            <div class="bg-danger h-2 rounded-full"></div>
+            <div class="bg-error h-2 rounded-full"></div>
           </VProgressBar>
         </VTooltip>
       </div>

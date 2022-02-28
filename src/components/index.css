@@ -1,6 +1,3 @@
 @import './AppBar/AppBar.css';
 @import './Sidenav/Sidenav.css';
 @import './Navigation/Navigation.css';
-@import './themes/mono/index.css';
-@import './themes/dark/index.css';
-@import './themes/light/index.css';

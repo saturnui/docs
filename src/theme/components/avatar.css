@@ -1,0 +1,59 @@
+@layer components {
+  .dark {
+    .avatar {
+      @apply relative w-full h-full;
+
+      > * {
+        @apply w-full h-full flex justify-center items-center;
+      }
+
+      &.shape-circle > * {
+        @apply rounded-full overflow-hidden;
+      }
+
+      &.size-sm,
+      &[size='sm'] {
+        @apply w-8 h-8 min-w-8 min-h-8 max-w-8 max-h-8 text-sm font-bold;
+
+        &.status:before,
+        &[status]:before {
+          @apply absolute rounded-full w-2 h-2 top-0.2 right-0.2 border-1;
+          content: '';
+        }
+      }
+
+      &.size-md,
+      &[size='md'] {
+        @apply w-12 h-12 min-w-12 min-h-12 max-w-12 max-h-12 text-xl font-bold;
+
+        &.status:before,
+        &[status]:before {
+          @apply absolute rounded-full z-10 w-3.6 h-3.6 top-0 right-0 border-2 border-white;
+          content: '';
+        }
+      }
+
+      &.size-lg,
+      &[size='lg'] {
+        @apply w-20 h-20 min-w-20 min-h-20 max-w-20 max-h-20 font-medium text-4xl;
+
+        &.status:before,
+        &[status]:before {
+          @apply absolute rounded-full w-4 h-4 top-1 right-1 border-2;
+          content: '';
+        }
+      }
+
+      &.size-xl,
+      &[size='xl'] {
+        @apply w-32 h-32 min-w-32 min-h-32 max-w-32 max-h-32 text-7xl font-light;
+
+        &.status:before,
+        &[status]:before {
+          @apply absolute rounded-full w-5 h-5 top-2.6 right-2.6 border-3;
+          content: '';
+        }
+      }
+    }
+  }
+}

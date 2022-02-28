@@ -1,0 +1,10 @@
+@layer components {
+  .dark {
+    .row {
+      @apply flex items-center;
+    }
+    .row-center {
+      @apply flex items-center justify-center;
+    }
+  }
+}

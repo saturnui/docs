@@ -2,7 +2,7 @@
 import 'highlight.js/styles/github-dark.css'
 import hljs from 'highlight.js'
 
-const theme = ref('dark')
+const theme = ref('')
 
 onMounted(() => {
   hljs.highlightAll()

@@ -1,0 +1,27 @@
+@layer components {
+  .dark {
+    /* Primary */
+    .focus\:ring-primary:focus {
+      outline: 3px solid var(--color-primary-focus);
+      outline-offset: 2px;
+    }
+
+    /* Secondary */
+    .focus\:ring-secondary:focus {
+      outline: 3px solid var(--color-secondary-focus);
+      outline-offset: 2px;
+    }
+
+    /* Accent */
+    .focus\:ring-accent:focus {
+      outline: 3px solid var(--color-accent-focus);
+      outline-offset: 2px;
+    }
+
+    /* Neutral */
+    .focus\:ring-neutral:focus {
+      outline: 3px solid var(--color-neutral-focus);
+      outline-offset: 2px;
+    }
+  }
+}

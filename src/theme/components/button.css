@@ -1,0 +1,71 @@
+@layer components {
+  .dark {
+    /* Default */
+    .btn {
+      @apply inline-flex items-center justify-center cursor-pointer
+      px-4 py-1 font-medium rounded-md
+      transform duration-150 active:scale-90
+      min-h-9;
+
+      /* Icon */
+      &.btn-icon,
+      &[icon]:not([icon='false']) {
+        @apply p-0 rounded-full min-w-9;
+      }
+
+      /* Sizes */
+      &.size-xs,
+      &[size='xs'] {
+        @apply px-1 leading-0 text-xs min-h-5;
+        &[icon] {
+          @apply w-5 h-5;
+        }
+      }
+      &.size-sm,
+      &[size='sm'] {
+        @apply px-2 leading-0 text-sm min-h-8;
+        &[icon] {
+          @apply w-8 h-8;
+        }
+      }
+      &.size-lg,
+      &[size='lg'] {
+        @apply px-6 min-h-12 text-lg;
+        &[icon] {
+          @apply w-12 h-12;
+        }
+      }
+      &.size-xl,
+      &[size='xl'] {
+        @apply px-8 min-h-14 text-xl;
+        &[icon] {
+          @apply w-14 h-14;
+        }
+      }
+
+      /* No Scale */
+      &.scale-none,
+      &[scale='none'] {
+        @apply transition-none active:scale-100;
+      }
+    }
+
+    /* Link */
+    .link {
+      @apply hover:cursor-pointer hover:underline focus:underline;
+    }
+
+    /* Button Group */
+    .btn-group .btn {
+      @apply !rounded-none;
+    }
+    .btn-group > .btn:first-child,
+    .btn-group > :first-child .btn {
+      @apply !rounded-l;
+    }
+    .btn-group > .btn:last-child,
+    .btn-group > :last-child .btn {
+      @apply !rounded-r;
+    }
+  }
+}

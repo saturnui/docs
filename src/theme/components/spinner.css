@@ -1,0 +1,7 @@
+@layer components {
+  .dark {
+    .spinner {
+      @apply inline-block rounded-full align-middle;
+    }
+  }
+}

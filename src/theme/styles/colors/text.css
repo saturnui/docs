@@ -1,0 +1,165 @@
+@layer components {
+  .dark {
+     /* Primary */
+    .hover\:text-primary:hover,
+    .focus\:text-primary:focus {
+      color: var(--color-primary-focus) !important;
+    }
+
+    .active\:text-primary.active,
+    .active\:text-primary[active]:not([active='false']) {
+      color: var(--color-primary-focus) !important;
+    }
+
+    /* Secondary */
+    .hover\:text-secondary:hover,
+    .focus\:text-secondary:focus {
+      color: var(--color-secondary-focus) !important;
+    }
+
+    .active\:text-secondary.active,
+    .active\:text-secondary[active]:not([active='false']) {
+      color: var(--color-secondary-focus) !important;
+    }
+
+    /* Accent */
+    .hover\:text-accent:hover,
+    .focus\:text-accent:focus {
+      color: var(--color-accent-focus) !important;
+    }
+
+    .active\:text-accent.active,
+    .active\:text-accent[active]:not([active='false']) {
+      color: var(--color-accent-focus) !important;
+    }
+
+    /* Neutral */
+    .hover\:text-neutral:hover,
+    .focus\:text-neutral:focus {
+      color: var(--color-neutral-focus) !important;
+    }
+
+    .active\:text-neutral.active,
+    .active\:text-neutral[active]:not([active='false']) {
+      color: var(--color-neutral-focus) !important;
+    }
+
+    .text {
+      /* base */
+      &-base {
+        &-100 {
+          color: var(--color-base-100);
+        }
+  
+        &-200 {
+          color: var(--color-base-200);
+        }
+  
+        &-300 {
+          color: var(--color-base-300);
+        }
+  
+        &-content {
+          color: var(--color-base-content);
+        }
+      }
+
+      /* neutral */
+      &-neutral {
+        color: var(--color-neutral);
+
+        &-focus {
+          color: var(--color-neutral-focus);
+        }
+
+        &-content {
+          color: var(--color-neutral-content);
+        }
+      }
+
+      /* primary */
+      &-primary {
+        color: var(--color-primary);
+
+        &-focus {
+          color: var(--color-primary-focus);
+        }
+  
+        &-content {
+          color: var(--color-primary-content);
+        }
+      }
+
+      /* secondary */
+      &-secondary {
+        color: var(--color-secondary);
+
+        &-focus {
+          color: var(--color-secondary-focus);
+        }
+  
+        &-content {
+          color: var(--color-secondary-content);
+        }
+      }
+
+      /* accent */
+      &-accent {
+        color: var(--color-accent);
+
+        &-focus {
+          color: var(--color-accent-focus);
+        }
+  
+        &-content {
+          color: var(--color-accent-content);
+        }
+      }
+
+      /* error */
+      &-error {
+        color: var(--color-error);
+
+        &-content {
+          color: var(--color-error-content);
+        }
+      }
+
+      /* success */
+      &-success {
+        color: var(--color-success);
+
+        &-content {
+          color: var(--color-success-content);
+        }
+      }
+
+      /* info */
+      &-info {
+        color: var(--color-info);
+
+        &-content {
+          color: var(--color-info-content);
+        }
+      }
+
+      /* warning */
+      &-warning {
+        color: var(--color-warning);
+
+        &-content {
+          color: var(--color-warning-content);
+        }
+      }
+
+      /* disabled */
+      &-disabled {
+        color: var(--color-disabled);
+
+        &-content {
+          color: var(--color-disabled-content);
+        }
+      }
+    }
+  }
+}

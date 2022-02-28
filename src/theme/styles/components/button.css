@@ -1,0 +1,22 @@
+@layer components {
+  .dark {
+    .btn-primary {
+      /* Default */
+      background-color: var(--color-primary);
+      color: var(--color-primary-content);
+
+      /* Focus */
+      &:hover,
+      &:focus {
+        background-color: var(--color-primary-focus);
+        color: var(--color-primary-content) !important;
+      }
+
+      /* Ring */
+      &:focus {
+        outline: 3px solid var(--color-primary-focus);
+        outline-offset: 2px;
+      }
+    }
+  }
+}

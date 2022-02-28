@@ -1,0 +1,126 @@
+@layer components {
+  .dark {
+    .border-r {
+      /* base */
+      &-base {
+        &-100 {
+          border-right-color: var(--color-base-100);
+        }
+  
+        &-200 {
+          border-right-color: var(--color-base-200);
+        }
+  
+        &-300 {
+          border-right-color: var(--color-base-300);
+        }
+  
+        &-content {
+          border-right-color: var(--color-base-content);
+        }
+      }
+
+      /* neutral */
+      &-neutral {
+        border-right-color: var(--color-neutral);
+
+        &-focus {
+          border-right-color: var(--color-neutral-focus);
+        }
+
+        &-content {
+          border-right-color: var(--color-neutral-content);
+        }
+      }
+
+      /* primary */
+      &-primary {
+        border-right-color: var(--color-primary);
+
+        &-focus {
+          border-right-color: var(--color-primary-focus);
+        }
+  
+        &-content {
+          border-right-color: var(--color-primary-content);
+        }
+      }
+
+      /* secondary */
+      &-secondary {
+        border-right-color: var(--color-secondary);
+
+        &-focus {
+          border-right-color: var(--color-secondary-focus);
+        }
+  
+        &-content {
+          border-right-color: var(--color-secondary-content);
+        }
+      }
+
+      /* accent */
+      &-accent {
+        border-right-color: var(--color-accent);
+
+        &-focus {
+          border-right-color: var(--color-accent-focus);
+        }
+  
+        &-content {
+          border-right-color: var(--color-accent-content);
+        }
+      }
+
+      /* error */
+      &-error {
+        border-right-color: var(--color-error);
+
+        &-content {
+          border-right-color: var(--color-error-content);
+        }
+      }
+
+      /* success */
+      &-success {
+        border-right-color: var(--color-success);
+
+        &-content {
+          border-right-color: var(--color-success-content);
+        }
+      }
+
+      /* info */
+      &-info {
+        border-right-color: var(--color-info);
+
+        &-content {
+          border-right-color: var(--color-info-content);
+        }
+      }
+
+      /* warning */
+      &-warning {
+        border-right-color: var(--color-warning);
+
+        &-content {
+          border-right-color: var(--color-warning-content);
+        }
+      }
+
+      /* disabled */
+      &-disabled {
+        border-right-color: var(--color-disabled);
+
+        &-content {
+          border-right-color: var(--color-disabled-content);
+        }
+      }
+
+      /* none */
+      &-none {
+        border-right-color: transparent;
+      }
+    }
+  }
+}

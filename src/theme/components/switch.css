@@ -1,0 +1,60 @@
+@layer components {
+  .dark {
+    .switch {
+      @apply inline-flex items-center cursor-pointer align-top;
+      input ~ .dot {
+        @apply absolute left-1 top-1 transition;
+      }
+      input ~ .pill {
+        @apply transition;
+      }
+      input:checked ~ .dot {
+        transform: translateX(100%);
+      }
+      
+      &.disabled {
+        @apply cursor-default opacity-40;
+      }
+
+      &.disabled input:checked ~ .pill {
+        @apply bg-opacity-30;
+      }
+    }
+
+    .switch.shape-circle {
+      input ~ .pill {
+        @apply rounded-full;
+      }
+      input ~ .dot {
+        @apply rounded-full;
+      }
+    }
+
+    .size-md, [size='md'], &:not([size]) {
+      input ~ .dot {
+        @apply w-6 h-6;
+      }
+      input ~ .pill {
+        @apply w-14 h-8;
+      }
+    }
+
+    .size-sm, [size='sm'] {
+      input ~ .dot {
+        @apply w-4 h-4;
+      }
+      input ~ .pill {
+        @apply w-10 h-6;
+      }
+    }
+
+    size-lg, [size='lg'] {
+      input ~ .dot {
+        @apply w-8 h-8;
+      }
+      input ~ .pill {
+        @apply w-18 h-10;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@layer components {
+  .dark {
+    input,
+    textarea {
+      background-color: transparent;
+    }
+  }
+}

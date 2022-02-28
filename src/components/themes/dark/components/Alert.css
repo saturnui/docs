@@ -1,9 +1,0 @@
-@layer components {
-  .dark {
-    .sa {
-      &-alert {
-        @apply flex items-center gap-2 rounded mb-2;
-      }
-    }
-  }
-}

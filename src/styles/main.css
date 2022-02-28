@@ -1,4 +1,9 @@
 @import './markdown.css';
+/* @import '../themes/mono/index.css'; */
+/* @import '../themes/blueprint/index.css';
+ */
+/* @import '../themes/light/index.css'; */
+@import '../theme/index.css';
 @import './doc.css';
 @import '../pages/index-page.css';
 @import '../components/index.css';

@@ -1,0 +1,45 @@
+@layer components {
+  .dark {
+    .sa {
+      &-tab {
+        @apply flex items-center justify-center gap-2 px-6 py-4;
+      }
+
+      &-tab-container {
+        @apply flex cursor-pointer select-none;
+      }
+
+      &-tab-container-border {
+        @apply border-b-2;
+      }
+
+      &-tab-container-pill {
+        @apply gap-2 px-2;
+      }
+
+      &-tab-container-bar {
+        @apply rounded-l-lg rounded-r-lg overflow-hidden;
+      }
+
+      &-tab-container-bar&-border {
+        @apply border border-dark-700;
+      }
+
+      &-tab-container-bar-tab {
+        @apply border-r last:border-r-0 border-dark-700;
+      }
+
+      &-tab-container-w-full {
+        @apply flex-grow;
+      }
+
+      &-tab-border-active {
+        @apply border-b-2 border-b-purple-400 text-light-200;
+      }
+
+      &-tab-border-spacer {
+        @apply flex-grow border-b-2;
+      }
+    }
+  }
+}

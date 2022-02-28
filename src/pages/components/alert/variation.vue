@@ -1,5 +1,5 @@
 <template>
-  <VAlert class="sa-danger text-sm font-medium p-2" role="alert">
+  <VAlert class="sa-error text-sm font-medium p-2" role="alert">
     <tabler-alert-octagon class="w-6 h-6" />
     <div class="flex-grow">I'm an alert that informs you of stuff.</div>
     <VButton icon>

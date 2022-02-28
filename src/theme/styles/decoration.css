@@ -1,0 +1,47 @@
+@layer components {
+  .dark {
+    .core {
+      &-stripe {
+        content: '';
+        position: relative;
+        background-image: linear-gradient(
+          -45deg,
+          rgba(255, 255, 255, 0.2) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0.2) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 50px 50px;
+      }
+
+      &-border {
+        @apply border-2 border-transparent;
+      }
+
+      &-round {
+        @apply rounded-lg;
+      }
+
+      &-square {
+        @apply rounded-none;
+      }
+
+      &-circle {
+        @apply rounded-full;
+      }
+    }
+
+    [disabled]:not([disabled='false']),
+    [disabled]:not([disabled='false']):hover,
+    [disabled]:not([disabled='false']):focus,
+    [disabled]:not([disabled='false']):active {
+      @apply !scale-100 !cursor-default opacity-100;
+      border-color: transparent !important;
+      background-color: var(--color-disabled) !important;
+      color: var(--color-disabled-content) !important;
+    }
+  }
+}

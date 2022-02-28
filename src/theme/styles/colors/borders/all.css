@@ -1,0 +1,161 @@
+@layer components {
+  .dark {
+    .border {
+      /* base */
+      &-base {
+        &-100 {
+          border-color: var(--color-base-100);
+        }
+
+        &-200 {
+          border-color: var(--color-base-200);
+        }
+
+        &-300 {
+          border-color: var(--color-base-300);
+        }
+
+        &-content {
+          border-color: var(--color-base-content);
+        }
+      }
+
+      /* neutral */
+      &-neutral {
+        border-color: var(--color-neutral);
+
+        &-content {
+          border-color: var(--color-neutral-content);
+        }
+      }
+
+      /* primary */
+      &-primary {
+        border-color: var(--color-primary);
+
+        &-content {
+          border-color: var(--color-primary-content);
+        }
+      }
+
+      /* secondary */
+      &-secondary {
+        border-color: var(--color-secondary);
+        color: var(--color-secondary);
+
+        &-content {
+          border-color: var(--color-secondary-content);
+        }
+      }
+
+      /* accent */
+      &-accent {
+        border-color: var(--color-accent);
+
+        &-content {
+          border-color: var(--color-accent-content);
+        }
+      }
+
+      /* error */
+      &-error {
+        border-color: var(--color-error);
+
+        &-content {
+          border-color: var(--color-error-content);
+        }
+      }
+
+      /* success */
+      &-success {
+        border-color: var(--color-success);
+
+        &-content {
+          border-color: var(--color-success-content);
+        }
+      }
+
+      /* info */
+      &-info {
+        border-color: var(--color-info);
+
+        &-content {
+          border-color: var(--color-info-content);
+        }
+      }
+
+      /* warning */
+      &-warning {
+        border-color: var(--color-warning);
+
+        &-content {
+          border-color: var(--color-warning-content);
+        }
+      }
+    }
+
+    /* Primary */
+    .hover\:border-primary:hover,
+    .focus\:border-primary:focus {
+      border-color: var(--color-primary-focus);
+    }
+
+    .active\:border-primary.active,
+    .active\:border-primary[active]:not([active='false']) {
+      border-color: var(--color-primary-active);
+    }
+
+    /* Secondary */
+    .hover\:border-secondary:hover,
+    .focus\:border-secondary:focus {
+      border-color: var(--color-secondary-focus);
+    }
+
+    .active\:border-secondary.active,
+    .active\:border-secondary[active]:not([active='false']) {
+      border-color: var(--color-secondary-active);
+    }
+
+    /* Accent */
+    .hover\:border-accent:hover,
+    .focus\:border-accent:focus {
+      border-color: var(--color-accent-focus);
+    }
+
+    .active\:border-accent.active,
+    .active\:border-accent[active]:not([active='false']) {
+      border-color: var(--color-accent-active);
+    }
+
+    /* Neutral */
+    .hover\:border-neutral:hover,
+    .focus\:border-neutral:focus {
+      border-color: var(--color-neutral-focus);
+    }
+
+    .active\:border-neutral.active,
+    .active\:border-neutral[active]:not([active='false']) {
+      border-color: var(--color-neutral-active);
+    }
+
+    [disabled]:not([disabled='false']):hover {
+      border-color: transparent !important
+    }
+
+    .border {
+      /* disabled */
+      &-disabled {
+        border-color: var(--color-disabled) !important;
+
+        &-content {
+          border-color: var(--color-disabled-content) !important;
+        }
+      }
+
+      /* none */
+      &-none {
+        border-color: transparent !important;
+      }
+    }
+  }
+}
